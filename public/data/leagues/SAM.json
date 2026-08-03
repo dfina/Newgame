@@ -6,18 +6,24 @@
   "leagues": [
     {
       "tier": 1,
-      "name": "Samoa National League",
+      "name": "Samoa National League (FFS National Premier League)",
       "tsdbLeagueId": null,
-      "verified": false,
+      "verified": true,
       "sources": [
         "https://en.wikipedia.org/wiki/Samoa_National_League",
         "https://globalsportsarchive.com/en/soccer/competition/ffs-national-premier-league-2025/75468"
       ],
       "clubs": [
         {"name": "Vaipuna", "tsdbTeamId": null, "badge": null},
-        {"name": "Vaivase-Tai", "tsdbTeamId": null, "badge": null}
+        {"name": "Vaivase-Tai", "tsdbTeamId": null, "badge": null},
+        {"name": "Vailima Kiwi FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Lupe o le Soaga SC", "tsdbTeamId": null, "badge": null},
+        {"name": "Lepea FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Vaitele-Uta SC", "tsdbTeamId": null, "badge": null},
+        {"name": "USP Alafua Campus", "tsdbTeamId": null, "badge": null},
+        {"name": "Sogi SC", "tsdbTeamId": null, "badge": null}
       ]
     }
   ],
-  "note": "League (currently run as the FFS National Premier League) has 12 member clubs in total; 2025 champions were Vaipuna, with Vaivase-Tai 3rd. Only these 2 clubs could be confirmed by name this session, so verified is false and the remaining ~10 clubs are omitted rather than guessed."
+  "note": "League (run in 2025 as the FFS National Premier League) has 12 member clubs in total; 2025 champions were Vaipuna, with Vaivase-Tai 3rd. 8 clubs were confirmed by name this session via Championship Round fixtures (Lepea, Vaitele-Uta, USP Alafua Campus, Vaivase-Tai, Vailima Kiwi, Vaipuna, Sogi, Lupe o le Soaga); the remaining ~4 clubs could not be verified."
 }

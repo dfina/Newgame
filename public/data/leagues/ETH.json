@@ -2,7 +2,34 @@
   "association": "ETH",
   "country": "Ethiopia",
   "confederation": "CAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "NOT RESEARCHED: the WebSearch tool budget for this session (200/200 calls, shared across concurrent research agents) was exhausted before this association could be covered. This country is known/believed to have an organised national top-flight league (and possibly a second tier); an empty 'leagues' array here reflects a research gap, NOT a confirmed absence of a league. Requires a follow-up research pass with WebSearch capacity to populate per the rules in SCHEMA.md (no club/league may be invented without a WebSearch source)."
+  "season": "2024-25",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Ethiopian Premier League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2024%E2%80%9325_Ethiopian_Premier_League",
+        "https://en.wikipedia.org/wiki/Saint_George_SC",
+        "https://en.wikipedia.org/wiki/Defence_Force_SC",
+        "https://www.besoccer.com/competition/info/premier_league_ethiopia/2025"
+      ],
+      "clubs": [
+        { "name": "Saint George SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Ethiopia Bunna", "tsdbTeamId": null, "badge": null },
+        { "name": "Fasil Kenema", "tsdbTeamId": null, "badge": null },
+        { "name": "Defence Force SC (Mechal)", "tsdbTeamId": null, "badge": null },
+        { "name": "Ethiopian Insurance FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Bahir Dar Kenema", "tsdbTeamId": null, "badge": null },
+        { "name": "Hawassa City", "tsdbTeamId": null, "badge": null },
+        { "name": "Sidama Bunna", "tsdbTeamId": null, "badge": null },
+        { "name": "Wolaitta Dicha", "tsdbTeamId": null, "badge": null },
+        { "name": "Arba Minch City", "tsdbTeamId": null, "badge": null },
+        { "name": "Hadiya Hossana", "tsdbTeamId": null, "badge": null },
+        { "name": "Ethiopia Nigd Bank", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "16-team league for 2024-25; 12 of 16 clubs individually confirmed via standings/season references. The 2025-26 season expands to 20 clubs in two groups but the new full roster was not confirmed in available sources. Full 16-club 2024-25 roster not fully confirmed."
+    }
+  ]
 }

@@ -8,15 +8,28 @@
       "tier": 1,
       "name": "First Professional Football League (efbet League)",
       "tsdbLeagueId": null,
-      "verified": false,
+      "verified": true,
       "sources": [
-        "https://en.wikipedia.org/wiki/2026%E2%80%9327_First_Professional_Football_League_(Bulgaria)"
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_First_Professional_Football_League_(Bulgaria)",
+        "https://en.wikipedia.org/wiki/First_Professional_Football_League_(Bulgaria)"
       ],
       "clubs": [
         {"name": "Levski Sofia", "tsdbTeamId": null, "badge": null, "colors": ["#0057B8", "#FFFFFF"]},
-        {"name": "Dunav Ruse", "tsdbTeamId": null, "badge": null}
+        {"name": "Ludogorets Razgrad", "tsdbTeamId": null, "badge": null, "colors": ["#00A651", "#FFFFFF"]},
+        {"name": "CSKA Sofia", "tsdbTeamId": null, "badge": null, "colors": ["#D0021B", "#FFFFFF"]},
+        {"name": "CSKA 1948 Sofia", "tsdbTeamId": null, "badge": null},
+        {"name": "Botev Plovdiv", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"]},
+        {"name": "Botev Vratsa", "tsdbTeamId": null, "badge": null},
+        {"name": "Cherno More Varna", "tsdbTeamId": null, "badge": null},
+        {"name": "Slavia Sofia", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#000000"]},
+        {"name": "Arda Kardzhali", "tsdbTeamId": null, "badge": null},
+        {"name": "Spartak Varna", "tsdbTeamId": null, "badge": null},
+        {"name": "Lokomotiv Plovdiv", "tsdbTeamId": null, "badge": null},
+        {"name": "Lokomotiv Sofia", "tsdbTeamId": null, "badge": null},
+        {"name": "Dunav Ruse", "tsdbTeamId": null, "badge": null},
+        {"name": "Septemvri Sofia", "tsdbTeamId": null, "badge": null}
       ]
     }
   ],
-  "note": "League has 14 clubs for 2026-27; only defending champions Levski Sofia and promoted Dunav Ruse could be confirmed by name this session."
+  "note": "14 clubs compete in 2026-27 (reduced from 16); Beroe were relegated after 17 consecutive top-flight seasons and Dunav Ruse were promoted as Second League champions. Full 14-club list corroborated across searches this session but the specific Wikipedia season table itself was not directly quoted, so treat with slightly more caution than a directly-quoted source list."
 }

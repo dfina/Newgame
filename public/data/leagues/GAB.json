@@ -2,7 +2,35 @@
   "association": "GAB",
   "country": "Gabon",
   "confederation": "CAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "NOT RESEARCHED: the WebSearch tool budget for this session (200/200 calls, shared across concurrent research agents) was exhausted before this association could be covered. This country is known/believed to have an organised national top-flight league (and possibly a second tier); an empty 'leagues' array here reflects a research gap, NOT a confirmed absence of a league. Requires a follow-up research pass with WebSearch capacity to populate per the rules in SCHEMA.md (no club/league may be invented without a WebSearch source)."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Gabon Championnat National D1",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://m.aiscore.com/tournament-gabon-championnat-d1/xo17pjizyxt37jw/standings",
+        "https://en.wikipedia.org/wiki/National_Foot_1",
+        "https://en.wikipedia.org/wiki/FC_105_Libreville",
+        "https://en.wikipedia.org/wiki/Vantour_Mangoungou"
+      ],
+      "clubs": [
+        { "name": "Mangasport", "tsdbTeamId": null, "badge": null },
+        { "name": "Cercle Mbéri Sportif", "tsdbTeamId": null, "badge": null },
+        { "name": "AS Oyem", "tsdbTeamId": null, "badge": null },
+        { "name": "Pelican Lambarene", "tsdbTeamId": null, "badge": null },
+        { "name": "Bouenguidi Sport", "tsdbTeamId": null, "badge": null },
+        { "name": "Lozo FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Vantour Mangoungou", "tsdbTeamId": null, "badge": null },
+        { "name": "Dikaki FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Union Sportive de Bitam", "tsdbTeamId": null, "badge": null },
+        { "name": "FC 105 Libreville", "tsdbTeamId": null, "badge": null },
+        { "name": "AS Stade Mandji", "tsdbTeamId": null, "badge": null },
+        { "name": "Centre Sportif Bendje", "tsdbTeamId": null, "badge": null },
+        { "name": "Mounana FC", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "14-club top division founded 1968; 13 clubs individually named in current standings/results sources. Exact season boundary (2025-26 vs ongoing 2026-27) not precisely disambiguated in sources; full roster not independently cross-checked against an official federation list."
+    }
+  ]
 }

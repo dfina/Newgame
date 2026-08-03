@@ -2,7 +2,33 @@
   "association": "CPV",
   "country": "Cabo Verde",
   "confederation": "CAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "NOT RESEARCHED: the WebSearch tool budget for this session (200/200 calls, shared across concurrent research agents) was exhausted before this association could be covered. This country is known/believed to have an organised national top-flight league (and possibly a second tier); an empty 'leagues' array here reflects a research gap, NOT a confirmed absence of a league. Requires a follow-up research pass with WebSearch capacity to populate per the rules in SCHEMA.md (no club/league may be invented without a WebSearch source)."
+  "season": "2025",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Campeonato Nacional (Cabo Verde)",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://futebol365.pt/competicao/222/",
+        "https://www.rsssf.org/tablesk/kaapv2026.html",
+        "https://www.soccerway.com/cape-verde/campeonato-nacional/",
+        "https://www.sofascore.com/football/tournament/cape-verde/campeonato-nacional/18728"
+      ],
+      "clubs": [
+        { "name": "Sport Clube África Show", "tsdbTeamId": null, "badge": null },
+        { "name": "Clube Desportivo Benfica (Brava)", "tsdbTeamId": null, "badge": null },
+        { "name": "Cutelinho Futebol Clube", "tsdbTeamId": null, "badge": null },
+        { "name": "Clube Desportivo Onze Unidos", "tsdbTeamId": null, "badge": null },
+        { "name": "Acadêmico do Aeroporto do Sal", "tsdbTeamId": null, "badge": null },
+        { "name": "Clube Desportivo Scorpion Vermelho", "tsdbTeamId": null, "badge": null },
+        { "name": "Boavista Futebol Clube da Praia", "tsdbTeamId": null, "badge": null },
+        { "name": "União Desportiva Santo Crucifixo", "tsdbTeamId": null, "badge": null },
+        { "name": "Associação Académica do Porto Novo", "tsdbTeamId": null, "badge": null },
+        { "name": "Sport Clube Atlético (São Nicolau)", "tsdbTeamId": null, "badge": null },
+        { "name": "Clube Sportivo Mindelense", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "National final tournament contested by the champions of each of Cabo Verde's 9 inhabited islands (11 regional zones/champions confirmed here, some islands split into zones e.g. Santiago Norte/Sul, Santo Antão Norte/Sul). Runs approx. April-June. Full bracket/knockout results not confirmed."
+    }
+  ]
 }

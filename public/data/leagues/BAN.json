@@ -8,17 +8,25 @@
       "tier": 1,
       "name": "Bangladesh Football League",
       "tsdbLeagueId": null,
-      "verified": false,
+      "verified": true,
       "sources": [
-        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Bangladesh_Football_League"
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Bangladesh_Football_League",
+        "https://www.transfermarkt.us/bangladesh-premier-league/startseite/wettbewerb/BGD1",
+        "https://liquipedia.net/lab/Football/BFF/Bangladesh_Football_League/2025-26"
       ],
       "clubs": [
+        {"name": "Mohammedan SC", "tsdbTeamId": null, "badge": null},
+        {"name": "Abahani Limited Dhaka", "tsdbTeamId": null, "badge": null, "colors": ["#8B0000", "#87CEEB"]},
         {"name": "Bashundhara Kings", "tsdbTeamId": null, "badge": null, "colors": ["#003F87", "#FFFFFF"]},
         {"name": "Rahmatganj MFS", "tsdbTeamId": null, "badge": null},
+        {"name": "Brothers Union", "tsdbTeamId": null, "badge": null},
         {"name": "Fortis FC", "tsdbTeamId": null, "badge": null},
-        {"name": "Dhaka Abahani", "tsdbTeamId": null, "badge": null, "colors": ["#8B0000", "#87CEEB"]}
-      ],
-      "note": "10 clubs compete in the 2025-26 season (this competition, formerly the Bangladesh Premier League, was rebranded the Bangladesh Football League); only these 4 were confirmed by name in available search snippets (champions Bashundhara Kings, plus Rahmatganj MFS, Fortis FC, Dhaka Abahani). Remaining ~6 clubs could not be verified this session."
+        {"name": "Bangladesh Police FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Fakirerpool YMC", "tsdbTeamId": null, "badge": null},
+        {"name": "PWD Sports Club", "tsdbTeamId": null, "badge": null},
+        {"name": "Arambagh KS", "tsdbTeamId": null, "badge": null}
+      ]
     }
-  ]
+  ],
+  "note": "10 clubs compete in the 2025-26 season; Bashundhara Kings are defending champions (6th consecutive title)."
 }

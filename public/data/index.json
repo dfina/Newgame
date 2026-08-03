@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-03T14:56:59.933Z",
+ "generated": "2026-08-03T14:57:38.716Z",
  "countries": [
   {
    "code": "AFG",
@@ -158,6 +158,20 @@
      "name": "Azerbaijan Premier League",
      "clubs": 11,
      "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "BAN",
+   "country": "Bangladesh",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Bangladesh Football League",
+     "clubs": 10,
+     "verified": true,
      "tsdbLeagueId": null
     }
    ]
@@ -338,6 +352,20 @@
    ]
   },
   {
+   "code": "BUL",
+   "country": "Bulgaria",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "First Professional Football League (efbet League)",
+     "clubs": 14,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "CAM",
    "country": "Cambodia",
    "confederation": "AFC",
@@ -466,6 +494,20 @@
      "name": "Categoría Primera A (Liga BetPlay Dimayor)",
      "clubs": 21,
      "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "CPV",
+   "country": "Cabo Verde",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Campeonato Nacional (Cabo Verde)",
+     "clubs": 11,
+     "verified": true,
      "tsdbLeagueId": null
     }
    ]
@@ -653,6 +695,20 @@
    ]
   },
   {
+   "code": "ETH",
+   "country": "Ethiopia",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Ethiopian Premier League",
+     "clubs": 12,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "FIJ",
    "country": "Fiji",
    "confederation": "OFC",
@@ -730,6 +786,20 @@
    ]
   },
   {
+   "code": "GAB",
+   "country": "Gabon",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Gabon Championnat National D1",
+     "clubs": 13,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "GEO",
    "country": "Georgia",
    "confederation": "UEFA",
@@ -780,6 +850,20 @@
      "tier": 1,
      "name": "Ghana Premier League",
      "clubs": 18,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "GIB",
+   "country": "Gibraltar",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Gibraltar Football League (National League)",
+     "clubs": 6,
      "verified": true,
      "tsdbLeagueId": null
     }
@@ -1801,6 +1885,20 @@
    ]
   },
   {
+   "code": "SAM",
+   "country": "Samoa",
+   "confederation": "OFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Samoa National League (FFS National Premier League)",
+     "clubs": 8,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "SCO",
    "country": "Scotland",
    "confederation": "UEFA",
@@ -1886,6 +1984,20 @@
      "tier": 1,
      "name": "Campionato Sammarinese di Calcio",
      "clubs": 16,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "SOL",
+   "country": "Solomon Islands",
+   "confederation": "OFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "S-League",
+     "clubs": 9,
      "verified": true,
      "tsdbLeagueId": null
     }

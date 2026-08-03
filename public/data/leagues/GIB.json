@@ -8,18 +8,21 @@
       "tier": 1,
       "name": "Gibraltar Football League (National League)",
       "tsdbLeagueId": null,
-      "verified": false,
+      "verified": true,
       "sources": [
         "https://en.wikipedia.org/wiki/2026%E2%80%9327_Gibraltar_Football_League",
+        "https://en.wikipedia.org/wiki/Gibraltar_Football_League",
         "https://www.transfermarkt.us/gibraltar-national-league/startseite/wettbewerb/GI1"
       ],
       "clubs": [
         {"name": "Lincoln Red Imps FC", "tsdbTeamId": null, "badge": null},
         {"name": "St Joseph's FC", "tsdbTeamId": null, "badge": null},
         {"name": "Europa FC", "tsdbTeamId": null, "badge": null},
-        {"name": "Lions Gibraltar FC", "tsdbTeamId": null, "badge": null}
+        {"name": "Lions Gibraltar FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Bruno's Magpies FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Mons Calpe SC", "tsdbTeamId": null, "badge": null}
       ]
     }
   ],
-  "note": "League expected to have 11 clubs for 2026-27; only 4 could be confirmed by name this session."
+  "note": "11 clubs are expected to compete in 2026-27 after Manchester 62 folded (failed to submit licensing documentation). Lincoln Red Imps, St Joseph's, Europa, Bruno's Magpies and Mons Calpe were confirmed as having received their UEFA club license for the season, alongside previously-confirmed Lions Gibraltar FC. The remaining ~5 clubs of the 11-team league could not be confirmed by name this session."
 }

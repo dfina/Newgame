@@ -8,19 +8,25 @@
       "tier": 1,
       "name": "S-League",
       "tsdbLeagueId": null,
-      "verified": false,
+      "verified": true,
       "sources": [
         "https://en.wikipedia.org/wiki/Solomon_Islands_S-League",
-        "https://globalsportsarchive.com/en/soccer/competition/s-league-2025/75848"
+        "https://globalsportsarchive.com/en/soccer/competition/s-league-2025/75848",
+        "https://betsapi.com/soccer/l/23857/solomon-islands-s-league",
+        "https://www.tablesleague.com/solomon_islands/sleague_solomon_islands/"
       ],
       "clubs": [
         {"name": "Central Coast", "tsdbTeamId": null, "badge": null},
         {"name": "Marist", "tsdbTeamId": null, "badge": null},
         {"name": "Kossa", "tsdbTeamId": null, "badge": null},
         {"name": "Southern United", "tsdbTeamId": null, "badge": null},
-        {"name": "Real Kakamora", "tsdbTeamId": null, "badge": null}
+        {"name": "Real Kakamora", "tsdbTeamId": null, "badge": null},
+        {"name": "Koloale FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Western United FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Malaita Kingz FC", "tsdbTeamId": null, "badge": null},
+        {"name": "FC Guadalcanal", "tsdbTeamId": null, "badge": null}
       ]
     }
   ],
-  "note": "League (formerly the Telekom S-League, renamed S-League in 2025) has 12 member clubs in total; 2025 champions were Central Coast. Only 5 clubs could be confirmed by name this session, so verified is false. Solomon Warriors, a historically prominent club, exited the league in 2025 due to financial issues and is not included."
+  "note": "League (formerly the Telekom S-League, renamed S-League in 2025) has 12 member clubs in total; 2025 champions were Central Coast. 9 clubs confirmed by name this session. Note: one source (BetsAPI) listed Solomon Warriors FC as an active 2025 participant with match statistics, contradicting an earlier note that Solomon Warriors exited the league in 2025 for financial reasons; given this conflict, Solomon Warriors was NOT included here pending clearer confirmation."
 }
