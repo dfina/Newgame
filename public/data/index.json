@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-03T14:43:10.252Z",
+ "generated": "2026-08-03T14:43:49.390Z",
  "countries": [
   {
    "code": "AFG",
@@ -128,6 +128,20 @@
     {
      "tier": 1,
      "name": "A-League Men",
+     "clubs": 12,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "AUT",
+   "country": "Austria",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Austrian Bundesliga",
      "clubs": 12,
      "verified": true,
      "tsdbLeagueId": null
@@ -1346,6 +1360,20 @@
    ]
   },
   {
+   "code": "POR",
+   "country": "Portugal",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Primeira Liga",
+     "clubs": 10,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "QAT",
    "country": "Qatar",
    "confederation": "AFC",
@@ -1523,6 +1551,20 @@
      "name": "São Tomé and Príncipe Championship",
      "clubs": 6,
      "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "SUI",
+   "country": "Switzerland",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Swiss Super League",
+     "clubs": 12,
+     "verified": true,
      "tsdbLeagueId": null
     }
    ]

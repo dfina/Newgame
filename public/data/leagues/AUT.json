@@ -8,16 +8,26 @@
       "tier": 1,
       "name": "Austrian Bundesliga",
       "tsdbLeagueId": null,
-      "verified": false,
+      "verified": true,
       "sources": [
-        "https://www.espn.com/soccer/standings/_/league/aut.1",
-        "https://www.uefa.com/nationalassociations/aut/domestic/league/1026/",
+        "https://tips.gg/tournament/football-austrian-bundesliga-2026-27/",
+        "https://www.transfermarkt.us/bundesliga/startseite/wettbewerb/A1",
         "https://en.wikipedia.org/wiki/2025%E2%80%9326_Austrian_Football_Second_League"
       ],
       "clubs": [
-        {"name": "Austria Lustenau", "tsdbTeamId": null, "badge": null}
+        {"name": "Red Bull Salzburg", "tsdbTeamId": null, "badge": null, "colors": ["#DA291C", "#FFFFFF"]},
+        {"name": "SK Sturm Graz", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"]},
+        {"name": "Rapid Vienna", "tsdbTeamId": null, "badge": null, "colors": ["#00A651", "#FFFFFF"]},
+        {"name": "LASK", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"]},
+        {"name": "Austria Vienna", "tsdbTeamId": null, "badge": null, "colors": ["#8B0000", "#FFFFFF"]},
+        {"name": "Wolfsberger AC", "tsdbTeamId": null, "badge": null, "colors": ["#DA291C", "#FFFFFF"]},
+        {"name": "TSV Hartberg", "tsdbTeamId": null, "badge": null},
+        {"name": "SCR Altach", "tsdbTeamId": null, "badge": null},
+        {"name": "Austria Lustenau", "tsdbTeamId": null, "badge": null},
+        {"name": "SV Ried", "tsdbTeamId": null, "badge": null},
+        {"name": "Grazer AK", "tsdbTeamId": null, "badge": null},
+        {"name": "WSG Tirol", "tsdbTeamId": null, "badge": null}
       ]
     }
-  ],
-  "note": "2026-27 Bundesliga has 12 clubs; only Austria Lustenau (promoted as 2025-26 2. Liga champions) could be confirmed by name before the search budget was exhausted. Full roster not verified this session."
+  ]
 }

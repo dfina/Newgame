@@ -2,7 +2,46 @@
   "association": "POR",
   "country": "Portugal",
   "confederation": "UEFA",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (200/200) was exhausted before this association could be covered. No clubs or leagues were invented per task rules; leagues left empty pending a follow-up session with search capacity."
+  "season": "2026-27",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Primeira Liga",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Primeira_Liga",
+        "https://groundhopperguides.com/2026-27-primeira-liga-schedule/",
+        "https://news.22bet.com/news/portugal-primeira-liga-2026-27-season-guide-predictions/"
+      ],
+      "clubs": [
+        {"name": "FC Porto", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"]},
+        {"name": "SL Benfica", "tsdbTeamId": null, "badge": null, "colors": ["#E2001A", "#FFFFFF"]},
+        {"name": "SC Braga", "tsdbTeamId": null, "badge": null, "colors": ["#DA291C", "#FFFFFF"]},
+        {"name": "Casa Pia AC", "tsdbTeamId": null, "badge": null},
+        {"name": "Estoril Praia", "tsdbTeamId": null, "badge": null},
+        {"name": "Estrela da Amadora", "tsdbTeamId": null, "badge": null},
+        {"name": "FC Arouca", "tsdbTeamId": null, "badge": null},
+        {"name": "FC Alverca", "tsdbTeamId": null, "badge": null},
+        {"name": "Académico de Viseu", "tsdbTeamId": null, "badge": null},
+        {"name": "CD Marítimo", "tsdbTeamId": null, "badge": null}
+      ]
+    },
+    {
+      "tier": 2,
+      "name": "Liga Portugal 2",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Liga_Portugal_2"
+      ],
+      "clubs": [
+        {"name": "CD Tondela", "tsdbTeamId": null, "badge": null},
+        {"name": "AVS Futebol SAD", "tsdbTeamId": null, "badge": null},
+        {"name": "Amarante FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Académica de Coimbra", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "Primeira Liga 2026-27 has 18 clubs; only 10 were confirmed by name this session (Porto as defending champions; Benfica, Braga, Casa Pia, Estoril Praia, Estrela da Amadora, Arouca, Alverca continuing from 2025-26; Académico de Viseu and Marítimo promoted from Liga Portugal 2). AVS and Tondela were named as relegated OUT of the Primeira Liga into Liga Portugal 2 for 2026-27, so they are listed under the tier-2 entry instead. Liga Portugal 2's other ~14 clubs (of 18 total) were not identified within the search budget. Both leagues marked unverified due to incomplete rosters."
 }

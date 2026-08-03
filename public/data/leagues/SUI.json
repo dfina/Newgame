@@ -2,7 +2,31 @@
   "association": "SUI",
   "country": "Switzerland",
   "confederation": "UEFA",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (200/200) was exhausted before this association could be covered. No clubs or leagues were invented per task rules; leagues left empty pending a follow-up session with search capacity."
+  "season": "2026-27",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Swiss Super League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Swiss_Super_League",
+        "https://tips.gg/tournament/football-switzerland-super-league-2026-27/"
+      ],
+      "clubs": [
+        {"name": "BSC Young Boys", "tsdbTeamId": null, "badge": null, "colors": ["#FFD700", "#000000"]},
+        {"name": "FC Sion", "tsdbTeamId": null, "badge": null, "colors": ["#DA291C", "#FFFFFF"]},
+        {"name": "FC Lugano", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"]},
+        {"name": "FC Vaduz", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#000000"]},
+        {"name": "FC St. Gallen", "tsdbTeamId": null, "badge": null, "colors": ["#00A651", "#FFFFFF"]},
+        {"name": "FC Zürich", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"]},
+        {"name": "FC Basel", "tsdbTeamId": null, "badge": null, "colors": ["#DA291C", "#000000"]},
+        {"name": "FC Lausanne-Sport", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"]},
+        {"name": "FC Thun", "tsdbTeamId": null, "badge": null},
+        {"name": "Servette FC", "tsdbTeamId": null, "badge": null, "colors": ["#8B0000", "#FFFFFF"]},
+        {"name": "Grasshopper Club Zürich", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"]},
+        {"name": "FC Luzern", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"]}
+      ]
+    }
+  ]
 }
