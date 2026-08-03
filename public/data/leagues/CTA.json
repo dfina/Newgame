@@ -2,7 +2,7 @@
   "association": "CTA",
   "country": "Central African Republic",
   "confederation": "CAF",
-  "season": "unresearched",
+  "season": "2023-24",
   "leagues": [],
-  "note": "NOT RESEARCHED: the WebSearch tool budget for this session (200/200 calls, shared across concurrent research agents) was exhausted before this association could be covered. This country is known/believed to have an organised national top-flight league (and possibly a second tier); an empty 'leagues' array here reflects a research gap, NOT a confirmed absence of a league. Requires a follow-up research pass with WebSearch capacity to populate per the rules in SCHEMA.md (no club/league may be invented without a WebSearch source)."
+  "note": "PARTIALLY RESEARCHED: the Central African Republic League (Championnat Seniors D1) is confirmed as a 12-club top flight. Only AS Tempête Mocaf could be confirmed as champions for a single named season (2023-24); other clubs surfaced (DFC8, Olympique Ral, Red Star) were champions of different, unconfirmed years, so were excluded per the no-season-mixing rule. Far short of the 6-club minimum needed for a usable entry. Sources consulted: https://globalsportsarchive.com/en/soccer/competition/championnat-seniors-d1-2024-2025/74271 , https://en.wikipedia.org/wiki/Central_African_Republic_League , https://www.rsssf.org/tablesc/cafrchamp.html . Requires a follow-up pass to name a single season's full club roster."
 }

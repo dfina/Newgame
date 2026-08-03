@@ -2,7 +2,28 @@
   "association": "BLZ",
   "country": "Belize",
   "confederation": "CONCACAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Research not completed: this session's WebSearch budget was exhausted (200/200) before this association could be researched. This does NOT mean no organised national league exists here -- it means verification could not be attempted in this session. Re-run research for this association with a fresh/raised search budget before treating this file as authoritative."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Premier League of Belize",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Premier_League_of_Belize",
+        "https://globalsportsarchive.com/en/soccer/competition/premier-league-of-belize-2025-2026/77054",
+        "https://footystats.org/belize/belize-premier-league"
+      ],
+      "clubs": [
+        {"name": "Verdes FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Progresso FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Port Loyola FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Belmopan FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Napoles FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Benque Viejo United FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Wagiya SC", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "7 clubs confirmed for the 2025-26 season; Verdes FC are the reigning champions. Belmopan FC was formerly known as Belmopan Bandits (record 9-time champions)."
 }

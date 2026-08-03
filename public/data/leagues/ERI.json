@@ -2,7 +2,7 @@
   "association": "ERI",
   "country": "Eritrea",
   "confederation": "CAF",
-  "season": "unresearched",
+  "season": "2025",
   "leagues": [],
-  "note": "NOT RESEARCHED: the WebSearch tool budget for this session (200/200 calls, shared across concurrent research agents) was exhausted before this association could be covered. This country is known/believed to have an organised national top-flight league (and possibly a second tier); an empty 'leagues' array here reflects a research gap, NOT a confirmed absence of a league. Requires a follow-up research pass with WebSearch capacity to populate per the rules in SCHEMA.md (no club/league may be invented without a WebSearch source)."
+  "note": "PARTIALLY RESEARCHED: the Eritrean Premier League is confirmed as a 12-club top flight, with Denden confirmed as 2025 champions. No other clubs could be individually named in available search results, far short of the 6-club minimum needed for a usable entry. Source consulted: https://en.wikipedia.org/wiki/Eritrean_Premier_League . Requires a follow-up pass to name the remaining clubs."
 }

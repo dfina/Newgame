@@ -2,7 +2,38 @@
   "association": "CGO",
   "country": "Congo",
   "confederation": "CAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "NOT RESEARCHED: the WebSearch tool budget for this session (200/200 calls, shared across concurrent research agents) was exhausted before this association could be covered. This country is known/believed to have an organised national top-flight league (and possibly a second tier); an empty 'leagues' array here reflects a research gap, NOT a confirmed absence of a league. Requires a follow-up research pass with WebSearch capacity to populate per the rules in SCHEMA.md (no club/league may be invented without a WebSearch source)."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Congo Ligue 1 (Championnat National MTN)",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Congo_Ligue_1",
+        "https://us.soccerway.com/republic-of-the-congo/ligue-1/",
+        "https://www.scoresway.com/fr_FR/soccer/1-liga-2025-2026/2qjd8kczy52xua5gu56w47bo/teams",
+        "https://www.soccerpunter.com/results/26445/Republic-of-the-Congo-Ligue-1-2025-2026"
+      ],
+      "clubs": [
+        { "name": "JS Talangaï", "tsdbTeamId": null, "badge": null },
+        { "name": "Étoile du Congo", "tsdbTeamId": null, "badge": null },
+        { "name": "AS Otôho d'Oyo", "tsdbTeamId": null, "badge": null },
+        { "name": "Diables Noirs", "tsdbTeamId": null, "badge": null },
+        { "name": "Jeunesse Unie de Kintélé", "tsdbTeamId": null, "badge": null },
+        { "name": "KFA", "tsdbTeamId": null, "badge": null },
+        { "name": "Racing Club Brazzaville", "tsdbTeamId": null, "badge": null },
+        { "name": "Vegas FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Nouvelle Génération FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Leopards de Dolisie", "tsdbTeamId": null, "badge": null },
+        { "name": "V.Club Mokanda", "tsdbTeamId": null, "badge": null },
+        { "name": "Cheminots FC", "tsdbTeamId": null, "badge": null },
+        { "name": "CARA Brazzaville", "tsdbTeamId": null, "badge": null },
+        { "name": "Red Star FC", "tsdbTeamId": null, "badge": null },
+        { "name": "AC Kondzo", "tsdbTeamId": null, "badge": null },
+        { "name": "Inter Club de Pointe-Noire", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "14-club top division per Wikipedia infobox, though the 2025-26 team list found totals 16 clubs; full list named directly in season team-list sources (scoresway 'Équipes' page)."
+    }
+  ]
 }

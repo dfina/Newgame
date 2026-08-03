@@ -2,7 +2,7 @@
   "association": "GNB",
   "country": "Guinea-Bissau",
   "confederation": "CAF",
-  "season": "unresearched",
+  "season": "2024-25",
   "leagues": [],
-  "note": "NOT RESEARCHED: the WebSearch tool budget for this session (200/200 calls, shared across concurrent research agents) was exhausted before this association could be covered. This country is known/believed to have an organised national top-flight league (and possibly a second tier); an empty 'leagues' array here reflects a research gap, NOT a confirmed absence of a league. Requires a follow-up research pass with WebSearch capacity to populate per the rules in SCHEMA.md (no club/league may be invented without a WebSearch source)."
+  "note": "PARTIALLY RESEARCHED: Campeonato Nacional da Guiné-Bissau (Liga Orange) is confirmed as a 16-club top flight. Only 4 clubs could be reliably tied to the 2024-25 season standings (Sport Bissau e Benfica champions, UD Internacional 2nd, SC Portos de Bissau 4th, FC Tigres de Fronteira 12th); several other named clubs (Benfica Bissau, FC Canchungo, FC Cuntum, FC Sonaco, Flamengo Pefine, Os Balantas Mansôa, SC Bafatá, Sporting CG Bissau, ADR Mansabá, CDR Farim, Estrela Negra Bissau, Lagartos Bambadinca, Nuno Tristão Bula) appeared in a source that could not be confirmed as the same season, so were excluded per the no-season-mixing rule. Short of the 6-club minimum for a usable entry. Sources consulted: https://en.wikipedia.org/wiki/Campeonato_Nacional_da_Guin%C3%A9-Bissau , https://globalsportsarchive.com/en/soccer/competition/liga-orange-bissau-2024-2025/74496 , https://www.national-football-teams.com/old/leagues/79/2025_1/Campeonato_Nacional_Da_Guine_Bissau.html . Requires a follow-up pass with a fresh season-specific source."
 }

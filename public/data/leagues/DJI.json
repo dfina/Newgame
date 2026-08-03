@@ -2,7 +2,30 @@
   "association": "DJI",
   "country": "Djibouti",
   "confederation": "CAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "NOT RESEARCHED: the WebSearch tool budget for this session (200/200 calls, shared across concurrent research agents) was exhausted before this association could be covered. This country is known/believed to have an organised national top-flight league (and possibly a second tier); an empty 'leagues' array here reflects a research gap, NOT a confirmed absence of a league. Requires a follow-up research pass with WebSearch capacity to populate per the rules in SCHEMA.md (no club/league may be invented without a WebSearch source)."
+  "season": "2024-25",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Djibouti Premier League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Djibouti_Premier_League",
+        "https://en.wikipedia.org/wiki/AS_Port",
+        "https://en.wikipedia.org/wiki/CF_Gendarmerie_Nationale",
+        "https://en.wikipedia.org/wiki/AS_Arta/Solar7",
+        "https://en.wikipedia.org/wiki/CF_Garde_R%C3%A9publicaine/SIAF",
+        "https://en.wikipedia.org/wiki/ASAS_Djibouti_T%C3%A9l%C3%A9com"
+      ],
+      "clubs": [
+        { "name": "ASAS Djibouti Télécom", "tsdbTeamId": null, "badge": null },
+        { "name": "AS Arta/Solar7", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Dikhil", "tsdbTeamId": null, "badge": null },
+        { "name": "AS Port", "tsdbTeamId": null, "badge": null },
+        { "name": "CF Gendarmerie Nationale", "tsdbTeamId": null, "badge": null },
+        { "name": "CF Garde Républicaine/SIAF", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "10-club top division; 6 of 10 clubs individually confirmed via 2024-25 final standings (ASAS Djibouti Télécom champions, 1st; AS Arta/Solar7 3rd; FC Dikhil 4th; AS Port 5th; CF Gendarmerie Nationale 6th; Garde Républicaine/SIAF 7th). Remaining 3-4 clubs not confirmed."
+    }
+  ]
 }

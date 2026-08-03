@@ -154,11 +154,13 @@
       "tsdbLeagueId": null,
       "groups": true,
       "verified": false,
-      "note": "Only Girone I (Calabria/Sicilia) had an officially published 2026-27 club list at research time (3 Aug 2026). The other 8 groups (A-H) were not yet officially announced by the LND (composition was due 5 Aug 2026); only unofficial/projected or prior-season (2025-26) compositions were found for those groups and were excluded to avoid inventing unconfirmed clubs. Expected total ~162 clubs across 9 groups of 18; only the 18 confirmed Girone I clubs are included here.",
+      "note": "Girone I (Calabria/Sicilia, 18 clubs) and Girone H (Campania/Puglia, 16 clubs named) had 2026-27 club composition confirmed via search at research time (3 Aug 2026); the LND's full official announcement of all 9 groups (A-I) was due 5 Aug 2026, after this research window. The other 7 groups were not yet confirmed and are excluded to avoid inventing unconfirmed clubs. Expected total ~162 clubs across 9 groups of 18; 34 clubs across 2 groups are included here.",
       "sources": [
         "https://www.lanuovacalabria.it/calcio-tutte-le-squadre-partecipanti-al-campionato-2026-2027-di-serie-d-girone-i",
         "https://www.seried.it/2026/06/serie-d-2026-2027-definite-le-161-squadre-partecipanti/",
-        "https://www.seried.it/2026/07/serie-d-2026-2027-date-chiave-per-organico-e-gironi/"
+        "https://www.seried.it/2026/07/serie-d-2026-2027-date-chiave-per-organico-e-gironi/",
+        "https://www.sportcasertano.it/2026/07/15/serie-d-2026-27-prende-forma-il-girone-h-ecco-la-composizione-piu-probabile/",
+        "https://www.nocerinalive.it/serie-d-2026-27-girone-g-o-h-nocerina-e-concorrenti-ai-raggi-x-chi-ha-costruito-la-rosa-piu-forte/"
       ],
       "clubs": [
         { "name": "Reggina", "tsdbTeamId": null, "badge": null },
@@ -178,7 +180,23 @@
         { "name": "Licata", "tsdbTeamId": null, "badge": null },
         { "name": "Trapani", "tsdbTeamId": null, "badge": null },
         { "name": "Siracusa", "tsdbTeamId": null, "badge": null },
-        { "name": "Avola", "tsdbTeamId": null, "badge": null }
+        { "name": "Avola", "tsdbTeamId": null, "badge": null },
+        { "name": "Gladiator", "tsdbTeamId": null, "badge": null },
+        { "name": "Real Forio", "tsdbTeamId": null, "badge": null },
+        { "name": "Ebolitana", "tsdbTeamId": null, "badge": null },
+        { "name": "Ischia", "tsdbTeamId": null, "badge": null },
+        { "name": "Nocerina", "tsdbTeamId": null, "badge": null },
+        { "name": "Palmese", "tsdbTeamId": null, "badge": null },
+        { "name": "Gelbison", "tsdbTeamId": null, "badge": null },
+        { "name": "Martina", "tsdbTeamId": null, "badge": null },
+        { "name": "Fasano", "tsdbTeamId": null, "badge": null },
+        { "name": "Nardò", "tsdbTeamId": null, "badge": null },
+        { "name": "Gravina", "tsdbTeamId": null, "badge": null },
+        { "name": "Fidelis Andria", "tsdbTeamId": null, "badge": null },
+        { "name": "Virtus Francavilla", "tsdbTeamId": null, "badge": null },
+        { "name": "Manfredonia", "tsdbTeamId": null, "badge": null },
+        { "name": "Bisceglie", "tsdbTeamId": null, "badge": null },
+        { "name": "Brindisi", "tsdbTeamId": null, "badge": null }
       ]
     }
   ]

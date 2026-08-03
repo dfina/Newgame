@@ -2,7 +2,40 @@
   "association": "EQG",
   "country": "Equatorial Guinea",
   "confederation": "CAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "NOT RESEARCHED: the WebSearch tool budget for this session (200/200 calls, shared across concurrent research agents) was exhausted before this association could be covered. This country is known/believed to have an organised national top-flight league (and possibly a second tier); an empty 'leagues' array here reflects a research gap, NOT a confirmed absence of a league. Requires a follow-up research pass with WebSearch capacity to populate per the rules in SCHEMA.md (no club/league may be invented without a WebSearch source)."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Liga Nacional de Fútbol (Equatoguinean Primera División)",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://www.national-football-teams.com/leagues/60/2025/Equatorial_Guinea.html",
+        "https://en.wikipedia.org/wiki/Equatoguinean_Primera_Divisi%C3%B3n",
+        "https://globalsportsarchive.com/en/soccer/competition/liga-nacional-de-futbol-2025-2026/78856",
+        "https://en.wikipedia.org/wiki/Fundaci%C3%B3n_Bata"
+      ],
+      "clubs": [
+        { "name": "Diablo Rojo de Niefang FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Cano Sport Academy", "tsdbTeamId": null, "badge": null },
+        { "name": "EDSA", "tsdbTeamId": null, "badge": null },
+        { "name": "Dragón's FC", "tsdbTeamId": null, "badge": null },
+        { "name": "CD Sony de Elá Nguema", "tsdbTeamId": null, "badge": null },
+        { "name": "Leones Vegetarianos FC", "tsdbTeamId": null, "badge": null },
+        { "name": "San Francisco CF", "tsdbTeamId": null, "badge": null },
+        { "name": "Malabo United FC", "tsdbTeamId": null, "badge": null },
+        { "name": "CD Mongomo", "tsdbTeamId": null, "badge": null },
+        { "name": "Club Unión Vésper", "tsdbTeamId": null, "badge": null },
+        { "name": "Sporting de Guinea Ecuatorial", "tsdbTeamId": null, "badge": null },
+        { "name": "15 de Agosto Akonibe", "tsdbTeamId": null, "badge": null },
+        { "name": "Akonangui FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Atlético Semu", "tsdbTeamId": null, "badge": null },
+        { "name": "CD Unidad Malabo", "tsdbTeamId": null, "badge": null },
+        { "name": "Deportivo Ebenezer", "tsdbTeamId": null, "badge": null },
+        { "name": "Deportivo Evinayong", "tsdbTeamId": null, "badge": null },
+        { "name": "Estrella Roja Malabo", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "24-club top division (LIFGE) for 2025-26; 18 of 24 clubs individually named in search results. Full official roster not cross-checked against FEGUIFUT."
+    }
+  ]
 }

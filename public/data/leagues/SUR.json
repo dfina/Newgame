@@ -2,7 +2,30 @@
   "association": "SUR",
   "country": "Suriname",
   "confederation": "CONCACAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Research not completed: this session's WebSearch budget was exhausted (200/200) before this association could be researched. This does NOT mean no organised national league exists here -- it means verification could not be attempted in this session. Re-run research for this association with a fresh/raised search budget before treating this file as authoritative."
+  "season": "2025",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Suriname Major League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025_Suriname_Major_League",
+        "https://en.wikipedia.org/wiki/SVB_Eerste_Divisie"
+      ],
+      "clubs": [
+        {"name": "Broki", "tsdbTeamId": null, "badge": null},
+        {"name": "Flora", "tsdbTeamId": null, "badge": null},
+        {"name": "Inter Moengotapoe", "tsdbTeamId": null, "badge": null},
+        {"name": "Inter Wanica", "tsdbTeamId": null, "badge": null},
+        {"name": "Leo Victor", "tsdbTeamId": null, "badge": null},
+        {"name": "Notch", "tsdbTeamId": null, "badge": null},
+        {"name": "PVV", "tsdbTeamId": null, "badge": null},
+        {"name": "Robinhood", "tsdbTeamId": null, "badge": null},
+        {"name": "Transvaal", "tsdbTeamId": null, "badge": null},
+        {"name": "Voorwaarts", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "Correction to the assigned league name: research this session found that the 'Suriname Major League' was introduced in 2024 as Suriname's new top-flight competition, with the SVB Eerste Divisie (the league named in the task assignment) now serving as the second-tier/top-amateur competition. This file therefore lists the Suriname Major League (tier 1) instead, with all 10 clubs confirmed for the 2025 season."
 }

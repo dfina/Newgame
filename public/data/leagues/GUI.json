@@ -2,7 +2,7 @@
   "association": "GUI",
   "country": "Guinea",
   "confederation": "CAF",
-  "season": "unresearched",
+  "season": "2025-26",
   "leagues": [],
-  "note": "NOT RESEARCHED: the WebSearch tool budget for this session (200/200 calls, shared across concurrent research agents) was exhausted before this association could be covered. This country is known/believed to have an organised national top-flight league (and possibly a second tier); an empty 'leagues' array here reflects a research gap, NOT a confirmed absence of a league. Requires a follow-up research pass with WebSearch capacity to populate per the rules in SCHEMA.md (no club/league may be invented without a WebSearch source)."
+  "note": "PARTIALLY RESEARCHED: Guinée Championnat National (Ligue 1 Guicopres) is confirmed as a 14-club top flight for 2025-26 (Horoya AC champions for the 21st time; AFA Guinée and Karfamoriah FC promoted). Only 3 clubs could be individually named in available search results, short of the 6-club minimum needed for a usable entry, so no 'leagues' entry is populated. Sources consulted: https://fr.wikipedia.org/wiki/Championnat_de_Guin%C3%A9e_de_football_2025-2026 , https://en.wikipedia.org/wiki/Guin%C3%A9e_Championnat_National , https://www.guinee7.com/2026/05/01/ligue-1-guicopres-le-bilan-chiffre-dune-saison-2025-2026-maitrisee-par-le-horoya-ac/ . Requires a follow-up pass to name the remaining clubs."
 }

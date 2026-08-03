@@ -2,7 +2,32 @@
   "association": "GUY",
   "country": "Guyana",
   "confederation": "CONCACAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Research not completed: this session's WebSearch budget was exhausted (200/200) before this association could be researched. This does NOT mean no organised national league exists here -- it means verification could not be attempted in this session. Re-run research for this association with a fresh/raised search budget before treating this file as authoritative."
+  "season": "2025",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "GFF Elite League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/GFF_Elite_League",
+        "https://globalsportsarchive.com/en/soccer/competition/gff-elite-league-2025/75327",
+        "https://www.rsssf.org/tablesg/guyana2025.html",
+        "https://footystats.org/guyana/gff-elite-league"
+      ],
+      "clubs": [
+        {"name": "Slingerz FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Guyana Police Force FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Guyana Defence Force FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Western Tigers FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Santos FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Monedderlust FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Ann's Grove United FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Den Amstel FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Fruta Conquerors FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Mainstay Goldstar FC", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "Full 10-club final 2025 standings confirmed: Slingerz FC (champions), Guyana Police Force, Guyana Defence Force, Western Tigers, Santos, Monedderlust, Ann's Grove United, Den Amstel, Fruta Conquerors, Mainstay Goldstar (relegated)."
 }

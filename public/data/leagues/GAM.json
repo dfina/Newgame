@@ -2,7 +2,38 @@
   "association": "GAM",
   "country": "Gambia",
   "confederation": "CAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "NOT RESEARCHED: the WebSearch tool budget for this session (200/200 calls, shared across concurrent research agents) was exhausted before this association could be covered. This country is known/believed to have an organised national top-flight league (and possibly a second tier); an empty 'leagues' array here reflects a research gap, NOT a confirmed absence of a league. Requires a follow-up research pass with WebSearch capacity to populate per the rules in SCHEMA.md (no club/league may be invented without a WebSearch source)."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "GFA League First Division",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/GFA_League_First_Division",
+        "https://www.futbol24.com/national/Gambia/GFA-League-First-Division/2025-2026",
+        "https://globalsportsarchive.com/en/soccer/competition/gff-first-division-league-2025-2026/77972",
+        "https://en.wikipedia.org/wiki/Real_de_Banjul_FC"
+      ],
+      "clubs": [
+        { "name": "Gambia Armed Forces FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Banjul United FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Brikama United FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Elite United FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Falcons FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Fortune FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Gambia Ports Authority FC", "tsdbTeamId": null, "badge": null },
+        { "name": "GAMTEL FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Hawks FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Marimoo FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Real de Banjul FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Samger FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Steve Biko FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Team Rhino FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Waa Banjul FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Wallidan FC", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "16-club top division for 2025-26; full roster named directly in search results. Real de Banjul are the 2024-25 champions (15th title); Wallidan holds the record with 16 titles."
+    }
+  ]
 }

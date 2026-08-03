@@ -2,7 +2,39 @@
   "association": "SWZ",
   "country": "Eswatini",
   "confederation": "CAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "NOT RESEARCHED: the WebSearch tool budget for this session (200/200 calls, shared across concurrent research agents) was exhausted before this association could be covered. This country is known/believed to have an organised national top-flight league (and possibly a second tier); an empty 'leagues' array here reflects a research gap, NOT a confirmed absence of a league. Requires a follow-up research pass with WebSearch capacity to populate per the rules in SCHEMA.md (no club/league may be invented without a WebSearch source)."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Premier League of Eswatini (MTN Premier League)",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Premier_League_of_Eswatini",
+        "https://en.wikipedia.org/wiki/Premier_League_of_Eswatini",
+        "https://en.wikipedia.org/wiki/Malanti_Chiefs_F.C.",
+        "https://en.wikipedia.org/wiki/Nsingizini_Hotspurs_F.C.",
+        "https://globalsportsarchive.com/en/soccer/competition/mtn-premier-league-2025-2026/77523"
+      ],
+      "clubs": [
+        { "name": "Nsingizini Hotspurs FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Royal Leopards FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Young Buffaloes FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Green Mamba FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Moneni Pirates FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Mbabane Swallows FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Ubombo Sugar FC (formerly Illovo)", "tsdbTeamId": null, "badge": null },
+        { "name": "Mbabane Highlanders FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Ezulwini United FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Manzini Sea Birds FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Sisonkhe FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Young Rangers FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Malanti Chiefs FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Amawele FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Manzini Wanderers FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Tabankulu Celtics FC", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "16-team league for 2025-26 (Malanti Chiefs, Amawele, Manzini Wanderers, Tabankulu Celtics newly promoted); Nsingizini Hotspurs won the 2025-26 title, defending from 2024-25. Full 16-club roster named directly in search results."
+    }
+  ]
 }

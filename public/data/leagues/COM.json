@@ -2,7 +2,31 @@
   "association": "COM",
   "country": "Comoros",
   "confederation": "CAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "NOT RESEARCHED: the WebSearch tool budget for this session (200/200 calls, shared across concurrent research agents) was exhausted before this association could be covered. This country is known/believed to have an organised national top-flight league (and possibly a second tier); an empty 'leagues' array here reflects a research gap, NOT a confirmed absence of a league. Requires a follow-up research pass with WebSearch capacity to populate per the rules in SCHEMA.md (no club/league may be invented without a WebSearch source)."
+  "season": "2024-25",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Comoros Premier League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Comoros_Premier_League",
+        "https://en.wikipedia.org/wiki/US_Zilimadjou"
+      ],
+      "clubs": [
+        { "name": "US Zilimadjou", "tsdbTeamId": null, "badge": null },
+        { "name": "Alizé Fort", "tsdbTeamId": null, "badge": null },
+        { "name": "Aventure Club", "tsdbTeamId": null, "badge": null },
+        { "name": "Djabal Club", "tsdbTeamId": null, "badge": null },
+        { "name": "Élan Club", "tsdbTeamId": null, "badge": null },
+        { "name": "Étoile des Comores", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Malé", "tsdbTeamId": null, "badge": null },
+        { "name": "Hantsindzi", "tsdbTeamId": null, "badge": null },
+        { "name": "JAC Mitsoudjé", "tsdbTeamId": null, "badge": null },
+        { "name": "Ngaya Club", "tsdbTeamId": null, "badge": null },
+        { "name": "US Ntsaoueni", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "US Zilimadjou confirmed as 2024-25 champions; the other 10 clubs are named as prominent Comoros Premier League participants in search results but their exact concurrent season could not be independently pinned down (league said to have expanded to ~30 clubs for 2025-26). Full current-season roster not confirmed; verified=false pending season alignment check."
+    }
+  ]
 }

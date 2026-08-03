@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-03T14:57:38.716Z",
+ "generated": "2026-08-03T14:58:54.019Z",
  "countries": [
   {
    "code": "AFG",
@@ -177,6 +177,20 @@
    ]
   },
   {
+   "code": "BDI",
+   "country": "Burundi",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Burundi Premier League (Ligue A)",
+     "clubs": 16,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "BEL",
    "country": "Belgium",
    "confederation": "UEFA",
@@ -289,6 +303,20 @@
    ]
   },
   {
+   "code": "BLZ",
+   "country": "Belize",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Premier League of Belize",
+     "clubs": 7,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "BOL",
    "country": "Bolivia",
    "confederation": "CONMEBOL",
@@ -389,6 +417,34 @@
      "name": "Canadian Premier League",
      "clubs": 8,
      "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "CGO",
+   "country": "Congo",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Congo Ligue 1 (Championnat National MTN)",
+     "clubs": 16,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "CHA",
+   "country": "Chad",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Première Division (Ligue de N'Djamena)",
+     "clubs": 9,
+     "verified": false,
      "tsdbLeagueId": null
     }
    ]
@@ -499,6 +555,20 @@
    ]
   },
   {
+   "code": "COM",
+   "country": "Comoros",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Comoros Premier League",
+     "clubs": 11,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "CPV",
    "country": "Cabo Verde",
    "confederation": "CAF",
@@ -583,6 +653,20 @@
    ]
   },
   {
+   "code": "DJI",
+   "country": "Djibouti",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Djibouti Premier League",
+     "clubs": 6,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "ECU",
    "country": "Ecuador",
    "confederation": "CONMEBOL",
@@ -640,6 +724,20 @@
      "tier": 4,
      "name": "EFL League Two",
      "clubs": 24,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "EQG",
+   "country": "Equatorial Guinea",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Liga Nacional de Fútbol (Equatoguinean Primera División)",
+     "clubs": 18,
      "verified": true,
      "tsdbLeagueId": null
     }
@@ -800,6 +898,20 @@
    ]
   },
   {
+   "code": "GAM",
+   "country": "Gambia",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "GFA League First Division",
+     "clubs": 16,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "GEO",
    "country": "Georgia",
    "confederation": "UEFA",
@@ -836,6 +948,13 @@
      "tier": 3,
      "name": "3. Liga",
      "clubs": 18,
+     "verified": false,
+     "tsdbLeagueId": null
+    },
+    {
+     "tier": 4,
+     "name": "Regionalliga",
+     "clubs": 56,
      "verified": false,
      "tsdbLeagueId": null
     }
@@ -900,6 +1019,20 @@
      "name": "Liga Nacional de Guatemala (Liga Bantrab)",
      "clubs": 11,
      "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "GUY",
+   "country": "Guyana",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "GFF Elite League",
+     "clubs": 10,
+     "verified": true,
      "tsdbLeagueId": null
     }
    ]
@@ -1073,7 +1206,7 @@
     {
      "tier": 4,
      "name": "Serie D",
-     "clubs": 18,
+     "clubs": 34,
      "verified": false,
      "tsdbLeagueId": null
     }
@@ -1976,6 +2109,20 @@
    ]
   },
   {
+   "code": "SLV",
+   "country": "El Salvador",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Primera División de El Salvador",
+     "clubs": 7,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "SMR",
    "country": "San Marino",
    "confederation": "UEFA",
@@ -2081,6 +2228,20 @@
    ]
   },
   {
+   "code": "SUR",
+   "country": "Suriname",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Suriname Major League",
+     "clubs": 10,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "SVK",
    "country": "Slovakia",
    "confederation": "UEFA",
@@ -2116,6 +2277,20 @@
     {
      "tier": 1,
      "name": "Allsvenskan",
+     "clubs": 16,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "SWZ",
+   "country": "Eswatini",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Premier League of Eswatini (MTN Premier League)",
      "clubs": 16,
      "verified": true,
      "tsdbLeagueId": null

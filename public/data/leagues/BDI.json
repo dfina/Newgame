@@ -2,7 +2,39 @@
   "association": "BDI",
   "country": "Burundi",
   "confederation": "CAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "NOT RESEARCHED: the WebSearch tool budget for this session (200/200 calls, shared across concurrent research agents) was exhausted before this association could be covered. This country is known/believed to have an organised national top-flight league (and possibly a second tier); an empty 'leagues' array here reflects a research gap, NOT a confirmed absence of a league. Requires a follow-up research pass with WebSearch capacity to populate per the rules in SCHEMA.md (no club/league may be invented without a WebSearch source)."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Burundi Premier League (Ligue A)",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://footystats.org/burundi/burundi-premier-league",
+        "https://www.aiscore.com/tournament-burundi-premier-league/8vmqy9ip6xiek9r",
+        "https://en.wikipedia.org/wiki/Burundi_Ligue_A",
+        "https://en.wikipedia.org/wiki/Muzinga_FC",
+        "https://en.wikipedia.org/wiki/Bujumbura_City_FC"
+      ],
+      "clubs": [
+        { "name": "Aigle Noir Makamba", "tsdbTeamId": null, "badge": null },
+        { "name": "Rukinzo FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Bumamuru FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Royal Vision FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Vital'O FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Flambeau du Centre", "tsdbTeamId": null, "badge": null },
+        { "name": "Musongati FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Kayanza United FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Muzinga FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Ngozi City FC", "tsdbTeamId": null, "badge": null },
+        { "name": "AS Inter Star", "tsdbTeamId": null, "badge": null },
+        { "name": "Green Farmers FC", "tsdbTeamId": null, "badge": null },
+        { "name": "BS Dynamic FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Le Messager Ngozi", "tsdbTeamId": null, "badge": null },
+        { "name": "Olympique Star FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Garage FC", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "16-team league, 30 rounds home/away, 2025-26 season; Aigle Noir Makamba are the current champions. Full 16-club roster named in search results."
+    }
+  ]
 }

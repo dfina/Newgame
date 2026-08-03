@@ -2,7 +2,7 @@
   "association": "HAI",
   "country": "Haiti",
   "confederation": "CONCACAF",
-  "season": "unresearched",
+  "season": "2025-26",
   "leagues": [],
-  "note": "Research not completed: this session's WebSearch budget was exhausted (200/200) before this association could be researched. This does NOT mean no organised national league exists here -- it means verification could not be attempted in this session. Re-run research for this association with a fresh/raised search budget before treating this file as authoritative."
+  "note": "Researched this session: the Ligue Haitienne is Haiti's top division, founded 1937, currently with 18 clubs. Only the 2025-26 Serie de Cloture champions, Violette AC, could be confirmed as playing in the current season; other well-known clubs (Racing Club Haitien, Don Bosco, Baltimore SC, Victory SC, Cavaly AS) appeared only in historical-championship context, not confirmed as 2025-26 season participants, so were not included per the no-invented-clubs rule. Insufficient (1 confirmed) to populate a usable club list; leagues left empty per the 6-club minimum rule. Sources: https://en.wikipedia.org/wiki/Ligue_Ha%C3%AFtienne"
 }

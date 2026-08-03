@@ -2,7 +2,28 @@
   "association": "SLV",
   "country": "El Salvador",
   "confederation": "CONCACAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Research not completed: this session's WebSearch budget was exhausted (200/200) before this association could be researched. This does NOT mean no organised national league exists here -- it means verification could not be attempted in this session. Re-run research for this association with a fresh/raised search budget before treating this file as authoritative."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Primera División de El Salvador",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Primera_Divisi%C3%B3n_de_El_Salvador",
+        "https://www.espn.com/soccer/standings/_/league/slv.1",
+        "https://www.soccerway.com/el-salvador/primera-division/"
+      ],
+      "clubs": [
+        {"name": "FAS", "tsdbTeamId": null, "badge": null},
+        {"name": "Alianza", "tsdbTeamId": null, "badge": null},
+        {"name": "Aguila", "tsdbTeamId": null, "badge": null},
+        {"name": "LA Firpo", "tsdbTeamId": null, "badge": null},
+        {"name": "Isidro Metapan", "tsdbTeamId": null, "badge": null},
+        {"name": "Platense", "tsdbTeamId": null, "badge": null},
+        {"name": "Municipal Limeno", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "2025-26 season split into Apertura (LA Firpo champions) and Clausura (FAS champions), running July 2025-May 2026. 7 of the league's clubs confirmed by name this session; new/promoted sides Inter FA, Zacatecoluca and Hercules were also mentioned but with conflicting promoted/relegated status, so were not included."
 }

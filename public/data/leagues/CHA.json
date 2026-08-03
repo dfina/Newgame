@@ -2,7 +2,33 @@
   "association": "CHA",
   "country": "Chad",
   "confederation": "CAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "NOT RESEARCHED: the WebSearch tool budget for this session (200/200 calls, shared across concurrent research agents) was exhausted before this association could be covered. This country is known/believed to have an organised national top-flight league (and possibly a second tier); an empty 'leagues' array here reflects a research gap, NOT a confirmed absence of a league. Requires a follow-up research pass with WebSearch capacity to populate per the rules in SCHEMA.md (no club/league may be invented without a WebSearch source)."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Première Division (Ligue de N'Djamena)",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://www.national-football-teams.com/app.php/leagues/40/2025_1/Chad.html",
+        "https://www.national-football-teams.com/club/5057/2025_1/Tourbillon_Ndjamena.html",
+        "https://www.national-football-teams.com/club/11957/2025_1/Foullah_Edifice_Ndjamena.html",
+        "https://www.national-football-teams.com/club/8720/2025_1/Ascot_Ndjamena.html",
+        "https://www.national-football-teams.com/club/30650/2025_1/Psi_Ndjamena.html",
+        "https://www.sofascore.com/football/tournament/chad/premiere-division-de-n-djamena/22106"
+      ],
+      "clubs": [
+        { "name": "Tourbillon FC (N'Djamena)", "tsdbTeamId": null, "badge": null },
+        { "name": "Foullah Édifice FC (N'Djamena)", "tsdbTeamId": null, "badge": null },
+        { "name": "ASCOT FC (N'Djamena)", "tsdbTeamId": null, "badge": null },
+        { "name": "PSI FC (N'Djamena)", "tsdbTeamId": null, "badge": null },
+        { "name": "Aiglons FC (N'Djamena)", "tsdbTeamId": null, "badge": null },
+        { "name": "Gazelle FC (N'Djamena)", "tsdbTeamId": null, "badge": null },
+        { "name": "Renaissance FC (N'Djamena)", "tsdbTeamId": null, "badge": null },
+        { "name": "CotonTchad FC (N'Djamena)", "tsdbTeamId": null, "badge": null },
+        { "name": "Postel 2000 FC (N'Djamena)", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "Chad's effective top flight is organised as the Première Division de la Ligue de N'Djamena (the capital-region league that functions as the de facto national tier 1, per tracked sources); a separate 'Chad Premier League'/LINAFOOT national structure exists historically but a distinct current-season roster for it was not found. 9 clubs individually named for 2025-26 sharing the same home stadium/zone. verified=false pending confirmation that this is the full recognised national tier 1 rather than a regional zone."
+    }
+  ]
 }
