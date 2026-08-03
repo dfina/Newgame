@@ -33,6 +33,25 @@
         {"name": "Zagłębie Lubin", "tsdbTeamId": null, "badge": null},
         {"name": "Piast Gliwice", "tsdbTeamId": null, "badge": null}
       ]
+    },
+    {
+      "tier": 2,
+      "name": "I liga",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_I_liga",
+        "https://nowiny24.pl/stal-rzeszow-zaprasza-na-inauguracje-sezonu-na-poczatek-chrobry-glogow-kadra-na-sezon-2026-2027/ar/c2p2-29208401"
+      ],
+      "clubs": [
+        {"name": "Lechia Gdańsk", "tsdbTeamId": null, "badge": null},
+        {"name": "Arka Gdynia", "tsdbTeamId": null, "badge": null},
+        {"name": "Bruk-Bet Termalica Nieciecza", "tsdbTeamId": null, "badge": null},
+        {"name": "Unia Skierniewice", "tsdbTeamId": null, "badge": null},
+        {"name": "Warta Poznań", "tsdbTeamId": null, "badge": null},
+        {"name": "Chrobry Głogów", "tsdbTeamId": null, "badge": null},
+        {"name": "Stal Rzeszów", "tsdbTeamId": null, "badge": null}
+      ]
     }
   ]
 }

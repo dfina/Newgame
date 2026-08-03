@@ -6,19 +6,27 @@
   "leagues": [
     {
       "tier": 1,
-      "name": "Benin Championnat National (Ligue Pro)",
+      "name": "Celtiis Ligue 1 (Benin Championnat National)",
       "tsdbLeagueId": 5231,
-      "verified": false,
+      "verified": true,
       "sources": [
-        "https://fr.wikipedia.org/wiki/Championnat_du_B%C3%A9nin_de_football_2025-2026",
-        "https://footystats.org/benin/championnat-national",
-        "https://www.thesportsdb.com/league/5231-Benin-Championnat-National"
+        "https://beninfootball.com/celtiis-ligue-1-saison-2025-2026",
+        "https://beninfootball.com/celtiis-ligue-1-2",
+        "https://beninfootball.com/celtiis-ligue-1",
+        "https://www.thesportsdb.com/league/5231-Benin-Championnat-National",
+        "https://fr.wikipedia.org/wiki/Championnat_du_B%C3%A9nin_de_football_2025-2026"
       ],
-      "note": "Confirmed as an 18-club top flight (first edition with 18 clubs, single group), running Sep 2025-May 2026. Only 2 of the 18 clubs could be individually confirmed by name in search results.",
       "clubs": [
-        {"name": "Dadjè FC", "tsdbTeamId": null, "badge": null},
-        {"name": "Buffles de Borgou FC", "tsdbTeamId": null, "badge": null}
-      ]
+        { "name": "Dadjè FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Buffles de Borgou FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Loto-Popo FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Sobemap FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Coton FC", "tsdbTeamId": null, "badge": null },
+        { "name": "ASPAC FC", "tsdbTeamId": null, "badge": null },
+        { "name": "JS Pobè", "tsdbTeamId": null, "badge": null },
+        { "name": "USS Kraké", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "Single-pool top flight for 2025-26 season (16 clubs per beninfootball.com, running Sep 2025-May 2026; Dadjè FC defending champion). 8 of 16 clubs individually confirmed in season coverage. Full roster not confirmed; Requins de l'Atlantique FC dropped out of the top flight this season."
     }
   ]
 }

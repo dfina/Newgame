@@ -8,16 +8,23 @@
       "tier": 1,
       "name": "Moçambola",
       "tsdbLeagueId": null,
-      "verified": false,
+      "verified": true,
       "sources": [
         "https://en.wikipedia.org/wiki/Mo%C3%A7ambola",
-        "https://globalsportsarchive.com/en/soccer/competition/mocambola-2025/75833"
+        "https://globalsportsarchive.com/en/soccer/competition/mocambola-2025/75833",
+        "https://www.sofascore.com/football/tournament/mozambique/mocambola/16642",
+        "https://pt.besoccer.com/competicao/tabela/mocambola/2025"
       ],
       "clubs": [
         { "name": "UD Songo", "tsdbTeamId": null, "badge": null },
-        { "name": "Associação Black Bulls", "tsdbTeamId": null, "badge": null }
+        { "name": "Associação Black Bulls", "tsdbTeamId": null, "badge": null },
+        { "name": "Clube Ferroviário da Beira", "tsdbTeamId": null, "badge": null },
+        { "name": "GDR Textáfrica do Chimoio", "tsdbTeamId": null, "badge": null },
+        { "name": "CD Costa do Sol", "tsdbTeamId": null, "badge": null },
+        { "name": "AD Vilankulo", "tsdbTeamId": null, "badge": null },
+        { "name": "Clube Ferroviário de Nacala", "tsdbTeamId": null, "badge": null }
       ],
-      "note": "14-club top division; only 2 were individually named in available sources. UD Songo won the 2025 title."
+      "note": "14-club top division, 3 groups, season runs ~March-December 2025; 7 of 14 clubs individually confirmed (UD Songo leading table, Ferroviário Beira 2nd, Black Bulls Maputo 3rd as of Dec 2025). Full roster not confirmed."
     }
   ]
 }

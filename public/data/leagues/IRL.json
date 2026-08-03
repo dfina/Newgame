@@ -2,7 +2,29 @@
   "association": "IRL",
   "country": "Republic of Ireland",
   "confederation": "UEFA",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (200/200) was exhausted before this association could be covered. No clubs or leagues were invented per task rules; leagues left empty pending a follow-up session with search capacity."
+  "season": "2026",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "League of Ireland Premier Division",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_League_of_Ireland_Premier_Division",
+        "https://en.wikipedia.org/wiki/2025_League_of_Ireland_Premier_Division"
+      ],
+      "clubs": [
+        { "name": "Shamrock Rovers", "tsdbTeamId": null, "badge": null, "colors": ["#005C33", "#FFFFFF"] },
+        { "name": "Dundalk", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#000000"] },
+        { "name": "Shelbourne", "tsdbTeamId": null, "badge": null, "colors": ["#D2122E", "#FFFFFF"] },
+        { "name": "Galway United", "tsdbTeamId": null, "badge": null, "colors": ["#8B0000", "#FFFFFF"] },
+        { "name": "Bohemians", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#D2122E"] },
+        { "name": "Derry City", "tsdbTeamId": null, "badge": null, "colors": ["#D2122E", "#FFFFFF"] },
+        { "name": "St Patrick's Athletic", "tsdbTeamId": null, "badge": null, "colors": ["#D2122E", "#FFFFFF"] },
+        { "name": "Sligo Rovers", "tsdbTeamId": null, "badge": null, "colors": ["#D2122E", "#000000"] },
+        { "name": "Drogheda United", "tsdbTeamId": null, "badge": null },
+        { "name": "Waterford", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

@@ -36,6 +36,25 @@
         { "name": "Avispa Fukuoka", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FDB913"] },
         { "name": "V-Varen Nagasaki", "tsdbTeamId": null, "badge": null }
       ]
+    },
+    {
+      "tier": 2,
+      "name": "J2 League",
+      "tsdbLeagueId": 4824,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_J2_League",
+        "https://en.wikipedia.org/wiki/2025_J3_League",
+        "https://www.thesportsdb.com/league/4824-japanese-j2-league"
+      ],
+      "clubs": [
+        { "name": "Albirex Niigata", "tsdbTeamId": null, "badge": null },
+        { "name": "Shonan Bellmare", "tsdbTeamId": null, "badge": null },
+        { "name": "Yokohama FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Tochigi City FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Vanraure Hachinohe", "tsdbTeamId": null, "badge": null },
+        { "name": "Tegevajaro Miyazaki", "tsdbTeamId": null, "badge": null }
+      ]
     }
   ]
 }

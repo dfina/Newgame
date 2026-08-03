@@ -38,6 +38,25 @@
         { "name": "Santos", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#000000"] },
         { "name": "Atlético Mineiro", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] }
       ]
+    },
+    {
+      "tier": 2,
+      "name": "Campeonato Brasileiro Série B",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_Campeonato_Brasileiro_S%C3%A9rie_B"
+      ],
+      "clubs": [
+        { "name": "Londrina", "tsdbTeamId": null, "badge": null },
+        { "name": "Náutico", "tsdbTeamId": null, "badge": null },
+        { "name": "Ponte Preta", "tsdbTeamId": null, "badge": null },
+        { "name": "São Bernardo", "tsdbTeamId": null, "badge": null },
+        { "name": "Juventude", "tsdbTeamId": null, "badge": null, "colors": ["#00693E", "#FFFFFF"] },
+        { "name": "Sport", "tsdbTeamId": null, "badge": null, "colors": ["#E30613", "#000000"] },
+        { "name": "Fortaleza", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#E30613"] },
+        { "name": "Ceará", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] }
+      ]
     }
   ]
 }

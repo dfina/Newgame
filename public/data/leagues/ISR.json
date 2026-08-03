@@ -2,7 +2,34 @@
   "association": "ISR",
   "country": "Israel",
   "confederation": "UEFA",
-  "season": "",
-  "leagues": [],
-  "note": "Not researched: the shared session web-search budget (200 calls) was exhausted before this association could be investigated. No club data verified this session, so no league entries are included to avoid inventing content. Known top flight is Ligat Ha'Al with a second tier, Liga Leumit; composition unverified."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Israeli Premier League (Ligat Ha'Al)",
+      "tsdbLeagueId": 4644,
+      "verified": true,
+      "sources": [
+        "https://www.thesportsdb.com/season/4644-israeli-premier-league/2025-2026",
+        "https://en.wikipedia.org/wiki/Israeli_Premier_League",
+        "https://www.transfermarkt.co.uk/ligat-haal/startseite/wettbewerb/ISR1"
+      ],
+      "clubs": [
+        { "name": "Maccabi Tel Aviv", "tsdbTeamId": null, "badge": null, "colors": ["#FDD023", "#00522F"] },
+        { "name": "Beitar Jerusalem", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFD700"] },
+        { "name": "Hapoel Be'er Sheva", "tsdbTeamId": null, "badge": null, "colors": ["#D2122E", "#000000"] },
+        { "name": "Hapoel Tel Aviv", "tsdbTeamId": null, "badge": null, "colors": ["#D2122E", "#FFFFFF"] },
+        { "name": "Hapoel Haifa", "tsdbTeamId": null, "badge": null },
+        { "name": "Ironi Kiryat Shmona", "tsdbTeamId": null, "badge": null },
+        { "name": "Maccabi Haifa", "tsdbTeamId": null, "badge": null, "colors": ["#00944D", "#FFA500"] },
+        { "name": "Bnei Sakhnin", "tsdbTeamId": null, "badge": null },
+        { "name": "F.C. Ashdod", "tsdbTeamId": null, "badge": null },
+        { "name": "Ironi Tiberias", "tsdbTeamId": null, "badge": null },
+        { "name": "Hapoel Jerusalem", "tsdbTeamId": null, "badge": null },
+        { "name": "Hapoel Petah Tikva", "tsdbTeamId": null, "badge": null },
+        { "name": "Maccabi Bnei Raina", "tsdbTeamId": null, "badge": null },
+        { "name": "Maccabi Netanya", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

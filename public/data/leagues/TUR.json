@@ -33,6 +33,24 @@
         {"name": "Samsunspor", "tsdbTeamId": null, "badge": null, "colors": ["#E30613", "#FFFFFF"]},
         {"name": "Trabzonspor", "tsdbTeamId": null, "badge": null, "colors": ["#7A1F2B", "#0F0F70"]}
       ]
+    },
+    {
+      "tier": 2,
+      "name": "TFF 1. Lig",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_TFF_1._Lig"
+      ],
+      "clubs": [
+        {"name": "Antalyaspor", "tsdbTeamId": null, "badge": null},
+        {"name": "Kayserispor", "tsdbTeamId": null, "badge": null},
+        {"name": "Fatih Karagümrük", "tsdbTeamId": null, "badge": null},
+        {"name": "Bursaspor", "tsdbTeamId": null, "badge": null, "colors": ["#00A651", "#FFFFFF"]},
+        {"name": "Batman Petrolspor", "tsdbTeamId": null, "badge": null},
+        {"name": "Mardin 1969 Spor", "tsdbTeamId": null, "badge": null},
+        {"name": "Muğlaspor", "tsdbTeamId": null, "badge": null}
+      ]
     }
   ]
 }

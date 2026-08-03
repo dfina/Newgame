@@ -2,7 +2,31 @@
   "association": "WAL",
   "country": "Wales",
   "confederation": "UEFA",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (200/200) was exhausted before this association could be covered. No clubs or leagues were invented per task rules; leagues left empty pending a follow-up session with search capacity."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Cymru Premier",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Cymru_Premier",
+        "https://faw.cymru/cymru-leagues/news/2025-26-jd-cymru-leagues-composition-confirmed/"
+      ],
+      "clubs": [
+        { "name": "The New Saints", "tsdbTeamId": null, "badge": null, "colors": ["#00A650", "#FFFFFF"] },
+        { "name": "Bala Town", "tsdbTeamId": null, "badge": null },
+        { "name": "Barry Town United", "tsdbTeamId": null, "badge": null },
+        { "name": "Briton Ferry Llansawel", "tsdbTeamId": null, "badge": null },
+        { "name": "Caernarfon Town", "tsdbTeamId": null, "badge": null },
+        { "name": "Cardiff Met", "tsdbTeamId": null, "badge": null },
+        { "name": "Colwyn Bay", "tsdbTeamId": null, "badge": null },
+        { "name": "Connah's Quay Nomads", "tsdbTeamId": null, "badge": null },
+        { "name": "Flint Town United", "tsdbTeamId": null, "badge": null },
+        { "name": "Haverfordwest County", "tsdbTeamId": null, "badge": null },
+        { "name": "Llanelli Town", "tsdbTeamId": null, "badge": null },
+        { "name": "Penybont", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

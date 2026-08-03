@@ -27,6 +27,27 @@
         {"name": "St Johnstone", "tsdbTeamId": null, "badge": null, "colors": ["#1E4B8F", "#FFD200"]},
         {"name": "St Mirren", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"]}
       ]
+    },
+    {
+      "tier": 2,
+      "name": "Scottish Championship",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Scottish_Championship"
+      ],
+      "clubs": [
+        {"name": "Arbroath", "tsdbTeamId": null, "badge": null},
+        {"name": "Ayr United", "tsdbTeamId": null, "badge": null},
+        {"name": "Dunfermline Athletic", "tsdbTeamId": null, "badge": null},
+        {"name": "Greenock Morton", "tsdbTeamId": null, "badge": null},
+        {"name": "Inverness Caledonian Thistle", "tsdbTeamId": null, "badge": null},
+        {"name": "Livingston", "tsdbTeamId": null, "badge": null},
+        {"name": "Partick Thistle", "tsdbTeamId": null, "badge": null},
+        {"name": "Queen's Park", "tsdbTeamId": null, "badge": null},
+        {"name": "Raith Rovers", "tsdbTeamId": null, "badge": null},
+        {"name": "Stenhousemuir", "tsdbTeamId": null, "badge": null}
+      ]
     }
   ]
 }

@@ -44,15 +44,19 @@
       "verified": false,
       "sources": [
         "https://en.wikipedia.org/wiki/2026%E2%80%9327_Challenger_Pro_League",
-        "https://en.wikipedia.org/wiki/RWDM_Brussels"
+        "https://en.wikipedia.org/wiki/RWDM_Brussels",
+        "https://www.worldfootball.net/competition/co131/belgium-challenger-pro-league/"
       ],
       "clubs": [
         {"name": "Virton", "tsdbTeamId": null, "badge": null},
         {"name": "Hasselt", "tsdbTeamId": null, "badge": null},
         {"name": "FCV Dender EH", "tsdbTeamId": null, "badge": null},
-        {"name": "Club NXT", "tsdbTeamId": null, "badge": null}
+        {"name": "Club NXT", "tsdbTeamId": null, "badge": null},
+        {"name": "Lierse", "tsdbTeamId": null, "badge": null},
+        {"name": "Jong Genk", "tsdbTeamId": null, "badge": null},
+        {"name": "Royal Francs Borains", "tsdbTeamId": null, "badge": null}
       ]
     }
   ],
-  "note": "Pro League: 17 of the 18 clubs for 2026-27 were confirmed by name across sources (16 incumbents minus relegated Dender EH, plus promoted Beveren, Kortrijk and Lommel); the 18th club could not be identified this session, so the league is marked unverified despite the near-complete list. Challenger Pro League: only 4 clubs (2 promoted from Belgian Division 1, relegated Dender EH, and Club NXT which was spared relegation) could be confirmed by name before the search budget for this session ran out; the remaining ~11-13 clubs are unconfirmed."
+  "note": "Pro League: 17 of the 18 clubs for 2026-27 were confirmed by name across sources (16 incumbents minus relegated Dender EH, plus promoted Beveren, Kortrijk and Lommel); the 18th club could not be identified this session, so the league is marked unverified despite the near-complete list. Challenger Pro League has roughly 15 clubs; 7 were confirmed by name this session (Virton and Hasselt promoted from Belgian Division 1; Dender EH relegated from Pro League; Club NXT spared relegation after RWDM Brussels lost its licence; Lierse, Jong Genk, and Royal Francs Borains per worldfootball.net); the remaining ~8 clubs are unconfirmed."
 }

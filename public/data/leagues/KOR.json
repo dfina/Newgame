@@ -28,6 +28,35 @@
         { "name": "FC Seoul", "tsdbTeamId": null, "badge": null, "colors": ["#E2231A", "#000000"] },
         { "name": "Ulsan HD", "tsdbTeamId": null, "badge": null, "colors": ["#003C7C", "#F9A01B"] }
       ]
+    },
+    {
+      "tier": 2,
+      "name": "K League 2",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_K_League_2",
+        "https://www.worldfootball.net/competition/co3424/south-korea-k-league-2/"
+      ],
+      "clubs": [
+        { "name": "Busan IPark", "tsdbTeamId": null, "badge": null },
+        { "name": "Suwon Samsung Bluewings", "tsdbTeamId": null, "badge": null },
+        { "name": "Suwon FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Seoul E-Land FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Daegu FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Hwaseong FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Gimpo FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Chungnam Asan", "tsdbTeamId": null, "badge": null },
+        { "name": "Gyeongnam FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Seongnam FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Cheonan City", "tsdbTeamId": null, "badge": null },
+        { "name": "Yongin FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Gimhae FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Paju Frontier", "tsdbTeamId": null, "badge": null },
+        { "name": "Jeonnam Dragons", "tsdbTeamId": null, "badge": null },
+        { "name": "Chungbuk Cheongju", "tsdbTeamId": null, "badge": null },
+        { "name": "Ansan Greeners", "tsdbTeamId": null, "badge": null }
+      ]
     }
   ]
 }

@@ -82,12 +82,17 @@
       "name": "EFL League One",
       "tsdbLeagueId": null,
       "verified": false,
+      "note": "23 of 24 clubs confirmed via search snippets (official club/league sources); the final 24th club (one of the 17 'returning' sides) could not be pinned down within the search budget.",
       "sources": [
         "https://en.wikipedia.org/wiki/2025%E2%80%9326_EFL_League_One",
         "https://en.wikipedia.org/wiki/Category:2025%E2%80%9326_EFL_League_One_by_team",
         "https://football.fandom.com/wiki/2026%E2%80%9327_EFL_League_One",
         "https://www.matchbingo.co.uk/blog/league-one-and-league-two-promotion-race-202526-who-is-going-up",
-        "https://en.wikipedia.org/wiki/2025%E2%80%9326_EFL_Championship"
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_EFL_Championship",
+        "https://www.barnsleyfc.co.uk/news/2026/may/26/2026-27-efl-league-one-line-up/",
+        "https://www.burtonalbionfc.co.uk/news/2026/may/03/2026-27-sky-bet-league-one-lineup-update/",
+        "https://footballleagueworld.co.uk/the-predicted-202627-efl-league-one-table-based-on-the-bookmakers-odds/",
+        "https://www.squawka.com/en/news/league-one-predicted-table-2026-27/"
       ],
       "clubs": [
         { "name": "Stockport County", "tsdbTeamId": null, "badge": null },
@@ -100,19 +105,33 @@
         { "name": "Bromley", "tsdbTeamId": null, "badge": null },
         { "name": "MK Dons", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] },
         { "name": "Cambridge United", "tsdbTeamId": null, "badge": null, "colors": ["#F9A01B", "#000000"] },
-        { "name": "Notts County", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] }
+        { "name": "Notts County", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] },
+        { "name": "Barnsley", "tsdbTeamId": null, "badge": null, "colors": ["#D2122E", "#FFFFFF"] },
+        { "name": "Blackpool", "tsdbTeamId": null, "badge": null, "colors": ["#FF7900", "#FFFFFF"] },
+        { "name": "Burton Albion", "tsdbTeamId": null, "badge": null, "colors": ["#FFD700", "#000000"] },
+        { "name": "Doncaster Rovers", "tsdbTeamId": null, "badge": null, "colors": ["#DC0714", "#FFFFFF"] },
+        { "name": "Huddersfield Town", "tsdbTeamId": null, "badge": null, "colors": ["#0F5EA2", "#FFFFFF"] },
+        { "name": "Leyton Orient", "tsdbTeamId": null, "badge": null, "colors": ["#DA020E", "#FFFFFF"] },
+        { "name": "Luton Town", "tsdbTeamId": null, "badge": null, "colors": ["#F78F1E", "#002D62"] },
+        { "name": "Mansfield Town", "tsdbTeamId": null, "badge": null, "colors": ["#FFD700", "#0000FF"] },
+        { "name": "Peterborough United", "tsdbTeamId": null, "badge": null, "colors": ["#0056A3", "#FFFFFF"] },
+        { "name": "Plymouth Argyle", "tsdbTeamId": null, "badge": null, "colors": ["#005A2B", "#FFFFFF"] },
+        { "name": "Reading", "tsdbTeamId": null, "badge": null, "colors": ["#004494", "#FFFFFF"] },
+        { "name": "Wycombe Wanderers", "tsdbTeamId": null, "badge": null, "colors": ["#0000FF", "#87CEEB"] }
       ]
     },
     {
       "tier": 4,
       "name": "EFL League Two",
       "tsdbLeagueId": null,
-      "verified": false,
+      "verified": true,
       "sources": [
         "https://www.fleetwoodtownfc.com/2026-27-sky-bet-league-two-line-up-confirmed/",
         "https://en.wikipedia.org/wiki/2025%E2%80%9326_EFL_League_One",
         "https://groundhopperguides.com/promotions-relegations-and-european-places-in-england-2025-26-season/",
-        "https://www.matchbingo.co.uk/blog/league-one-and-league-two-promotion-race-202526-who-is-going-up"
+        "https://www.matchbingo.co.uk/blog/league-one-and-league-two-promotion-race-202526-who-is-going-up",
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_EFL_League_Two",
+        "https://www.skysports.com/football/news/11750/13552231/league-two-2026-27-season-fixtures-dates-schedule-and-how-to-watch"
       ],
       "clubs": [
         { "name": "Rotherham United", "tsdbTeamId": null, "badge": null, "colors": ["#EE2E24", "#FFFFFF"] },
@@ -120,7 +139,25 @@
         { "name": "Exeter City", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] },
         { "name": "Northampton Town", "tsdbTeamId": null, "badge": null, "colors": ["#800000", "#FFFFFF"] },
         { "name": "York City", "tsdbTeamId": null, "badge": null },
-        { "name": "Rochdale", "tsdbTeamId": null, "badge": null, "colors": ["#00538C", "#FFFFFF"] }
+        { "name": "Rochdale", "tsdbTeamId": null, "badge": null, "colors": ["#00538C", "#FFFFFF"] },
+        { "name": "Accrington Stanley", "tsdbTeamId": null, "badge": null, "colors": ["#E30613", "#FFFFFF"] },
+        { "name": "Barnet", "tsdbTeamId": null, "badge": null, "colors": ["#FBEE23", "#000000"] },
+        { "name": "Bristol Rovers", "tsdbTeamId": null, "badge": null, "colors": ["#0F4A9C", "#FFFFFF"] },
+        { "name": "Cheltenham Town", "tsdbTeamId": null, "badge": null, "colors": ["#DA1710", "#FFFFFF"] },
+        { "name": "Chesterfield", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"] },
+        { "name": "Colchester United", "tsdbTeamId": null, "badge": null, "colors": ["#004B87", "#FFFFFF"] },
+        { "name": "Crawley Town", "tsdbTeamId": null, "badge": null, "colors": ["#DA020E", "#FFFFFF"] },
+        { "name": "Crewe Alexandra", "tsdbTeamId": null, "badge": null, "colors": ["#DA020E", "#FFFFFF"] },
+        { "name": "Fleetwood Town", "tsdbTeamId": null, "badge": null, "colors": ["#DC1E35", "#FFFFFF"] },
+        { "name": "Gillingham", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"] },
+        { "name": "Grimsby Town", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] },
+        { "name": "Newport County", "tsdbTeamId": null, "badge": null, "colors": ["#F9A01B", "#000000"] },
+        { "name": "Oldham Athletic", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"] },
+        { "name": "Salford City", "tsdbTeamId": null, "badge": null, "colors": ["#B41E30", "#FFFFFF"] },
+        { "name": "Shrewsbury Town", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFD700"] },
+        { "name": "Swindon Town", "tsdbTeamId": null, "badge": null, "colors": ["#DA020E", "#FFFFFF"] },
+        { "name": "Tranmere Rovers", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#0033A0"] },
+        { "name": "Walsall", "tsdbTeamId": null, "badge": null, "colors": ["#800000", "#FFD700"] }
       ]
     }
   ]

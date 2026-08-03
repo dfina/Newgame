@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-03T14:43:49.390Z",
+ "generated": "2026-08-03T14:55:25.669Z",
  "countries": [
   {
    "code": "AFG",
@@ -173,6 +173,27 @@
      "clubs": 17,
      "verified": false,
      "tsdbLeagueId": null
+    },
+    {
+     "tier": 2,
+     "name": "Challenger Pro League",
+     "clubs": 7,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "BEN",
+   "country": "Benin",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Celtiis Ligue 1 (Benin Championnat National)",
+     "clubs": 8,
+     "verified": true,
+     "tsdbLeagueId": 5231
     }
    ]
   },
@@ -292,6 +313,13 @@
      "clubs": 20,
      "verified": true,
      "tsdbLeagueId": null
+    },
+    {
+     "tier": 2,
+     "name": "Campeonato Brasileiro Série B",
+     "clubs": 8,
+     "verified": false,
+     "tsdbLeagueId": null
     }
    ]
   },
@@ -369,6 +397,20 @@
      "clubs": 6,
      "verified": false,
      "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "CIV",
+   "country": "Côte d'Ivoire",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Ligue 1 (Ivory Coast)",
+     "clubs": 16,
+     "verified": true,
+     "tsdbLeagueId": 5241
     }
    ]
   },
@@ -548,15 +590,15 @@
     {
      "tier": 3,
      "name": "EFL League One",
-     "clubs": 11,
+     "clubs": 23,
      "verified": false,
      "tsdbLeagueId": null
     },
     {
      "tier": 4,
      "name": "EFL League Two",
-     "clubs": 6,
-     "verified": false,
+     "clubs": 24,
+     "verified": true,
      "tsdbLeagueId": null
     }
    ]
@@ -754,6 +796,13 @@
      "clubs": 12,
      "verified": false,
      "tsdbLeagueId": null
+    },
+    {
+     "tier": 2,
+     "name": "Super League Greece 2",
+     "clubs": 6,
+     "verified": false,
+     "tsdbLeagueId": null
     }
    ]
   },
@@ -828,6 +877,20 @@
    ]
   },
   {
+   "code": "IRL",
+   "country": "Republic of Ireland",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "League of Ireland Premier Division",
+     "clubs": 10,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "IRN",
    "country": "IR Iran",
    "confederation": "AFC",
@@ -866,6 +929,20 @@
      "clubs": 12,
      "verified": true,
      "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "ISR",
+   "country": "Israel",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Israeli Premier League (Ligat Ha'Al)",
+     "clubs": 14,
+     "verified": true,
+     "tsdbLeagueId": 4644
     }
    ]
   },
@@ -929,6 +1006,13 @@
      "clubs": 20,
      "verified": true,
      "tsdbLeagueId": null
+    },
+    {
+     "tier": 2,
+     "name": "J2 League",
+     "clubs": 6,
+     "verified": false,
+     "tsdbLeagueId": 4824
     }
    ]
   },
@@ -955,6 +1039,13 @@
      "tier": 1,
      "name": "K League 1",
      "clubs": 12,
+     "verified": true,
+     "tsdbLeagueId": null
+    },
+    {
+     "tier": 2,
+     "name": "K League 2",
+     "clubs": 17,
      "verified": true,
      "tsdbLeagueId": null
     }
@@ -1027,6 +1118,20 @@
      "clubs": 10,
      "verified": false,
      "tsdbLeagueId": 5629
+    }
+   ]
+  },
+  {
+   "code": "MAD",
+   "country": "Madagascar",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Pureplay Football League (Coca-Cola PFL, formerly THB Champions League)",
+     "clubs": 10,
+     "verified": true,
+     "tsdbLeagueId": null
     }
    ]
   },
@@ -1185,6 +1290,34 @@
    ]
   },
   {
+   "code": "MOZ",
+   "country": "Mozambique",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Moçambola",
+     "clubs": 7,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "MRI",
+   "country": "Mauritius",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Mauritian Premier League",
+     "clubs": 6,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "MTN",
    "country": "Mauritania",
    "confederation": "CAF",
@@ -1276,6 +1409,34 @@
    ]
   },
   {
+   "code": "NIG",
+   "country": "Niger",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Niger Premier League",
+     "clubs": 12,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "NIR",
+   "country": "Northern Ireland",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "NIFL Premiership",
+     "clubs": 12,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "NOR",
    "country": "Norway",
    "confederation": "UEFA",
@@ -1356,6 +1517,13 @@
      "clubs": 18,
      "verified": true,
      "tsdbLeagueId": null
+    },
+    {
+     "tier": 2,
+     "name": "I liga",
+     "clubs": 7,
+     "verified": false,
+     "tsdbLeagueId": null
     }
    ]
   },
@@ -1367,6 +1535,13 @@
     {
      "tier": 1,
      "name": "Primeira Liga",
+     "clubs": 10,
+     "verified": false,
+     "tsdbLeagueId": null
+    },
+    {
+     "tier": 2,
+     "name": "Liga Portugal 2",
      "clubs": 10,
      "verified": false,
      "tsdbLeagueId": null
@@ -1452,6 +1627,13 @@
      "tier": 1,
      "name": "Scottish Premiership",
      "clubs": 12,
+     "verified": true,
+     "tsdbLeagueId": null
+    },
+    {
+     "tier": 2,
+     "name": "Scottish Championship",
+     "clubs": 10,
      "verified": true,
      "tsdbLeagueId": null
     }
@@ -1566,6 +1748,13 @@
      "clubs": 12,
      "verified": true,
      "tsdbLeagueId": null
+    },
+    {
+     "tier": 2,
+     "name": "Swiss Challenge League",
+     "clubs": 10,
+     "verified": true,
+     "tsdbLeagueId": null
     }
    ]
   },
@@ -1678,6 +1867,13 @@
      "clubs": 18,
      "verified": true,
      "tsdbLeagueId": null
+    },
+    {
+     "tier": 2,
+     "name": "TFF 1. Lig",
+     "clubs": 7,
+     "verified": false,
+     "tsdbLeagueId": null
     }
    ]
   },
@@ -1759,6 +1955,20 @@
    ]
   },
   {
+   "code": "UZB",
+   "country": "Uzbekistan",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Uzbekistan Super League",
+     "clubs": 16,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "VEN",
    "country": "Venezuela",
    "confederation": "CONMEBOL",
@@ -1768,6 +1978,34 @@
      "name": "Liga FUTVE (Primera División de Venezuela)",
      "clubs": 12,
      "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "VIE",
+   "country": "Vietnam",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "V.League 1",
+     "clubs": 14,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "WAL",
+   "country": "Wales",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Cymru Premier",
+     "clubs": 12,
+     "verified": true,
      "tsdbLeagueId": null
     }
    ]

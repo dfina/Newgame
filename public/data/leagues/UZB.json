@@ -2,7 +2,36 @@
   "association": "UZB",
   "country": "Uzbekistan",
   "confederation": "AFC",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (shared across this entire session) was exhausted before Uzbekistan could be looked into. This is NOT a claim that no league exists (the Uzbekistan Super League clearly exists) — composition simply could not be verified here. Needs a follow-up session with search budget available."
+  "season": "2026",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Uzbekistan Super League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_Uzbekistan_Super_League",
+        "https://en.wikipedia.org/wiki/Uzbekistan_Super_League",
+        "https://tribuna.com/en/league/uzbekistan-professional-league/"
+      ],
+      "clubs": [
+        { "name": "AGMK", "tsdbTeamId": null, "badge": null },
+        { "name": "Andijan", "tsdbTeamId": null, "badge": null },
+        { "name": "Bunyodkor", "tsdbTeamId": null, "badge": null },
+        { "name": "Buxoro", "tsdbTeamId": null, "badge": null },
+        { "name": "Dinamo Samarqand", "tsdbTeamId": null, "badge": null },
+        { "name": "Khorazm", "tsdbTeamId": null, "badge": null },
+        { "name": "Kokand 1912", "tsdbTeamId": null, "badge": null },
+        { "name": "Mash'al Mubarek", "tsdbTeamId": null, "badge": null },
+        { "name": "Nasaf", "tsdbTeamId": null, "badge": null },
+        { "name": "Navbahor Namangan", "tsdbTeamId": null, "badge": null },
+        { "name": "Neftchi Fergana", "tsdbTeamId": null, "badge": null },
+        { "name": "Pakhtakor Tashkent", "tsdbTeamId": null, "badge": null },
+        { "name": "Qizilqum Zarafshon", "tsdbTeamId": null, "badge": null },
+        { "name": "Sogdiana Jizzakh", "tsdbTeamId": null, "badge": null },
+        { "name": "Surkhon Termez", "tsdbTeamId": null, "badge": null },
+        { "name": "Lokomotiv Tashkent", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

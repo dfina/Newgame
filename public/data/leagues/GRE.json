@@ -27,6 +27,24 @@
         {"name": "Iraklis", "tsdbTeamId": null, "badge": null},
         {"name": "Kalamata", "tsdbTeamId": null, "badge": null}
       ]
+    },
+    {
+      "tier": 2,
+      "name": "Super League Greece 2",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Super_League_Greece_2",
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Gamma_Ethniki"
+      ],
+      "clubs": [
+        {"name": "PAOK B", "tsdbTeamId": null, "badge": null},
+        {"name": "Asteras Tripolis B", "tsdbTeamId": null, "badge": null},
+        {"name": "Olympiacos B", "tsdbTeamId": null, "badge": null},
+        {"name": "Athens Kallithea", "tsdbTeamId": null, "badge": null},
+        {"name": "Apollon Kalamaria", "tsdbTeamId": null, "badge": null},
+        {"name": "Panthrakikos", "tsdbTeamId": null, "badge": null}
+      ]
     }
   ],
   "note": "League has 14 clubs (12 retained from 2025-26 plus 2 promoted: Iraklis, Kalamata). Only 12 of the 14 could be confirmed by name in this session's search results; 2 retained clubs remain unconfirmed."

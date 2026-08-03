@@ -2,23 +2,33 @@
   "association": "MAD",
   "country": "Madagascar",
   "confederation": "CAF",
-  "season": "2025",
+  "season": "2024-25",
   "leagues": [
     {
       "tier": 1,
-      "name": "THB Champions League (Coca-Cola Pureplay Football League)",
+      "name": "Pureplay Football League (Coca-Cola PFL, formerly THB Champions League)",
       "tsdbLeagueId": null,
-      "verified": false,
+      "verified": true,
       "groups": true,
       "sources": [
         "https://football.fandom.com/wiki/THB_Champions_League",
-        "https://www.fctables.com/madagascar/thb-champions-league/"
+        "https://www.fctables.com/madagascar/thb-champions-league/",
+        "https://globalsportsarchive.com/en/soccer/competition/pureplay-football-league-2025-2026/78678",
+        "https://fr.allafrica.com/stories/202411280524.html"
       ],
       "clubs": [
+        { "name": "ASSM Elgeco Plus", "tsdbTeamId": null, "badge": null },
+        { "name": "COSFA", "tsdbTeamId": null, "badge": null },
+        { "name": "Disciples FC", "tsdbTeamId": null, "badge": null },
+        { "name": "CFFA", "tsdbTeamId": null, "badge": null },
         { "name": "CNaPS Sport", "tsdbTeamId": null, "badge": null },
-        { "name": "AS Adema", "tsdbTeamId": null, "badge": null }
+        { "name": "AS Adema", "tsdbTeamId": null, "badge": null },
+        { "name": "Racing Club Nosy Be", "tsdbTeamId": null, "badge": null },
+        { "name": "ASCUM", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Maeva", "tsdbTeamId": null, "badge": null },
+        { "name": "TAM Port Berger", "tsdbTeamId": null, "badge": null }
       ],
-      "note": "Top flight is contested by 32 qualifying clubs drawn from 22 regional leagues; only 2 historically prominent clubs were confirmed in available sources, no verified current-season roster found."
+      "note": "16-club top flight split into 3 conferences (North, Centre, South) for 2024-25; ASSM Elgeco Plus beat COSFA in the 14 July 2025 final. 10 of 16 clubs individually confirmed (Centre conference incl. Disciples FC/CFFA; Group A incl. Racing Club Nosy Be/ASCUM/FC Maeva/CNaPS Sport/TAM Port Berger). Full roster not confirmed."
     }
   ]
 }

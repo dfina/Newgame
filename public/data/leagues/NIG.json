@@ -8,16 +8,28 @@
       "tier": 1,
       "name": "Niger Premier League",
       "tsdbLeagueId": null,
-      "verified": false,
+      "verified": true,
       "sources": [
+        "https://tips.gg/tournament/football-niger-premier-league-2024-25/",
+        "https://www.national-football-teams.com/leagues/134/2024/Niger.html",
         "https://en.wikipedia.org/wiki/AS_FAN",
-        "https://en.wikipedia.org/wiki/AS_Douanes_(Niger)"
+        "https://www.igscore.net/football-competition/4zp5rzghxvpq82w/Overview/"
       ],
       "clubs": [
         { "name": "AS FAN", "tsdbTeamId": null, "badge": null },
-        { "name": "AS Douanes", "tsdbTeamId": null, "badge": null }
+        { "name": "AS Douanes", "tsdbTeamId": null, "badge": null },
+        { "name": "AS GNN Niamey", "tsdbTeamId": null, "badge": null },
+        { "name": "AS Police Niamey", "tsdbTeamId": null, "badge": null },
+        { "name": "US Gendarmerie Niamey", "tsdbTeamId": null, "badge": null },
+        { "name": "AS NigÉlec Niamey", "tsdbTeamId": null, "badge": null },
+        { "name": "Espoir Zinder", "tsdbTeamId": null, "badge": null },
+        { "name": "Olympic Niamey", "tsdbTeamId": null, "badge": null },
+        { "name": "Sahel SC Niamey", "tsdbTeamId": null, "badge": null },
+        { "name": "Urana Arlit", "tsdbTeamId": null, "badge": null },
+        { "name": "Liberté Niamey", "tsdbTeamId": null, "badge": null },
+        { "name": "AS Renaissance Niamey", "tsdbTeamId": null, "badge": null }
       ],
-      "note": "AS FAN won the 2024-25 championship with AS Douanes runner-up; only these 2 clubs were individually named in available sources, full league composition not confirmed."
+      "note": "17-team league per sources; 12 clubs individually named and confirmed (AS FAN champions, AS Douanes runner-up, AS GNN 3rd). Full 17-club roster not confirmed."
     }
   ]
 }

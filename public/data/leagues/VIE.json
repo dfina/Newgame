@@ -2,7 +2,34 @@
   "association": "VIE",
   "country": "Vietnam",
   "confederation": "AFC",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (shared across this entire session) was exhausted before Vietnam could be looked into. This is NOT a claim that no league exists (V.League 1 clearly exists) — composition simply could not be verified here. Needs a follow-up session with search budget available."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "V.League 1",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_V.League_1",
+        "https://liquipedia.net/lab/Football/VFF/V.League_1/2025-26"
+      ],
+      "clubs": [
+        { "name": "Becamex Ho Chi Minh City", "tsdbTeamId": null, "badge": null },
+        { "name": "Cong An Hanoi", "tsdbTeamId": null, "badge": null },
+        { "name": "Ho Chi Minh City Police", "tsdbTeamId": null, "badge": null },
+        { "name": "Dong A Thanh Hoa", "tsdbTeamId": null, "badge": null },
+        { "name": "Hanoi FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Hai Phong", "tsdbTeamId": null, "badge": null },
+        { "name": "Hoang Anh Gia Lai", "tsdbTeamId": null, "badge": null },
+        { "name": "Hong Linh Ha Tinh", "tsdbTeamId": null, "badge": null },
+        { "name": "Ninh Binh", "tsdbTeamId": null, "badge": null },
+        { "name": "Quang Nam", "tsdbTeamId": null, "badge": null },
+        { "name": "SHB Da Nang", "tsdbTeamId": null, "badge": null },
+        { "name": "Song Lam Nghe An", "tsdbTeamId": null, "badge": null },
+        { "name": "Thep Xanh Nam Dinh", "tsdbTeamId": null, "badge": null },
+        { "name": "The Cong Viettel", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ],
+  "note": "2025-26 season list verified (14 clubs, season completed with Cong An Hanoi champions). The 2026-27 season has since kicked off (started 4 Sep 2026) with Truong Tuoi Dong Nai promoted in place of a relegated club, but a full 2026-27 roster was not found within the search budget, so the last fully verified season (2025-26) was recorded instead per the no-mixed-seasons rule."
 }

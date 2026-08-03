@@ -27,6 +27,28 @@
         {"name": "Grasshopper Club Zürich", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"]},
         {"name": "FC Luzern", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"]}
       ]
+    },
+    {
+      "tier": 2,
+      "name": "Swiss Challenge League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://sportstats365.com/football/challenge-league",
+        "https://www.worldfootball.net/competition/co18/switzerland-challenge-league/"
+      ],
+      "clubs": [
+        {"name": "FC Aarau", "tsdbTeamId": null, "badge": null},
+        {"name": "Étoile Carouge", "tsdbTeamId": null, "badge": null},
+        {"name": "Neuchâtel Xamax", "tsdbTeamId": null, "badge": null},
+        {"name": "Rapperswil-Jona", "tsdbTeamId": null, "badge": null},
+        {"name": "SC Kriens", "tsdbTeamId": null, "badge": null},
+        {"name": "Stade Lausanne Ouchy", "tsdbTeamId": null, "badge": null},
+        {"name": "Stade Nyonnais", "tsdbTeamId": null, "badge": null},
+        {"name": "Wil", "tsdbTeamId": null, "badge": null},
+        {"name": "Winterthur", "tsdbTeamId": null, "badge": null},
+        {"name": "Yverdon Sport", "tsdbTeamId": null, "badge": null}
+      ]
     }
   ]
 }

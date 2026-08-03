@@ -2,7 +2,31 @@
   "association": "NIR",
   "country": "Northern Ireland",
   "confederation": "UEFA",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (200/200) was exhausted before this association could be covered. No clubs or leagues were invented per task rules; leagues left empty pending a follow-up session with search capacity."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "NIFL Premiership",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_NIFL_Premiership",
+        "https://www.playmakerstats.com/competition/northern-ireland-football-league-premiership"
+      ],
+      "clubs": [
+        { "name": "Larne", "tsdbTeamId": null, "badge": null },
+        { "name": "Glentoran", "tsdbTeamId": null, "badge": null, "colors": ["#00A650", "#000000"] },
+        { "name": "Coleraine", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"] },
+        { "name": "Linfield", "tsdbTeamId": null, "badge": null, "colors": ["#00205B", "#FFFFFF"] },
+        { "name": "Ballymena United", "tsdbTeamId": null, "badge": null },
+        { "name": "Cliftonville", "tsdbTeamId": null, "badge": null, "colors": ["#D2122E", "#FFFFFF"] },
+        { "name": "Carrick Rangers", "tsdbTeamId": null, "badge": null },
+        { "name": "Crusaders", "tsdbTeamId": null, "badge": null, "colors": ["#D2122E", "#000000"] },
+        { "name": "Bangor", "tsdbTeamId": null, "badge": null },
+        { "name": "Dungannon Swifts", "tsdbTeamId": null, "badge": null },
+        { "name": "Portadown", "tsdbTeamId": null, "badge": null },
+        { "name": "Glenavon", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }
