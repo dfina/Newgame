@@ -1,31 +1,151 @@
 {
-  "association": "QAT",
-  "country": "Qatar",
-  "confederation": "AFC",
-  "season": "2026-27",
-  "leagues": [
+ "association": "QAT",
+ "country": "Qatar",
+ "confederation": "AFC",
+ "season": "2026-27",
+ "leagues": [
+  {
+   "tier": 1,
+   "name": "Qatar Stars League",
+   "tsdbLeagueId": null,
+   "verified": false,
+   "sources": [
+    "https://www.qatar-tribune.com/article/244831/sports/doha-bank-stars-league-2026-27-season-early-schedule-released",
+    "https://en.wikipedia.org/wiki/2025%E2%80%9326_Qatar_Stars_League"
+   ],
+   "clubs": [
     {
-      "tier": 1,
-      "name": "Qatar Stars League",
-      "tsdbLeagueId": null,
-      "verified": false,
-      "sources": [
-        "https://www.qatar-tribune.com/article/244831/sports/doha-bank-stars-league-2026-27-season-early-schedule-released",
-        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Qatar_Stars_League"
-      ],
-      "clubs": [
-        { "name": "Al Sadd", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] },
-        { "name": "Al Duhail", "tsdbTeamId": null, "badge": null, "colors": ["#8A1538", "#FFFFFF"] },
-        { "name": "Al Rayyan", "tsdbTeamId": null, "badge": null, "colors": ["#E2231A", "#FFFFFF"] },
-        { "name": "Al Ahli", "tsdbTeamId": null, "badge": null },
-        { "name": "Al Sailiya", "tsdbTeamId": null, "badge": null },
-        { "name": "Al Wakrah", "tsdbTeamId": null, "badge": null },
-        { "name": "Qatar SC", "tsdbTeamId": null, "badge": null },
-        { "name": "Al Gharafa", "tsdbTeamId": null, "badge": null },
-        { "name": "Al Arabi", "tsdbTeamId": null, "badge": null },
-        { "name": "Lusail", "tsdbTeamId": null, "badge": null }
-      ]
+     "name": "Al Sadd",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#000000",
+      "#FFFFFF"
+     ]
+    },
+    {
+     "name": "Al Duhail",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#8A1538",
+      "#FFFFFF"
+     ]
+    },
+    {
+     "name": "Al Rayyan",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#E2231A",
+      "#FFFFFF"
+     ]
+    },
+    {
+     "name": "Al Ahli",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Al Sailiya",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Al Wakrah",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Qatar SC",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Al Gharafa",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Al Arabi",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Lusail",
+     "tsdbTeamId": null,
+     "badge": null
     }
-  ],
-  "note": "10 of the league's 12 clubs for the 2026-27 Doha Bank Stars League season were confirmed by name via opening-fixture reporting and general league references; the complete official roster (all 12 clubs) was not retrieved this session, so the entry is marked unverified/partial."
+   ]
+  },
+  {
+   "tier": 2,
+   "name": "Qatar Stars League 2 (QSL 2)",
+   "tsdbLeagueId": null,
+   "verified": true,
+   "sources": [
+    "https://www.insideworldfootball.com/2026/07/22/qatar-star-league-revamps-its-second-tier-structure-to-focus-on-developing-players",
+    "https://en.wikipedia.org/wiki/Qatar_Stars_League_2"
+   ],
+   "clubs": [
+    {
+     "name": "Al Khor",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Al Markhiya",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Al Bidda",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Mesaimeer",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Muaither",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Al Kharaitiyat",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Umm Salal",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Al Waab",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "NextGen (Al Rayyan)",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Etihad Al Gharafa",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Al Shamal Future",
+     "tsdbTeamId": null,
+     "badge": null
+    }
+   ],
+   "note": "QSL 2 replaced the Qatar Second Division and Olympic League from 2026-27. The source lists a 12-team line-up including the Qatar U-23 national side, which is excluded here as it is not a club; the 11 clubs are listed."
+  }
+ ],
+ "note": "10 of the league's 12 clubs for the 2026-27 Doha Bank Stars League season were confirmed by name via opening-fixture reporting and general league references; the complete official roster (all 12 clubs) was not retrieved this session, so the entry is marked unverified/partial."
 }

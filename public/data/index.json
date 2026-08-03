@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-03T15:10:15.346Z",
+ "generated": "2026-08-03T15:20:42.187Z",
  "countries": [
   {
    "code": "AFG",
@@ -2242,7 +2242,7 @@
     {
      "tier": 1,
      "name": "Primeira Liga",
-     "clubs": 10,
+     "clubs": 14,
      "verified": false,
      "tsdbLeagueId": null
     },
@@ -2293,6 +2293,13 @@
      "name": "Qatar Stars League",
      "clubs": 10,
      "verified": false,
+     "tsdbLeagueId": null
+    },
+    {
+     "tier": 2,
+     "name": "Qatar Stars League 2 (QSL 2)",
+     "clubs": 11,
+     "verified": true,
      "tsdbLeagueId": null
     }
    ]

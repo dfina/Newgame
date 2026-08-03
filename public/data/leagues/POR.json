@@ -1,54 +1,177 @@
 {
-  "association": "POR",
-  "country": "Portugal",
-  "confederation": "UEFA",
-  "season": "2026-27",
-  "leagues": [
+ "association": "POR",
+ "country": "Portugal",
+ "confederation": "UEFA",
+ "season": "2026-27",
+ "leagues": [
+  {
+   "tier": 1,
+   "name": "Primeira Liga",
+   "tsdbLeagueId": null,
+   "verified": false,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2026%E2%80%9327_Primeira_Liga",
+    "https://groundhopperguides.com/2026-27-primeira-liga-schedule/",
+    "https://news.22bet.com/news/portugal-primeira-liga-2026-27-season-guide-predictions/",
+    "https://bolanarede.pt/especial-bola-na-rede/atualidade/eis-o-calendario-completo-da-primeira-liga-2026-27/",
+    "https://www.abola.pt/noticias/eis-os-calendarios-completos-da-liga-e-da-liga-2-para-202627-2026070218520723632"
+   ],
+   "clubs": [
     {
-      "tier": 1,
-      "name": "Primeira Liga",
-      "tsdbLeagueId": null,
-      "verified": false,
-      "sources": [
-        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Primeira_Liga",
-        "https://groundhopperguides.com/2026-27-primeira-liga-schedule/",
-        "https://news.22bet.com/news/portugal-primeira-liga-2026-27-season-guide-predictions/"
-      ],
-      "clubs": [
-        {"name": "FC Porto", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"]},
-        {"name": "SL Benfica", "tsdbTeamId": null, "badge": null, "colors": ["#E2001A", "#FFFFFF"]},
-        {"name": "SC Braga", "tsdbTeamId": null, "badge": null, "colors": ["#DA291C", "#FFFFFF"]},
-        {"name": "Casa Pia AC", "tsdbTeamId": null, "badge": null},
-        {"name": "Estoril Praia", "tsdbTeamId": null, "badge": null},
-        {"name": "Estrela da Amadora", "tsdbTeamId": null, "badge": null},
-        {"name": "FC Arouca", "tsdbTeamId": null, "badge": null},
-        {"name": "FC Alverca", "tsdbTeamId": null, "badge": null},
-        {"name": "Académico de Viseu", "tsdbTeamId": null, "badge": null},
-        {"name": "CD Marítimo", "tsdbTeamId": null, "badge": null}
-      ]
+     "name": "FC Porto",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#0033A0",
+      "#FFFFFF"
+     ]
     },
     {
-      "tier": 2,
-      "name": "Liga Portugal 2",
-      "tsdbLeagueId": null,
-      "verified": false,
-      "sources": [
-        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Liga_Portugal_2",
-        "https://www.abola.pt/noticias/eis-os-calendarios-completos-da-liga-e-da-liga-2-para-202627-2026070218520723632"
-      ],
-      "clubs": [
-        {"name": "CD Tondela", "tsdbTeamId": null, "badge": null},
-        {"name": "AVS Futebol SAD", "tsdbTeamId": null, "badge": null},
-        {"name": "Amarante FC", "tsdbTeamId": null, "badge": null},
-        {"name": "Académica de Coimbra", "tsdbTeamId": null, "badge": null},
-        {"name": "CD Feirense", "tsdbTeamId": null, "badge": null},
-        {"name": "FC Penafiel", "tsdbTeamId": null, "badge": null},
-        {"name": "Vizela", "tsdbTeamId": null, "badge": null},
-        {"name": "União de Leiria", "tsdbTeamId": null, "badge": null},
-        {"name": "SL Benfica B", "tsdbTeamId": null, "badge": null},
-        {"name": "FC Porto B", "tsdbTeamId": null, "badge": null}
-      ]
+     "name": "SL Benfica",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#E2001A",
+      "#FFFFFF"
+     ]
+    },
+    {
+     "name": "SC Braga",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#DA291C",
+      "#FFFFFF"
+     ]
+    },
+    {
+     "name": "Casa Pia AC",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Estoril Praia",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Estrela da Amadora",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "FC Arouca",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "FC Alverca",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Académico de Viseu",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "CD Marítimo",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Sporting CP",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#008057",
+      "#FFFFFF"
+     ]
+    },
+    {
+     "name": "Vitória SC",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#FFFFFF",
+      "#000000"
+     ]
+    },
+    {
+     "name": "FC Famalicão",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Moreirense FC",
+     "tsdbTeamId": null,
+     "badge": null
     }
-  ],
-  "note": "Primeira Liga 2026-27 has 18 clubs; only 10 were confirmed by name this session (Porto as defending champions; Benfica, Braga, Casa Pia, Estoril Praia, Estrela da Amadora, Arouca, Alverca continuing from 2025-26; Académico de Viseu and Marítimo promoted from Liga Portugal 2). AVS and Tondela were named as relegated OUT of the Primeira Liga into Liga Portugal 2 for 2026-27, so they are listed under the tier-2 entry instead. Liga Portugal 2 has 18 clubs; 10 were confirmed by name this session (Tondela, AVS, Amarante, Académica de Coimbra, Feirense, Penafiel, Vizela, União de Leiria, and reserve sides Benfica B and Porto B, from fixture and promotion/relegation reporting); the remaining ~8 clubs (including Torreense, which appeared in a fixture list but could not be confirmed as a first-team Liga Portugal 2 participant with certainty) were not confirmed within the search budget. Both leagues marked unverified due to incomplete rosters."
+   ],
+   "note": "Primeira Liga has 18 clubs in 2026-27. 14 confirmed by name this session: the ten previously sourced plus Sporting CP, Vitoria SC, FC Famalicao and Moreirense FC, all named in the published 2026-27 opening-round fixture list. The remaining clubs could not be confirmed by name from any source consulted, so verified stays false."
+  },
+  {
+   "tier": 2,
+   "name": "Liga Portugal 2",
+   "tsdbLeagueId": null,
+   "verified": false,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2026%E2%80%9327_Liga_Portugal_2",
+    "https://www.abola.pt/noticias/eis-os-calendarios-completos-da-liga-e-da-liga-2-para-202627-2026070218520723632"
+   ],
+   "clubs": [
+    {
+     "name": "CD Tondela",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "AVS Futebol SAD",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Amarante FC",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Académica de Coimbra",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "CD Feirense",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "FC Penafiel",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Vizela",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "União de Leiria",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "SL Benfica B",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "FC Porto B",
+     "tsdbTeamId": null,
+     "badge": null
+    }
+   ]
+  }
+ ],
+ "note": "Primeira Liga 2026-27 has 18 clubs; only 10 were confirmed by name this session (Porto as defending champions; Benfica, Braga, Casa Pia, Estoril Praia, Estrela da Amadora, Arouca, Alverca continuing from 2025-26; Académico de Viseu and Marítimo promoted from Liga Portugal 2). AVS and Tondela were named as relegated OUT of the Primeira Liga into Liga Portugal 2 for 2026-27, so they are listed under the tier-2 entry instead. Liga Portugal 2 has 18 clubs; 10 were confirmed by name this session (Tondela, AVS, Amarante, Académica de Coimbra, Feirense, Penafiel, Vizela, União de Leiria, and reserve sides Benfica B and Porto B, from fixture and promotion/relegation reporting); the remaining ~8 clubs (including Torreense, which appeared in a fixture list but could not be confirmed as a first-team Liga Portugal 2 participant with certainty) were not confirmed within the search budget. Both leagues marked unverified due to incomplete rosters."
 }

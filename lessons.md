@@ -15,6 +15,9 @@
 - **Call-up threshold was inverted** — it made strong nations *easier* to break into than weak ones. Now `16 + natStr * 0.6`. Found only by questioning an implausible sim distribution, not by any test.
 - **Weighted preference alone is too weak to express an intent** — nationality bias via weights still produced Nigerian offers for a Belgian. Reserving offer slots outright for home clubs (with a confederation fallback where the home league has no data) is what made it legible.
 - **Verify designed-for behaviour with its own script** — scripts/check-nationality.mjs asserts the U-shaped home bias numerically; a screenshot alone would not have caught the weighting being too weak.
+- **Guard additive edits with a diff against HEAD** — scripts/check-no-regression.mjs compares every league's club count to the last commit and fails on shrinkage. Essential when subagents modify existing files rather than create them; run it before every data commit.
+- **Don't pad a league with a stale roster to make it playable** — Saint Lucia's only sourceable line-ups are from 2016-2018. Presenting those as the current season would misrepresent the data as surely as inventing clubs. Leave the file empty with a note saying what was found and when.
+- **Coverage reached 203/211 playable associations.** The 8 that remain each have a documented reason: Liechtenstein has no domestic league (its clubs play in Switzerland), Pakistan's league is suspended, Palestine's runs but no current roster is published, and Dominica, Saint Lucia, Saint Vincent, Montserrat and the US Virgin Islands have semi-professional leagues with no sourceable current line-ups.
 
 - **Empty-repo git log exits 128** — `git log` on a commitless branch is a normal failure, not a broken repo; check `ls` output before concluding anything.
 - **Data schema before agents** — all research subagents get one canonical SCHEMA.md so 211 association files stay mergeable without rework.
