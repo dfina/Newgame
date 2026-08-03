@@ -2,7 +2,27 @@
   "association": "KOS",
   "country": "Kosovo",
   "confederation": "UEFA",
-  "season": "",
-  "leagues": [],
-  "note": "Not researched: the shared session web-search budget (200 calls) was exhausted before this association could be investigated. No club data verified this session, so no league entries are included to avoid inventing content. Known top flight is the Football Superleague of Kosovo; composition unverified."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Football Superleague of Kosovo",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Football_Superleague_of_Kosovo",
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_FC_Drita_season"
+      ],
+      "clubs": [
+        { "name": "FC Drita", "tsdbTeamId": null, "badge": null },
+        { "name": "KF Ballkani", "tsdbTeamId": null, "badge": null },
+        { "name": "KF Gjilani", "tsdbTeamId": null, "badge": null },
+        { "name": "KF Llapi", "tsdbTeamId": null, "badge": null },
+        { "name": "KF Drenica", "tsdbTeamId": null, "badge": null },
+        { "name": "KF Prishtina e Re", "tsdbTeamId": null, "badge": null },
+        { "name": "KF Ferizaj", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ],
+  "note": "Only 7 of the 10 clubs in the 2025-26 Superleague of Kosovo could be confirmed by name within the WebSearch budget; league marked verified:false as the list is partial. KF Feronikeli was explicitly confirmed NOT in this season's league (relegated/replaced previously)."
 }

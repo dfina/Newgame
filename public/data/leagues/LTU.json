@@ -2,7 +2,29 @@
   "association": "LTU",
   "country": "Lithuania",
   "confederation": "UEFA",
-  "season": "",
-  "leagues": [],
-  "note": "Not researched: the shared session web-search budget (200 calls) was exhausted before this association could be investigated. No club data verified this session, so no league entries are included to avoid inventing content. Known top flight is the A Lyga (calendar-year season); composition unverified."
+  "season": "2026",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "A Lyga",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_TOPLYGA",
+        "https://balticfootballnews.com/eleven-clubs-apply-for-2026-a-lyga-licensing-process/"
+      ],
+      "clubs": [
+        { "name": "FK Kauno Žalgiris", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#00944D"] },
+        { "name": "FK Žalgiris Vilnius", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#00944D"] },
+        { "name": "FC Hegelmann", "tsdbTeamId": null, "badge": null },
+        { "name": "FK Banga Gargždai", "tsdbTeamId": null, "badge": null },
+        { "name": "FK Džiugas Telšiai", "tsdbTeamId": null, "badge": null },
+        { "name": "FA Šiauliai", "tsdbTeamId": null, "badge": null },
+        { "name": "FK Panevėžys", "tsdbTeamId": null, "badge": null },
+        { "name": "FK Sūduva Marijampolė", "tsdbTeamId": null, "badge": null },
+        { "name": "FK Riteriai", "tsdbTeamId": null, "badge": null },
+        { "name": "FK TransINVEST", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

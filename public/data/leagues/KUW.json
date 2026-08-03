@@ -2,7 +2,29 @@
   "association": "KUW",
   "country": "Kuwait",
   "confederation": "AFC",
-  "season": "unverified",
-  "leagues": [],
-  "note": "Not researched this session: the shared WebSearch budget (200 calls) for this session was exhausted before this association could be investigated. No league or club data has been invented; this file intentionally lists no leagues pending a future session with search access to verify the Kuwaiti Premier League and clubs (a 2025-26 Kuwaiti Premier League page was noted to exist in passing search snippets for another association, but its club list was not read or verified)."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Kuwaiti Premier League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Kuwaiti_Premier_League",
+        "https://footystats.org/kuwait/kuwait-premier-league"
+      ],
+      "clubs": [
+        { "name": "Al-Kuwait", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Arabi", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Qadsia", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Salmiya", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Fahaheel", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Nasar", "tsdbTeamId": null, "badge": null },
+        { "name": "Kazma", "tsdbTeamId": null, "badge": null },
+        { "name": "Khaitan", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Yarmouk", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Tadamon", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

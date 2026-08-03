@@ -2,7 +2,29 @@
   "association": "JOR",
   "country": "Jordan",
   "confederation": "AFC",
-  "season": "unverified",
-  "leagues": [],
-  "note": "Not researched this session: the shared WebSearch budget (200 calls) for this session was exhausted before this association could be investigated. No league or club data has been invented; this file intentionally lists no leagues pending a future session with search access to verify the Jordanian Pro League and clubs."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Jordanian Pro League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Jordanian_Pro_League",
+        "https://globalsportsarchive.com/en/soccer/competition/jordanian-pro-league-2025-2026/76393"
+      ],
+      "clubs": [
+        { "name": "Al-Hussein", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Faisaly", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Wehdat", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Baqa'a", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Ramtha", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Salt", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Jazeera", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Ahli", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Sarhan", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ],
+  "note": "The league was reduced from 12 to 10 clubs starting 2025-26. Only 9 of the 10 clubs could be confirmed by name within the search budget; the 10th (also promoted from the 2024-25 First Division alongside Al-Sarhan) was not identified. Marked verified:false because the list is one club short of complete."
 }

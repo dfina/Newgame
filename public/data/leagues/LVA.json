@@ -2,7 +2,28 @@
   "association": "LVA",
   "country": "Latvia",
   "confederation": "UEFA",
-  "season": "",
-  "leagues": [],
-  "note": "Not researched: the shared session web-search budget (200 calls) was exhausted before this association could be investigated. No club data verified this session, so no league entries are included to avoid inventing content. Known top flight is the Latvian Virslīga (calendar-year season); composition unverified."
+  "season": "2026",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Virslīga",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_Latvian_Higher_League"
+      ],
+      "clubs": [
+        { "name": "Riga FC", "tsdbTeamId": null, "badge": null, "colors": ["#8B0000", "#FFFFFF"] },
+        { "name": "FC RFS", "tsdbTeamId": null, "badge": null },
+        { "name": "Tukums 2000", "tsdbTeamId": null, "badge": null },
+        { "name": "Auda", "tsdbTeamId": null, "badge": null },
+        { "name": "Liepāja", "tsdbTeamId": null, "badge": null },
+        { "name": "BFC Daugavpils", "tsdbTeamId": null, "badge": null },
+        { "name": "FS Jelgava", "tsdbTeamId": null, "badge": null },
+        { "name": "Super Nova", "tsdbTeamId": null, "badge": null },
+        { "name": "Grobiņa", "tsdbTeamId": null, "badge": null },
+        { "name": "Ogre United", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

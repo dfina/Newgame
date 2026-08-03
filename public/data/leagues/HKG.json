@@ -2,7 +2,29 @@
   "association": "HKG",
   "country": "Hong Kong",
   "confederation": "AFC",
-  "season": "unverified",
-  "leagues": [],
-  "note": "Not researched this session: the shared WebSearch budget (200 calls) for this session was exhausted before this association could be investigated. No league or club data has been invented; this file intentionally lists no leagues pending a future session with search access to verify the Hong Kong Premier League and its clubs."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Hong Kong Premier League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Hong_Kong_Premier_League",
+        "https://resource.hkfa.com/upload/rules/Form%20F-Hong%20Kong%20Premier%20League%202025-26%20(to%20Clubs).pdf"
+      ],
+      "clubs": [
+        { "name": "Tai Po", "tsdbTeamId": null, "badge": null },
+        { "name": "Lee Man", "tsdbTeamId": null, "badge": null },
+        { "name": "Eastern", "tsdbTeamId": null, "badge": null },
+        { "name": "Kitchee", "tsdbTeamId": null, "badge": null },
+        { "name": "Southern", "tsdbTeamId": null, "badge": null },
+        { "name": "Kowloon City", "tsdbTeamId": null, "badge": null },
+        { "name": "Rangers", "tsdbTeamId": null, "badge": null },
+        { "name": "North District", "tsdbTeamId": null, "badge": null },
+        { "name": "HKFC", "tsdbTeamId": null, "badge": null },
+        { "name": "Eastern District", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

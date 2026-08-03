@@ -2,7 +2,30 @@
   "association": "PHI",
   "country": "Philippines",
   "confederation": "AFC",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (shared across this entire session) was exhausted before the Philippines could be looked into. This is NOT a claim that no league exists (the Philippines Football League likely exists) — composition simply could not be verified here. Needs a follow-up session with search budget available."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Philippines Football League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Philippines_Football_League",
+        "https://www.kayafc.com/news/philippines-football-league-2025-26-primer/"
+      ],
+      "clubs": [
+        { "name": "Kaya FC-Iloilo", "tsdbTeamId": null, "badge": null },
+        { "name": "Manila Digger FC", "tsdbTeamId": null, "badge": null },
+        { "name": "One Taguig FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Dynamic Herb Cebu FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Stallion Laguna FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Maharlika Taguig", "tsdbTeamId": null, "badge": null },
+        { "name": "Aguilas FC-Umak FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Valenzuela PB-Mendiola FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Tuloy FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Philippine Army FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Don Bosco Garelli United", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

@@ -2,7 +2,30 @@
   "association": "SVK",
   "country": "Slovakia",
   "confederation": "UEFA",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (200/200) was exhausted before this association could be covered. No clubs or leagues were invented per task rules; leagues left empty pending a follow-up session with search capacity."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Niké Liga (Slovak First Football League)",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Slovak_First_Football_League"
+      ],
+      "clubs": [
+        { "name": "ŠK Slovan Bratislava", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"] },
+        { "name": "FC Spartak Trnava", "tsdbTeamId": null, "badge": null, "colors": ["#D2122E", "#FFFFFF"] },
+        { "name": "MŠK Žilina", "tsdbTeamId": null, "badge": null, "colors": ["#00944D", "#FFFFFF"] },
+        { "name": "FC DAC 1904 Dunajská Streda", "tsdbTeamId": null, "badge": null, "colors": ["#FFD700", "#0033A0"] },
+        { "name": "FK Železiarne Podbrezová", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Košice", "tsdbTeamId": null, "badge": null },
+        { "name": "MFK Zemplín Michalovce", "tsdbTeamId": null, "badge": null },
+        { "name": "KFC Komárno", "tsdbTeamId": null, "badge": null },
+        { "name": "MFK Ružomberok", "tsdbTeamId": null, "badge": null },
+        { "name": "AS Trenčín", "tsdbTeamId": null, "badge": null },
+        { "name": "MFK Skalica", "tsdbTeamId": null, "badge": null },
+        { "name": "1. FC Tatran Prešov", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

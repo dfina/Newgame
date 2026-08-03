@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-03T14:55:25.669Z",
+ "generated": "2026-08-03T14:55:47.223Z",
  "countries": [
   {
    "code": "AFG",
@@ -821,6 +821,20 @@
    ]
   },
   {
+   "code": "HKG",
+   "country": "Hong Kong",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Hong Kong Premier League",
+     "clubs": 10,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "HON",
    "country": "Honduras",
    "confederation": "CONCACAF",
@@ -996,6 +1010,20 @@
    ]
   },
   {
+   "code": "JOR",
+   "country": "Jordan",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Jordanian Pro League",
+     "clubs": 9,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "JPN",
    "country": "Japan",
    "confederation": "AFC",
@@ -1052,6 +1080,20 @@
    ]
   },
   {
+   "code": "KOS",
+   "country": "Kosovo",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Football Superleague of Kosovo",
+     "clubs": 7,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "KSA",
    "country": "Saudi Arabia",
    "confederation": "AFC",
@@ -1060,6 +1102,20 @@
      "tier": 1,
      "name": "Saudi Pro League",
      "clubs": 18,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "KUW",
+   "country": "Kuwait",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Kuwaiti Premier League",
+     "clubs": 10,
      "verified": true,
      "tsdbLeagueId": null
     }
@@ -1103,6 +1159,34 @@
      "name": "Lesotho Premier League",
      "clubs": 14,
      "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "LTU",
+   "country": "Lithuania",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "A Lyga",
+     "clubs": 10,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "LVA",
+   "country": "Latvia",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Virslīga",
+     "clubs": 10,
+     "verified": true,
      "tsdbLeagueId": null
     }
    ]
@@ -1493,6 +1577,20 @@
    ]
   },
   {
+   "code": "PHI",
+   "country": "Philippines",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Philippines Football League",
+     "clubs": 11,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "PNG",
    "country": "Papua New Guinea",
    "confederation": "OFC",
@@ -1668,6 +1766,20 @@
    ]
   },
   {
+   "code": "SGP",
+   "country": "Singapore",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Singapore Premier League",
+     "clubs": 8,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "SLE",
    "country": "Sierra Leone",
    "confederation": "CAF",
@@ -1752,6 +1864,34 @@
     {
      "tier": 2,
      "name": "Swiss Challenge League",
+     "clubs": 10,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "SVK",
+   "country": "Slovakia",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Niké Liga (Slovak First Football League)",
+     "clubs": 12,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "SVN",
+   "country": "Slovenia",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Slovenian PrvaLiga",
      "clubs": 10,
      "verified": true,
      "tsdbLeagueId": null

@@ -2,7 +2,27 @@
   "association": "SGP",
   "country": "Singapore",
   "confederation": "AFC",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (shared across this entire session) was exhausted before Singapore could be looked into. This is NOT a claim that no league exists (the Singapore Premier League likely exists) — composition simply could not be verified here. Needs a follow-up session with search budget available."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Singapore Premier League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Singapore_Premier_League",
+        "https://spl.sg/spl-teams/"
+      ],
+      "clubs": [
+        { "name": "Albirex Niigata FC (S)", "tsdbTeamId": null, "badge": null },
+        { "name": "Balestier Khalsa FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Tampines Rovers FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Geylang International FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Hougang United FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Lion City Sailors FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Tanjong Pagar United FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Young Lions FC", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

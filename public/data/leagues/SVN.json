@@ -2,7 +2,28 @@
   "association": "SVN",
   "country": "Slovenia",
   "confederation": "UEFA",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (200/200) was exhausted before this association could be covered. No clubs or leagues were invented per task rules; leagues left empty pending a follow-up session with search capacity."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Slovenian PrvaLiga",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Slovenian_PrvaLiga"
+      ],
+      "clubs": [
+        { "name": "NK Celje", "tsdbTeamId": null, "badge": null, "colors": ["#D2122E", "#000000"] },
+        { "name": "NK Koper", "tsdbTeamId": null, "badge": null },
+        { "name": "NK Bravo", "tsdbTeamId": null, "badge": null },
+        { "name": "NK Maribor", "tsdbTeamId": null, "badge": null, "colors": ["#5B21B6", "#FFD700"] },
+        { "name": "NK Radomlje", "tsdbTeamId": null, "badge": null },
+        { "name": "NK Olimpija Ljubljana", "tsdbTeamId": null, "badge": null, "colors": ["#00205B", "#00944D"] },
+        { "name": "NK Aluminij", "tsdbTeamId": null, "badge": null },
+        { "name": "NŠ Mura", "tsdbTeamId": null, "badge": null },
+        { "name": "NK Primorje", "tsdbTeamId": null, "badge": null },
+        { "name": "NK Domžale", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }
