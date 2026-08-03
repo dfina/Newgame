@@ -1,0 +1,33 @@
+{
+  "association": "AZE",
+  "country": "Azerbaijan",
+  "confederation": "UEFA",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Azerbaijan Premier League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Azerbaijan_Premier_League",
+        "https://en.wikipedia.org/wiki/List_of_football_clubs_in_Azerbaijan",
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Azerbaijan_Premier_League"
+      ],
+      "clubs": [
+        {"name": "Araz Naxçıvan", "tsdbTeamId": null, "badge": null},
+        {"name": "İmişli", "tsdbTeamId": null, "badge": null},
+        {"name": "Kapaz", "tsdbTeamId": null, "badge": null},
+        {"name": "Karvan", "tsdbTeamId": null, "badge": null},
+        {"name": "Neftçi", "tsdbTeamId": null, "badge": null},
+        {"name": "Qəbələ", "tsdbTeamId": null, "badge": null},
+        {"name": "Qarabağ", "tsdbTeamId": null, "badge": null, "colors": ["#6C2A8C", "#FFFFFF"]},
+        {"name": "Sabah", "tsdbTeamId": null, "badge": null},
+        {"name": "Shamakhi", "tsdbTeamId": null, "badge": null},
+        {"name": "Şimal", "tsdbTeamId": null, "badge": null},
+        {"name": "Zaqatala", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "League expanded to 12 clubs for 2025-26; only 11 could be individually confirmed by name this session."
+}

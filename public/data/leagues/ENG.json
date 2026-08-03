@@ -1,0 +1,127 @@
+{
+  "association": "ENG",
+  "country": "England",
+  "confederation": "UEFA",
+  "season": "2026-27",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Premier League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Premier_League",
+        "https://sports.yahoo.com/articles/2026-27-premier-league-teams-133302059.html",
+        "https://sports.yahoo.com/articles/premier-league-teams-relegated-2026-121617399.html",
+        "https://www.premierleague.com/en/news/4673099/the-202627-premier-league-season-officially-starts/"
+      ],
+      "clubs": [
+        { "name": "Arsenal", "tsdbTeamId": null, "badge": null, "colors": ["#EF0107", "#FFFFFF"] },
+        { "name": "Aston Villa", "tsdbTeamId": null, "badge": null, "colors": ["#670E36", "#95BFE5"] },
+        { "name": "Bournemouth", "tsdbTeamId": null, "badge": null, "colors": ["#DA020E", "#000000"] },
+        { "name": "Brentford", "tsdbTeamId": null, "badge": null, "colors": ["#E30613", "#FFFFFF"] },
+        { "name": "Brighton & Hove Albion", "tsdbTeamId": null, "badge": null, "colors": ["#0057B8", "#FFFFFF"] },
+        { "name": "Chelsea", "tsdbTeamId": null, "badge": null, "colors": ["#034694", "#FFFFFF"] },
+        { "name": "Coventry City", "tsdbTeamId": null, "badge": null, "colors": ["#78B5E3", "#FFFFFF"] },
+        { "name": "Crystal Palace", "tsdbTeamId": null, "badge": null, "colors": ["#1B458F", "#C4122E"] },
+        { "name": "Everton", "tsdbTeamId": null, "badge": null, "colors": ["#003399", "#FFFFFF"] },
+        { "name": "Fulham", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#000000"] },
+        { "name": "Hull City", "tsdbTeamId": null, "badge": null, "colors": ["#F18A00", "#000000"] },
+        { "name": "Ipswich Town", "tsdbTeamId": null, "badge": null, "colors": ["#1D4C9B", "#FFFFFF"] },
+        { "name": "Leeds United", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#1D428A"] },
+        { "name": "Liverpool", "tsdbTeamId": null, "badge": null, "colors": ["#C8102E", "#F6EB61"] },
+        { "name": "Manchester City", "tsdbTeamId": null, "badge": null, "colors": ["#6CABDD", "#1C2C5B"] },
+        { "name": "Manchester United", "tsdbTeamId": null, "badge": null, "colors": ["#DA291C", "#FBE122"] },
+        { "name": "Newcastle United", "tsdbTeamId": null, "badge": null, "colors": ["#241F20", "#FFFFFF"] },
+        { "name": "Nottingham Forest", "tsdbTeamId": null, "badge": null, "colors": ["#DD0000", "#FFFFFF"] },
+        { "name": "Sunderland", "tsdbTeamId": null, "badge": null, "colors": ["#EB172B", "#FFFFFF"] },
+        { "name": "Tottenham Hotspur", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#132257"] }
+      ]
+    },
+    {
+      "tier": 2,
+      "name": "EFL Championship",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_EFL_Championship",
+        "https://footballleagueworld.co.uk/all-efl-championship-clubs-next-season-summed-up-in-one-word/",
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_EFL_Championship",
+        "https://www.espn.co.uk/football/table/_/league/eng.2",
+        "https://sports.yahoo.com/articles/premier-league-teams-relegated-2026-121617399.html"
+      ],
+      "clubs": [
+        { "name": "Millwall", "tsdbTeamId": null, "badge": null, "colors": ["#001B5A", "#FFFFFF"] },
+        { "name": "Southampton", "tsdbTeamId": null, "badge": null, "colors": ["#D71920", "#FFFFFF"] },
+        { "name": "Middlesbrough", "tsdbTeamId": null, "badge": null, "colors": ["#DA1710", "#FFFFFF"] },
+        { "name": "Wrexham", "tsdbTeamId": null, "badge": null, "colors": ["#DC1E35", "#FFFFFF"] },
+        { "name": "Derby County", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#000000"] },
+        { "name": "Norwich City", "tsdbTeamId": null, "badge": null, "colors": ["#FFF200", "#00A650"] },
+        { "name": "Birmingham City", "tsdbTeamId": null, "badge": null, "colors": ["#0000FF", "#FFFFFF"] },
+        { "name": "Swansea City", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#000000"] },
+        { "name": "Bristol City", "tsdbTeamId": null, "badge": null, "colors": ["#E21C21", "#FFFFFF"] },
+        { "name": "Sheffield United", "tsdbTeamId": null, "badge": null, "colors": ["#EE2737", "#FFFFFF"] },
+        { "name": "Preston North End", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#001C58"] },
+        { "name": "Queens Park Rangers", "tsdbTeamId": null, "badge": null, "colors": ["#1D5BA4", "#FFFFFF"] },
+        { "name": "Watford", "tsdbTeamId": null, "badge": null, "colors": ["#FBEE23", "#ED2127"] },
+        { "name": "Stoke City", "tsdbTeamId": null, "badge": null, "colors": ["#E03A3E", "#FFFFFF"] },
+        { "name": "Portsmouth", "tsdbTeamId": null, "badge": null, "colors": ["#001489", "#FFFFFF"] },
+        { "name": "Charlton Athletic", "tsdbTeamId": null, "badge": null, "colors": ["#D2122E", "#FFFFFF"] },
+        { "name": "Blackburn Rovers", "tsdbTeamId": null, "badge": null, "colors": ["#009EE0", "#FFFFFF"] },
+        { "name": "West Bromwich Albion", "tsdbTeamId": null, "badge": null, "colors": ["#122F67", "#FFFFFF"] },
+        { "name": "West Ham United", "tsdbTeamId": null, "badge": null, "colors": ["#7A263A", "#1BB1E7"] },
+        { "name": "Burnley", "tsdbTeamId": null, "badge": null, "colors": ["#6C1D45", "#99D6EA"] },
+        { "name": "Wolverhampton Wanderers", "tsdbTeamId": null, "badge": null, "colors": ["#FDB913", "#231F20"] },
+        { "name": "Lincoln City", "tsdbTeamId": null, "badge": null, "colors": ["#CC0000", "#FFFFFF"] },
+        { "name": "Cardiff City", "tsdbTeamId": null, "badge": null, "colors": ["#0070B5", "#FFFFFF"] },
+        { "name": "Bolton Wanderers", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#00285E"] }
+      ]
+    },
+    {
+      "tier": 3,
+      "name": "EFL League One",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_EFL_League_One",
+        "https://en.wikipedia.org/wiki/Category:2025%E2%80%9326_EFL_League_One_by_team",
+        "https://football.fandom.com/wiki/2026%E2%80%9327_EFL_League_One",
+        "https://www.matchbingo.co.uk/blog/league-one-and-league-two-promotion-race-202526-who-is-going-up",
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_EFL_Championship"
+      ],
+      "clubs": [
+        { "name": "Stockport County", "tsdbTeamId": null, "badge": null },
+        { "name": "Bradford City", "tsdbTeamId": null, "badge": null, "colors": ["#FFCD00", "#800000"] },
+        { "name": "Stevenage", "tsdbTeamId": null, "badge": null },
+        { "name": "Wigan Athletic", "tsdbTeamId": null, "badge": null, "colors": ["#1C3F94", "#FFFFFF"] },
+        { "name": "Oxford United", "tsdbTeamId": null, "badge": null, "colors": ["#FFEB00", "#00285E"] },
+        { "name": "Leicester City", "tsdbTeamId": null, "badge": null, "colors": ["#003090", "#FDBE11"] },
+        { "name": "Sheffield Wednesday", "tsdbTeamId": null, "badge": null, "colors": ["#0099D8", "#FFFFFF"] },
+        { "name": "Bromley", "tsdbTeamId": null, "badge": null },
+        { "name": "MK Dons", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] },
+        { "name": "Cambridge United", "tsdbTeamId": null, "badge": null, "colors": ["#F9A01B", "#000000"] },
+        { "name": "Notts County", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] }
+      ]
+    },
+    {
+      "tier": 4,
+      "name": "EFL League Two",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://www.fleetwoodtownfc.com/2026-27-sky-bet-league-two-line-up-confirmed/",
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_EFL_League_One",
+        "https://groundhopperguides.com/promotions-relegations-and-european-places-in-england-2025-26-season/",
+        "https://www.matchbingo.co.uk/blog/league-one-and-league-two-promotion-race-202526-who-is-going-up"
+      ],
+      "clubs": [
+        { "name": "Rotherham United", "tsdbTeamId": null, "badge": null, "colors": ["#EE2E24", "#FFFFFF"] },
+        { "name": "Port Vale", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] },
+        { "name": "Exeter City", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] },
+        { "name": "Northampton Town", "tsdbTeamId": null, "badge": null, "colors": ["#800000", "#FFFFFF"] },
+        { "name": "York City", "tsdbTeamId": null, "badge": null },
+        { "name": "Rochdale", "tsdbTeamId": null, "badge": null, "colors": ["#00538C", "#FFFFFF"] }
+      ]
+    }
+  ]
+}

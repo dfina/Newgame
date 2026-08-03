@@ -1,0 +1,30 @@
+{
+  "association": "GEO",
+  "country": "Georgia",
+  "confederation": "UEFA",
+  "season": "2026",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Erovnuli Liga",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_Erovnuli_Liga",
+        "https://footystats.org/georgia/erovnuli-liga"
+      ],
+      "clubs": [
+        {"name": "FC Iberia 1999", "tsdbTeamId": null, "badge": null},
+        {"name": "Torpedo Kutaisi", "tsdbTeamId": null, "badge": null},
+        {"name": "FC Rustavi", "tsdbTeamId": null, "badge": null},
+        {"name": "Dinamo Tbilisi", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"]},
+        {"name": "Dinamo Batumi", "tsdbTeamId": null, "badge": null},
+        {"name": "Samgurali Tsqaltubo", "tsdbTeamId": null, "badge": null},
+        {"name": "Spaeri Tbilisi", "tsdbTeamId": null, "badge": null},
+        {"name": "Dila Gori", "tsdbTeamId": null, "badge": null},
+        {"name": "Gagra", "tsdbTeamId": null, "badge": null},
+        {"name": "Meshakhte Tkibuli", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ]
+}

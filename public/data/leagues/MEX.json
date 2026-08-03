@@ -1,0 +1,69 @@
+{
+  "association": "MEX",
+  "country": "Mexico",
+  "confederation": "CONCACAF",
+  "season": "2026-27",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Liga MX",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Liga_MX_season",
+        "https://oem.com.mx/elsoldesinaloa/deportes/todo-listo-para-la-liga-mx-asi-llegan-los-18-clubes-al-inicio-del-apertura-2026-30996774"
+      ],
+      "note": "Apertura 2026 tournament, first of the 2026-27 season, 18 clubs. Atlante returned to Liga MX in 2026 after 12 years in the second tier by acquiring a club registration (reported in connection with Mazatlán's franchise); both names appeared in session sources so both are listed rather than guessing which is correct.",
+      "clubs": [
+        { "name": "Club América", "tsdbTeamId": null, "badge": null, "colors": ["#FFD200", "#00274E"] },
+        { "name": "Cruz Azul", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"] },
+        { "name": "Guadalajara (Chivas)", "tsdbTeamId": null, "badge": null, "colors": ["#C8102E", "#002E5D"] },
+        { "name": "Toluca", "tsdbTeamId": null, "badge": null, "colors": ["#D2001C", "#FFFFFF"] },
+        { "name": "Pachuca", "tsdbTeamId": null, "badge": null, "colors": ["#003DA5", "#FF7900"] },
+        { "name": "Tigres UANL", "tsdbTeamId": null, "badge": null, "colors": ["#FFC72C", "#002B5C"] },
+        { "name": "Monterrey (Rayados)", "tsdbTeamId": null, "badge": null, "colors": ["#03228E", "#FFFFFF"] },
+        { "name": "Necaxa", "tsdbTeamId": null, "badge": null, "colors": ["#EE1C25", "#FFFFFF"] },
+        { "name": "Puebla", "tsdbTeamId": null, "badge": null, "colors": ["#0F3B82", "#FFFFFF"] },
+        { "name": "Querétaro", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] },
+        { "name": "Mazatlán FC", "tsdbTeamId": null, "badge": null, "colors": ["#7A0019", "#000000"] },
+        { "name": "FC Juárez", "tsdbTeamId": null, "badge": null, "colors": ["#00843D", "#000000"] },
+        { "name": "León", "tsdbTeamId": null, "badge": null, "colors": ["#046A38", "#FFFFFF"] },
+        { "name": "Santos Laguna", "tsdbTeamId": null, "badge": null, "colors": ["#0B6623", "#FFFFFF"] },
+        { "name": "Tijuana (Xolos)", "tsdbTeamId": null, "badge": null, "colors": ["#C8102E", "#000000"] },
+        { "name": "Atlas", "tsdbTeamId": null, "badge": null, "colors": ["#D2232A", "#000000"] },
+        { "name": "Atlético San Luis", "tsdbTeamId": null, "badge": null, "colors": ["#C8102E", "#FFFFFF"] },
+        { "name": "Atlante", "tsdbTeamId": null, "badge": null, "colors": ["#1D3557", "#B0B0B0"] }
+      ]
+    },
+    {
+      "tier": 2,
+      "name": "Liga de Expansión MX",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://www.clarosports.com/futbol/liga-de-expansion-mx/liga-de-expansion-mx-presenta-calendario-del-apertura-2026-habra-16-equipos-y-tres-nuevos-clubes/",
+        "https://www.estadiodeportes.mx/ligamx/inicia-la-liga-de-expansion-mx-apertura-2026-estos-son-los-16-equipos-participantes-20260724-0011.html",
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Liga_de_Expansi%C3%B3n_MX_season"
+      ],
+      "note": "Apertura 2026, 16 clubs. Atlante left this league in 2026 to join Liga MX; Irapuato ceased participating due to financial/legal issues. Alacranes de Durango and Piratas FC are new entrants for this season.",
+      "clubs": [
+        { "name": "Tepatitlán", "tsdbTeamId": null, "badge": null },
+        { "name": "Mineros de Zacatecas", "tsdbTeamId": null, "badge": null },
+        { "name": "Correcaminos UAT", "tsdbTeamId": null, "badge": null },
+        { "name": "Tlaxcala FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Leones Negros UdeG", "tsdbTeamId": null, "badge": null },
+        { "name": "Venados FC (Mérida)", "tsdbTeamId": null, "badge": null },
+        { "name": "Alebrijes de Oaxaca", "tsdbTeamId": null, "badge": null },
+        { "name": "Atlético Morelia", "tsdbTeamId": null, "badge": null },
+        { "name": "Atlético La Paz", "tsdbTeamId": null, "badge": null },
+        { "name": "Jaiba Brava (Tampico Madero)", "tsdbTeamId": null, "badge": null },
+        { "name": "Piratas FC (Campeche)", "tsdbTeamId": null, "badge": null },
+        { "name": "Tapatío", "tsdbTeamId": null, "badge": null },
+        { "name": "Cruz Azul Hidalgo", "tsdbTeamId": null, "badge": null },
+        { "name": "Dorados de Sinaloa", "tsdbTeamId": null, "badge": null },
+        { "name": "Cancún FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Alacranes de Durango", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
+}

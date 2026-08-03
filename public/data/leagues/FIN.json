@@ -1,0 +1,32 @@
+{
+  "association": "FIN",
+  "country": "Finland",
+  "confederation": "UEFA",
+  "season": "2026",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Veikkausliiga",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_Veikkausliiga",
+        "https://footystats.org/finland/veikkausliiga"
+      ],
+      "clubs": [
+        {"name": "AC Oulu", "tsdbTeamId": null, "badge": null},
+        {"name": "HJK Helsinki", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"]},
+        {"name": "IF Gnistan", "tsdbTeamId": null, "badge": null},
+        {"name": "IFK Mariehamn", "tsdbTeamId": null, "badge": null},
+        {"name": "Ilves", "tsdbTeamId": null, "badge": null},
+        {"name": "Inter Turku", "tsdbTeamId": null, "badge": null},
+        {"name": "FF Jaro", "tsdbTeamId": null, "badge": null},
+        {"name": "KuPS Kuopio", "tsdbTeamId": null, "badge": null},
+        {"name": "FC Lahti", "tsdbTeamId": null, "badge": null},
+        {"name": "SJK Seinäjoki", "tsdbTeamId": null, "badge": null},
+        {"name": "TPS Turku", "tsdbTeamId": null, "badge": null},
+        {"name": "VPS Vaasa", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ]
+}

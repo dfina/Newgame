@@ -1,0 +1,32 @@
+{
+  "association": "KEN",
+  "country": "Kenya",
+  "confederation": "CAF",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Kenyan Premier League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Kenyan_Premier_League",
+        "https://www.espn.com/soccer/standings/_/league/ken.1"
+      ],
+      "clubs": [
+        { "name": "A.F.C. Leopards", "tsdbTeamId": null, "badge": null },
+        { "name": "APS Bomet", "tsdbTeamId": null, "badge": null },
+        { "name": "Bandari", "tsdbTeamId": null, "badge": null },
+        { "name": "Bidco United", "tsdbTeamId": null, "badge": null },
+        { "name": "Gor Mahia", "tsdbTeamId": null, "badge": null, "colors": ["#006633", "#FFFFFF"] },
+        { "name": "Kakamega Homeboyz", "tsdbTeamId": null, "badge": null },
+        { "name": "Kenya Commercial Bank", "tsdbTeamId": null, "badge": null },
+        { "name": "Kenya Police", "tsdbTeamId": null, "badge": null },
+        { "name": "Mara Sugar", "tsdbTeamId": null, "badge": null },
+        { "name": "Mathare United", "tsdbTeamId": null, "badge": null },
+        { "name": "Nairobi United", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "18 clubs contest the 2025-26 season (16 retained plus APS Bomet and Nairobi United promoted); only 11 were individually named in available sources."
+    }
+  ]
+}

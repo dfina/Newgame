@@ -1,0 +1,22 @@
+{
+  "association": "GRE",
+  "country": "Greece",
+  "confederation": "UEFA",
+  "season": "2026-27",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Super League Greece",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Super_League_Greece"
+      ],
+      "clubs": [
+        {"name": "Iraklis", "tsdbTeamId": null, "badge": null},
+        {"name": "Kalamata", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "League has 14 clubs (12 retained plus 2 promoted); only the 2 promoted clubs (Iraklis, Kalamata) could be confirmed by name this session."
+}

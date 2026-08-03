@@ -1,0 +1,52 @@
+{
+  "association": "CZE",
+  "country": "Czechia",
+  "confederation": "UEFA",
+  "season": "2026-27",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Czech First League (Chance Liga)",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Czech_First_League",
+        "https://www.soccerway.com/czech-republic/chance-liga/"
+      ],
+      "clubs": [
+        {"name": "Sparta Prague", "tsdbTeamId": null, "badge": null, "colors": ["#8B0000", "#FFFFFF"]},
+        {"name": "Slavia Prague", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#8B0000"]},
+        {"name": "Viktoria Plzeň", "tsdbTeamId": null, "badge": null},
+        {"name": "FK Zlín", "tsdbTeamId": null, "badge": null},
+        {"name": "FC Slovan Liberec", "tsdbTeamId": null, "badge": null},
+        {"name": "FK Teplice", "tsdbTeamId": null, "badge": null},
+        {"name": "FC Baník Ostrava", "tsdbTeamId": null, "badge": null},
+        {"name": "FK Slovácko", "tsdbTeamId": null, "badge": null},
+        {"name": "FC Zbrojovka Brno", "tsdbTeamId": null, "badge": null},
+        {"name": "SK Sigma Olomouc", "tsdbTeamId": null, "badge": null},
+        {"name": "FK Mladá Boleslav", "tsdbTeamId": null, "badge": null},
+        {"name": "Bohemians 1905", "tsdbTeamId": null, "badge": null},
+        {"name": "FC Hradec Králové", "tsdbTeamId": null, "badge": null},
+        {"name": "FK Pardubice", "tsdbTeamId": null, "badge": null},
+        {"name": "FK Jablonec", "tsdbTeamId": null, "badge": null}
+      ]
+    },
+    {
+      "tier": 2,
+      "name": "Czech National Football League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Czech_National_Football_League"
+      ],
+      "clubs": [
+        {"name": "SK Kladno", "tsdbTeamId": null, "badge": null},
+        {"name": "Arsenal Česká Lípa", "tsdbTeamId": null, "badge": null},
+        {"name": "Fotbal Třinec", "tsdbTeamId": null, "badge": null},
+        {"name": "MFK Karviná", "tsdbTeamId": null, "badge": null},
+        {"name": "SK Artis Brno", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "Tier-1 list has 15 of 16 clubs confirmed and one apparent conflict (SK Artis Brno was also named as moving to the second tier in a separate result), so verified is false pending clarification. Tier-2 list is partial (5 clubs named, league has 16)."
+}

@@ -1,0 +1,31 @@
+{
+  "association": "SEY",
+  "country": "Seychelles",
+  "confederation": "CAF",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Seychelles Premier League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Seychelles_Premier_League",
+        "https://seyfoot.com/clubs/"
+      ],
+      "clubs": [
+        { "name": "PTL Bazar Brothers", "tsdbTeamId": null, "badge": null },
+        { "name": "Real Maldive FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Bel Air", "tsdbTeamId": null, "badge": null },
+        { "name": "Saint Michel United", "tsdbTeamId": null, "badge": null },
+        { "name": "Light Stars FC", "tsdbTeamId": null, "badge": null },
+        { "name": "St Louis", "tsdbTeamId": null, "badge": null },
+        { "name": "Revengers FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Anse Reunion", "tsdbTeamId": null, "badge": null },
+        { "name": "Côte d'Or FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Foresters", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "53rd season (2025-26); 10 clubs were named in available sources but exact league size could not be independently confirmed. Côte d'Or FC were 2024-25 champions."
+    }
+  ]
+}

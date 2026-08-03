@@ -1,0 +1,120 @@
+{
+  "association": "GER",
+  "country": "Germany",
+  "confederation": "UEFA",
+  "season": "2026-27",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Bundesliga",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Bundesliga",
+        "https://www.worldfootball.net/competition/co12/germany-bundesliga/teams/",
+        "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/24/bayer-04-leverkusen-vs-tsg-hoffenheim/lineup",
+        "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/7/tsg-hoffenheim-vs-bayer-04-leverkusen/lineup"
+      ],
+      "clubs": [
+        { "name": "Bayern Munich", "tsdbTeamId": null, "badge": null, "colors": ["#DC052D", "#0066B2"] },
+        { "name": "Bayer Leverkusen", "tsdbTeamId": null, "badge": null, "colors": ["#E32219", "#000000"] },
+        { "name": "Borussia Dortmund", "tsdbTeamId": null, "badge": null, "colors": ["#FDE100", "#000000"] },
+        { "name": "RB Leipzig", "tsdbTeamId": null, "badge": null, "colors": ["#DD0741", "#FFFFFF"] },
+        { "name": "Eintracht Frankfurt", "tsdbTeamId": null, "badge": null, "colors": ["#E1000F", "#000000"] },
+        { "name": "FSV Mainz 05", "tsdbTeamId": null, "badge": null, "colors": ["#C8102E", "#FFFFFF"] },
+        { "name": "1. FC Köln", "tsdbTeamId": null, "badge": null, "colors": ["#ED1C24", "#FFFFFF"] },
+        { "name": "Hamburger SV", "tsdbTeamId": null, "badge": null, "colors": ["#0C1A3B", "#FFFFFF"] },
+        { "name": "Schalke 04", "tsdbTeamId": null, "badge": null, "colors": ["#004488", "#FFFFFF"] },
+        { "name": "SV Elversberg", "tsdbTeamId": null, "badge": null },
+        { "name": "SC Paderborn", "tsdbTeamId": null, "badge": null },
+        { "name": "Union Berlin", "tsdbTeamId": null, "badge": null, "colors": ["#EB1923", "#FFD100"] },
+        { "name": "Borussia Mönchengladbach", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] },
+        { "name": "SC Freiburg", "tsdbTeamId": null, "badge": null, "colors": ["#DD0000", "#FFFFFF"] },
+        { "name": "Werder Bremen", "tsdbTeamId": null, "badge": null, "colors": ["#1D9053", "#FFFFFF"] },
+        { "name": "VfB Stuttgart", "tsdbTeamId": null, "badge": null, "colors": ["#E32219", "#FFFFFF"] },
+        { "name": "FC Augsburg", "tsdbTeamId": null, "badge": null, "colors": ["#BA3733", "#046A38"] },
+        { "name": "TSG Hoffenheim", "tsdbTeamId": null, "badge": null, "colors": ["#1C63B7", "#FFFFFF"] }
+      ]
+    },
+    {
+      "tier": 2,
+      "name": "2. Bundesliga",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://www.worldfootball.net/competition/co3/germany-2-bundesliga/teams/",
+        "https://de.wikipedia.org/wiki/2._Fu%C3%9Fball-Bundesliga_2026/27",
+        "https://www.fussballtransfers.com/deutschland/2-bundesliga/2026-2027/verein",
+        "https://www.dfl.de/en/news/bundesliga-2-exact-schedule-for-first-two-matchdays-of-the-2026-27-season-released/"
+      ],
+      "clubs": [
+        { "name": "VfL Bochum", "tsdbTeamId": null, "badge": null, "colors": ["#004C9E", "#FFFFFF"] },
+        { "name": "Hertha BSC", "tsdbTeamId": null, "badge": null, "colors": ["#004C9E", "#FFFFFF"] },
+        { "name": "1. FC Heidenheim", "tsdbTeamId": null, "badge": null, "colors": ["#E2001A", "#001489"] },
+        { "name": "VfL Osnabrück", "tsdbTeamId": null, "badge": null },
+        { "name": "SV Darmstadt 98", "tsdbTeamId": null, "badge": null, "colors": ["#003399", "#FFFFFF"] },
+        { "name": "Holstein Kiel", "tsdbTeamId": null, "badge": null, "colors": ["#003087", "#FFFFFF"] },
+        { "name": "Karlsruher SC", "tsdbTeamId": null, "badge": null, "colors": ["#003087", "#FFFFFF"] },
+        { "name": "Arminia Bielefeld", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] },
+        { "name": "1. FC Magdeburg", "tsdbTeamId": null, "badge": null, "colors": ["#00843D", "#FFFFFF"] },
+        { "name": "Eintracht Braunschweig", "tsdbTeamId": null, "badge": null, "colors": ["#F7A800", "#001489"] },
+        { "name": "VfL Wolfsburg", "tsdbTeamId": null, "badge": null, "colors": ["#65B32E", "#FFFFFF"] },
+        { "name": "1. FC Kaiserslautern", "tsdbTeamId": null, "badge": null, "colors": ["#E2001A", "#FFFFFF"] },
+        { "name": "FC St. Pauli", "tsdbTeamId": null, "badge": null, "colors": ["#5A3A29", "#FFFFFF"] },
+        { "name": "SpVgg Greuther Fürth", "tsdbTeamId": null, "badge": null, "colors": ["#00843D", "#FFFFFF"] },
+        { "name": "1. FC Nürnberg", "tsdbTeamId": null, "badge": null, "colors": ["#B7002C", "#FFFFFF"] },
+        { "name": "Dynamo Dresden", "tsdbTeamId": null, "badge": null, "colors": ["#FCD116", "#000000"] },
+        { "name": "Energie Cottbus", "tsdbTeamId": null, "badge": null, "colors": ["#E2001A", "#FFFFFF"] },
+        { "name": "Hannover 96", "tsdbTeamId": null, "badge": null, "colors": ["#00843D", "#FFFFFF"] }
+      ]
+    },
+    {
+      "tier": 3,
+      "name": "3. Liga",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://www.worldfootball.net/competition/co4/germany-3-liga/",
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_3._Liga",
+        "https://de.wikipedia.org/wiki/3._Fu%C3%9Fball-Liga_2026/27",
+        "https://www.diefalsche9.de/die-teilnehmer-der-3-liga-2026-27/"
+      ],
+      "clubs": [
+        { "name": "SV Waldhof Mannheim", "tsdbTeamId": null, "badge": null, "colors": ["#003C8A", "#FFFFFF"] },
+        { "name": "Fortuna Düsseldorf", "tsdbTeamId": null, "badge": null, "colors": ["#E2001A", "#FFFFFF"] },
+        { "name": "FC Ingolstadt 04", "tsdbTeamId": null, "badge": null, "colors": ["#E2001A", "#FFFFFF"] },
+        { "name": "Würzburger Kickers", "tsdbTeamId": null, "badge": null },
+        { "name": "MSV Duisburg", "tsdbTeamId": null, "badge": null, "colors": ["#0066B3", "#FFFFFF"] },
+        { "name": "SV Meppen", "tsdbTeamId": null, "badge": null },
+        { "name": "SV Wehen Wiesbaden", "tsdbTeamId": null, "badge": null },
+        { "name": "Preußen Münster", "tsdbTeamId": null, "badge": null, "colors": ["#00549F", "#FFFFFF"] },
+        { "name": "Viktoria Köln", "tsdbTeamId": null, "badge": null },
+        { "name": "Jahn Regensburg", "tsdbTeamId": null, "badge": null, "colors": ["#003C8A", "#FFFFFF"] },
+        { "name": "VfB Stuttgart II", "tsdbTeamId": null, "badge": null, "colors": ["#E32219", "#FFFFFF"] },
+        { "name": "SG Sonnenhof Großaspach", "tsdbTeamId": null, "badge": null },
+        { "name": "SC Fortuna Köln", "tsdbTeamId": null, "badge": null },
+        { "name": "TSG Hoffenheim II", "tsdbTeamId": null, "badge": null, "colors": ["#1C63B7", "#FFFFFF"] },
+        { "name": "Hansa Rostock", "tsdbTeamId": null, "badge": null, "colors": ["#003C8A", "#FFFFFF"] },
+        { "name": "1. FC Saarbrücken", "tsdbTeamId": null, "badge": null },
+        { "name": "Rot-Weiss Essen", "tsdbTeamId": null, "badge": null, "colors": ["#E2001A", "#FFFFFF"] },
+        { "name": "Alemannia Aachen", "tsdbTeamId": null, "badge": null, "colors": ["#FFD100", "#000080"] }
+      ]
+    },
+    {
+      "tier": 4,
+      "name": "Regionalliga",
+      "tsdbLeagueId": null,
+      "groups": true,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_3._Liga",
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Regionalliga"
+      ],
+      "clubs": [
+        { "name": "Erzgebirge Aue", "tsdbTeamId": null, "badge": null, "colors": ["#712F92", "#FFFFFF"] },
+        { "name": "SSV Ulm 1846", "tsdbTeamId": null, "badge": null },
+        { "name": "1. FC Schweinfurt 05", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
+}

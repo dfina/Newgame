@@ -1,0 +1,30 @@
+{
+  "association": "FRO",
+  "country": "Faroe Islands",
+  "confederation": "UEFA",
+  "season": "2026",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Betri deildin (Faroe Islands Premier League)",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_Faroe_Islands_Premier_League",
+        "https://www.transfermarkt.us/betri-deildin/startseite/wettbewerb/FARO"
+      ],
+      "clubs": [
+        {"name": "AB Argir", "tsdbTeamId": null, "badge": null},
+        {"name": "B36 Tórshavn", "tsdbTeamId": null, "badge": null},
+        {"name": "B68 Toftir", "tsdbTeamId": null, "badge": null},
+        {"name": "EB/Streymur", "tsdbTeamId": null, "badge": null},
+        {"name": "HB Tórshavn", "tsdbTeamId": null, "badge": null},
+        {"name": "KÍ Klaksvík", "tsdbTeamId": null, "badge": null},
+        {"name": "NSÍ Runavík", "tsdbTeamId": null, "badge": null},
+        {"name": "07 Vestur", "tsdbTeamId": null, "badge": null},
+        {"name": "Skála ÍF", "tsdbTeamId": null, "badge": null},
+        {"name": "Víkingur Gøta", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ]
+}

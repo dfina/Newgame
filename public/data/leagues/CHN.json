@@ -1,0 +1,54 @@
+{
+  "association": "CHN",
+  "country": "China PR",
+  "confederation": "AFC",
+  "season": "2026",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Chinese Super League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_Chinese_Super_League",
+        "https://www.chinesesuperleague.uk/columnist/which-teams-are-in-the-2026-chinese-super-league-part-2/"
+      ],
+      "clubs": [
+        {"name": "Beijing Guoan", "tsdbTeamId": null, "badge": null, "colors": ["#006A44", "#FFFFFF"]},
+        {"name": "Chengdu Rongcheng", "tsdbTeamId": null, "badge": null},
+        {"name": "Chongqing Tonglianglong", "tsdbTeamId": null, "badge": null},
+        {"name": "Dalian Yingbo", "tsdbTeamId": null, "badge": null},
+        {"name": "Henan", "tsdbTeamId": null, "badge": null},
+        {"name": "Liaoning Tieren", "tsdbTeamId": null, "badge": null},
+        {"name": "Qingdao Hainiu", "tsdbTeamId": null, "badge": null},
+        {"name": "Qingdao West Coast", "tsdbTeamId": null, "badge": null},
+        {"name": "Shandong Taishan", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"]},
+        {"name": "Shanghai Port", "tsdbTeamId": null, "badge": null, "colors": ["#E4002B", "#0033A0"]},
+        {"name": "Shanghai Shenhua", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"]},
+        {"name": "Shenzhen Peng City", "tsdbTeamId": null, "badge": null},
+        {"name": "Tianjin Jinmen Tiger", "tsdbTeamId": null, "badge": null},
+        {"name": "Wuhan Three Towns", "tsdbTeamId": null, "badge": null},
+        {"name": "Yunnan Yukun", "tsdbTeamId": null, "badge": null},
+        {"name": "Zhejiang", "tsdbTeamId": null, "badge": null}
+      ]
+    },
+    {
+      "tier": 2,
+      "name": "China League One",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_China_League_One"
+      ],
+      "clubs": [
+        {"name": "Meizhou Hakka", "tsdbTeamId": null, "badge": null},
+        {"name": "Changchun Yatai", "tsdbTeamId": null, "badge": null},
+        {"name": "Guangdong GZ-Power", "tsdbTeamId": null, "badge": null},
+        {"name": "Yanbian Longding", "tsdbTeamId": null, "badge": null},
+        {"name": "Shijiazhuang Gongfu", "tsdbTeamId": null, "badge": null},
+        {"name": "Jiangxi Dingnan United", "tsdbTeamId": null, "badge": null}
+      ],
+      "note": "16 clubs compete in the 2026 China League One (incl. relegated CSL sides Meizhou Hakka and Changchun Yatai); only these 6 were confirmed by name in available search snippets. Remaining ~10 clubs could not be verified this session."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "association": "MWI",
+  "country": "Malawi",
+  "confederation": "CAF",
+  "season": "2025",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Super League of Malawi (TNM Super League)",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Super_League_of_Malawi",
+        "https://www.national-football-teams.com/leagues/113/2025_2/Malawi.html",
+        "https://footystats.org/malawi/super-league"
+      ],
+      "clubs": [
+        { "name": "Mighty Wanderers", "tsdbTeamId": null, "badge": null },
+        { "name": "Nyasa Big Bullets", "tsdbTeamId": null, "badge": null },
+        { "name": "Ekhaya FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Blue Eagles", "tsdbTeamId": null, "badge": null },
+        { "name": "Chitipa United", "tsdbTeamId": null, "badge": null },
+        { "name": "Civil Service United", "tsdbTeamId": null, "badge": null },
+        { "name": "Dedza Dynamos", "tsdbTeamId": null, "badge": null },
+        { "name": "Mzuzu City Hammers", "tsdbTeamId": null, "badge": null },
+        { "name": "CRECK Sporting", "tsdbTeamId": null, "badge": null },
+        { "name": "Kamuzu Barracks", "tsdbTeamId": null, "badge": null },
+        { "name": "Karonga United", "tsdbTeamId": null, "badge": null },
+        { "name": "MAFCO", "tsdbTeamId": null, "badge": null },
+        { "name": "Mighty Tigers", "tsdbTeamId": null, "badge": null },
+        { "name": "Moyale Barracks", "tsdbTeamId": null, "badge": null },
+        { "name": "Tigers FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Rumphi United", "tsdbTeamId": null, "badge": null },
+        { "name": "Sable Farming", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "16-club league; Mighty Wanderers won the 2025 title. Club list compiled from sources referencing 2023-2025 seasons and may not exactly match current composition."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "association": "UGA",
+  "country": "Uganda",
+  "confederation": "CAF",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Uganda Premier League (StarTimes Uganda Premier League)",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Uganda_Premier_League",
+        "https://fufa.co.ug/competitions/uganda-premier-league/"
+      ],
+      "clubs": [
+        { "name": "SC Villa", "tsdbTeamId": null, "badge": null },
+        { "name": "Vipers SC", "tsdbTeamId": null, "badge": null },
+        { "name": "KCCA FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Express FC", "tsdbTeamId": null, "badge": null },
+        { "name": "URA FC", "tsdbTeamId": null, "badge": null },
+        { "name": "BUL FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Lugazi FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Mbarara City", "tsdbTeamId": null, "badge": null },
+        { "name": "Kitara FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Uganda Police FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Calvary FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Buhimba Saints", "tsdbTeamId": null, "badge": null },
+        { "name": "Entebbe UPPC", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "16-club league (13 retained plus Calvary FC, Buhimba Saints and Entebbe UPPC promoted from FUFA Big League); 13 were individually named in available sources."
+    }
+  ]
+}

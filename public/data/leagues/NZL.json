@@ -1,0 +1,23 @@
+{
+  "association": "NZL",
+  "country": "New Zealand",
+  "confederation": "OFC",
+  "season": "2026",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "New Zealand National League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_New_Zealand_National_League",
+        "https://en.wikipedia.org/wiki/New_Zealand_National_League"
+      ],
+      "clubs": [
+        {"name": "Auckland FC Reserves", "tsdbTeamId": null, "badge": null},
+        {"name": "Wellington Phoenix Reserves", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "The New Zealand National League is the top domestic club competition run by New Zealand Football. The 2026 edition comprises 32 clubs across regional Northern, Central and Southern Leagues, from which 4, 3 and 2 clubs respectively qualify for a national championship phase alongside Auckland FC Reserves and Wellington Phoenix Reserves (automatic qualifiers). Full regional club lists could not be confirmed by name this session, so only the two automatic qualifiers are listed; verified is false pending a complete roster. Note: Auckland FC and Wellington Phoenix's first teams play in Australia's A-League Men (AFC), not in this competition."
+}

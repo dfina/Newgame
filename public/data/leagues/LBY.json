@@ -1,0 +1,32 @@
+{
+  "association": "LBY",
+  "country": "Libya",
+  "confederation": "CAF",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Libyan Premier League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "groups": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Libyan_Premier_League",
+        "https://globalsportsarchive.com/en/soccer/competition/libyan-premier-league-2025-2026/77973",
+        "https://footystats.org/libya/libyan-premier-league"
+      ],
+      "clubs": [
+        { "name": "Al Ahly Tripoli", "tsdbTeamId": null, "badge": null },
+        { "name": "Asswehly SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Darnes", "tsdbTeamId": null, "badge": null },
+        { "name": "Al Qadisiya", "tsdbTeamId": null, "badge": null },
+        { "name": "Assabah", "tsdbTeamId": null, "badge": null },
+        { "name": "Ittihad Gharyan", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Afreky", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Ittihad Benghazi", "tsdbTeamId": null, "badge": null },
+        { "name": "Al Shomooa", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "2025-26 season played across multiple regional groups (36 clubs total reported); only 9 clubs were individually named in available sources."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "association": "BAN",
+  "country": "Bangladesh",
+  "confederation": "AFC",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Bangladesh Football League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Bangladesh_Football_League"
+      ],
+      "clubs": [
+        {"name": "Bashundhara Kings", "tsdbTeamId": null, "badge": null, "colors": ["#003F87", "#FFFFFF"]},
+        {"name": "Rahmatganj MFS", "tsdbTeamId": null, "badge": null},
+        {"name": "Fortis FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Dhaka Abahani", "tsdbTeamId": null, "badge": null, "colors": ["#8B0000", "#87CEEB"]}
+      ],
+      "note": "10 clubs compete in the 2025-26 season (this competition, formerly the Bangladesh Premier League, was rebranded the Bangladesh Football League); only these 4 were confirmed by name in available search snippets (champions Bashundhara Kings, plus Rahmatganj MFS, Fortis FC, Dhaka Abahani). Remaining ~6 clubs could not be verified this session."
+    }
+  ]
+}

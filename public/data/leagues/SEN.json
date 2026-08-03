@@ -1,0 +1,36 @@
+{
+  "association": "SEN",
+  "country": "Senegal",
+  "confederation": "CAF",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Ligue 1 (Senegal)",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Ligue_1_(Senegal)",
+        "https://www.national-football-teams.com/leagues/163/2025/Senegal.html"
+      ],
+      "clubs": [
+        { "name": "AJEL", "tsdbTeamId": null, "badge": null },
+        { "name": "Gorée", "tsdbTeamId": null, "badge": null },
+        { "name": "Teungueth FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Wally Daan", "tsdbTeamId": null, "badge": null },
+        { "name": "Casa Sports", "tsdbTeamId": null, "badge": null },
+        { "name": "Ouakam", "tsdbTeamId": null, "badge": null },
+        { "name": "Génération Foot", "tsdbTeamId": null, "badge": null },
+        { "name": "Jaraaf", "tsdbTeamId": null, "badge": null },
+        { "name": "Pikine", "tsdbTeamId": null, "badge": null },
+        { "name": "HLM Dakar", "tsdbTeamId": null, "badge": null },
+        { "name": "Guédiawaye FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Stade de Mbour", "tsdbTeamId": null, "badge": null },
+        { "name": "Dakar Sacré-Coeur", "tsdbTeamId": null, "badge": null },
+        { "name": "La Linguère", "tsdbTeamId": null, "badge": null },
+        { "name": "SONACOS", "tsdbTeamId": null, "badge": null },
+        { "name": "Camberène", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
+}

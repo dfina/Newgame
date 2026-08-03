@@ -1,0 +1,39 @@
+{
+  "association": "ZIM",
+  "country": "Zimbabwe",
+  "confederation": "CAF",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Zimbabwe Premier Soccer League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Zimbabwe_Premier_Soccer_League",
+        "https://fanzone.co.zw/premier-soccer-league-psl-2025-2026/",
+        "https://www.national-football-teams.com/leagues/208/2025/Zimbabwe.html"
+      ],
+      "clubs": [
+        { "name": "Scottland FC", "tsdbTeamId": null, "badge": null },
+        { "name": "MWOS FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Simba Bhora", "tsdbTeamId": null, "badge": null },
+        { "name": "Ngezi Platinum Stars", "tsdbTeamId": null, "badge": null },
+        { "name": "TelOne FC", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Platinum", "tsdbTeamId": null, "badge": null },
+        { "name": "Herentals FC", "tsdbTeamId": null, "badge": null },
+        { "name": "ZPC Kariba", "tsdbTeamId": null, "badge": null },
+        { "name": "CAPS United", "tsdbTeamId": null, "badge": null, "colors": ["#00A651", "#000000"] },
+        { "name": "Manica Diamonds", "tsdbTeamId": null, "badge": null },
+        { "name": "Highlanders FC", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] },
+        { "name": "Chicken Inn FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Dynamos FC", "tsdbTeamId": null, "badge": null, "colors": ["#003DA5", "#FFFFFF"] },
+        { "name": "Triangle United", "tsdbTeamId": null, "badge": null },
+        { "name": "Green Fuel FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Bikita Minerals", "tsdbTeamId": null, "badge": null },
+        { "name": "Yadah Stars", "tsdbTeamId": null, "badge": null },
+        { "name": "Kwekwe United", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "association": "CAM",
+  "country": "Cambodia",
+  "confederation": "AFC",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Cambodian Premier League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Cambodian_Premier_League",
+        "https://liquipedia.net/lab/Football/FFC/Cambodian_Premier_League/2025-26"
+      ],
+      "clubs": [
+        {"name": "Preah Khan Reach Svay Rieng", "tsdbTeamId": null, "badge": null},
+        {"name": "Phnom Penh Crown", "tsdbTeamId": null, "badge": null},
+        {"name": "Boeung Ket", "tsdbTeamId": null, "badge": null},
+        {"name": "Angkor Tiger", "tsdbTeamId": null, "badge": null},
+        {"name": "Visakha", "tsdbTeamId": null, "badge": null},
+        {"name": "Kirivong Sok Sen Chey", "tsdbTeamId": null, "badge": null},
+        {"name": "ISI Dangkor Senchey", "tsdbTeamId": null, "badge": null},
+        {"name": "Life", "tsdbTeamId": null, "badge": null},
+        {"name": "Royal Cambodian Armed Forces", "tsdbTeamId": null, "badge": null},
+        {"name": "MOI Kompong Dewa", "tsdbTeamId": null, "badge": null},
+        {"name": "Tiffy Army", "tsdbTeamId": null, "badge": null}
+      ],
+      "note": "11 clubs confirmed across two sources, matching the reported total of 11 teams for the 2025-26 season (double round-robin, top-6 proceed to championship round)."
+    }
+  ]
+}

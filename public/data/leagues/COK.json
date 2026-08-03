@@ -1,0 +1,27 @@
+{
+  "association": "COK",
+  "country": "Cook Islands",
+  "confederation": "OFC",
+  "season": "2025",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Cook Islands Round Cup",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025_Cook_Islands_Cup",
+        "https://en.wikipedia.org/wiki/Cook_Islands_Round_Cup"
+      ],
+      "clubs": [
+        {"name": "Tupapa Maraerenga", "tsdbTeamId": null, "badge": null},
+        {"name": "Avatiu", "tsdbTeamId": null, "badge": null},
+        {"name": "Titikaveka", "tsdbTeamId": null, "badge": null},
+        {"name": "Puaikura", "tsdbTeamId": null, "badge": null},
+        {"name": "Nikao Sokattak", "tsdbTeamId": null, "badge": null},
+        {"name": "Matavera-Ngatangiia", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "Single organised tier (the CIFA Rarotonga Round Cup); no tier-2 league found. Tupapa Maraerenga were 2025 champions."
+}

@@ -1,0 +1,24 @@
+{
+  "association": "BEN",
+  "country": "Benin",
+  "confederation": "CAF",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Benin Championnat National (Ligue Pro)",
+      "tsdbLeagueId": 5231,
+      "verified": false,
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Championnat_du_B%C3%A9nin_de_football_2025-2026",
+        "https://footystats.org/benin/championnat-national",
+        "https://www.thesportsdb.com/league/5231-Benin-Championnat-National"
+      ],
+      "note": "Confirmed as an 18-club top flight (first edition with 18 clubs, single group), running Sep 2025-May 2026. Only 2 of the 18 clubs could be individually confirmed by name in search results.",
+      "clubs": [
+        {"name": "Dadjè FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Buffles de Borgou FC", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ]
+}

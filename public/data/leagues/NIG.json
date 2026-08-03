@@ -1,0 +1,23 @@
+{
+  "association": "NIG",
+  "country": "Niger",
+  "confederation": "CAF",
+  "season": "2024-25",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Niger Premier League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/AS_FAN",
+        "https://en.wikipedia.org/wiki/AS_Douanes_(Niger)"
+      ],
+      "clubs": [
+        { "name": "AS FAN", "tsdbTeamId": null, "badge": null },
+        { "name": "AS Douanes", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "AS FAN won the 2024-25 championship with AS Douanes runner-up; only these 2 clubs were individually named in available sources, full league composition not confirmed."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "association": "MLT",
+  "country": "Malta",
+  "confederation": "UEFA",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Maltese Premier League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": ["https://en.wikipedia.org/wiki/2025%E2%80%9326_Maltese_Premier_League"],
+      "clubs": [
+        {"name": "Ħamrun Spartans", "tsdbTeamId": null, "badge": null},
+        {"name": "Floriana", "tsdbTeamId": null, "badge": null},
+        {"name": "Valletta", "tsdbTeamId": null, "badge": null},
+        {"name": "Sliema Wanderers", "tsdbTeamId": null, "badge": null},
+        {"name": "Marsaxlokk", "tsdbTeamId": null, "badge": null},
+        {"name": "Birkirkara", "tsdbTeamId": null, "badge": null},
+        {"name": "Hibernians", "tsdbTeamId": null, "badge": null},
+        {"name": "Gzira United", "tsdbTeamId": null, "badge": null},
+        {"name": "Mosta", "tsdbTeamId": null, "badge": null},
+        {"name": "Żabbar St. Patrick", "tsdbTeamId": null, "badge": null},
+        {"name": "Tarxien Rainbows", "tsdbTeamId": null, "badge": null},
+        {"name": "Naxxar Lions", "tsdbTeamId": null, "badge": null}
+      ]
+    },
+    {
+      "tier": 2,
+      "name": "Maltese Challenge League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": ["https://en.wikipedia.org/wiki/2025%E2%80%9326_Maltese_Challenge_League"],
+      "clubs": [
+        {"name": "Balzan", "tsdbTeamId": null, "badge": null},
+        {"name": "Birzebbuga St. Peter's", "tsdbTeamId": null, "badge": null},
+        {"name": "Fgura United", "tsdbTeamId": null, "badge": null},
+        {"name": "Gudja United", "tsdbTeamId": null, "badge": null},
+        {"name": "Marsa", "tsdbTeamId": null, "badge": null},
+        {"name": "Melita", "tsdbTeamId": null, "badge": null},
+        {"name": "Mgarr United", "tsdbTeamId": null, "badge": null},
+        {"name": "Mtarfa", "tsdbTeamId": null, "badge": null},
+        {"name": "Pietà Hotspurs", "tsdbTeamId": null, "badge": null},
+        {"name": "Santa Lucia", "tsdbTeamId": null, "badge": null},
+        {"name": "Sirens", "tsdbTeamId": null, "badge": null},
+        {"name": "St. Andrews", "tsdbTeamId": null, "badge": null},
+        {"name": "Swieqi United", "tsdbTeamId": null, "badge": null},
+        {"name": "Vittoriosa Stars", "tsdbTeamId": null, "badge": null},
+        {"name": "Żebbuġ Rangers", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ]
+}

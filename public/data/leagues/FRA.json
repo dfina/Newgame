@@ -1,0 +1,8 @@
+{
+  "association": "FRA",
+  "country": "France",
+  "confederation": "UEFA",
+  "season": "2026-27",
+  "leagues": [],
+  "note": "French league research could not be conducted in this session: the session's WebSearch tool budget was exhausted while researching the England (ENG) file before any France-specific queries could be run (direct HTTPS and WebFetch are also blocked by egress policy). Per the no-invention rule, no club, league, or TheSportsDB ID may be included without a WebSearch result naming it, so Ligue 1, Ligue 2, Championnat National, and Championnat National 2 are left unpopulated pending a follow-up session with restored search quota."
+}

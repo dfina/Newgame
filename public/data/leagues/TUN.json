@@ -1,0 +1,36 @@
+{
+  "association": "TUN",
+  "country": "Tunisia",
+  "confederation": "CAF",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Tunisian Ligue Professionnelle 1",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Tunisian_Ligue_Professionnelle_1",
+        "https://www.worldfootball.net/competition/co1158/tunisia-ligue-1/teams/"
+      ],
+      "clubs": [
+        { "name": "Club Africain", "tsdbTeamId": null, "badge": null, "colors": ["#DA020E", "#FFFFFF"] },
+        { "name": "Espérance de Tunis", "tsdbTeamId": null, "badge": null, "colors": ["#B7093B", "#FFD700"] },
+        { "name": "CS Sfaxien", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] },
+        { "name": "Stade Tunisien", "tsdbTeamId": null, "badge": null },
+        { "name": "US Monastir", "tsdbTeamId": null, "badge": null },
+        { "name": "Espérance Zarzis", "tsdbTeamId": null, "badge": null },
+        { "name": "Étoile du Sahel", "tsdbTeamId": null, "badge": null },
+        { "name": "ES Métlaoui", "tsdbTeamId": null, "badge": null },
+        { "name": "JS Omrane", "tsdbTeamId": null, "badge": null },
+        { "name": "US Ben Guerdane", "tsdbTeamId": null, "badge": null },
+        { "name": "AS Marsa", "tsdbTeamId": null, "badge": null },
+        { "name": "CA Bizertin", "tsdbTeamId": null, "badge": null },
+        { "name": "AS Gabès", "tsdbTeamId": null, "badge": null },
+        { "name": "AS Soliman", "tsdbTeamId": null, "badge": null },
+        { "name": "Olympique Béja", "tsdbTeamId": null, "badge": null },
+        { "name": "JS Kairouan", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "association": "CAN",
+  "country": "Canada",
+  "confederation": "CONCACAF",
+  "season": "2026",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Canadian Premier League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_Canadian_Premier_League_season",
+        "https://en.wikipedia.org/wiki/Category:2026_Canadian_Premier_League_by_team"
+      ],
+      "note": "Canada's three MLS clubs (Toronto FC, CF Montréal, Vancouver Whitecaps FC) play in the United States' MLS structure and are recorded in USA.json only, per task instruction, to avoid duplication. No organised national tier 2 league exists in Canada below the CPL.",
+      "clubs": [
+        { "name": "Atlético Ottawa", "tsdbTeamId": null, "badge": null, "colors": ["#B7002E", "#FFFFFF"] },
+        { "name": "Cavalry FC", "tsdbTeamId": null, "badge": null, "colors": ["#7A1F2B", "#F2A900"] },
+        { "name": "Forge FC", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#F2A900"] },
+        { "name": "HFX Wanderers FC", "tsdbTeamId": null, "badge": null, "colors": ["#00B2A9", "#000000"] },
+        { "name": "Inter Toronto FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Pacific FC", "tsdbTeamId": null, "badge": null, "colors": ["#003DA5", "#000000"] },
+        { "name": "FC Supra du Québec", "tsdbTeamId": null, "badge": null },
+        { "name": "Vancouver FC", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
+}

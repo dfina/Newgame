@@ -1,0 +1,25 @@
+{
+  "association": "GIB",
+  "country": "Gibraltar",
+  "confederation": "UEFA",
+  "season": "2026-27",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Gibraltar Football League (National League)",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Gibraltar_Football_League",
+        "https://www.transfermarkt.us/gibraltar-national-league/startseite/wettbewerb/GI1"
+      ],
+      "clubs": [
+        {"name": "Lincoln Red Imps FC", "tsdbTeamId": null, "badge": null},
+        {"name": "St Joseph's FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Europa FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Lions Gibraltar FC", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "League expected to have 11 clubs for 2026-27; only 4 could be confirmed by name this session."
+}

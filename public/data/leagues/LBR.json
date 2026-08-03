@@ -1,0 +1,27 @@
+{
+  "association": "LBR",
+  "country": "Liberia",
+  "confederation": "CAF",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "LFA First Division (Orange First Division)",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/LFA_First_Division",
+        "https://globalsportsarchive.com/en/soccer/competition/lfa-first-division-league-2025-2026/77594"
+      ],
+      "clubs": [
+        { "name": "FC Fassell", "tsdbTeamId": null, "badge": null },
+        { "name": "Paynesville FC", "tsdbTeamId": null, "badge": null },
+        { "name": "LISCR FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Watanga FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Gardnersville FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Wologizi FC", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "14 clubs compete at the top level (Orange First Division); only 6 were individually named in available sources. FC Fassell were 2024-25 champions."
+    }
+  ]
+}

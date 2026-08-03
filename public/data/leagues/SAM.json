@@ -1,0 +1,23 @@
+{
+  "association": "SAM",
+  "country": "Samoa",
+  "confederation": "OFC",
+  "season": "2025",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Samoa National League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Samoa_National_League",
+        "https://globalsportsarchive.com/en/soccer/competition/ffs-national-premier-league-2025/75468"
+      ],
+      "clubs": [
+        {"name": "Vaipuna", "tsdbTeamId": null, "badge": null},
+        {"name": "Vaivase-Tai", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "League (currently run as the FFS National Premier League) has 12 member clubs in total; 2025 champions were Vaipuna, with Vaivase-Tai 3rd. Only these 2 clubs could be confirmed by name this session, so verified is false and the remaining ~10 clubs are omitted rather than guessed."
+}

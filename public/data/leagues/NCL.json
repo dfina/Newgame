@@ -1,0 +1,33 @@
+{
+  "association": "NCL",
+  "country": "New Caledonia",
+  "confederation": "OFC",
+  "season": "2025",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "New Caledonia Super Ligue",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "groups": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/New_Caledonia_Super_Ligue",
+        "https://footystats.org/new-caledonia/super-ligue",
+        "https://globalsportsarchive.com/en/soccer/competition/super-ligue-2025/75846"
+      ],
+      "clubs": [
+        {"name": "AS Tiga Sport", "tsdbTeamId": null, "badge": null},
+        {"name": "Gaïtcha FCN", "tsdbTeamId": null, "badge": null},
+        {"name": "Hienghène Sport", "tsdbTeamId": null, "badge": null},
+        {"name": "Horizon Patho FC", "tsdbTeamId": null, "badge": null},
+        {"name": "AS Mont-Dore", "tsdbTeamId": null, "badge": null},
+        {"name": "AS Magenta", "tsdbTeamId": null, "badge": null},
+        {"name": "AS Lossi", "tsdbTeamId": null, "badge": null},
+        {"name": "AS Kunié", "tsdbTeamId": null, "badge": null},
+        {"name": "CA Saint-Louis", "tsdbTeamId": null, "badge": null},
+        {"name": "SC Ne Drehu", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "Super Ligue splits into Group A and Group B (5 clubs each), combined here with groups:true. AS Tiga Sport were 2025 champions."
+}

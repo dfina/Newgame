@@ -1,0 +1,36 @@
+{
+  "association": "SSD",
+  "country": "South Sudan",
+  "confederation": "CAF",
+  "season": "2024-25",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "South Sudan Premier League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/South_Sudan_Premier_League",
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_South_Sudan_Premier_League",
+        "https://globalsportsarchive.com/en/soccer/competition/south-sudan-premier-league-2025-2026/77171"
+      ],
+      "clubs": [
+        { "name": "Kator", "tsdbTeamId": null, "badge": null },
+        { "name": "Jamus SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Malakai", "tsdbTeamId": null, "badge": null },
+        { "name": "Bentiu City", "tsdbTeamId": null, "badge": null },
+        { "name": "El-Merriekh", "tsdbTeamId": null, "badge": null },
+        { "name": "Salaam Aweil", "tsdbTeamId": null, "badge": null },
+        { "name": "Wajuma", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Hilal", "tsdbTeamId": null, "badge": null },
+        { "name": "Koryom", "tsdbTeamId": null, "badge": null },
+        { "name": "Nile City", "tsdbTeamId": null, "badge": null },
+        { "name": "Young Stars", "tsdbTeamId": null, "badge": null },
+        { "name": "Lion Hunters", "tsdbTeamId": null, "badge": null },
+        { "name": "Olympics", "tsdbTeamId": null, "badge": null },
+        { "name": "Holy Family", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "Inaugural 14-club season established December 2024; Jamus SC won the 2024-25 (2025) title, qualifying for the 2025-26 CAF Champions League. A South Sudan National League operates as second tier."
+    }
+  ]
+}

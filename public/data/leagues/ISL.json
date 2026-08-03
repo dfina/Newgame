@@ -1,0 +1,32 @@
+{
+  "association": "ISL",
+  "country": "Iceland",
+  "confederation": "UEFA",
+  "season": "2026",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Besta deild karla",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_Besta_deild_karla",
+        "https://m.aiscore.com/tournament-iceland-premier-league/w34kgmi14s1ko92/standings"
+      ],
+      "clubs": [
+        {"name": "Víkingur Reykjavík", "tsdbTeamId": null, "badge": null},
+        {"name": "KR Reykjavík", "tsdbTeamId": null, "badge": null},
+        {"name": "Fram Reykjavík", "tsdbTeamId": null, "badge": null},
+        {"name": "Breiðablik", "tsdbTeamId": null, "badge": null},
+        {"name": "Valur Reykjavík", "tsdbTeamId": null, "badge": null},
+        {"name": "Keflavík", "tsdbTeamId": null, "badge": null},
+        {"name": "ÍA Akranes", "tsdbTeamId": null, "badge": null},
+        {"name": "ÍBV Vestmannaeyjar", "tsdbTeamId": null, "badge": null},
+        {"name": "Stjarnan", "tsdbTeamId": null, "badge": null},
+        {"name": "KA Akureyri", "tsdbTeamId": null, "badge": null},
+        {"name": "FH Hafnarfjörður", "tsdbTeamId": null, "badge": null},
+        {"name": "Þór Akureyri", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ]
+}

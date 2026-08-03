@@ -1,0 +1,28 @@
+{
+  "association": "CRO",
+  "country": "Croatia",
+  "confederation": "UEFA",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Croatian Football League (HNL)",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Croatian_Football_League",
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_HNK_Hajduk_Split_season"
+      ],
+      "clubs": [
+        {"name": "Dinamo Zagreb", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"]},
+        {"name": "Hajduk Split", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#0033A0"]},
+        {"name": "Rijeka", "tsdbTeamId": null, "badge": null},
+        {"name": "Varaždin", "tsdbTeamId": null, "badge": null},
+        {"name": "Osijek", "tsdbTeamId": null, "badge": null},
+        {"name": "Gorica", "tsdbTeamId": null, "badge": null},
+        {"name": "Vukovar 1991", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "League has 10 clubs; 7 could be confirmed by name this session (3 unconfirmed)."
+}

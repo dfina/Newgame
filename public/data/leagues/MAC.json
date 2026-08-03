@@ -1,0 +1,34 @@
+{
+  "association": "MAC",
+  "country": "Macau",
+  "confederation": "AFC",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Liga de Elite",
+      "tsdbLeagueId": 5629,
+      "verified": false,
+      "sources": [
+        "https://tips.gg/tournament/football-macau-liga-de-elite-2025/",
+        "https://globalsportsarchive.com/en/soccer/competition/liga-de-elite-2026/78496",
+        "https://globalsportsarchive.com/en/soccer/competition/liga-de-elite-2025/75221",
+        "https://www.thesportsdb.com/league/5629-macau-liga-de-elite",
+        "https://footystats.org/macau/liga-de-elite"
+      ],
+      "clubs": [
+        {"name": "Sunco G. Universe", "tsdbTeamId": null, "badge": null},
+        {"name": "FC Os Artilheiros", "tsdbTeamId": null, "badge": null},
+        {"name": "Ching Fung FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Universidade de Macau", "tsdbTeamId": null, "badge": null},
+        {"name": "Benfica de Macau", "tsdbTeamId": null, "badge": null},
+        {"name": "Hang Sai SC", "tsdbTeamId": null, "badge": null},
+        {"name": "Gala", "tsdbTeamId": null, "badge": null},
+        {"name": "Shao Jiang SA", "tsdbTeamId": null, "badge": null},
+        {"name": "Macau Chiba FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Must IPO SC", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "Tier-1 club list for the 2025-26 Liga de Elite season is reconstructed from aggregator sites (tips.gg, globalsportsarchive, footystats); a search result also gave conflicting/older-season names (Chao Pak Kei, Lun Lok, Sporting de Macau, Triangle United), so verified is false pending a canonical source such as an official MFA or Wikipedia season page. No organised tier-2 league was verified this session (a '2ª Divisão de Macau' Wikipedia page exists but its composition was not checked)."
+}

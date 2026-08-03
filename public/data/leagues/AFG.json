@@ -1,0 +1,32 @@
+{
+  "association": "AFG",
+  "country": "Afghanistan",
+  "confederation": "AFC",
+  "season": "2024-25",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Afghanistan Champions League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2024%E2%80%9325_Afghanistan_Champions_League",
+        "https://en.wikipedia.org/wiki/Afghanistan_Champions_League"
+      ],
+      "clubs": [
+        {"name": "Abu Muslim", "tsdbTeamId": null, "badge": null},
+        {"name": "Attack Energy", "tsdbTeamId": null, "badge": null},
+        {"name": "Sorkh Poshan", "tsdbTeamId": null, "badge": null},
+        {"name": "Istiqlal", "tsdbTeamId": null, "badge": null},
+        {"name": "Sarrafan", "tsdbTeamId": null, "badge": null},
+        {"name": "Khurasan", "tsdbTeamId": null, "badge": null},
+        {"name": "Sarsabz Yashlar", "tsdbTeamId": null, "badge": null},
+        {"name": "Mawj Sahel Sehat", "tsdbTeamId": null, "badge": null},
+        {"name": "Aino Mina", "tsdbTeamId": null, "badge": null},
+        {"name": "Perozi Kabul", "tsdbTeamId": null, "badge": null},
+        {"name": "Adalat Farah", "tsdbTeamId": null, "badge": null}
+      ],
+      "note": "The Afghanistan Champions League has operated as the de facto top-tier men's competition since the original Afghan Premier League (franchise format) lapsed around 2016. Clubs listed are the 11 (of 12 licensed) that fielded teams in the 2024-25 edition, per Wikipedia; one licensed club (Khadim) withdrew mid-season. A 2025-26 edition and/or a relaunched five-team Afghan Premier League for 2026 were referenced in search snippets, but their club compositions could not be verified this session."
+    }
+  ]
+}

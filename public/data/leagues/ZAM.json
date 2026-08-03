@@ -1,0 +1,27 @@
+{
+  "association": "ZAM",
+  "country": "Zambia",
+  "confederation": "CAF",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Zambia Super League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Zambia_Super_League",
+        "https://www.besoccer.com/competition/info/super_league_zambia"
+      ],
+      "clubs": [
+        { "name": "Power Dynamos", "tsdbTeamId": null, "badge": null },
+        { "name": "ZESCO United", "tsdbTeamId": null, "badge": null },
+        { "name": "Mines United", "tsdbTeamId": null, "badge": null },
+        { "name": "Mutondo Stars", "tsdbTeamId": null, "badge": null },
+        { "name": "Nkwazi FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Nchanga Rangers", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "18-club league (65th season, 16 Aug 2025 - 10 May 2026); 6 were individually named in available sources. Power Dynamos are defending champions."
+    }
+  ]
+}

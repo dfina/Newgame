@@ -1,0 +1,37 @@
+{
+  "association": "ALG",
+  "country": "Algeria",
+  "confederation": "CAF",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Algerian Ligue Professionnelle 1",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Algerian_Ligue_Professionnelle_1",
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_ES_S%C3%A9tif_season",
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_MB_Rouissat_season",
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Olympique_Akbou_season"
+      ],
+      "note": "League confirmed to have 16 clubs for 2025-26; only 14 could be individually named across search results, so club list is partial and unverified.",
+      "clubs": [
+        {"name": "MC Alger", "tsdbTeamId": null, "badge": null},
+        {"name": "USM Alger", "tsdbTeamId": null, "badge": null},
+        {"name": "JS Kabylie", "tsdbTeamId": null, "badge": null},
+        {"name": "ES Sétif", "tsdbTeamId": null, "badge": null},
+        {"name": "CR Belouizdad", "tsdbTeamId": null, "badge": null},
+        {"name": "Paradou AC", "tsdbTeamId": null, "badge": null},
+        {"name": "ASO Chlef", "tsdbTeamId": null, "badge": null},
+        {"name": "CS Constantine", "tsdbTeamId": null, "badge": null},
+        {"name": "ES Ben Aknoun", "tsdbTeamId": null, "badge": null},
+        {"name": "ES Mostaganem", "tsdbTeamId": null, "badge": null},
+        {"name": "MB Rouissat", "tsdbTeamId": null, "badge": null},
+        {"name": "JS Saoura", "tsdbTeamId": null, "badge": null},
+        {"name": "Olympique Akbou", "tsdbTeamId": null, "badge": null},
+        {"name": "MC El Bayadh", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ]
+}

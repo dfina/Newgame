@@ -1,0 +1,74 @@
+{
+  "association": "USA",
+  "country": "United States",
+  "confederation": "CONCACAF",
+  "season": "2026",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Major League Soccer",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_Major_League_Soccer_season",
+        "https://en.wikipedia.org/wiki/Eastern_Conference_(MLS)",
+        "https://en.wikipedia.org/wiki/Western_Conference_(MLS)"
+      ],
+      "note": "MLS has 30 clubs (27 US + 3 Canadian) in 2026 but only 13 were named by title in this session's searches before the web-search budget was exhausted; the remaining ~17 clubs are NOT included (not invented). Canadian MLS clubs (Toronto FC, CF Montréal, Vancouver Whitecaps FC) are included here per task instruction, not duplicated in CAN.json.",
+      "clubs": [
+        { "name": "D.C. United", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#EE1C25"] },
+        { "name": "St. Louis City SC", "tsdbTeamId": null, "badge": null, "colors": ["#DA291C", "#002B5C"] },
+        { "name": "CF Montréal", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#1D9BD8"] },
+        { "name": "San Diego FC", "tsdbTeamId": null, "badge": null, "colors": ["#00205B", "#8CC63F"] },
+        { "name": "Nashville SC", "tsdbTeamId": null, "badge": null, "colors": ["#E5B324", "#1B1B1B"] },
+        { "name": "Chicago Fire FC", "tsdbTeamId": null, "badge": null, "colors": ["#E53233", "#002B5C"] },
+        { "name": "Inter Miami CF", "tsdbTeamId": null, "badge": null, "colors": ["#F7B5CD", "#231F20"] },
+        { "name": "Los Angeles FC", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#C39E6D"] },
+        { "name": "San Jose Earthquakes", "tsdbTeamId": null, "badge": null, "colors": ["#0059B3", "#000000"] },
+        { "name": "FC Dallas", "tsdbTeamId": null, "badge": null, "colors": ["#C41230", "#00529B"] },
+        { "name": "Portland Timbers", "tsdbTeamId": null, "badge": null, "colors": ["#00482B", "#EEB111"] },
+        { "name": "Houston Dynamo FC", "tsdbTeamId": null, "badge": null, "colors": ["#F68712", "#101820"] },
+        { "name": "Vancouver Whitecaps FC", "tsdbTeamId": null, "badge": null, "colors": ["#00245D", "#9BCBEB"] }
+      ]
+    },
+    {
+      "tier": 2,
+      "name": "USL Championship",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_USL_Championship_season",
+        "https://www.rhodeislandfc.com/news/usl-championship-announces-season-structure-for-2026-season/",
+        "https://www.uslchampionship.com/news_article/show/1351433"
+      ],
+      "note": "USA has no promotion/relegation; USL Championship is the sanctioned Division II league. 25 clubs confirmed for the 2026 season (Western Conference 12, Eastern Conference 13), including expansion clubs Sporting Club Jacksonville and Brooklyn FC.",
+      "clubs": [
+        { "name": "Colorado Springs Switchbacks FC", "tsdbTeamId": null, "badge": null },
+        { "name": "El Paso Locomotive FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Las Vegas Lights FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Lexington SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Monterey Bay FC", "tsdbTeamId": null, "badge": null },
+        { "name": "New Mexico United", "tsdbTeamId": null, "badge": null },
+        { "name": "Oakland Roots SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Orange County SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Phoenix Rising FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Sacramento Republic FC", "tsdbTeamId": null, "badge": null },
+        { "name": "San Antonio FC", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Tulsa", "tsdbTeamId": null, "badge": null },
+        { "name": "Birmingham Legion FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Brooklyn FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Charleston Battery", "tsdbTeamId": null, "badge": null },
+        { "name": "Detroit City FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Hartford Athletic", "tsdbTeamId": null, "badge": null },
+        { "name": "Indy Eleven", "tsdbTeamId": null, "badge": null },
+        { "name": "Loudoun United FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Louisville City FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Miami FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Pittsburgh Riverhounds SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Rhode Island FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Sporting Club Jacksonville", "tsdbTeamId": null, "badge": null },
+        { "name": "Tampa Bay Rowdies", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
+}

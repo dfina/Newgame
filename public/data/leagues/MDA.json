@@ -1,0 +1,43 @@
+{
+  "association": "MDA",
+  "country": "Moldova",
+  "confederation": "UEFA",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Moldovan Super Liga",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": ["https://en.wikipedia.org/wiki/2025%E2%80%9326_Moldovan_Liga"],
+      "clubs": [
+        {"name": "Bălți", "tsdbTeamId": null, "badge": null},
+        {"name": "Dacia Buiucani", "tsdbTeamId": null, "badge": null},
+        {"name": "Milsami Orhei", "tsdbTeamId": null, "badge": null},
+        {"name": "Petrocub Hîncești", "tsdbTeamId": null, "badge": null},
+        {"name": "Politehnica UTM", "tsdbTeamId": null, "badge": null},
+        {"name": "Sheriff Tiraspol", "tsdbTeamId": null, "badge": null},
+        {"name": "Spartanii Sportul", "tsdbTeamId": null, "badge": null},
+        {"name": "Zimbru Chișinău", "tsdbTeamId": null, "badge": null}
+      ]
+    },
+    {
+      "tier": 2,
+      "name": "Moldovan Liga 1",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": ["https://en.wikipedia.org/wiki/2025%E2%80%9326_Moldovan_Liga_1"],
+      "clubs": [
+        {"name": "Fălești", "tsdbTeamId": null, "badge": null},
+        {"name": "Florești", "tsdbTeamId": null, "badge": null},
+        {"name": "Iskra Rîbnița", "tsdbTeamId": null, "badge": null},
+        {"name": "Oguz Comrat", "tsdbTeamId": null, "badge": null},
+        {"name": "Olimp Comrat", "tsdbTeamId": null, "badge": null},
+        {"name": "Real Sireți", "tsdbTeamId": null, "badge": null},
+        {"name": "Sheriff-2 Tiraspol", "tsdbTeamId": null, "badge": null},
+        {"name": "Stăuceni", "tsdbTeamId": null, "badge": null}
+      ],
+      "note": "Partial list from search snippet; full 2025-26 Liga 1 roster (may include additional clubs) not fully enumerated."
+    }
+  ]
+}

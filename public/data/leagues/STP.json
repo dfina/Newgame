@@ -1,0 +1,28 @@
+{
+  "association": "STP",
+  "country": "São Tomé and Príncipe",
+  "confederation": "CAF",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "São Tomé and Príncipe Championship",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "groups": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe_Championship",
+        "https://en.wikipedia.org/wiki/Football_in_S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe"
+      ],
+      "clubs": [
+        { "name": "Sporting Clube da Praia Cruz", "tsdbTeamId": null, "badge": null },
+        { "name": "Vitória Riboque", "tsdbTeamId": null, "badge": null },
+        { "name": "Andorinha Sport Club", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Aliança Nacional", "tsdbTeamId": null, "badge": null },
+        { "name": "Os Operários", "tsdbTeamId": null, "badge": null },
+        { "name": "Inter Bom-Bom", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "Top flight consists of separate São Tomé Island and Príncipe Island championships (18 clubs total) whose winners contest a two-legged final; no verified current-season roster found, clubs listed are historically prominent title-winning sides."
+    }
+  ]
+}

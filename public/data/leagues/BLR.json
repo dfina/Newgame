@@ -1,0 +1,36 @@
+{
+  "association": "BLR",
+  "country": "Belarus",
+  "confederation": "UEFA",
+  "season": "2026",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Belarusian Premier League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_Belarusian_Premier_League",
+        "https://en.wikipedia.org/wiki/2025_Belarusian_Premier_League",
+        "https://tribuna.com/en/league/premier-league-belarus/"
+      ],
+      "clubs": [
+        {"name": "Arsenal Dzerzhinsk", "tsdbTeamId": null, "badge": null},
+        {"name": "Baranovichi", "tsdbTeamId": null, "badge": null},
+        {"name": "BATE Borisov", "tsdbTeamId": null, "badge": null},
+        {"name": "Belshina Bobruisk", "tsdbTeamId": null, "badge": null},
+        {"name": "Dinamo Brest", "tsdbTeamId": null, "badge": null},
+        {"name": "Dinamo Minsk", "tsdbTeamId": null, "badge": null},
+        {"name": "Maxline Vitebsk", "tsdbTeamId": null, "badge": null},
+        {"name": "Dnepr Mogilev", "tsdbTeamId": null, "badge": null},
+        {"name": "Gomel", "tsdbTeamId": null, "badge": null},
+        {"name": "Isloch", "tsdbTeamId": null, "badge": null},
+        {"name": "Neman Grodno", "tsdbTeamId": null, "badge": null},
+        {"name": "Naftan Novopolotsk", "tsdbTeamId": null, "badge": null},
+        {"name": "Slavia Mozyr", "tsdbTeamId": null, "badge": null},
+        {"name": "Torpedo-BelAZ Zhodino", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "League has 16 clubs for 2026; 14 could be confirmed by name this session (2 unconfirmed)."
+}

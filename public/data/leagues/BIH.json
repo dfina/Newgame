@@ -1,0 +1,30 @@
+{
+  "association": "BIH",
+  "country": "Bosnia and Herzegovina",
+  "confederation": "UEFA",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Premier League of Bosnia and Herzegovina",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Premier_League_of_Bosnia_and_Herzegovina",
+        "https://footystats.org/bosnia-and-herzegovina/premier-league-of-bosnia"
+      ],
+      "clubs": [
+        {"name": "Borac Banja Luka", "tsdbTeamId": null, "badge": null},
+        {"name": "HŠK Zrinjski Mostar", "tsdbTeamId": null, "badge": null},
+        {"name": "FK Sarajevo", "tsdbTeamId": null, "badge": null, "colors": ["#5A2D82", "#FFFFFF"]},
+        {"name": "FK Velež Mostar", "tsdbTeamId": null, "badge": null},
+        {"name": "NK Široki Brijeg", "tsdbTeamId": null, "badge": null},
+        {"name": "FK Željezničar", "tsdbTeamId": null, "badge": null, "colors": ["#5A3A29", "#FFA500"]},
+        {"name": "FK Radnik Bijeljina", "tsdbTeamId": null, "badge": null},
+        {"name": "NK Posušje", "tsdbTeamId": null, "badge": null},
+        {"name": "FK Sloga Doboj", "tsdbTeamId": null, "badge": null},
+        {"name": "FK Rudar Prijedor", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ]
+}

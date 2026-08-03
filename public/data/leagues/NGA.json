@@ -1,0 +1,37 @@
+{
+  "association": "NGA",
+  "country": "Nigeria",
+  "confederation": "CAF",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Nigeria Premier Football League (NPFL)",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://punchng.com/full-list-20-teams-compete-as-2025-26-npfl-season-begins-friday/",
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Nigeria_Premier_Football_League"
+      ],
+      "clubs": [
+        { "name": "Remo Stars", "tsdbTeamId": null, "badge": null },
+        { "name": "Ikorodu City", "tsdbTeamId": null, "badge": null },
+        { "name": "Barau FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Kun Khalifat FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Enugu Rangers", "tsdbTeamId": null, "badge": null },
+        { "name": "Rivers United", "tsdbTeamId": null, "badge": null },
+        { "name": "Nasarawa United", "tsdbTeamId": null, "badge": null },
+        { "name": "Shooting Stars", "tsdbTeamId": null, "badge": null },
+        { "name": "Kano Pillars", "tsdbTeamId": null, "badge": null },
+        { "name": "Niger Tornadoes", "tsdbTeamId": null, "badge": null },
+        { "name": "El-Kanemi Warriors", "tsdbTeamId": null, "badge": null },
+        { "name": "Wikki Tourists", "tsdbTeamId": null, "badge": null },
+        { "name": "Bayelsa United", "tsdbTeamId": null, "badge": null },
+        { "name": "Kwara United", "tsdbTeamId": null, "badge": null },
+        { "name": "Bendel Insurance", "tsdbTeamId": null, "badge": null },
+        { "name": "Katsina United", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "20 clubs contest the 2025-26 NPFL season; 16 were individually named in available sources."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "association": "HUN",
+  "country": "Hungary",
+  "confederation": "UEFA",
+  "season": "2026-27",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Nemzeti Bajnokság I (NB I)",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Nemzeti_Bajnoks%C3%A1g_I",
+        "https://footystats.org/hungary/nb-i"
+      ],
+      "clubs": [
+        {"name": "Debreceni VSC", "tsdbTeamId": null, "badge": null},
+        {"name": "Ferencvárosi TC", "tsdbTeamId": null, "badge": null, "colors": ["#00A651", "#FFFFFF"]},
+        {"name": "Győri ETO FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Budapest Honvéd (Kispest-Honvéd)", "tsdbTeamId": null, "badge": null},
+        {"name": "Kisvárda FC", "tsdbTeamId": null, "badge": null},
+        {"name": "MTK Budapest", "tsdbTeamId": null, "badge": null},
+        {"name": "Nyíregyháza Spartacus", "tsdbTeamId": null, "badge": null},
+        {"name": "Paksi FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Puskás Akadémia FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Újpest FC", "tsdbTeamId": null, "badge": null, "colors": ["#4B0082", "#FFFFFF"]},
+        {"name": "Vasas SC", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "League has 12 clubs; 11 could be confirmed by name this session (1 unconfirmed)."
+}

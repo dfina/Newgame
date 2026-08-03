@@ -1,0 +1,33 @@
+{
+  "association": "ASA",
+  "country": "American Samoa",
+  "confederation": "OFC",
+  "season": "2026",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "FFAS Senior League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/FFAS_Senior_League",
+        "https://www.national-football-teams.com/leagues/4/2025_2/American_Samoa.html"
+      ],
+      "clubs": [
+        {"name": "Royal Puma", "tsdbTeamId": null, "badge": null},
+        {"name": "Black Roses", "tsdbTeamId": null, "badge": null},
+        {"name": "Green Bay Faga'alu", "tsdbTeamId": null, "badge": null},
+        {"name": "Ilaoa & To'omata", "tsdbTeamId": null, "badge": null},
+        {"name": "Lion Heart", "tsdbTeamId": null, "badge": null},
+        {"name": "Pago Youth A", "tsdbTeamId": null, "badge": null},
+        {"name": "PanSa East", "tsdbTeamId": null, "badge": null},
+        {"name": "Utulei Youth", "tsdbTeamId": null, "badge": null},
+        {"name": "Vaiala Tonga", "tsdbTeamId": null, "badge": null},
+        {"name": "American Samoa Community College", "tsdbTeamId": null, "badge": null},
+        {"name": "Atu'u Broncos", "tsdbTeamId": null, "badge": null},
+        {"name": "Fagaitua High School", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "FFAS Senior League is the sole organised national tier; no separate tier-2 league found. Royal Puma were 2025 champions; the 2026 season is underway with the same club membership."
+}

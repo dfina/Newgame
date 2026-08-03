@@ -1,0 +1,34 @@
+{
+  "association": "ARM",
+  "country": "Armenia",
+  "confederation": "UEFA",
+  "season": "2026-27",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Armenian Premier League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Armenian_Premier_League",
+        "https://www.uefa.com/nationalassociations/arm/domestic/league/1079/",
+        "https://footystats.org/armenia/armenian-premier-league"
+      ],
+      "clubs": [
+        {"name": "Alashkert", "tsdbTeamId": null, "badge": null},
+        {"name": "Ararat Yerevan", "tsdbTeamId": null, "badge": null},
+        {"name": "Ararat-Armenia", "tsdbTeamId": null, "badge": null},
+        {"name": "BKMA Yerevan", "tsdbTeamId": null, "badge": null},
+        {"name": "Gandzasar Kapan", "tsdbTeamId": null, "badge": null},
+        {"name": "Noah", "tsdbTeamId": null, "badge": null},
+        {"name": "Pyunik", "tsdbTeamId": null, "badge": null},
+        {"name": "Sardarapat", "tsdbTeamId": null, "badge": null},
+        {"name": "Shirak", "tsdbTeamId": null, "badge": null},
+        {"name": "Syunik", "tsdbTeamId": null, "badge": null},
+        {"name": "Urartu", "tsdbTeamId": null, "badge": null},
+        {"name": "Van", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "12-club composition for 2026-27 returned by search was flagged as preliminary/not fully confirmed; marked verified:false accordingly."
+}

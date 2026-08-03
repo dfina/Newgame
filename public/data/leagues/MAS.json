@@ -1,0 +1,34 @@
+{
+  "association": "MAS",
+  "country": "Malaysia",
+  "confederation": "AFC",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Malaysia Super League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Malaysia_Super_League",
+        "https://www.bernama.com/en/news.php?id=2403498"
+      ],
+      "clubs": [
+        {"name": "DPMM FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Immigration FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Johor Darul Ta'zim", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FDB913"]},
+        {"name": "Kelantan The Real Warriors", "tsdbTeamId": null, "badge": null, "colors": ["#E4032E", "#FFFFFF"]},
+        {"name": "Kuala Lumpur City", "tsdbTeamId": null, "badge": null},
+        {"name": "Kuching City", "tsdbTeamId": null, "badge": null},
+        {"name": "Melaka", "tsdbTeamId": null, "badge": null},
+        {"name": "Negeri Sembilan", "tsdbTeamId": null, "badge": null},
+        {"name": "PDRM FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Penang", "tsdbTeamId": null, "badge": null},
+        {"name": "Sabah FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Selangor FC", "tsdbTeamId": null, "badge": null, "colors": ["#E4032E", "#FFFFFF"]},
+        {"name": "Terengganu FC", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "Tier 2 (Malaysia A1 Semi-Pro League) could not be verified this session — the WebSearch tool budget was exhausted before it could be researched; omitted rather than guessed at."
+}

@@ -1,0 +1,23 @@
+{
+  "association": "RSA",
+  "country": "South Africa",
+  "confederation": "CAF",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "South African Premiership (Betway Premiership)",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_South_African_Premiership",
+        "https://africa.espn.com/football/table/_/league/rsa.1"
+      ],
+      "clubs": [
+        { "name": "Orbit College", "tsdbTeamId": null, "badge": null },
+        { "name": "Siwelele FC", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "16-club top division running 9 August 2025 to 23 May 2026; only Orbit College and Siwelele FC (both new entrants) were individually named in available sources. Full club roster could not be confirmed."
+    }
+  ]
+}

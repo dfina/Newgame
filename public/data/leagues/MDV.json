@@ -1,0 +1,29 @@
+{
+  "association": "MDV",
+  "country": "Maldives",
+  "confederation": "AFC",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Dhivehi Premier League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Dhivehi_Premier_League",
+        "https://globalsportsarchive.com/en/soccer/competition/dhiraagu-dhivehi-premier-league-2025-2026/77444",
+        "https://tribuna.com/en/league/dhivehi-premier-league/table/2025-2026/"
+      ],
+      "clubs": [
+        {"name": "Maziya S&RC", "tsdbTeamId": null, "badge": null},
+        {"name": "TC Sports Club", "tsdbTeamId": null, "badge": null},
+        {"name": "United Victory", "tsdbTeamId": null, "badge": null},
+        {"name": "Victory Sports Club", "tsdbTeamId": null, "badge": null},
+        {"name": "New Radiant", "tsdbTeamId": null, "badge": null},
+        {"name": "Buru Sports Club", "tsdbTeamId": null, "badge": null},
+        {"name": "Odi Sports Club", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "Sources indicate 10 clubs contest the 2025-26 Dhivehi Premier League but only 7 were individually named in results found this session, so the club list is partial and verified is false. No organised tier-2 league was verified this session (WebSearch budget exhausted before it could be checked)."
+}

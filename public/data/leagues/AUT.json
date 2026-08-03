@@ -1,0 +1,23 @@
+{
+  "association": "AUT",
+  "country": "Austria",
+  "confederation": "UEFA",
+  "season": "2026-27",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Austrian Bundesliga",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://www.espn.com/soccer/standings/_/league/aut.1",
+        "https://www.uefa.com/nationalassociations/aut/domestic/league/1026/",
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Austrian_Football_Second_League"
+      ],
+      "clubs": [
+        {"name": "Austria Lustenau", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "2026-27 Bundesliga has 12 clubs; only Austria Lustenau (promoted as 2025-26 2. Liga champions) could be confirmed by name before the search budget was exhausted. Full roster not verified this session."
+}

@@ -1,0 +1,28 @@
+{
+  "association": "DEN",
+  "country": "Denmark",
+  "confederation": "UEFA",
+  "season": "2026-27",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Danish Superliga",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Danish_Superliga",
+        "https://en.wikipedia.org/wiki/List_of_Danish_Superliga_clubs"
+      ],
+      "clubs": [
+        {"name": "FC Midtjylland", "tsdbTeamId": null, "badge": null},
+        {"name": "FC København", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#0033A0"]},
+        {"name": "Brøndby IF", "tsdbTeamId": null, "badge": null, "colors": ["#FFD700", "#0033A0"]},
+        {"name": "FC Nordsjælland", "tsdbTeamId": null, "badge": null},
+        {"name": "Silkeborg IF", "tsdbTeamId": null, "badge": null},
+        {"name": "AGF", "tsdbTeamId": null, "badge": null},
+        {"name": "Lyngby BK", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "League has 12 clubs; 7 could be confirmed by name this session (5 unconfirmed)."
+}

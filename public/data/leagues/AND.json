@@ -1,0 +1,30 @@
+{
+  "association": "AND",
+  "country": "Andorra",
+  "confederation": "UEFA",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Primera Divisió",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Primera_Divisi%C3%B3",
+        "https://tribuna.com/en/league/primera-divisio/"
+      ],
+      "clubs": [
+        {"name": "Atlètic Club d'Escaldes", "tsdbTeamId": null, "badge": null},
+        {"name": "Esperança", "tsdbTeamId": null, "badge": null},
+        {"name": "Inter Club d'Escaldes", "tsdbTeamId": null, "badge": null},
+        {"name": "CE Carroi", "tsdbTeamId": null, "badge": null},
+        {"name": "Ordino", "tsdbTeamId": null, "badge": null},
+        {"name": "Pas de la Casa", "tsdbTeamId": null, "badge": null},
+        {"name": "Penya Encarnada d'Andorra", "tsdbTeamId": null, "badge": null},
+        {"name": "FC Rànger's", "tsdbTeamId": null, "badge": null},
+        {"name": "FC Santa Coloma", "tsdbTeamId": null, "badge": null},
+        {"name": "UE Santa Coloma", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ]
+}

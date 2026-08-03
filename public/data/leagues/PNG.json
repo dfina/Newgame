@@ -1,0 +1,29 @@
+{
+  "association": "PNG",
+  "country": "Papua New Guinea",
+  "confederation": "OFC",
+  "season": "2025",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Papua New Guinea Premier Soccer League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Papua_New_Guinea_Premier_Soccer_League",
+        "https://globalsportsarchive.com/en/soccer/competition/premier-soccer-league-2025/76171"
+      ],
+      "clubs": [
+        {"name": "Gulf Komara", "tsdbTeamId": null, "badge": null},
+        {"name": "Hekari United", "tsdbTeamId": null, "badge": null},
+        {"name": "Lae City", "tsdbTeamId": null, "badge": null},
+        {"name": "Lae City Dwellers", "tsdbTeamId": null, "badge": null},
+        {"name": "Port Moresby Strikers", "tsdbTeamId": null, "badge": null},
+        {"name": "United Highlands FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Admiralty Island FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Morobe Wawens Lae", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "League has 11 member clubs in total; 2025 champions were Gulf Komara. Only 8 clubs could be confirmed by name this session, so verified is false and the remaining ~3 clubs are omitted rather than guessed."
+}

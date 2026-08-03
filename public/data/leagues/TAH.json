@@ -1,0 +1,31 @@
+{
+  "association": "TAH",
+  "country": "Tahiti",
+  "confederation": "OFC",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Tahiti Ligue 1",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tahiti_Ligue_1",
+        "https://globalsportsarchive.com/en/soccer/competition/ligue-1-vini-2025-2026/77443"
+      ],
+      "clubs": [
+        {"name": "AS Jeunes Tahitiens", "tsdbTeamId": null, "badge": null},
+        {"name": "Taiarapu", "tsdbTeamId": null, "badge": null},
+        {"name": "Pirae", "tsdbTeamId": null, "badge": null},
+        {"name": "Dragon", "tsdbTeamId": null, "badge": null},
+        {"name": "Central", "tsdbTeamId": null, "badge": null},
+        {"name": "AS Pueu", "tsdbTeamId": null, "badge": null},
+        {"name": "Punaruu", "tsdbTeamId": null, "badge": null},
+        {"name": "Tefana", "tsdbTeamId": null, "badge": null},
+        {"name": "Mira", "tsdbTeamId": null, "badge": null},
+        {"name": "Vénus", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "Sponsored as 'Ligue 1 Vini'; 10 clubs confirmed for the 2025-26 season. No separate tier-2 league found."
+}

@@ -1,0 +1,37 @@
+{
+  "association": "MAR",
+  "country": "Morocco",
+  "confederation": "CAF",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Botola Pro",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Botola_Pro",
+        "https://footystats.org/morocco/botola-pro",
+        "https://www.transfermarkt.us/botola-pro/startseite/wettbewerb/MAR1"
+      ],
+      "clubs": [
+        { "name": "Wydad Casablanca", "tsdbTeamId": null, "badge": null, "colors": ["#B71234", "#FFFFFF"] },
+        { "name": "Raja Club Athletic", "tsdbTeamId": null, "badge": null, "colors": ["#006633", "#FFFFFF"] },
+        { "name": "Renaissance de Berkane", "tsdbTeamId": null, "badge": null },
+        { "name": "AS FAR Rabat", "tsdbTeamId": null, "badge": null },
+        { "name": "Maghreb Fès (MAS)", "tsdbTeamId": null, "badge": null },
+        { "name": "FUS Rabat", "tsdbTeamId": null, "badge": null },
+        { "name": "Difaâ El Jadida", "tsdbTeamId": null, "badge": null },
+        { "name": "Ittihad Riadi Tanger", "tsdbTeamId": null, "badge": null },
+        { "name": "KAC Marrakech", "tsdbTeamId": null, "badge": null },
+        { "name": "COD Meknès", "tsdbTeamId": null, "badge": null },
+        { "name": "Hassania Agadir", "tsdbTeamId": null, "badge": null },
+        { "name": "Olympic Club de Safi", "tsdbTeamId": null, "badge": null },
+        { "name": "Renaissance Club Zemamra", "tsdbTeamId": null, "badge": null },
+        { "name": "US Yacoub El Mansour", "tsdbTeamId": null, "badge": null },
+        { "name": "Olympique Dcheira", "tsdbTeamId": null, "badge": null },
+        { "name": "Union de Touarga", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
+}

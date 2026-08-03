@@ -1,0 +1,24 @@
+{
+  "association": "BEL",
+  "country": "Belgium",
+  "confederation": "UEFA",
+  "season": "2026-27",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Belgian Pro League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Belgian_Pro_League",
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Challenger_Pro_League"
+      ],
+      "clubs": [
+        {"name": "Beveren", "tsdbTeamId": null, "badge": null},
+        {"name": "Kortrijk", "tsdbTeamId": null, "badge": null},
+        {"name": "Lommel", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "League expands to 18 clubs for 2026-27; only the 3 clubs newly promoted from Challenger Pro League could be confirmed by name before the search budget was exhausted. The bulk of the incumbent top-flight clubs were not verified this session."
+}

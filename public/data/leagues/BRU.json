@@ -1,0 +1,28 @@
+{
+  "association": "BRU",
+  "country": "Brunei Darussalam",
+  "confederation": "AFC",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Brunei Super League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Brunei_Super_League"
+      ],
+      "clubs": [
+        {"name": "Kasuka FC", "tsdbTeamId": null, "badge": null},
+        {"name": "DPMM FC", "tsdbTeamId": null, "badge": null, "colors": ["#FFD700", "#000000"]},
+        {"name": "Indera SC", "tsdbTeamId": null, "badge": null},
+        {"name": "Kota Ranger", "tsdbTeamId": null, "badge": null},
+        {"name": "Jerudong", "tsdbTeamId": null, "badge": null},
+        {"name": "Hawa FC", "tsdbTeamId": null, "badge": null},
+        {"name": "MS PDB", "tsdbTeamId": null, "badge": null},
+        {"name": "Kuala Belait", "tsdbTeamId": null, "badge": null}
+      ],
+      "note": "12 clubs compete in the 2025-26 season; only these 8 were confirmed by name in available search snippets (champions Indera SC, runners-up Kasuka FC, plus DPMM FC, Kota Ranger, Jerudong, Hawa FC, MS PDB, Kuala Belait). Remaining ~4 clubs could not be verified this session."
+    }
+  ]
+}

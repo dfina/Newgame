@@ -1,0 +1,1153 @@
+{
+ "generated": "2026-08-03T10:46:11.725Z",
+ "countries": [
+  {
+   "code": "AFG",
+   "country": "Afghanistan",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Afghanistan Champions League",
+     "clubs": 11,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "ALB",
+   "country": "Albania",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Kategoria Superiore",
+     "clubs": 10,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "ALG",
+   "country": "Algeria",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Algerian Ligue Professionnelle 1",
+     "clubs": 14,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "AND",
+   "country": "Andorra",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Primera Divisió",
+     "clubs": 10,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "ANG",
+   "country": "Angola",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Girabola",
+     "clubs": 16,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "ARG",
+   "country": "Argentina",
+   "confederation": "CONMEBOL",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Primera División (Liga Profesional / Copa de Primera)",
+     "clubs": 30,
+     "verified": true,
+     "tsdbLeagueId": null
+    },
+    {
+     "tier": 2,
+     "name": "Primera Nacional",
+     "clubs": 33,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "ARM",
+   "country": "Armenia",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Armenian Premier League",
+     "clubs": 12,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "ASA",
+   "country": "American Samoa",
+   "confederation": "OFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "FFAS Senior League",
+     "clubs": 12,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "AUS",
+   "country": "Australia",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "A-League Men",
+     "clubs": 12,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "AZE",
+   "country": "Azerbaijan",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Azerbaijan Premier League",
+     "clubs": 11,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "BFA",
+   "country": "Burkina Faso",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "FasoFoot Ligue 1",
+     "clubs": 17,
+     "verified": false,
+     "tsdbLeagueId": null
+    },
+    {
+     "tier": 2,
+     "name": "Championnat National Ligue 2",
+     "clubs": 10,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "BHR",
+   "country": "Bahrain",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Bahraini Premier League",
+     "clubs": 8,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "BHU",
+   "country": "Bhutan",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Bhutan Premier League",
+     "clubs": 10,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "BIH",
+   "country": "Bosnia and Herzegovina",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Premier League of Bosnia and Herzegovina",
+     "clubs": 10,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "BLR",
+   "country": "Belarus",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Belarusian Premier League",
+     "clubs": 14,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "BOT",
+   "country": "Botswana",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Botswana Premier League",
+     "clubs": 15,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "BRU",
+   "country": "Brunei Darussalam",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Brunei Super League",
+     "clubs": 8,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "CAM",
+   "country": "Cambodia",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Cambodian Premier League",
+     "clubs": 11,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "CAN",
+   "country": "Canada",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Canadian Premier League",
+     "clubs": 8,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "CHN",
+   "country": "China PR",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Chinese Super League",
+     "clubs": 16,
+     "verified": true,
+     "tsdbLeagueId": null
+    },
+    {
+     "tier": 2,
+     "name": "China League One",
+     "clubs": 6,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "COK",
+   "country": "Cook Islands",
+   "confederation": "OFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Cook Islands Round Cup",
+     "clubs": 6,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "CRO",
+   "country": "Croatia",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Croatian Football League (HNL)",
+     "clubs": 7,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "CYP",
+   "country": "Cyprus",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Cypriot First Division",
+     "clubs": 14,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "CZE",
+   "country": "Czechia",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Czech First League (Chance Liga)",
+     "clubs": 15,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "DEN",
+   "country": "Denmark",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Danish Superliga",
+     "clubs": 7,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "ENG",
+   "country": "England",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Premier League",
+     "clubs": 20,
+     "verified": true,
+     "tsdbLeagueId": null
+    },
+    {
+     "tier": 2,
+     "name": "EFL Championship",
+     "clubs": 24,
+     "verified": true,
+     "tsdbLeagueId": null
+    },
+    {
+     "tier": 3,
+     "name": "EFL League One",
+     "clubs": 11,
+     "verified": false,
+     "tsdbLeagueId": null
+    },
+    {
+     "tier": 4,
+     "name": "EFL League Two",
+     "clubs": 6,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "ESP",
+   "country": "Spain",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "La Liga",
+     "clubs": 20,
+     "verified": true,
+     "tsdbLeagueId": 4335
+    },
+    {
+     "tier": 2,
+     "name": "Segunda División",
+     "clubs": 22,
+     "verified": true,
+     "tsdbLeagueId": 4400
+    },
+    {
+     "tier": 3,
+     "name": "Primera Federación",
+     "clubs": 40,
+     "verified": true,
+     "tsdbLeagueId": null
+    },
+    {
+     "tier": 4,
+     "name": "Segunda Federación",
+     "clubs": 89,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "EST",
+   "country": "Estonia",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Meistriliiga",
+     "clubs": 10,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "FIJ",
+   "country": "Fiji",
+   "confederation": "OFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Fiji Premier League",
+     "clubs": 11,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "FIN",
+   "country": "Finland",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Veikkausliiga",
+     "clubs": 12,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "FRO",
+   "country": "Faroe Islands",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Betri deildin (Faroe Islands Premier League)",
+     "clubs": 10,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "GEO",
+   "country": "Georgia",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Erovnuli Liga",
+     "clubs": 10,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "GER",
+   "country": "Germany",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Bundesliga",
+     "clubs": 18,
+     "verified": true,
+     "tsdbLeagueId": null
+    },
+    {
+     "tier": 2,
+     "name": "2. Bundesliga",
+     "clubs": 18,
+     "verified": true,
+     "tsdbLeagueId": null
+    },
+    {
+     "tier": 3,
+     "name": "3. Liga",
+     "clubs": 18,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "HUN",
+   "country": "Hungary",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Nemzeti Bajnokság I (NB I)",
+     "clubs": 11,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "ISL",
+   "country": "Iceland",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Besta deild karla",
+     "clubs": 12,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "ITA",
+   "country": "Italy",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Serie A",
+     "clubs": 20,
+     "verified": true,
+     "tsdbLeagueId": null
+    },
+    {
+     "tier": 2,
+     "name": "Serie B",
+     "clubs": 20,
+     "verified": true,
+     "tsdbLeagueId": null
+    },
+    {
+     "tier": 3,
+     "name": "Serie C",
+     "clubs": 60,
+     "verified": true,
+     "tsdbLeagueId": null
+    },
+    {
+     "tier": 4,
+     "name": "Serie D",
+     "clubs": 18,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "KEN",
+   "country": "Kenya",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Kenyan Premier League",
+     "clubs": 11,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "LBR",
+   "country": "Liberia",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "LFA First Division (Orange First Division)",
+     "clubs": 6,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "LBY",
+   "country": "Libya",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Libyan Premier League",
+     "clubs": 9,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "LES",
+   "country": "Lesotho",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Lesotho Premier League",
+     "clubs": 14,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "MAC",
+   "country": "Macau",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Liga de Elite",
+     "clubs": 10,
+     "verified": false,
+     "tsdbLeagueId": 5629
+    }
+   ]
+  },
+  {
+   "code": "MAR",
+   "country": "Morocco",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Botola Pro",
+     "clubs": 16,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "MAS",
+   "country": "Malaysia",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Malaysia Super League",
+     "clubs": 13,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "MDA",
+   "country": "Moldova",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Moldovan Super Liga",
+     "clubs": 8,
+     "verified": true,
+     "tsdbLeagueId": null
+    },
+    {
+     "tier": 2,
+     "name": "Moldovan Liga 1",
+     "clubs": 8,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "MDV",
+   "country": "Maldives",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Dhivehi Premier League",
+     "clubs": 7,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "MEX",
+   "country": "Mexico",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Liga MX",
+     "clubs": 18,
+     "verified": true,
+     "tsdbLeagueId": null
+    },
+    {
+     "tier": 2,
+     "name": "Liga de Expansión MX",
+     "clubs": 16,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "MLI",
+   "country": "Mali",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Malian Première Division (Ligue 1 Orange Mali)",
+     "clubs": 14,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "MLT",
+   "country": "Malta",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Maltese Premier League",
+     "clubs": 12,
+     "verified": true,
+     "tsdbLeagueId": null
+    },
+    {
+     "tier": 2,
+     "name": "Maltese Challenge League",
+     "clubs": 15,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "MNE",
+   "country": "Montenegro",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Montenegrin First League",
+     "clubs": 10,
+     "verified": true,
+     "tsdbLeagueId": null
+    },
+    {
+     "tier": 2,
+     "name": "Montenegrin Second League",
+     "clubs": 10,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "MNG",
+   "country": "Mongolia",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Mongolian Premier League",
+     "clubs": 9,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "MTN",
+   "country": "Mauritania",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Super D1 (Ligue 1 Mauritania)",
+     "clubs": 13,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "MWI",
+   "country": "Malawi",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Super League of Malawi (TNM Super League)",
+     "clubs": 17,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "NAM",
+   "country": "Namibia",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Namibia Premiership",
+     "clubs": 16,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "NCL",
+   "country": "New Caledonia",
+   "confederation": "OFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "New Caledonia Super Ligue",
+     "clubs": 10,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "NED",
+   "country": "Netherlands",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Eredivisie",
+     "clubs": 18,
+     "verified": true,
+     "tsdbLeagueId": null
+    },
+    {
+     "tier": 2,
+     "name": "Eerste Divisie",
+     "clubs": 10,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "NGA",
+   "country": "Nigeria",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Nigeria Premier Football League (NPFL)",
+     "clubs": 16,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "PNG",
+   "country": "Papua New Guinea",
+   "confederation": "OFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Papua New Guinea Premier Soccer League",
+     "clubs": 8,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "RWA",
+   "country": "Rwanda",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Rwanda Premier League",
+     "clubs": 15,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "SEN",
+   "country": "Senegal",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Ligue 1 (Senegal)",
+     "clubs": 16,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "SEY",
+   "country": "Seychelles",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Seychelles Premier League",
+     "clubs": 10,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "SLE",
+   "country": "Sierra Leone",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Sierra Leone Premier League (Leone Rock Premier League)",
+     "clubs": 12,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "SOM",
+   "country": "Somalia",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Somali National League (formerly Somali Premier League)",
+     "clubs": 11,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "SSD",
+   "country": "South Sudan",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "South Sudan Premier League",
+     "clubs": 14,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "STP",
+   "country": "São Tomé and Príncipe",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "São Tomé and Príncipe Championship",
+     "clubs": 6,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "TAH",
+   "country": "Tahiti",
+   "confederation": "OFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Tahiti Ligue 1",
+     "clubs": 10,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "TAN",
+   "country": "Tanzania",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Tanzanian Premier League",
+     "clubs": 16,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "TOG",
+   "country": "Togo",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Togolese Championnat National",
+     "clubs": 10,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "TUN",
+   "country": "Tunisia",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Tunisian Ligue Professionnelle 1",
+     "clubs": 16,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "UGA",
+   "country": "Uganda",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Uganda Premier League (StarTimes Uganda Premier League)",
+     "clubs": 13,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "USA",
+   "country": "United States",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Major League Soccer",
+     "clubs": 13,
+     "verified": false,
+     "tsdbLeagueId": null
+    },
+    {
+     "tier": 2,
+     "name": "USL Championship",
+     "clubs": 25,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "ZAM",
+   "country": "Zambia",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Zambia Super League",
+     "clubs": 6,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "ZIM",
+   "country": "Zimbabwe",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Zimbabwe Premier Soccer League",
+     "clubs": 18,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  }
+ ]
+}

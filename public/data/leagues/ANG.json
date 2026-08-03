@@ -1,0 +1,37 @@
+{
+  "association": "ANG",
+  "country": "Angola",
+  "confederation": "CAF",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Girabola",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Girabola",
+        "https://pt.wikipedia.org/wiki/Girabola_de_2025%E2%80%9326",
+        "https://rna.ao/rna.ao/2025/07/18/girabola-versao-2025-2026-vai-a-sorteio-no-dia-8-de-agosto/"
+      ],
+      "clubs": [
+        {"name": "Petro de Luanda", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FF0000"]},
+        {"name": "1º de Agosto", "tsdbTeamId": null, "badge": null},
+        {"name": "Interclube", "tsdbTeamId": null, "badge": null},
+        {"name": "Kabuscorp do Palanca", "tsdbTeamId": null, "badge": null},
+        {"name": "Luanda City", "tsdbTeamId": null, "badge": null},
+        {"name": "Guelson FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Wiliete de Benguela", "tsdbTeamId": null, "badge": null},
+        {"name": "1º de Maio de Benguela", "tsdbTeamId": null, "badge": null},
+        {"name": "Académica do Lobito", "tsdbTeamId": null, "badge": null},
+        {"name": "Sagrada Esperança", "tsdbTeamId": null, "badge": null},
+        {"name": "Bravos do Maquis", "tsdbTeamId": null, "badge": null},
+        {"name": "Clube Desportivo da Huíla", "tsdbTeamId": null, "badge": null},
+        {"name": "Clube Desportivo da Lunda Sul", "tsdbTeamId": null, "badge": null},
+        {"name": "São Salvador do Kongo", "tsdbTeamId": null, "badge": null},
+        {"name": "Recreativo do Libolo", "tsdbTeamId": null, "badge": null},
+        {"name": "Redonda FC", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ]
+}

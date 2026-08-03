@@ -1,0 +1,24 @@
+{
+  "association": "MAD",
+  "country": "Madagascar",
+  "confederation": "CAF",
+  "season": "2025",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "THB Champions League (Coca-Cola Pureplay Football League)",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "groups": true,
+      "sources": [
+        "https://football.fandom.com/wiki/THB_Champions_League",
+        "https://www.fctables.com/madagascar/thb-champions-league/"
+      ],
+      "clubs": [
+        { "name": "CNaPS Sport", "tsdbTeamId": null, "badge": null },
+        { "name": "AS Adema", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "Top flight is contested by 32 qualifying clubs drawn from 22 regional leagues; only 2 historically prominent clubs were confirmed in available sources, no verified current-season roster found."
+    }
+  ]
+}

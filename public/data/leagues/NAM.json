@@ -1,0 +1,37 @@
+{
+  "association": "NAM",
+  "country": "Namibia",
+  "confederation": "CAF",
+  "season": "2024-25",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Namibia Premiership",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Namibia_Premiership",
+        "https://globalsportsarchive.com/competition/soccer/namibia-premier-football-league-2024-2025/regular-season/108459/"
+      ],
+      "clubs": [
+        { "name": "African Stars", "tsdbTeamId": null, "badge": null },
+        { "name": "Young African", "tsdbTeamId": null, "badge": null },
+        { "name": "Khomas NAMPOL", "tsdbTeamId": null, "badge": null },
+        { "name": "Ongos", "tsdbTeamId": null, "badge": null },
+        { "name": "Mighty Gunners", "tsdbTeamId": null, "badge": null },
+        { "name": "UNAM FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Eeshoke Chula Chula", "tsdbTeamId": null, "badge": null },
+        { "name": "KK Palace", "tsdbTeamId": null, "badge": null },
+        { "name": "Blue Waters", "tsdbTeamId": null, "badge": null },
+        { "name": "Bucks Buccaneers", "tsdbTeamId": null, "badge": null },
+        { "name": "Tigers SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Okahandja United", "tsdbTeamId": null, "badge": null },
+        { "name": "Julinho Sporting", "tsdbTeamId": null, "badge": null },
+        { "name": "Young Brazilians", "tsdbTeamId": null, "badge": null },
+        { "name": "Blue Boys", "tsdbTeamId": null, "badge": null },
+        { "name": "Cuca Tops", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "16-club league; roster reflects the 2024-25 season standings as the specific 2025-26 composition could not be confirmed in available sources."
+    }
+  ]
+}

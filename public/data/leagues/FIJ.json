@@ -1,0 +1,32 @@
+{
+  "association": "FIJ",
+  "country": "Fiji",
+  "confederation": "OFC",
+  "season": "2025",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Fiji Premier League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025_Fiji_Premier_League",
+        "https://en.wikipedia.org/wiki/Fiji_Premier_League"
+      ],
+      "clubs": [
+        {"name": "Ba", "tsdbTeamId": null, "badge": null},
+        {"name": "Labasa", "tsdbTeamId": null, "badge": null},
+        {"name": "Lautoka", "tsdbTeamId": null, "badge": null},
+        {"name": "Nadi", "tsdbTeamId": null, "badge": null},
+        {"name": "Nadroga", "tsdbTeamId": null, "badge": null},
+        {"name": "Nasinu", "tsdbTeamId": null, "badge": null},
+        {"name": "Navua", "tsdbTeamId": null, "badge": null},
+        {"name": "Rewa", "tsdbTeamId": null, "badge": null},
+        {"name": "Suva", "tsdbTeamId": null, "badge": null},
+        {"name": "Tailevu", "tsdbTeamId": null, "badge": null},
+        {"name": "Tavua", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "A tier-2 'Fiji Senior League' also exists (see 2025 Fiji Senior League on Wikipedia, from which Tavua was promoted and Tailevu Naitasiri relegated) but its club composition could not be confirmed by name this session, so it is omitted rather than guessed."
+}

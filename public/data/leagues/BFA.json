@@ -1,0 +1,61 @@
+{
+  "association": "BFA",
+  "country": "Burkina Faso",
+  "confederation": "CAF",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "FasoFoot Ligue 1",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://globalsportsarchive.com/en/soccer/competition/fasofoot-ligue-1-2025-2026/77434",
+        "https://www.sofascore.com/football/tournament/burkina-faso/fasofoot-ligue-1/29369",
+        "https://www.fctables.com/burkina-faso/championnat-national/"
+      ],
+      "note": "League described as a 14-club top flight, but two separate search summaries produced overlapping-but-inconsistent name sets (17 distinct names between them, including Salitas FC missing from one list), so the composition is unverified. All distinct club names encountered are listed.",
+      "clubs": [
+        {"name": "CF Rahimo FC", "tsdbTeamId": null, "badge": null},
+        {"name": "ASFA Yennenga", "tsdbTeamId": null, "badge": null},
+        {"name": "Vitesse FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Sporting Club Cascades", "tsdbTeamId": null, "badge": null},
+        {"name": "Réal du Faso", "tsdbTeamId": null, "badge": null},
+        {"name": "ASF Bobo-Dioulasso", "tsdbTeamId": null, "badge": null},
+        {"name": "AS SONABEL", "tsdbTeamId": null, "badge": null},
+        {"name": "Étoile Filante Ouagadougou", "tsdbTeamId": null, "badge": null},
+        {"name": "Racing Club Bobo-Dioulasso", "tsdbTeamId": null, "badge": null},
+        {"name": "AJEB Bobo-Dioulasso", "tsdbTeamId": null, "badge": null},
+        {"name": "US Comoé", "tsdbTeamId": null, "badge": null},
+        {"name": "SC Majestic", "tsdbTeamId": null, "badge": null},
+        {"name": "USFA", "tsdbTeamId": null, "badge": null},
+        {"name": "Rail Club du Kadiogo", "tsdbTeamId": null, "badge": null},
+        {"name": "AS Douanes", "tsdbTeamId": null, "badge": null},
+        {"name": "CFFEB", "tsdbTeamId": null, "badge": null},
+        {"name": "Salitas FC", "tsdbTeamId": null, "badge": null}
+      ]
+    },
+    {
+      "tier": 2,
+      "name": "Championnat National Ligue 2",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://globalsportsarchive.com/en/soccer/competition/championnat-national-ligue-2-2025-2026/77435"
+      ],
+      "note": "Regional/organised second division exists for 2025-26 but only a partial ('among others') set of clubs was named in search results.",
+      "clubs": [
+        {"name": "FocuSport FC", "tsdbTeamId": null, "badge": null},
+        {"name": "KOZAF", "tsdbTeamId": null, "badge": null},
+        {"name": "AS Police", "tsdbTeamId": null, "badge": null},
+        {"name": "AS de Tèma", "tsdbTeamId": null, "badge": null},
+        {"name": "AS Léopards de Saint-Camille", "tsdbTeamId": null, "badge": null},
+        {"name": "Sahel FC", "tsdbTeamId": null, "badge": null},
+        {"name": "9 Athlétic FC", "tsdbTeamId": null, "badge": null},
+        {"name": "AS Ouagadougou", "tsdbTeamId": null, "badge": null},
+        {"name": "AS Kourittenga", "tsdbTeamId": null, "badge": null},
+        {"name": "Faso Athletic Club", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ]
+}

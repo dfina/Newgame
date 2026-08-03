@@ -1,0 +1,28 @@
+{
+  "association": "BHR",
+  "country": "Bahrain",
+  "confederation": "AFC",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Bahraini Premier League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Bahraini_Premier_League"
+      ],
+      "clubs": [
+        {"name": "Al-Muharraq", "tsdbTeamId": null, "badge": null, "colors": ["#FFD200", "#000000"]},
+        {"name": "Al-Khaldiya", "tsdbTeamId": null, "badge": null},
+        {"name": "Sitra", "tsdbTeamId": null, "badge": null},
+        {"name": "Al-Riffa", "tsdbTeamId": null, "badge": null},
+        {"name": "Bahrain SC", "tsdbTeamId": null, "badge": null, "colors": ["#E30613", "#FFFFFF"]},
+        {"name": "Malkiya", "tsdbTeamId": null, "badge": null},
+        {"name": "Al-Hidd", "tsdbTeamId": null, "badge": null},
+        {"name": "Budaiya", "tsdbTeamId": null, "badge": null}
+      ],
+      "note": "12 clubs compete in the 2025-26 season; only these 8 were confirmed by name in available search snippets (defending champions Al-Muharraq, plus Al-Khaldiya, Sitra, Al-Riffa, Bahrain SC, Malkiya, and promoted sides Al-Hidd and Budaiya). The remaining ~4 clubs could not be verified this session."
+    }
+  ]
+}

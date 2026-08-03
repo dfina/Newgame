@@ -1,0 +1,30 @@
+{
+  "association": "MNG",
+  "country": "Mongolia",
+  "confederation": "AFC",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Mongolian Premier League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Mongolian_Premier_League",
+        "https://en.wikipedia.org/wiki/Mongolian_Premier_League"
+      ],
+      "clubs": [
+        {"name": "Deren", "tsdbTeamId": null, "badge": null},
+        {"name": "SP Falcons", "tsdbTeamId": null, "badge": null},
+        {"name": "Hunters Mongolia", "tsdbTeamId": null, "badge": null},
+        {"name": "Erchim", "tsdbTeamId": null, "badge": null},
+        {"name": "Khangarid", "tsdbTeamId": null, "badge": null},
+        {"name": "Bishrelt Khoromkhon", "tsdbTeamId": null, "badge": null},
+        {"name": "Khovdyn Khuleguud", "tsdbTeamId": null, "badge": null},
+        {"name": "Tuv Azarganuud", "tsdbTeamId": null, "badge": null},
+        {"name": "Ulaanbaatar", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "The 2025-26 Mongolian Premier League is described as a 10-club competition but only 9 clubs were individually named in sources found this session, so verified is false pending the 10th club. Tier 2 (Mongolia First League) was not verified — WebSearch budget was exhausted before it could be researched."
+}

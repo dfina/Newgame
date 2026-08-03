@@ -1,0 +1,36 @@
+{
+  "association": "TAN",
+  "country": "Tanzania",
+  "confederation": "CAF",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Tanzanian Premier League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Tanzanian_Premier_League",
+        "https://thefishy.co.uk/teams.php?table=312"
+      ],
+      "clubs": [
+        { "name": "Young Africans (Yanga SC)", "tsdbTeamId": null, "badge": null, "colors": ["#009639", "#FDB913"] },
+        { "name": "Simba SC", "tsdbTeamId": null, "badge": null, "colors": ["#DA020E", "#000000"] },
+        { "name": "Azam FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Singida Black Stars", "tsdbTeamId": null, "badge": null },
+        { "name": "Coastal Union", "tsdbTeamId": null, "badge": null },
+        { "name": "Tanzania Prisons", "tsdbTeamId": null, "badge": null },
+        { "name": "Kinondoni MC", "tsdbTeamId": null, "badge": null },
+        { "name": "Dodoma Jiji", "tsdbTeamId": null, "badge": null },
+        { "name": "Namungo FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Pamba FC", "tsdbTeamId": null, "badge": null },
+        { "name": "JKT Tanzania", "tsdbTeamId": null, "badge": null },
+        { "name": "Mashujaa FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Singida Fountain Gate", "tsdbTeamId": null, "badge": null },
+        { "name": "Tabora United", "tsdbTeamId": null, "badge": null },
+        { "name": "Mtibwa Sugar", "tsdbTeamId": null, "badge": null },
+        { "name": "Mbeya City", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
+}

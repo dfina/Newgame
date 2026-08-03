@@ -1,0 +1,31 @@
+{
+  "association": "ALB",
+  "country": "Albania",
+  "confederation": "UEFA",
+  "season": "2026-27",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Kategoria Superiore",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Kategoria_Superiore",
+        "https://www.playmakerstats.com/competition/albanian-1st-league",
+        "https://www.fctables.com/albania/kategoria-superiore/"
+      ],
+      "clubs": [
+        {"name": "Dinamo City", "tsdbTeamId": null, "badge": null},
+        {"name": "Egnatia", "tsdbTeamId": null, "badge": null},
+        {"name": "Elbasani", "tsdbTeamId": null, "badge": null},
+        {"name": "Laçi", "tsdbTeamId": null, "badge": null},
+        {"name": "Partizani", "tsdbTeamId": null, "badge": null, "colors": ["#E30613", "#000000"]},
+        {"name": "Skënderbeu", "tsdbTeamId": null, "badge": null},
+        {"name": "Teuta", "tsdbTeamId": null, "badge": null},
+        {"name": "Tirana", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"]},
+        {"name": "Vora", "tsdbTeamId": null, "badge": null},
+        {"name": "Vllaznia", "tsdbTeamId": null, "badge": null, "colors": ["#8B0000", "#FFFFFF"]}
+      ]
+    }
+  ]
+}

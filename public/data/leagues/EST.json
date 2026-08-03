@@ -1,0 +1,30 @@
+{
+  "association": "EST",
+  "country": "Estonia",
+  "confederation": "UEFA",
+  "season": "2026",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Meistriliiga",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_Meistriliiga",
+        "https://tribuna.com/en/league/meistriliiga/"
+      ],
+      "clubs": [
+        {"name": "FC Flora", "tsdbTeamId": null, "badge": null},
+        {"name": "Harju JK", "tsdbTeamId": null, "badge": null},
+        {"name": "FC Kuressaare", "tsdbTeamId": null, "badge": null},
+        {"name": "FCI Levadia", "tsdbTeamId": null, "badge": null},
+        {"name": "Narva Trans", "tsdbTeamId": null, "badge": null},
+        {"name": "Nõmme Kalju", "tsdbTeamId": null, "badge": null},
+        {"name": "Nõmme United", "tsdbTeamId": null, "badge": null},
+        {"name": "Paide Linnameeskond", "tsdbTeamId": null, "badge": null},
+        {"name": "JK Tammeka", "tsdbTeamId": null, "badge": null},
+        {"name": "FC Vaprus", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ]
+}

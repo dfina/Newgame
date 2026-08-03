@@ -1,0 +1,30 @@
+{
+  "association": "BHU",
+  "country": "Bhutan",
+  "confederation": "AFC",
+  "season": "2025",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Bhutan Premier League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025_Bhutan_Premier_League",
+        "https://bhutanfootball.org/paro-fc-crowned-champions-as-the-bob-bhutan-premier-league-2025-concludes/"
+      ],
+      "clubs": [
+        {"name": "Paro", "tsdbTeamId": null, "badge": null},
+        {"name": "Transport United", "tsdbTeamId": null, "badge": null},
+        {"name": "RTC", "tsdbTeamId": null, "badge": null},
+        {"name": "Thimphu City", "tsdbTeamId": null, "badge": null},
+        {"name": "BFF Academy U19", "tsdbTeamId": null, "badge": null},
+        {"name": "Southern City", "tsdbTeamId": null, "badge": null},
+        {"name": "Ugyen Academy", "tsdbTeamId": null, "badge": null},
+        {"name": "Samtse", "tsdbTeamId": null, "badge": null},
+        {"name": "Tensung", "tsdbTeamId": null, "badge": null},
+        {"name": "Tsirang", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ]
+}

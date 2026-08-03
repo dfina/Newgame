@@ -1,0 +1,31 @@
+{
+  "association": "TOG",
+  "country": "Togo",
+  "confederation": "CAF",
+  "season": "2024-25",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Togolese Championnat National",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Togolese_Championnat_National",
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Championnat_National"
+      ],
+      "clubs": [
+        { "name": "ASC Kara", "tsdbTeamId": null, "badge": null },
+        { "name": "ASKO FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Dynamic Togolais", "tsdbTeamId": null, "badge": null },
+        { "name": "Gbohloé-su des Lacs", "tsdbTeamId": null, "badge": null },
+        { "name": "OTR", "tsdbTeamId": null, "badge": null },
+        { "name": "AC Semassi", "tsdbTeamId": null, "badge": null },
+        { "name": "Binah FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Unisport", "tsdbTeamId": null, "badge": null },
+        { "name": "Gomido FC", "tsdbTeamId": null, "badge": null },
+        { "name": "AS Togo-Port", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "14-club top division; ASC Kara are the reigning (2024-25) champions. Remaining club names sourced largely reflect earlier seasons (e.g. 2022-23) and the exact 2025-26 composition could not be fully confirmed."
+    }
+  ]
+}

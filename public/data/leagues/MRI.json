@@ -1,0 +1,25 @@
+{
+  "association": "MRI",
+  "country": "Mauritius",
+  "confederation": "CAF",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Mauritian Premier League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mauritian_Premier_League",
+        "https://globalsportsarchive.com/en/soccer/competition/mauritian-premier-league-2025-2026/78677"
+      ],
+      "clubs": [
+        { "name": "Cercle de Joachim SC", "tsdbTeamId": null, "badge": null },
+        { "name": "AS Port-Louis 2000", "tsdbTeamId": null, "badge": null },
+        { "name": "Pamplemousses SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Chebel Citizen SC", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "10-club top division; only 4 were individually named in available sources. Cercle de Joachim SC were 2024-25 champions."
+    }
+  ]
+}

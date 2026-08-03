@@ -1,0 +1,34 @@
+{
+  "association": "MTN",
+  "country": "Mauritania",
+  "confederation": "CAF",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Super D1 (Ligue 1 Mauritania)",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2024%E2%80%9325_Ligue_1_Mauritania",
+        "https://m.aiscore.com/tournament-mauritania-ligue-1/w34kgmip8lh1ko9/standings"
+      ],
+      "clubs": [
+        { "name": "AS Pompiers", "tsdbTeamId": null, "badge": null },
+        { "name": "Chemal FC", "tsdbTeamId": null, "badge": null },
+        { "name": "ASC Police", "tsdbTeamId": null, "badge": null },
+        { "name": "ASC Gendrim", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Nouadhibou", "tsdbTeamId": null, "badge": null },
+        { "name": "Kaédi FC", "tsdbTeamId": null, "badge": null },
+        { "name": "AS Douanes Nouakchott", "tsdbTeamId": null, "badge": null },
+        { "name": "ACS Ksar", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Inter Nouakchott", "tsdbTeamId": null, "badge": null },
+        { "name": "King Nouakchott", "tsdbTeamId": null, "badge": null },
+        { "name": "Nzeidane", "tsdbTeamId": null, "badge": null },
+        { "name": "Nouakchott Académie", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Tevragh-Zeina", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "14-club top division; 13 were individually named in available sources."
+    }
+  ]
+}

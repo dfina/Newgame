@@ -1,0 +1,33 @@
+{
+  "association": "AUS",
+  "country": "Australia",
+  "confederation": "AFC",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "A-League Men",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_A-League_Men",
+        "https://en.wikipedia.org/wiki/List_of_A-League_Men_clubs"
+      ],
+      "clubs": [
+        {"name": "Adelaide United", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFD100"]},
+        {"name": "Auckland FC", "tsdbTeamId": null, "badge": null, "colors": ["#4B2E83", "#FFFFFF"]},
+        {"name": "Brisbane Roar", "tsdbTeamId": null, "badge": null, "colors": ["#F97316", "#FFFFFF"]},
+        {"name": "Central Coast Mariners", "tsdbTeamId": null, "badge": null, "colors": ["#FFCE00", "#003DA5"]},
+        {"name": "Macarthur FC", "tsdbTeamId": null, "badge": null, "colors": ["#009639", "#FBB040"]},
+        {"name": "Melbourne City", "tsdbTeamId": null, "badge": null, "colors": ["#5CBFEB", "#00285E"]},
+        {"name": "Melbourne Victory", "tsdbTeamId": null, "badge": null, "colors": ["#3B1E70", "#00A9E0"]},
+        {"name": "Newcastle Jets", "tsdbTeamId": null, "badge": null, "colors": ["#003DA5", "#FFFFFF"]},
+        {"name": "Perth Glory", "tsdbTeamId": null, "badge": null, "colors": ["#5D1D5F", "#F5A200"]},
+        {"name": "Sydney FC", "tsdbTeamId": null, "badge": null, "colors": ["#00285E", "#84C6E8"]},
+        {"name": "Western Sydney Wanderers", "tsdbTeamId": null, "badge": null, "colors": ["#E2231A", "#000000"]},
+        {"name": "Wellington Phoenix", "tsdbTeamId": null, "badge": null, "colors": ["#FBEE23", "#000000"]}
+      ]
+    }
+  ],
+  "note": "No organised national tier 2 exists in Australian men's football; the National Premier Leagues (NPL) is a set of separate state/territory competitions, not a unified second tier, so it is omitted."
+}

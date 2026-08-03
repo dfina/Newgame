@@ -1,0 +1,37 @@
+{
+  "association": "RWA",
+  "country": "Rwanda",
+  "confederation": "CAF",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Rwanda Premier League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Rwanda_Premier_League",
+        "https://globalsportsarchive.com/en/soccer/competition/rwanda-premier-league-2025-2026/77034",
+        "https://www.futbol24.com/national/Rwanda/Rwanda-Premier-League/2025-2026"
+      ],
+      "clubs": [
+        { "name": "AS Kigali", "tsdbTeamId": null, "badge": null },
+        { "name": "Rayon Sports", "tsdbTeamId": null, "badge": null },
+        { "name": "Gorilla FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Kiyovu Sports", "tsdbTeamId": null, "badge": null },
+        { "name": "AS Muhanga", "tsdbTeamId": null, "badge": null },
+        { "name": "Marine FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Etincelles FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Mukura Victory Sports", "tsdbTeamId": null, "badge": null },
+        { "name": "Bugesera FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Police FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Amagaju FC", "tsdbTeamId": null, "badge": null },
+        { "name": "APR FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Rutsiro FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Musanze FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Gasogi United FC", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "16-club league. Two Sudanese clubs (Al Hilal Omdurman and Al Merrikh) were also approved by CAF to compete temporarily in 2025-26 due to Sudan's civil war."
+    }
+  ]
+}

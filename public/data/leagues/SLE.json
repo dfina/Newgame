@@ -1,0 +1,33 @@
+{
+  "association": "SLE",
+  "country": "Sierra Leone",
+  "confederation": "CAF",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Sierra Leone Premier League (Leone Rock Premier League)",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://footballsierraleone.net/table/sierra-leone-premier-league-2025-26-season/",
+        "https://globalsportsarchive.com/en/soccer/competition/leone-rock-premier-league-2025-2026/77695"
+      ],
+      "clubs": [
+        { "name": "Old Edwardians FC", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Kallon", "tsdbTeamId": null, "badge": null },
+        { "name": "Freetonians SLIFA FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Freetown City FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Wilberforce Strikers FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Star of Africa (Star SA)", "tsdbTeamId": null, "badge": null },
+        { "name": "Ports Authority FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Bai Bureh Warriors FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Wusum Stars FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Luawa FC", "tsdbTeamId": null, "badge": null },
+        { "name": "East End Lions FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Bo Rangers FC", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "18-team league; 12 were individually named in available sources."
+    }
+  ]
+}

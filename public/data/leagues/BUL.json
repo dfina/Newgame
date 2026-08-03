@@ -1,0 +1,22 @@
+{
+  "association": "BUL",
+  "country": "Bulgaria",
+  "confederation": "UEFA",
+  "season": "2026-27",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "First Professional Football League (efbet League)",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_First_Professional_Football_League_(Bulgaria)"
+      ],
+      "clubs": [
+        {"name": "Levski Sofia", "tsdbTeamId": null, "badge": null, "colors": ["#0057B8", "#FFFFFF"]},
+        {"name": "Dunav Ruse", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "League has 14 clubs for 2026-27; only defending champions Levski Sofia and promoted Dunav Ruse could be confirmed by name this session."
+}

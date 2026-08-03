@@ -1,0 +1,35 @@
+{
+  "association": "LES",
+  "country": "Lesotho",
+  "confederation": "CAF",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Lesotho Premier League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Lesotho_Premier_League",
+        "https://footystats.org/lesotho/lesotho-premier-league"
+      ],
+      "clubs": [
+        { "name": "Lijabatho FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Lifofane FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Bantu FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Matlama FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Majantja FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Lesotho Defence Force FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Lioli FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Linare FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Lesotho Correctional Services FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Lesotho Mounted Police Service FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Machokha FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Manonyane FC", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Members", "tsdbTeamId": null, "badge": null },
+        { "name": "Maroala FC", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "16 clubs compete in 2025-26; 14 were individually named in available sources."
+    }
+  ]
+}

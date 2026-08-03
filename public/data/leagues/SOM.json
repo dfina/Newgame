@@ -1,0 +1,32 @@
+{
+  "association": "SOM",
+  "country": "Somalia",
+  "confederation": "CAF",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Somali National League (formerly Somali Premier League)",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://www.scoresway.com/en_GB/soccer/somali-premier-league-2025-2026/3teqj9n5qc2sh4mvwvdqn8jys/fixtures",
+        "https://globalsportsarchive.com/en/soccer/competition/somali-national-league-2025-2026/78158"
+      ],
+      "clubs": [
+        { "name": "Mogadishu City Club", "tsdbTeamId": null, "badge": null },
+        { "name": "Horseed", "tsdbTeamId": null, "badge": null },
+        { "name": "Gasko FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Elman SC", "tsdbTeamId": null, "badge": null },
+        { "name": "KIGS SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Madbacada FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Badbaado FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Raadsan SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Gaadiidka FC", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Gantaalaha", "tsdbTeamId": null, "badge": null },
+        { "name": "Dekedaha FC", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "Despite ongoing instability, an organised 12-club national league is running for 2025-26; 11 clubs were individually named in available sources (a mix of 2024-25 and 2025-26 references). Mogadishu City Club were the 2024-25 champions."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "association": "MNE",
+  "country": "Montenegro",
+  "confederation": "UEFA",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Montenegrin First League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": ["https://en.wikipedia.org/wiki/2025%E2%80%9326_Montenegrin_First_League"],
+      "clubs": [
+        {"name": "Arsenal Tivat", "tsdbTeamId": null, "badge": null},
+        {"name": "Bokelj", "tsdbTeamId": null, "badge": null},
+        {"name": "Budućnost Podgorica", "tsdbTeamId": null, "badge": null},
+        {"name": "Dečić", "tsdbTeamId": null, "badge": null},
+        {"name": "Jedinstvo", "tsdbTeamId": null, "badge": null},
+        {"name": "Jezero", "tsdbTeamId": null, "badge": null},
+        {"name": "Mladost DG", "tsdbTeamId": null, "badge": null},
+        {"name": "Mornar Bar", "tsdbTeamId": null, "badge": null},
+        {"name": "OFK Petrovac", "tsdbTeamId": null, "badge": null},
+        {"name": "Sutjeska", "tsdbTeamId": null, "badge": null}
+      ]
+    },
+    {
+      "tier": 2,
+      "name": "Montenegrin Second League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": ["https://en.wikipedia.org/wiki/2025%E2%80%9326_Montenegrin_Second_League"],
+      "clubs": [
+        {"name": "FK Podgorica", "tsdbTeamId": null, "badge": null},
+        {"name": "Grbalj", "tsdbTeamId": null, "badge": null},
+        {"name": "Igalo", "tsdbTeamId": null, "badge": null},
+        {"name": "Otrant-Olympic", "tsdbTeamId": null, "badge": null},
+        {"name": "KOM Podgorica", "tsdbTeamId": null, "badge": null},
+        {"name": "Iskra", "tsdbTeamId": null, "badge": null},
+        {"name": "Lovćen", "tsdbTeamId": null, "badge": null},
+        {"name": "FK Internacional", "tsdbTeamId": null, "badge": null},
+        {"name": "Berane", "tsdbTeamId": null, "badge": null},
+        {"name": "FK Rudar Pljevlja", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ]
+}

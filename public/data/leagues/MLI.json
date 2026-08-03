@@ -1,0 +1,36 @@
+{
+  "association": "MLI",
+  "country": "Mali",
+  "confederation": "CAF",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Malian Première Division (Ligue 1 Orange Mali)",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://footystats.org/mali/premiere-division",
+        "https://en.wikipedia.org/wiki/Malian_Premi%C3%A8re_Division",
+        "https://www.futbol24.com/national/Mali/Premiere-Division/2025-2026"
+      ],
+      "clubs": [
+        { "name": "Djoliba AC", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Diarra", "tsdbTeamId": null, "badge": null },
+        { "name": "AS Real Bamako", "tsdbTeamId": null, "badge": null },
+        { "name": "Binga FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Stade Malien", "tsdbTeamId": null, "badge": null },
+        { "name": "USFAS Bamako", "tsdbTeamId": null, "badge": null },
+        { "name": "AS Korofina", "tsdbTeamId": null, "badge": null },
+        { "name": "Derby Académie", "tsdbTeamId": null, "badge": null },
+        { "name": "US Bougouba", "tsdbTeamId": null, "badge": null },
+        { "name": "Afrique Football Élite", "tsdbTeamId": null, "badge": null },
+        { "name": "AS Bakaridjan", "tsdbTeamId": null, "badge": null },
+        { "name": "Onze Créateurs", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Mali Coura", "tsdbTeamId": null, "badge": null },
+        { "name": "US Bougouni", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "League reported to have 18 clubs; 14 were individually named in available sources."
+    }
+  ]
+}

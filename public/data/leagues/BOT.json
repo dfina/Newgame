@@ -1,0 +1,38 @@
+{
+  "association": "BOT",
+  "country": "Botswana",
+  "confederation": "CAF",
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Botswana Premier League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Botswana_Premier_League",
+        "https://footystats.org/botswana/botswana-premier-league",
+        "https://www.fctables.com/botswana/premier-league/",
+        "https://www.soccerway.com/botswana/premier-league/"
+      ],
+      "note": "16-club league confirmed. Final-standings club list aggregated from search-engine summary of the above sources; one entry ('Ramodibedi') could not be corroborated as a genuine club name, so the whole list is marked unverified pending direct source confirmation.",
+      "clubs": [
+        {"name": "Gaborone United", "tsdbTeamId": null, "badge": null},
+        {"name": "Jwaneng Galaxy", "tsdbTeamId": null, "badge": null},
+        {"name": "Orapa United", "tsdbTeamId": null, "badge": null},
+        {"name": "Township Rollers", "tsdbTeamId": null, "badge": null},
+        {"name": "Nico United", "tsdbTeamId": null, "badge": null},
+        {"name": "Sua Flamingoes", "tsdbTeamId": null, "badge": null},
+        {"name": "Mochudi Centre Chiefs", "tsdbTeamId": null, "badge": null},
+        {"name": "TAFIC", "tsdbTeamId": null, "badge": null},
+        {"name": "Matebele", "tsdbTeamId": null, "badge": null},
+        {"name": "Police XI", "tsdbTeamId": null, "badge": null},
+        {"name": "BDF XI", "tsdbTeamId": null, "badge": null},
+        {"name": "Extension Gunners", "tsdbTeamId": null, "badge": null},
+        {"name": "Black Lions", "tsdbTeamId": null, "badge": null},
+        {"name": "Santa Green", "tsdbTeamId": null, "badge": null},
+        {"name": "Calendar Star", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ]
+}
