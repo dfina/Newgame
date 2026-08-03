@@ -3,6 +3,137 @@
   "country": "France",
   "confederation": "UEFA",
   "season": "2026-27",
-  "leagues": [],
-  "note": "French league research could not be conducted in this session: the session's WebSearch tool budget was exhausted while researching the England (ENG) file before any France-specific queries could be run (direct HTTPS and WebFetch are also blocked by egress policy). Per the no-invention rule, no club, league, or TheSportsDB ID may be included without a WebSearch result naming it, so Ligue 1, Ligue 2, Championnat National, and Championnat National 2 are left unpopulated pending a follow-up session with restored search quota."
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Ligue 1",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://www.footix.fr/ligue-1-les-18-clubs-officiels-de-la-saison-2026-2027-devoiles/",
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Ligue_1"
+      ],
+      "clubs": [
+        {"name": "Angers SCO", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"]},
+        {"name": "AJ Auxerre", "tsdbTeamId": null, "badge": null, "colors": ["#003C82", "#FFFFFF"]},
+        {"name": "Stade Brestois 29", "tsdbTeamId": null, "badge": null, "colors": ["#E2001A", "#FFFFFF"]},
+        {"name": "Le Havre AC", "tsdbTeamId": null, "badge": null, "colors": ["#0055A4", "#FFFFFF"]},
+        {"name": "Le Mans FC", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#0033A0"]},
+        {"name": "RC Lens", "tsdbTeamId": null, "badge": null, "colors": ["#FFD700", "#E2001A"]},
+        {"name": "LOSC Lille", "tsdbTeamId": null, "badge": null, "colors": ["#E2001A", "#0033A0"]},
+        {"name": "FC Lorient", "tsdbTeamId": null, "badge": null, "colors": ["#FF6600", "#000000"]},
+        {"name": "Olympique Lyonnais", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#E2001A"]},
+        {"name": "Olympique de Marseille", "tsdbTeamId": null, "badge": null, "colors": ["#2FA0DA", "#FFFFFF"]},
+        {"name": "AS Monaco", "tsdbTeamId": null, "badge": null, "colors": ["#E2001A", "#FFFFFF"]},
+        {"name": "OGC Nice", "tsdbTeamId": null, "badge": null, "colors": ["#E2001A", "#000000"]},
+        {"name": "Paris FC", "tsdbTeamId": null, "badge": null, "colors": ["#1D3557", "#E2001A"]},
+        {"name": "Paris Saint-Germain", "tsdbTeamId": null, "badge": null, "colors": ["#00285E", "#DA291C"]},
+        {"name": "Stade Rennais FC", "tsdbTeamId": null, "badge": null, "colors": ["#E2001A", "#000000"]},
+        {"name": "RC Strasbourg", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"]},
+        {"name": "Toulouse FC", "tsdbTeamId": null, "badge": null, "colors": ["#5A2D81", "#FFFFFF"]},
+        {"name": "ESTAC Troyes", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#E2001A"]}
+      ]
+    },
+    {
+      "tier": 2,
+      "name": "Ligue 2",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://www.wikidata.org/wiki/Q139830847",
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Ligue_2"
+      ],
+      "clubs": [
+        {"name": "AS Nancy-Lorraine", "tsdbTeamId": null, "badge": null},
+        {"name": "AS Saint-Étienne", "tsdbTeamId": null, "badge": null, "colors": ["#00A651", "#FFFFFF"]},
+        {"name": "Clermont Foot 63", "tsdbTeamId": null, "badge": null},
+        {"name": "En Avant de Guingamp", "tsdbTeamId": null, "badge": null},
+        {"name": "FC Metz", "tsdbTeamId": null, "badge": null, "colors": ["#8B0000", "#FFD700"]},
+        {"name": "FC Annecy", "tsdbTeamId": null, "badge": null},
+        {"name": "FC Nantes", "tsdbTeamId": null, "badge": null, "colors": ["#FFD700", "#00A651"]},
+        {"name": "FC Sochaux-Montbéliard", "tsdbTeamId": null, "badge": null},
+        {"name": "Grenoble Foot 38", "tsdbTeamId": null, "badge": null},
+        {"name": "Montpellier Hérault SC", "tsdbTeamId": null, "badge": null, "colors": ["#FF6600", "#003C82"]},
+        {"name": "Pau FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Red Star FC", "tsdbTeamId": null, "badge": null},
+        {"name": "Rodez AF", "tsdbTeamId": null, "badge": null},
+        {"name": "Stade de Reims", "tsdbTeamId": null, "badge": null, "colors": ["#E2001A", "#FFFFFF"]},
+        {"name": "Stade Lavallois", "tsdbTeamId": null, "badge": null},
+        {"name": "US Boulogne", "tsdbTeamId": null, "badge": null},
+        {"name": "USL Dunkerque", "tsdbTeamId": null, "badge": null},
+        {"name": "Dijon FCO", "tsdbTeamId": null, "badge": null}
+      ]
+    },
+    {
+      "tier": 3,
+      "name": "Ligue 3",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Ligue_3",
+        "https://www.wikidata.org/wiki/Q139820390"
+      ],
+      "clubs": [
+        {"name": "Amiens SC", "tsdbTeamId": null, "badge": null},
+        {"name": "FC Fleury 91", "tsdbTeamId": null, "badge": null},
+        {"name": "FC Rouen", "tsdbTeamId": null, "badge": null},
+        {"name": "Bourg-en-Bresse Péronnas 01", "tsdbTeamId": null, "badge": null},
+        {"name": "FC Versailles", "tsdbTeamId": null, "badge": null},
+        {"name": "Villefranche Beaujolais", "tsdbTeamId": null, "badge": null},
+        {"name": "Le Puy Foot 43 Auvergne", "tsdbTeamId": null, "badge": null},
+        {"name": "Paris 13 Atletico", "tsdbTeamId": null, "badge": null},
+        {"name": "Aubagne FC", "tsdbTeamId": null, "badge": null},
+        {"name": "SC Bastia", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"]},
+        {"name": "Stade Malherbe Caen", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#E2001A"]},
+        {"name": "US Concarneau", "tsdbTeamId": null, "badge": null},
+        {"name": "US Orléans", "tsdbTeamId": null, "badge": null},
+        {"name": "US Quevilly", "tsdbTeamId": null, "badge": null},
+        {"name": "Valenciennes FC", "tsdbTeamId": null, "badge": null},
+        {"name": "US Thionville Lusitanos", "tsdbTeamId": null, "badge": null},
+        {"name": "AS Cannes", "tsdbTeamId": null, "badge": null},
+        {"name": "La Roche VF", "tsdbTeamId": null, "badge": null}
+      ]
+    },
+    {
+      "tier": 4,
+      "name": "National 1",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "groups": true,
+      "sources": [
+        "https://news.footeo.com/2026/07/16/national-1-et-national-2-decouvrez-les-groupes-complets-pour-la-saison-2026-2027-5504",
+        "https://www.fff.fr/article/17102-les-groupes-pour-la-saison-2026-2027.html",
+        "https://www.fff.fr/article/17124-national-1-les-calendriers-2026-2027.html"
+      ],
+      "clubs": [
+        {"name": "AS Furiani-Agliani", "tsdbTeamId": null, "badge": null},
+        {"name": "Biesheim ASC", "tsdbTeamId": null, "badge": null},
+        {"name": "Colmar SR FA", "tsdbTeamId": null, "badge": null},
+        {"name": "FC Borgo", "tsdbTeamId": null, "badge": null},
+        {"name": "FC Chambly Oise", "tsdbTeamId": null, "badge": null},
+        {"name": "FC Dieppe", "tsdbTeamId": null, "badge": null},
+        {"name": "FC Montlouis", "tsdbTeamId": null, "badge": null},
+        {"name": "Feignies Aulnoye EFC", "tsdbTeamId": null, "badge": null},
+        {"name": "Haguenau FCSR", "tsdbTeamId": null, "badge": null},
+        {"name": "Racing CFF", "tsdbTeamId": null, "badge": null},
+        {"name": "SA Épinal", "tsdbTeamId": null, "badge": null},
+        {"name": "US Saint-Maur", "tsdbTeamId": null, "badge": null},
+        {"name": "US Pays-de-Valois", "tsdbTeamId": null, "badge": null},
+        {"name": "Poiré-sur-Vie VF", "tsdbTeamId": null, "badge": null},
+        {"name": "GSI Pontivy", "tsdbTeamId": null, "badge": null},
+        {"name": "Tarbes Pyrénées Football", "tsdbTeamId": null, "badge": null},
+        {"name": "Canet Roussillon FC", "tsdbTeamId": null, "badge": null},
+        {"name": "ESTAC Troyes 2", "tsdbTeamId": null, "badge": null},
+        {"name": "Hauts Lyonnais", "tsdbTeamId": null, "badge": null},
+        {"name": "Lyon La Duchère", "tsdbTeamId": null, "badge": null},
+        {"name": "Andrézieux-Bouthéon FC", "tsdbTeamId": null, "badge": null},
+        {"name": "AS Saint-Priest", "tsdbTeamId": null, "badge": null},
+        {"name": "Bourges FC", "tsdbTeamId": null, "badge": null},
+        {"name": "FC Limonest Dardilly Saint-Didier", "tsdbTeamId": null, "badge": null},
+        {"name": "Berrichonne Châteauroux", "tsdbTeamId": null, "badge": null},
+        {"name": "Stade Briochin", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "For 2026-27 the FFF renamed the pyramid: former Championnat National is now 'Ligue 3' (tier 3) and former Championnat National 2 is now 'National 1' (tier 4, 3 groups of 16 = 48 clubs total); former National 3 is now called 'National 2' (tier 5, 8 groups, not in scope). Ligue 1, Ligue 2 and Ligue 3 club lists are complete and verified. National 1 club list is partial (26 of 48 clubs identified across its three groups via search snippets) and marked unverified; full group-by-group rosters were not confirmed from a single consolidated source within the search budget."
 }

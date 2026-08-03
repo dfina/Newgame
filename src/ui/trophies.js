@@ -83,7 +83,7 @@ export function trophyTile(trophy) {
   const yrs = trophy.years?.length > 1
     ? `×${trophy.years.length} (${trophy.years.join(', ')})`
     : `${trophy.years?.[0] ?? trophy.year}`;
-  return `<div class="trophy"><div id="${id}">${trophySvg(trophy)}</div>
+  return `<div class="trophy-cab"><div id="${id}">${trophySvg(trophy)}</div>
     <div class="tname">${trophy.name}</div>
     <div class="tmeta">${yrs}</div></div>`;
 }

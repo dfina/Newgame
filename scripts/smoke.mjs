@@ -56,7 +56,7 @@ if (!retiredVisible) { console.log('FAIL: never reached retirement'); process.ex
 console.log('retirement reached');
 await page.click('button[data-action="cabinet"]');
 await page.waitForTimeout(300);
-const tiles = await page.$$eval('.trophy', (t) => t.length).catch(() => 0);
+const tiles = await page.$$eval('.trophy-cab', (t) => t.length).catch(() => 0);
 const empty = await page.$('.card.center');
 console.log(`cabinet: ${tiles} trophy tiles${empty && !tiles ? ' (empty cabinet message shown)' : ''}`);
 await page.screenshot({ path: process.env.SCRATCH + '/cabinet.png' });
@@ -64,7 +64,7 @@ await page.click('button[data-action="back-retired"]');
 await page.waitForTimeout(200);
 await page.click('button[data-action="history"]');
 await page.waitForTimeout(200);
-const histRows = await page.$$eval('table.league tr', (r) => r.length);
+const histRows = await page.$$eval('.timeline tbody tr:not(.empty)', (r) => r.length);
 console.log(`history rows: ${histRows}`);
 await page.screenshot({ path: process.env.SCRATCH + '/history.png' });
 

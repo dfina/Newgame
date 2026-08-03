@@ -32,9 +32,13 @@ function profileCard(career) {
   const club = career.club;
   const clubObj = club ? { name: club.name, tsdbTeamId: club.tsdbTeamId, colors: club.colors } : null;
   const watermark = clubObj ? initialsBadge(clubObj.name, clubObj.colors) : '';
+  // Tint the header with the club's primary colour, as a kit does.
+  const tint = /^#[0-9a-f]{6}$/i.test(club?.colors?.[0] || '')
+    ? ` style="background:linear-gradient(100deg, ${club.colors[0]}3d 0%, ${club.colors[0]}14 45%, var(--panel2) 85%)"`
+    : '';
   return `<div class="profile">
     <div class="ovr-badge ${ovrTier(ovr)}"><span class="lbl">OVR</span><span class="val">${ovr}</span></div>
-    <div class="club-head">
+    <div class="club-head"${tint}>
       ${clubObj ? `<img class="watermark" src="${watermark}" alt="">` : ''}
       <div class="info">
         <div class="chips">
@@ -120,9 +124,13 @@ function timeline(career) {
 
   const p = career.player;
   const nat = career.nation;
+  const intlHonours = career.trophies.filter((t) => t.type === 'international').length;
+  const intlMarks = intlHonours
+    ? Array.from({ length: Math.min(intlHonours, 3) }, () => `<span class="tiny-tr">${trophySvg({ type: 'international', name: 'x' })}</span>`).join('')
+    : '';
   const intlRow = `<tr class="intl">
     <td class="age"><span class="flag">${flagOf(nat.code)}</span></td>
-    <td><span class="club-cell"><span class="nm">${esc(nat.name)}</span></span></td>
+    <td><span class="club-cell"><span class="nm">${esc(nat.name)}</span>${intlMarks}</span></td>
     <td class="n"></td>
     <td class="n">${p.caps}</td>
     <td class="n">${p.intlGoals}</td>
