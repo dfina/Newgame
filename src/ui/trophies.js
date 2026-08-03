@@ -1,6 +1,6 @@
 // Original stylised SVG trophies — parameterised shapes that evoke a
 // competition type without reproducing any real trophy design.
-import { resolveTrophyImage } from './badge.js';
+import { resolveTrophyImage, resolveTrophyImageByName } from './badge.js';
 
 const TYPE_STYLE = {
   international: { metal: '#ffd75e', accent: '#2e86de', shape: 'globe' },
@@ -62,9 +62,12 @@ function escapeAttr(s) { return s.replace(/"/g, '&quot;').replace(/</g, '&lt;');
 // Render a trophy tile; upgrades to TheSportsDB trophy image when available.
 export function trophyTile(trophy) {
   const id = 't' + Math.random().toString(36).slice(2, 9);
-  if (trophy.type === 'league' && trophy.tsdbLeagueId) {
+  // Awards and specials are personal honours with no hosted artwork — SVG only.
+  if (trophy.type !== 'award' && trophy.type !== 'special') {
     queueMicrotask(async () => {
-      const img = await resolveTrophyImage(trophy.tsdbLeagueId);
+      const img = trophy.tsdbLeagueId
+        ? await resolveTrophyImage(trophy.tsdbLeagueId)
+        : await resolveTrophyImageByName(trophy.name);
       const holder = document.getElementById(id);
       if (holder && img) {
         const imgEl = document.createElement('img');

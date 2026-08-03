@@ -64,6 +64,50 @@ export async function resolveTrophyImage(tsdbLeagueId) {
   return img;
 }
 
+// Name → TheSportsDB league id, via the full league list (fetched once,
+// cached as a name→id map). Covers domestic leagues, cups and continental
+// competitions, so trophies can show real hosted artwork where it exists.
+let leagueMapPromise = null;
+async function leagueIdMap() {
+  const c = loadCache();
+  if (c['leaguemap']) return c['leaguemap'];
+  if (leagueMapPromise) return leagueMapPromise;
+  leagueMapPromise = (async () => {
+    const map = {};
+    try {
+      const res = await fetch(`${TSDB}/all_leagues.php`, { signal: AbortSignal.timeout(10000) });
+      if (res.ok) {
+        const json = await res.json();
+        for (const l of json.leagues || []) {
+          if (l.strSport === 'Soccer') map[l.strLeague.toLowerCase()] = Number(l.idLeague);
+        }
+      }
+    } catch { /* offline — empty map, retried next session */ }
+    if (Object.keys(map).length) { c['leaguemap'] = map; persist(); }
+    return map;
+  })();
+  return leagueMapPromise;
+}
+
+export async function resolveTrophyImageByName(competitionName) {
+  const c = loadCache();
+  const key = `trophyname:${competitionName}`;
+  if (key in c) return c[key];
+  const map = await leagueIdMap();
+  const name = competitionName.toLowerCase();
+  // Exact match, then a contains-match either way round.
+  let id = map[name] ?? null;
+  if (!id) {
+    for (const [k, v] of Object.entries(map)) {
+      if (k.includes(name) || name.includes(k)) { id = v; break; }
+    }
+  }
+  const img = id ? await resolveTrophyImage(id) : null;
+  c[key] = img;
+  persist();
+  return img;
+}
+
 // Generated initials badge (SVG data URI) in club colours.
 export function initialsBadge(name, colors) {
   const initials = name

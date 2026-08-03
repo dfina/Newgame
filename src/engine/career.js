@@ -94,7 +94,17 @@ async function generateOffers(career, isStart = false) {
   }
   if (!candidates.length) return [];
 
-  const homeBias = (cand) => (cand.c.code === p.nationality ? 2.2 : 1);
+  // A player chasing one last adventure draws romantic offers: far-off or
+  // much weaker leagues get heavily upweighted for one window.
+  const adventurous = career.adventure && !isStart;
+  const homeBias = (cand) => {
+    let w = cand.c.code === p.nationality ? 2.2 : 1;
+    if (adventurous) {
+      if (cand.c.confederation !== career.club?.confederation) w *= 3;
+      if (cand.lvl < target * 0.75) w *= 2.5;
+    }
+    return w;
+  };
   const count = isStart ? 3 : irand(2, 4);
   const offers = [];
   const seen = new Set();
@@ -253,6 +263,7 @@ function applyEffects(career, fx) {
   if (fx.agent) p.agent = fx.agent;
   if (fx.bonusGoals) career.flags.bonusGoals = fx.bonusGoals;
   if (fx.intlBoost) career.flags.intlBoost = fx.intlBoost;
+  if (fx.adventure) career.adventure = true;
   if (fx.fanFavourite) career.flags.fanFavourite = true;
 }
 
@@ -343,6 +354,7 @@ export async function advanceToNextSeason(career) {
   const wantOffers = career.flags.listed || p.contractYears === 0 ||
     (p.reputation > 30 && chance(0.45)) || chance(0.2);
   career.offers = wantOffers ? await generateOffers(career) : [];
+  career.adventure = false;
   if (p.contractYears === 0 && !career.offers.length) {
     // Out of contract with no suitors: the club offers a modest one-year deal.
     career.offers = [];

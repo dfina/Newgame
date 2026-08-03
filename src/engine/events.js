@@ -354,6 +354,25 @@ E.push({
   ]
 });
 
+E.push({
+  id: 'last-adventure',
+  weight: (c) => (c.player.age >= 32 ? 1.8 : 0),
+  title: 'One last adventure',
+  text: () => 'Your agent floats an idea over dinner: a final chapter somewhere unexpected — a lower division that would worship you, or an emerging league far from home.',
+  choices: [
+    {
+      label: 'Chase the adventure',
+      sub: 'Open the door to romantic offers',
+      resolve: () => ({ text: 'Word spreads that you are open to one last great story. Unexpected phone calls follow.', tone: 'good', fx: { adventure: true, listed: true, morale: 5 } })
+    },
+    {
+      label: 'Finish at your level',
+      sub: 'Pride in the standard you set',
+      resolve: () => ({ text: 'You intend to bow out where you belong — at the top of your game.', tone: 'neutral', fx: { form: 2 } })
+    }
+  ]
+});
+
 export function drawSeasonEvents(career, count) {
   const pool = E.filter((e) => e.weight(career) > 0);
   const drawn = [];
