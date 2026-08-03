@@ -52,7 +52,10 @@ function playScreen(c) {
   switch (c.phase) {
     case 'offers': return S.offersScreen(c);
     case 'event': return S.eventScreen(c);
-    case 'review': return S.outcomeScreen(c); // safety: outcome pending
+    case 'review':
+      if (c.lastOutcome) return S.outcomeScreen(c);
+      runSeason(c); // no decision pending — go straight to the season result
+      return S.reportScreen(c);
     case 'postseason': return S.reportScreen(c);
     case 'preseason': return S.preseasonScreen(c);
     case 'retired': return S.retiredScreen(c);

@@ -108,14 +108,15 @@ async function generateOffers(career, isStart = false) {
     seen.add(key);
     const wage = Math.round((50 + Math.pow(cand.lvl, 1.7) * 3) * (0.8 + rand() * 0.5) *
       (p.agent === 'shark' ? 1.2 : 1)) * 5;
+    const loan = !isStart && cand.lvl < target - 8 && chance(0.3);
     offers.push({
       clubName: club.name,
       tsdbTeamId: club.tsdbTeamId ?? null,
       colors: club.colors || null,
       ...leagueRef(cand.c, { tier: cand.l.tier, name: cand.l.name, tsdbLeagueId: cand.l.tsdbLeagueId }),
       wage,
-      years: irand(2, 4),
-      loan: !isStart && cand.lvl < target - 8 && chance(0.3)
+      years: loan ? 1 : irand(2, 4),
+      loan
     });
   }
   return offers;
@@ -144,7 +145,9 @@ export async function acceptOffer(career, offer) {
   // A rival: another club in the same division (a derby narrative anchor).
   const others = career.leagueClubs.filter((c) => c.name !== career.club.name);
   career.rival = others.length && chance(0.7) ? pick(others).name : null;
-  career.news.unshift({ tone: 'good', text: `You sign for ${career.club.name} (${career.club.leagueName}, ${career.club.countryName}) on ${fmtWage(offer.wage)} a week.` });
+  career.news.unshift({ tone: 'good', text: offer.loan
+    ? `You join ${career.club.name} (${career.club.leagueName}, ${career.club.countryName}) on a season-long loan.`
+    : `You sign for ${career.club.name} (${career.club.leagueName}, ${career.club.countryName}) on ${fmtWage(offer.wage)} a week.` });
   beginSeason(career);
   saveCareer(career);
 }
@@ -167,12 +170,12 @@ function beginSeason(career) {
   career.flags = {};
   const nEvents = irand(3, 4);
   career.pendingEvents = drawSeasonEvents(career, nEvents).map((e) => e.id);
-  // Rare career-threatening injury interjection.
-  if (chance(0.012 + career.player.injuryProne * 0.012 + (career.player.age > 30 ? 0.008 : 0))) {
+  // Rare career-threatening injury interjection (~0.6%/season on average).
+  if (chance(0.003 + career.player.injuryProne * 0.005 + (career.player.age > 30 ? 0.003 : 0))) {
     career.pendingEvents.splice(irand(0, career.pendingEvents.length), 0, '__grave-injury');
   }
   career.eventIdx = 0;
-  career.phase = 'event';
+  career.phase = career.pendingEvents.length ? 'event' : 'review';
 }
 
 export function currentEvent(career) {
@@ -210,7 +213,7 @@ export function chooseEventOption(career, choiceIdx) {
       outcome = { text: 'You announce your retirement from a hospital bed. Football mourns with you.', tone: 'bad', fx: {} };
       career.player.careerEnded = true;
     } else {
-      outcome = chance(0.55)
+      outcome = chance(0.65)
         ? { text: 'Eighteen agonising months later, you run out to a standing ovation. You are back.', tone: 'gold', fx: { injuryWeeks: 30, ability: -4, morale: 10, reputation: 4 } }
         : { text: 'The comeback attempt fails. Your body cannot do it any more.', tone: 'bad', fx: {} };
       if (outcome.fx.injuryWeeks === undefined) career.player.careerEnded = true;

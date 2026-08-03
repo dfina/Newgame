@@ -7,9 +7,14 @@
     "dev": "vite --host",
     "start": "vite --host",
     "build": "vite build",
-    "preview": "vite preview --host"
+    "preview": "vite preview --host",
+    "build:index": "node scripts/build-index.mjs",
+    "check:data": "node scripts/check-data.mjs",
+    "sim": "node scripts/sim-career.mjs 300",
+    "smoke": "node scripts/smoke.mjs"
   },
   "devDependencies": {
+    "playwright-core": "^1.62.1",
     "vite": "^6.3.5"
   }
 }

@@ -359,7 +359,9 @@ export function drawSeasonEvents(career, count) {
   const drawn = [];
   const used = new Set(career.usedEventIds || []);
   for (let i = 0; i < count && pool.length; i++) {
-    const avail = pool.filter((e) => !drawn.includes(e) && !(used.has(e.id) && chance(0.6)));
+    let avail = pool.filter((e) => !drawn.includes(e) && !(used.has(e.id) && chance(0.6)));
+    // Long careers exhaust the pool: repeats are better than an empty season.
+    if (!avail.length) avail = pool.filter((e) => !drawn.includes(e));
     if (!avail.length) break;
     let total = avail.reduce((s, e) => s + e.weight(career), 0);
     let r = rand() * total;

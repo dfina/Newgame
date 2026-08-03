@@ -45,7 +45,7 @@ function simulateTable(career, level) {
   const rows = clubs.map((c) => {
     let s = clubStrength(c.name, level);
     if (c.name === career.club.name) {
-      const contrib = clamp((career.player.ability - level) / 100, -0.1, 0.35) *
+      const contrib = clamp((career.player.ability - level) / 130, -0.1, 0.22) *
         clamp(career.lastStats?.share ?? 0.6, 0.2, 1);
       s *= 1 + contrib + (career.player.captain ? 0.03 : 0);
     }
@@ -155,7 +155,7 @@ export function simulateSeason(career) {
 
   // ----- Awards -----
   const posKey = effectivePosition(p);
-  if (posKey === 'FWD' && stats.goals >= 22 && chance(0.5 + (stats.goals - 22) * 0.06)) {
+  if (posKey === 'FWD' && stats.goals >= 24 && chance(0.4 + (stats.goals - 24) * 0.06)) {
     report.awards.push(AWARDS.goldenBoot);
     report.trophies.push({ type: 'award', name: `${AWARDS.goldenBoot} — ${career.club.leagueName}`, year: career.year });
   }
@@ -163,7 +163,7 @@ export function simulateSeason(career) {
     report.awards.push(AWARDS.goldenGlove);
     report.trophies.push({ type: 'award', name: `${AWARDS.goldenGlove} — ${career.club.leagueName}`, year: career.year });
   }
-  if (stats.rating >= 7.6 && chance(clamp((stats.rating - 7.5) * 1.4, 0.1, 0.85))) {
+  if (stats.rating >= 7.8 && chance(clamp((stats.rating - 7.7) * 1.2, 0.08, 0.7))) {
     report.awards.push(AWARDS.playerOfSeason);
     report.trophies.push({ type: 'award', name: `${AWARDS.playerOfSeason} — ${career.club.leagueName}`, year: career.year });
   }
