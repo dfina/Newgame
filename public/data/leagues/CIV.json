@@ -2,7 +2,26 @@
   "association": "CIV",
   "country": "Côte d'Ivoire",
   "confederation": "CAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "NOT RESEARCHED: the WebSearch tool budget for this session (200/200 calls, shared across concurrent research agents) was exhausted before this association could be covered. This country is known/believed to have an organised national top-flight league (and possibly a second tier); an empty 'leagues' array here reflects a research gap, NOT a confirmed absence of a league. Requires a follow-up research pass with WebSearch capacity to populate per the rules in SCHEMA.md (no club/league may be invented without a WebSearch source)."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Ligue 1 (Ivory Coast)",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Championnat_de_C%C3%B4te_d'Ivoire_de_football_2025-2026",
+        "https://www.aip.ci/cote-divoire-aip-saison-2025-2026-le-championnat-de-football-de-ligue-1-debute-le-15-aout-federation/",
+        "https://en.wikipedia.org/wiki/Ligue_1_(Ivory_Coast)"
+      ],
+      "clubs": [
+        { "name": "Stade d'Abidjan", "tsdbTeamId": null, "badge": null },
+        { "name": "US Tchologo", "tsdbTeamId": null, "badge": null },
+        { "name": "ES Agboville", "tsdbTeamId": null, "badge": null },
+        { "name": "ASEC Mimosas", "tsdbTeamId": null, "badge": null, "colors": ["#FFD700", "#000000"] },
+        { "name": "FC San Pedro", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "68th edition, 16-club league running 15 August 2025 to 30 June 2026; only 5 of 16 clubs (defending champion, two promoted sides, and continental-qualified/cup-final clubs) were unambiguously named in available sources. Full roster could not be confirmed."
+    }
+  ]
 }

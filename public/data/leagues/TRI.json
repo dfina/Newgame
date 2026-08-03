@@ -2,7 +2,33 @@
   "association": "TRI",
   "country": "Trinidad and Tobago",
   "confederation": "CONCACAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Research not completed: this session's WebSearch budget was exhausted (200/200) before this association could be researched. This does NOT mean no organised national league exists here -- it means verification could not be attempted in this session. Re-run research for this association with a fresh/raised search budget before treating this file as authoritative."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "TT Premier Football League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://www.rsssf.org/tablest/trin2026.html",
+        "https://en.wikipedia.org/wiki/TT_Premier_Football_League",
+        "https://globalsportsarchive.com/en/soccer/competition/tt-premier-football-league-2025-2026/77608"
+      ],
+      "clubs": [
+        { "name": "Defence Force", "tsdbTeamId": null, "badge": null, "colors": ["#DC0000", "#FFFFFF"] },
+        { "name": "Club Sando", "tsdbTeamId": null, "badge": null },
+        { "name": "Prison Service FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Miscellaneous Police FC", "tsdbTeamId": null, "badge": null },
+        { "name": "AC Port of Spain", "tsdbTeamId": null, "badge": null },
+        { "name": "San Juan Jabloteh", "tsdbTeamId": null, "badge": null },
+        { "name": "Central FC", "tsdbTeamId": null, "badge": null },
+        { "name": "La Horquetta Rangers", "tsdbTeamId": null, "badge": null },
+        { "name": "1976 FC Phoenix", "tsdbTeamId": null, "badge": null },
+        { "name": "Eagles FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Point Fortin Civic Centre", "tsdbTeamId": null, "badge": null },
+        { "name": "Caledonia AIA", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "12-club league contested by clubs with no automatic promotion/relegation system; Defence Force were champions, Caledonia AIA relegated."
+    }
+  ]
 }

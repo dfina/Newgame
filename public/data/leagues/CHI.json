@@ -3,6 +3,37 @@
   "country": "Chile",
   "confederation": "CONMEBOL",
   "season": "2026",
-  "leagues": [],
-  "note": "Not researched: the shared WebSearch tool budget for this session was exhausted (200/200) before any query could be run for Chile. Per RULES no club, league, or structure may be invented from background knowledge without a WebSearch result obtained in this session, so no league entries were added. Requires a follow-up session with WebSearch quota available to research Primera División de Chile (tier 1) and Primera B (tier 2)."
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Liga de Primera (Primera División de Chile)",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_football_clubs_in_Chile",
+        "https://www.transfermarkt.us/liga-de-primera/startseite/wettbewerb/CLPD",
+        "https://www.espn.com/soccer/standings/_/league/chi.1",
+        "https://www.espn.com/soccer/teams/_/league/CHI.1/chilean-primera-division",
+        "https://en.wikipedia.org/wiki/Liga_de_Primera"
+      ],
+      "clubs": [
+        { "name": "Audax Italiano", "tsdbTeamId": null, "badge": null, "colors": ["#00693E", "#FFFFFF"] },
+        { "name": "Cobresal", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFDD00"] },
+        { "name": "Colo-Colo", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#000000"] },
+        { "name": "Coquimbo Unido", "tsdbTeamId": null, "badge": null, "colors": ["#7A1FA2", "#FFFFFF"] },
+        { "name": "Deportes Concepción", "tsdbTeamId": null, "badge": null },
+        { "name": "Deportes La Serena", "tsdbTeamId": null, "badge": null, "colors": ["#00693E", "#FFFFFF"] },
+        { "name": "Deportes Limache", "tsdbTeamId": null, "badge": null },
+        { "name": "Everton de Viña del Mar", "tsdbTeamId": null, "badge": null, "colors": ["#003DA5", "#FFDD00"] },
+        { "name": "Huachipato", "tsdbTeamId": null, "badge": null, "colors": ["#003DA5", "#000000"] },
+        { "name": "Ñublense", "tsdbTeamId": null, "badge": null, "colors": ["#D50000", "#FFFFFF"] },
+        { "name": "O'Higgins", "tsdbTeamId": null, "badge": null, "colors": ["#00693E", "#FFFFFF"] },
+        { "name": "Palestino", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#D50000"] },
+        { "name": "Unión La Calera", "tsdbTeamId": null, "badge": null },
+        { "name": "Universidad Católica", "tsdbTeamId": null, "badge": null, "colors": ["#003DA5", "#FFFFFF"] },
+        { "name": "Universidad de Chile", "tsdbTeamId": null, "badge": null, "colors": ["#003DA5", "#D50000"] },
+        { "name": "Universidad de Concepción", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

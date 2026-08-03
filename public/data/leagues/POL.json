@@ -2,7 +2,37 @@
   "association": "POL",
   "country": "Poland",
   "confederation": "UEFA",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (200/200) was exhausted before this association could be covered. No clubs or leagues were invented per task rules; leagues left empty pending a follow-up session with search capacity."
+  "season": "2026-27",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Ekstraklasa",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://liquipedia.net/lab/Football/PZPN/Ekstraklasa/2026-27",
+        "https://footystats.org/poland/ekstraklasa"
+      ],
+      "clubs": [
+        {"name": "Radomiak Radom", "tsdbTeamId": null, "badge": null},
+        {"name": "Wieczysta Kraków", "tsdbTeamId": null, "badge": null},
+        {"name": "Pogoń Szczecin", "tsdbTeamId": null, "badge": null, "colors": ["#002F6C", "#FFFFFF"]},
+        {"name": "Legia Warsaw", "tsdbTeamId": null, "badge": null, "colors": ["#00843D", "#FFFFFF"]},
+        {"name": "Jagiellonia Białystok", "tsdbTeamId": null, "badge": null, "colors": ["#C8102E", "#FFFFFF"]},
+        {"name": "Korona Kielce", "tsdbTeamId": null, "badge": null},
+        {"name": "Górnik Zabrze", "tsdbTeamId": null, "badge": null},
+        {"name": "Śląsk Wrocław", "tsdbTeamId": null, "badge": null},
+        {"name": "Lech Poznań", "tsdbTeamId": null, "badge": null, "colors": ["#00549F", "#FFFFFF"]},
+        {"name": "Cracovia", "tsdbTeamId": null, "badge": null, "colors": ["#003DA5", "#FF0000"]},
+        {"name": "Raków Częstochowa", "tsdbTeamId": null, "badge": null, "colors": ["#E30613", "#000000"]},
+        {"name": "Wisła Płock", "tsdbTeamId": null, "badge": null},
+        {"name": "Widzew Łódź", "tsdbTeamId": null, "badge": null, "colors": ["#C8102E", "#FFFFFF"]},
+        {"name": "Motor Lublin", "tsdbTeamId": null, "badge": null},
+        {"name": "Wisła Kraków", "tsdbTeamId": null, "badge": null, "colors": ["#B4975A", "#C8102E"]},
+        {"name": "GKS Katowice", "tsdbTeamId": null, "badge": null},
+        {"name": "Zagłębie Lubin", "tsdbTeamId": null, "badge": null},
+        {"name": "Piast Gliwice", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ]
 }

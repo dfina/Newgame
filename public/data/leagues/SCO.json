@@ -2,7 +2,31 @@
   "association": "SCO",
   "country": "Scotland",
   "confederation": "UEFA",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (200/200) was exhausted before this association could be covered. No clubs or leagues were invented per task rules; leagues left empty pending a follow-up session with search capacity."
+  "season": "2026-27",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Scottish Premiership",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Scottish_Premiership",
+        "https://www.skysports.com/football/news/11781/13551122/scottish-premiership-2026-27-fixtures-dates-schedule-every-match-across-opening-weekend-live-on-sky-sports"
+      ],
+      "clubs": [
+        {"name": "Aberdeen", "tsdbTeamId": null, "badge": null, "colors": ["#D2122E", "#FFFFFF"]},
+        {"name": "Celtic", "tsdbTeamId": null, "badge": null, "colors": ["#018749", "#FFFFFF"]},
+        {"name": "Dundee", "tsdbTeamId": null, "badge": null, "colors": ["#001A96", "#FFFFFF"]},
+        {"name": "Dundee United", "tsdbTeamId": null, "badge": null, "colors": ["#F47B20", "#000000"]},
+        {"name": "Falkirk", "tsdbTeamId": null, "badge": null, "colors": ["#001F5C", "#FFFFFF"]},
+        {"name": "Heart of Midlothian", "tsdbTeamId": null, "badge": null, "colors": ["#7C2C3B", "#FFFFFF"]},
+        {"name": "Hibernian", "tsdbTeamId": null, "badge": null, "colors": ["#00A650", "#FFFFFF"]},
+        {"name": "Kilmarnock", "tsdbTeamId": null, "badge": null, "colors": ["#00205B", "#FFFFFF"]},
+        {"name": "Motherwell", "tsdbTeamId": null, "badge": null, "colors": ["#FDB913", "#00205B"]},
+        {"name": "Rangers", "tsdbTeamId": null, "badge": null, "colors": ["#1D428A", "#FFFFFF"]},
+        {"name": "St Johnstone", "tsdbTeamId": null, "badge": null, "colors": ["#1E4B8F", "#FFD200"]},
+        {"name": "St Mirren", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"]}
+      ]
+    }
+  ]
 }

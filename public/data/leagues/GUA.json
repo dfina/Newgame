@@ -2,7 +2,32 @@
   "association": "GUA",
   "country": "Guatemala",
   "confederation": "CONCACAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Research not completed: this session's WebSearch budget was exhausted (200/200) before this association could be researched. This does NOT mean no organised national league exists here -- it means verification could not be attempted in this session. Re-run research for this association with a fresh/raised search budget before treating this file as authoritative."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Liga Nacional de Guatemala (Liga Bantrab)",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Liga_Bantrab",
+        "https://footballdatabase.com/league-scores-tables/guatemala-liga-nacional-apertura-2025",
+        "https://www.sofascore.com/football/tournament/guatemala/liga-guate-banrural-apertura/11619"
+      ],
+      "clubs": [
+        { "name": "Achuapa", "tsdbTeamId": null, "badge": null },
+        { "name": "Antigua GFC", "tsdbTeamId": null, "badge": null },
+        { "name": "Aurora FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Cobán Imperial", "tsdbTeamId": null, "badge": null },
+        { "name": "Comunicaciones", "tsdbTeamId": null, "badge": null, "colors": ["#DC0000", "#FFFFFF"] },
+        { "name": "Guastatoya", "tsdbTeamId": null, "badge": null },
+        { "name": "Malacateco", "tsdbTeamId": null, "badge": null },
+        { "name": "Marquense", "tsdbTeamId": null, "badge": null },
+        { "name": "Atlético Mictlán", "tsdbTeamId": null, "badge": null },
+        { "name": "Mixco", "tsdbTeamId": null, "badge": null },
+        { "name": "Municipal", "tsdbTeamId": null, "badge": null, "colors": ["#DC0000", "#FFFFFF"] }
+      ],
+      "note": "2025-26 season (Apertura 2025/Clausura 2026) contested by 12 teams; only 11 were individually named across available sources. One club could not be confirmed."
+    }
+  ]
 }

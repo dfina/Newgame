@@ -11,14 +11,48 @@
       "verified": false,
       "sources": [
         "https://en.wikipedia.org/wiki/2026%E2%80%9327_Belgian_Pro_League",
-        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Challenger_Pro_League"
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Belgian_Pro_League",
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Challenger_Pro_League",
+        "https://en.wikipedia.org/wiki/Lommel_SK",
+        "https://en.wikipedia.org/wiki/FCV_Dender_EH",
+        "https://news.22bet.com/news/jupiler-pro-league-2026-27-season-guide-betting-preview/"
       ],
       "clubs": [
-        {"name": "Beveren", "tsdbTeamId": null, "badge": null},
+        {"name": "Club Brugge", "tsdbTeamId": null, "badge": null, "colors": ["#0057A8", "#000000"]},
+        {"name": "Union Saint-Gilloise", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFD700"]},
+        {"name": "Anderlecht", "tsdbTeamId": null, "badge": null, "colors": ["#5A2D81", "#FFFFFF"]},
+        {"name": "Sint-Truiden", "tsdbTeamId": null, "badge": null},
+        {"name": "Gent", "tsdbTeamId": null, "badge": null, "colors": ["#003C82", "#FFFFFF"]},
+        {"name": "Royal Antwerp", "tsdbTeamId": null, "badge": null, "colors": ["#DA291C", "#FFFFFF"]},
+        {"name": "Standard Liège", "tsdbTeamId": null, "badge": null, "colors": ["#DA291C", "#FFFFFF"]},
+        {"name": "Cercle Brugge", "tsdbTeamId": null, "badge": null, "colors": ["#00A651", "#000000"]},
+        {"name": "KVC Westerlo", "tsdbTeamId": null, "badge": null},
+        {"name": "Genk", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"]},
+        {"name": "Charleroi", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#3B5AA6"]},
+        {"name": "OH Leuven", "tsdbTeamId": null, "badge": null},
+        {"name": "Zulte Waregem", "tsdbTeamId": null, "badge": null},
+        {"name": "La Louvière", "tsdbTeamId": null, "badge": null},
         {"name": "Kortrijk", "tsdbTeamId": null, "badge": null},
+        {"name": "Beveren", "tsdbTeamId": null, "badge": null},
         {"name": "Lommel", "tsdbTeamId": null, "badge": null}
+      ]
+    },
+    {
+      "tier": 2,
+      "name": "Challenger Pro League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Challenger_Pro_League",
+        "https://en.wikipedia.org/wiki/RWDM_Brussels"
+      ],
+      "clubs": [
+        {"name": "Virton", "tsdbTeamId": null, "badge": null},
+        {"name": "Hasselt", "tsdbTeamId": null, "badge": null},
+        {"name": "FCV Dender EH", "tsdbTeamId": null, "badge": null},
+        {"name": "Club NXT", "tsdbTeamId": null, "badge": null}
       ]
     }
   ],
-  "note": "League expands to 18 clubs for 2026-27; only the 3 clubs newly promoted from Challenger Pro League could be confirmed by name before the search budget was exhausted. The bulk of the incumbent top-flight clubs were not verified this session."
+  "note": "Pro League: 17 of the 18 clubs for 2026-27 were confirmed by name across sources (16 incumbents minus relegated Dender EH, plus promoted Beveren, Kortrijk and Lommel); the 18th club could not be identified this session, so the league is marked unverified despite the near-complete list. Challenger Pro League: only 4 clubs (2 promoted from Belgian Division 1, relegated Dender EH, and Club NXT which was spared relegation) could be confirmed by name before the search budget for this session ran out; the remaining ~11-13 clubs are unconfirmed."
 }

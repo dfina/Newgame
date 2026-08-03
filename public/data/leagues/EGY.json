@@ -2,7 +2,36 @@
   "association": "EGY",
   "country": "Egypt",
   "confederation": "CAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "NOT RESEARCHED: the WebSearch tool budget for this session (200/200 calls, shared across concurrent research agents) was exhausted before this association could be covered. This country is known/believed to have an organised national top-flight league (and possibly a second tier); an empty 'leagues' array here reflects a research gap, NOT a confirmed absence of a league. Requires a follow-up research pass with WebSearch capacity to populate per the rules in SCHEMA.md (no club/league may be invented without a WebSearch source)."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Egyptian Premier League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Egyptian_Premier_League",
+        "https://sports.yahoo.com/article/egyptian-premier-league-2025-26-171300165.html",
+        "https://www.sportmonks.com/glossary/egyptian-premier-league-egypt/"
+      ],
+      "clubs": [
+        { "name": "Al Ahly", "tsdbTeamId": null, "badge": null, "colors": ["#DC0714", "#FFFFFF"] },
+        { "name": "Zamalek", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#DC0000"] },
+        { "name": "Pyramids FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Ismaily SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Al Ittihad Alexandria", "tsdbTeamId": null, "badge": null },
+        { "name": "Al Masry", "tsdbTeamId": null, "badge": null },
+        { "name": "Smouha SC", "tsdbTeamId": null, "badge": null },
+        { "name": "ENPPI", "tsdbTeamId": null, "badge": null },
+        { "name": "El Gouna FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Ceramica Cleopatra", "tsdbTeamId": null, "badge": null },
+        { "name": "Abageyah", "tsdbTeamId": null, "badge": null },
+        { "name": "Ghazl El Mahalla", "tsdbTeamId": null, "badge": null },
+        { "name": "Haras El Hodoud", "tsdbTeamId": null, "badge": null },
+        { "name": "ZED FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Tala'ea El Gaish", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "League expanded to 21 clubs for 2025-26 (no relegation prior season); only these 15 were individually named across available sources. Full 21-club roster could not be confirmed."
+    }
+  ]
 }

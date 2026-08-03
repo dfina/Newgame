@@ -2,7 +2,32 @@
   "association": "KOR",
   "country": "Korea Republic",
   "confederation": "AFC",
-  "season": "unverified",
-  "leagues": [],
-  "note": "Not researched this session: the shared WebSearch budget (200 calls) for this session was exhausted before this association could be investigated. No league or club data has been invented; this file intentionally lists no leagues pending a future session with search access to verify K League 1 and K League 2 club compositions."
+  "season": "2026",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "K League 1",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_K_League_1",
+        "https://liquipedia.net/lab/Football/KFA/K_League_1/2026",
+        "https://en.wikipedia.org/wiki/2026_Gangwon_FC_season"
+      ],
+      "clubs": [
+        { "name": "FC Anyang", "tsdbTeamId": null, "badge": null },
+        { "name": "Bucheon FC 1995", "tsdbTeamId": null, "badge": null },
+        { "name": "Daejeon Hana Citizen", "tsdbTeamId": null, "badge": null },
+        { "name": "Gangwon FC", "tsdbTeamId": null, "badge": null, "colors": ["#F37321", "#003876"] },
+        { "name": "Gimcheon Sangmu", "tsdbTeamId": null, "badge": null },
+        { "name": "Gwangju FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Incheon United", "tsdbTeamId": null, "badge": null, "colors": ["#0F3092", "#000000"] },
+        { "name": "Jeju SK", "tsdbTeamId": null, "badge": null },
+        { "name": "Jeonbuk Hyundai Motors", "tsdbTeamId": null, "badge": null, "colors": ["#00693E", "#FFFFFF"] },
+        { "name": "Pohang Steelers", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#E2231A"] },
+        { "name": "FC Seoul", "tsdbTeamId": null, "badge": null, "colors": ["#E2231A", "#000000"] },
+        { "name": "Ulsan HD", "tsdbTeamId": null, "badge": null, "colors": ["#003C7C", "#F9A01B"] }
+      ]
+    }
+  ]
 }

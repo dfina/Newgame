@@ -2,7 +2,38 @@
   "association": "KSA",
   "country": "Saudi Arabia",
   "confederation": "AFC",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (shared across this entire session) was exhausted before Saudi Arabia could be looked into. This is NOT a claim that no league exists (the Saudi Pro League and Saudi First Division clearly exist) — composition simply could not be verified here. Needs a follow-up session with search budget available."
+  "season": "2026-27",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Saudi Pro League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Saudi_Pro_League",
+        "https://www.spl.com.sa/en/news/1071407/spl-confirms-2026-27-season-calendar",
+        "https://liquipedia.net/lab/Football/SAFF/Saudi_Pro_League/2026-27"
+      ],
+      "clubs": [
+        { "name": "Al-Hilal", "tsdbTeamId": null, "badge": null, "colors": ["#00539F", "#FFFFFF"] },
+        { "name": "Al-Nassr", "tsdbTeamId": null, "badge": null, "colors": ["#FFC72C", "#00205B"] },
+        { "name": "Al-Ittihad", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FDB913"] },
+        { "name": "Al-Ahli", "tsdbTeamId": null, "badge": null, "colors": ["#008542", "#FFFFFF"] },
+        { "name": "Al-Qadsiah", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Taawoun", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Fateh", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Ettifaq", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] },
+        { "name": "Abha", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Faisaly", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Hazem", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Fayha", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Riyadh", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Shabab", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#000000"] },
+        { "name": "Al-Khaleej", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Kholood", "tsdbTeamId": null, "badge": null },
+        { "name": "Diriyah", "tsdbTeamId": null, "badge": null },
+        { "name": "Neom SC", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

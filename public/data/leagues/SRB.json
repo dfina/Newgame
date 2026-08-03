@@ -2,7 +2,32 @@
   "association": "SRB",
   "country": "Serbia",
   "confederation": "UEFA",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (200/200) was exhausted before this association could be covered. No clubs or leagues were invented per task rules; leagues left empty pending a follow-up session with search capacity."
+  "season": "2026-27",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Serbian SuperLiga",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Serbian_SuperLiga",
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Serbian_SuperLiga"
+      ],
+      "clubs": [
+        {"name": "Red Star Belgrade", "tsdbTeamId": null, "badge": null, "colors": ["#C8102E", "#FFFFFF"]},
+        {"name": "Partizan", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"]},
+        {"name": "Vojvodina", "tsdbTeamId": null, "badge": null, "colors": ["#C8102E", "#FFFFFF"]},
+        {"name": "Železničar Pančevo", "tsdbTeamId": null, "badge": null},
+        {"name": "Novi Pazar", "tsdbTeamId": null, "badge": null},
+        {"name": "OFK Beograd", "tsdbTeamId": null, "badge": null},
+        {"name": "Čukarički", "tsdbTeamId": null, "badge": null},
+        {"name": "Radnik Surdulica", "tsdbTeamId": null, "badge": null},
+        {"name": "IMT", "tsdbTeamId": null, "badge": null},
+        {"name": "Mačva", "tsdbTeamId": null, "badge": null},
+        {"name": "Mladost Lučani", "tsdbTeamId": null, "badge": null},
+        {"name": "Zemun", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "League has 14 clubs (top 12 retained from 2025-26 plus 2 promoted: Zemun, Mačva). Only 12 of the 14 could be confirmed by name in this session's search results; 2 retained clubs remain unconfirmed."
 }

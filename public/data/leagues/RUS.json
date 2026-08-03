@@ -2,7 +2,34 @@
   "association": "RUS",
   "country": "Russia",
   "confederation": "UEFA",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (200/200) was exhausted before this association could be covered. No clubs or leagues were invented per task rules; leagues left empty pending a follow-up session with search capacity."
+  "season": "2026-27",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Russian Premier League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Russian_Premier_League"
+      ],
+      "clubs": [
+        {"name": "Akhmat Grozny", "tsdbTeamId": null, "badge": null, "colors": ["#008000", "#FFFFFF"]},
+        {"name": "Akron Tolyatti", "tsdbTeamId": null, "badge": null},
+        {"name": "Baltika Kaliningrad", "tsdbTeamId": null, "badge": null},
+        {"name": "CSKA Moscow", "tsdbTeamId": null, "badge": null, "colors": ["#C8102E", "#003087"]},
+        {"name": "Dinamo Moscow", "tsdbTeamId": null, "badge": null, "colors": ["#1B3E8C", "#FFFFFF"]},
+        {"name": "Fakel Voronezh", "tsdbTeamId": null, "badge": null},
+        {"name": "Krasnodar", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#01824F"]},
+        {"name": "Krylia Sovetov", "tsdbTeamId": null, "badge": null, "colors": ["#1C75BC", "#FFFFFF"]},
+        {"name": "Lokomotiv Moscow", "tsdbTeamId": null, "badge": null, "colors": ["#C8102E", "#00843D"]},
+        {"name": "Dynamo Makhachkala", "tsdbTeamId": null, "badge": null},
+        {"name": "Orenburg", "tsdbTeamId": null, "badge": null},
+        {"name": "Rodina Moscow", "tsdbTeamId": null, "badge": null},
+        {"name": "Rostov", "tsdbTeamId": null, "badge": null, "colors": ["#FFD200", "#0033A0"]},
+        {"name": "Rubin Kazan", "tsdbTeamId": null, "badge": null, "colors": ["#00A651", "#FFFFFF"]},
+        {"name": "Spartak Moscow", "tsdbTeamId": null, "badge": null, "colors": ["#E4141B", "#FFFFFF"]},
+        {"name": "Zenit Saint Petersburg", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#8FCAE7"]}
+      ]
+    }
+  ]
 }

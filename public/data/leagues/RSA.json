@@ -11,13 +11,28 @@
       "verified": false,
       "sources": [
         "https://en.wikipedia.org/wiki/2025%E2%80%9326_South_African_Premiership",
-        "https://africa.espn.com/football/table/_/league/rsa.1"
+        "https://africa.espn.com/football/table/_/league/rsa.1",
+        "https://dailysports.net/news/all-16-teams-confirmed-for-the-202526-south-african-premier-league-season/",
+        "https://www.transfermarkt.co.za/betway-premiership/startseite/wettbewerb/SFA1"
       ],
       "clubs": [
+        { "name": "Orlando Pirates", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] },
+        { "name": "Mamelodi Sundowns", "tsdbTeamId": null, "badge": null, "colors": ["#FFD700", "#0033A0"] },
+        { "name": "Kaizer Chiefs", "tsdbTeamId": null, "badge": null, "colors": ["#FFD700", "#000000"] },
+        { "name": "Stellenbosch FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Chippa United", "tsdbTeamId": null, "badge": null },
+        { "name": "Polokwane City", "tsdbTeamId": null, "badge": null },
+        { "name": "Richards Bay", "tsdbTeamId": null, "badge": null },
+        { "name": "Sekhukhune United", "tsdbTeamId": null, "badge": null },
+        { "name": "TS Galaxy", "tsdbTeamId": null, "badge": null },
+        { "name": "Marumo Gallants", "tsdbTeamId": null, "badge": null },
+        { "name": "Golden Arrows", "tsdbTeamId": null, "badge": null },
+        { "name": "Magesi FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Durban City", "tsdbTeamId": null, "badge": null },
         { "name": "Orbit College", "tsdbTeamId": null, "badge": null },
         { "name": "Siwelele FC", "tsdbTeamId": null, "badge": null }
       ],
-      "note": "16-club top division running 9 August 2025 to 23 May 2026; only Orbit College and Siwelele FC (both new entrants) were individually named in available sources. Full club roster could not be confirmed."
+      "note": "16-club top division running 9 August 2025 to 23 May 2026 (Orlando Pirates champions); 15 of the 16 clubs were individually named across available sources (Durban City and Orbit College promoted; Magesi FC and Orbit College relegated at season end). One club could not be confirmed by name."
     }
   ]
 }

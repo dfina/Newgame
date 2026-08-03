@@ -2,7 +2,37 @@
   "association": "TUR",
   "country": "Türkiye",
   "confederation": "UEFA",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (200/200) was exhausted before this association could be covered. No clubs or leagues were invented per task rules; leagues left empty pending a follow-up session with search capacity."
+  "season": "2026-27",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Süper Lig",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_S%C3%BCper_Lig",
+        "https://football.fandom.com/wiki/2026%E2%80%9327_S%C3%BCper_Lig"
+      ],
+      "clubs": [
+        {"name": "Alanyaspor", "tsdbTeamId": null, "badge": null, "colors": ["#F58220", "#00A651"]},
+        {"name": "Amedspor", "tsdbTeamId": null, "badge": null},
+        {"name": "Beşiktaş", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"]},
+        {"name": "Çorum FK", "tsdbTeamId": null, "badge": null},
+        {"name": "Erzurumspor", "tsdbTeamId": null, "badge": null, "colors": ["#004B93", "#FFFFFF"]},
+        {"name": "Eyüpspor", "tsdbTeamId": null, "badge": null, "colors": ["#800000", "#FFD700"]},
+        {"name": "Fenerbahçe", "tsdbTeamId": null, "badge": null, "colors": ["#FFED00", "#00285E"]},
+        {"name": "Galatasaray", "tsdbTeamId": null, "badge": null, "colors": ["#A90432", "#FDB913"]},
+        {"name": "Gaziantep FK", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FF0000"]},
+        {"name": "Gençlerbirliği", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"]},
+        {"name": "Göztepe", "tsdbTeamId": null, "badge": null, "colors": ["#E30613", "#FFD700"]},
+        {"name": "İstanbul Başakşehir", "tsdbTeamId": null, "badge": null, "colors": ["#F58220", "#002D62"]},
+        {"name": "Kasımpaşa", "tsdbTeamId": null, "badge": null, "colors": ["#00447C", "#FFFFFF"]},
+        {"name": "Kocaelispor", "tsdbTeamId": null, "badge": null, "colors": ["#006341", "#000000"]},
+        {"name": "Konyaspor", "tsdbTeamId": null, "badge": null, "colors": ["#00A651", "#FFFFFF"]},
+        {"name": "Çaykur Rizespor", "tsdbTeamId": null, "badge": null, "colors": ["#008542", "#004B93"]},
+        {"name": "Samsunspor", "tsdbTeamId": null, "badge": null, "colors": ["#E30613", "#FFFFFF"]},
+        {"name": "Trabzonspor", "tsdbTeamId": null, "badge": null, "colors": ["#7A1F2B", "#0F0F70"]}
+      ]
+    }
+  ]
 }

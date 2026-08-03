@@ -2,7 +2,37 @@
   "association": "IRN",
   "country": "IR Iran",
   "confederation": "AFC",
-  "season": "unverified",
-  "leagues": [],
-  "note": "Not researched this session: the shared WebSearch budget (200 calls) for this session was exhausted before this association could be investigated. No league or club data has been invented; this file intentionally lists no leagues pending a future session with search access to verify Iran's top-flight competition and clubs."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Persian Gulf Pro League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Persian_Gulf_Pro_League",
+        "https://dailysports.net/tournaments/iran-persian-gulf-pro-league/",
+        "https://www.teammelli.com/world-cup-sacrifice-iran-suspends-domestic-league-for-three-months-leaving-foreign-players-in-limbo/"
+      ],
+      "clubs": [
+        { "name": "Esteghlal", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"] },
+        { "name": "Tractor", "tsdbTeamId": null, "badge": null, "colors": ["#E2231A", "#FFFFFF"] },
+        { "name": "Sepahan", "tsdbTeamId": null, "badge": null, "colors": ["#FFD700", "#8B0000"] },
+        { "name": "Gol Gohar", "tsdbTeamId": null, "badge": null },
+        { "name": "Chadormalou", "tsdbTeamId": null, "badge": null },
+        { "name": "Foolad Khuzestan", "tsdbTeamId": null, "badge": null },
+        { "name": "Malavan", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#E2231A"] },
+        { "name": "Persepolis", "tsdbTeamId": null, "badge": null, "colors": ["#E2231A", "#FFFFFF"] },
+        { "name": "Zob Ahan", "tsdbTeamId": null, "badge": null },
+        { "name": "Mes Rafsanjan", "tsdbTeamId": null, "badge": null },
+        { "name": "Kheybar Khorramabad", "tsdbTeamId": null, "badge": null },
+        { "name": "Shams Azar", "tsdbTeamId": null, "badge": null },
+        { "name": "Esteghlal Khuzestan", "tsdbTeamId": null, "badge": null },
+        { "name": "Fajr Sepasi", "tsdbTeamId": null, "badge": null },
+        { "name": "Paykan", "tsdbTeamId": null, "badge": null },
+        { "name": "Aluminium Arak", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ],
+  "note": "2025-26 season line-up (16 clubs) confirmed by sources, but the season was suspended indefinitely from 28 February 2026 amid regional conflict/unrest, and no confirmation of it having resumed, concluded, or of a 2026-27 season composition could be found this session."
 }

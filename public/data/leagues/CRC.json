@@ -2,7 +2,32 @@
   "association": "CRC",
   "country": "Costa Rica",
   "confederation": "CONCACAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Research not completed: this session's WebSearch budget was exhausted (200/200) before this association could be researched. This does NOT mean no organised national league exists here -- it means verification could not be attempted in this session. Re-run research for this association with a fresh/raised search budget before treating this file as authoritative."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Liga FPD (Liga Promérica)",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Liga_FPD",
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Liga_FPD",
+        "https://www.espn.co.cr/futbol/posiciones/_/liga/crc.1",
+        "https://grokipedia.com/page/Liga_FPD"
+      ],
+      "clubs": [
+        { "name": "LD Alajuelense", "tsdbTeamId": null, "badge": null, "colors": ["#DC0000", "#000000"] },
+        { "name": "Deportivo Saprissa", "tsdbTeamId": null, "badge": null, "colors": ["#5D2E8C", "#FFFFFF"] },
+        { "name": "CS Cartaginés", "tsdbTeamId": null, "badge": null },
+        { "name": "CS Herediano", "tsdbTeamId": null, "badge": null },
+        { "name": "AD Municipal Liberia", "tsdbTeamId": null, "badge": null },
+        { "name": "Municipal Pérez Zeledón", "tsdbTeamId": null, "badge": null },
+        { "name": "Puntarenas FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Sporting FC San José", "tsdbTeamId": null, "badge": null },
+        { "name": "AD San Carlos", "tsdbTeamId": null, "badge": null },
+        { "name": "Guadalupe FC", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "105th season, reduced to 10 clubs after AD Guanacasteca and Santos de Guápiles were disqualified/had licenses revoked."
+    }
+  ]
 }

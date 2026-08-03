@@ -2,7 +2,33 @@
   "association": "PAN",
   "country": "Panama",
   "confederation": "CONCACAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Research not completed: this session's WebSearch budget was exhausted (200/200) before this association could be researched. This does NOT mean no organised national league exists here -- it means verification could not be attempted in this session. Re-run research for this association with a fresh/raised search budget before treating this file as authoritative."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Liga Panameña de Fútbol (LPF)",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Liga_Paname%C3%B1a_de_F%C3%BAtbol",
+        "https://www.sofascore.com/football/tournament/panama/liga-panamena-de-futbol-apertura/11534",
+        "https://forzafootball.com/tournament/liga-panamena-apertura-1450/teams"
+      ],
+      "clubs": [
+        { "name": "Tauro FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Plaza Amador", "tsdbTeamId": null, "badge": null },
+        { "name": "Alianza FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Club Deportivo del Este", "tsdbTeamId": null, "badge": null },
+        { "name": "Árabe Unido", "tsdbTeamId": null, "badge": null },
+        { "name": "Sporting San Miguelito", "tsdbTeamId": null, "badge": null },
+        { "name": "Herrera FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Club Atlético Independiente", "tsdbTeamId": null, "badge": null },
+        { "name": "Veraguas United", "tsdbTeamId": null, "badge": null },
+        { "name": "Club Universitario", "tsdbTeamId": null, "badge": null },
+        { "name": "San Francisco FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Chorrillo FC (Chiriquí)", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "Apertura 2025 tournament, 12 clubs split into Eastern and Western conferences."
+    }
+  ]
 }

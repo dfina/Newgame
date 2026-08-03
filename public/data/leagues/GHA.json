@@ -2,7 +2,39 @@
   "association": "GHA",
   "country": "Ghana",
   "confederation": "CAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "NOT RESEARCHED: the WebSearch tool budget for this session (200/200 calls, shared across concurrent research agents) was exhausted before this association could be covered. This country is known/believed to have an organised national top-flight league (and possibly a second tier); an empty 'leagues' array here reflects a research gap, NOT a confirmed absence of a league. Requires a follow-up research pass with WebSearch capacity to populate per the rules in SCHEMA.md (no club/league may be invented without a WebSearch source)."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Ghana Premier League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://accrastreetjournal.com/2026/03/18/the-18-contenders-full-list-of-ghana-premier-league-clubs-and-their-profiles-2025-26-season/",
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Ghana_Premier_League",
+        "https://www.espn.com/soccer/standings/_/league/gha.1"
+      ],
+      "clubs": [
+        { "name": "Medeama SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Bibiani Gold Stars", "tsdbTeamId": null, "badge": null },
+        { "name": "Hearts of Oak", "tsdbTeamId": null, "badge": null, "colors": ["#7A0026", "#FFD700"] },
+        { "name": "Dreams FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Asante Kotoko", "tsdbTeamId": null, "badge": null, "colors": ["#DC0000", "#FFD700"] },
+        { "name": "Aduana Stars", "tsdbTeamId": null, "badge": null },
+        { "name": "Basake Holy Stars", "tsdbTeamId": null, "badge": null },
+        { "name": "Bechem United", "tsdbTeamId": null, "badge": null },
+        { "name": "Berekum Chelsea", "tsdbTeamId": null, "badge": null },
+        { "name": "Eleven Wonders", "tsdbTeamId": null, "badge": null },
+        { "name": "Heart of Lions", "tsdbTeamId": null, "badge": null },
+        { "name": "Hohoe United", "tsdbTeamId": null, "badge": null },
+        { "name": "Karela United", "tsdbTeamId": null, "badge": null },
+        { "name": "Nations FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Samartex", "tsdbTeamId": null, "badge": null },
+        { "name": "Swedru All Blacks", "tsdbTeamId": null, "badge": null },
+        { "name": "Vision FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Young Apostles", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "Full 18-club roster for the 2025-26 season as named by Accra Street Journal, cross-checked against Wikipedia/ESPN standings mentions. Eleven Wonders, Hohoe United and Heart of Lions were relegated at season end."
+    }
+  ]
 }

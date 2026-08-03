@@ -10,13 +10,24 @@
       "tsdbLeagueId": null,
       "verified": false,
       "sources": [
-        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Super_League_Greece"
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Super_League_Greece",
+        "https://www.worldfootball.net/competition/co122/greece-super-league/all-matches/"
       ],
       "clubs": [
+        {"name": "AEK Athens", "tsdbTeamId": null, "badge": null, "colors": ["#FFD700", "#000000"]},
+        {"name": "Olympiacos", "tsdbTeamId": null, "badge": null, "colors": ["#DC0F2E", "#FFFFFF"]},
+        {"name": "PAOK", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"]},
+        {"name": "Panathinaikos", "tsdbTeamId": null, "badge": null, "colors": ["#00A550", "#FFFFFF"]},
+        {"name": "Aris Thessaloniki", "tsdbTeamId": null, "badge": null, "colors": ["#F9A11B", "#000000"]},
+        {"name": "Atromitos", "tsdbTeamId": null, "badge": null},
+        {"name": "OFI Crete", "tsdbTeamId": null, "badge": null, "colors": ["#00693E", "#FFFFFF"]},
+        {"name": "Asteras Tripolis", "tsdbTeamId": null, "badge": null},
+        {"name": "Panetolikos", "tsdbTeamId": null, "badge": null},
+        {"name": "Volos", "tsdbTeamId": null, "badge": null},
         {"name": "Iraklis", "tsdbTeamId": null, "badge": null},
         {"name": "Kalamata", "tsdbTeamId": null, "badge": null}
       ]
     }
   ],
-  "note": "League has 14 clubs (12 retained plus 2 promoted); only the 2 promoted clubs (Iraklis, Kalamata) could be confirmed by name this session."
+  "note": "League has 14 clubs (12 retained from 2025-26 plus 2 promoted: Iraklis, Kalamata). Only 12 of the 14 could be confirmed by name in this session's search results; 2 retained clubs remain unconfirmed."
 }

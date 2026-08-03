@@ -2,7 +2,35 @@
   "association": "NOR",
   "country": "Norway",
   "confederation": "UEFA",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (200/200) was exhausted before this association could be covered. No clubs or leagues were invented per task rules; leagues left empty pending a follow-up session with search capacity."
+  "season": "2026",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Eliteserien",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_Eliteserien",
+        "https://m.aiscore.com/tournament-norwegian-eliteserien/1edq09iynayqxgo/standings"
+      ],
+      "clubs": [
+        {"name": "Viking", "tsdbTeamId": null, "badge": null, "colors": ["#001A70", "#FFFFFF"]},
+        {"name": "Bodø/Glimt", "tsdbTeamId": null, "badge": null, "colors": ["#FFD200", "#000000"]},
+        {"name": "Tromsø", "tsdbTeamId": null, "badge": null, "colors": ["#C8102E", "#FFFFFF"]},
+        {"name": "Lillestrøm", "tsdbTeamId": null, "badge": null, "colors": ["#FFD200", "#000000"]},
+        {"name": "Molde", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"]},
+        {"name": "Brann", "tsdbTeamId": null, "badge": null, "colors": ["#C8102E", "#FFFFFF"]},
+        {"name": "Sarpsborg 08", "tsdbTeamId": null, "badge": null},
+        {"name": "HamKam", "tsdbTeamId": null, "badge": null},
+        {"name": "Vålerenga", "tsdbTeamId": null, "badge": null, "colors": ["#C8102E", "#000000"]},
+        {"name": "Rosenborg", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#000000"]},
+        {"name": "Sandefjord", "tsdbTeamId": null, "badge": null},
+        {"name": "Fredrikstad", "tsdbTeamId": null, "badge": null},
+        {"name": "Kristiansund", "tsdbTeamId": null, "badge": null},
+        {"name": "KFUM Oslo", "tsdbTeamId": null, "badge": null},
+        {"name": "IK Start", "tsdbTeamId": null, "badge": null},
+        {"name": "Aalesund", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ]
 }

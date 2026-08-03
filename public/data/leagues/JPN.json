@@ -2,7 +2,40 @@
   "association": "JPN",
   "country": "Japan",
   "confederation": "AFC",
-  "season": "unverified",
-  "leagues": [],
-  "note": "Not researched this session: the shared WebSearch budget (200 calls) for this session was exhausted before this association could be investigated. No league or club data has been invented; this file intentionally lists no leagues pending a future session with search access to verify J1/J2 League club compositions during Japan's autumn-spring calendar transition."
+  "season": "2026-27",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "J1 League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_J1_League",
+        "https://www.worldfootball.net/competition/co48/japan-j1-league/results-and-standings/",
+        "https://tabimaniajapan.com/culture/the-new-era-of-j-league-everything-you-need-to-know-about-the-historic-2026-27-transition"
+      ],
+      "clubs": [
+        { "name": "Kashima Antlers", "tsdbTeamId": null, "badge": null, "colors": ["#A6093D", "#1A1A1A"] },
+        { "name": "Mito HollyHock", "tsdbTeamId": null, "badge": null },
+        { "name": "Urawa Red Diamonds", "tsdbTeamId": null, "badge": null, "colors": ["#E60012", "#FFFFFF"] },
+        { "name": "JEF United Chiba", "tsdbTeamId": null, "badge": null },
+        { "name": "Kashiwa Reysol", "tsdbTeamId": null, "badge": null, "colors": ["#FDB913", "#000000"] },
+        { "name": "FC Tokyo", "tsdbTeamId": null, "badge": null, "colors": ["#0D3B8C", "#E2231A"] },
+        { "name": "Tokyo Verdy", "tsdbTeamId": null, "badge": null, "colors": ["#5AAF41", "#5AAF41"] },
+        { "name": "FC Machida Zelvia", "tsdbTeamId": null, "badge": null },
+        { "name": "Kawasaki Frontale", "tsdbTeamId": null, "badge": null, "colors": ["#00A0DE", "#1A1A1A"] },
+        { "name": "Yokohama F. Marinos", "tsdbTeamId": null, "badge": null, "colors": ["#00539F", "#FFFFFF"] },
+        { "name": "Shimizu S-Pulse", "tsdbTeamId": null, "badge": null, "colors": ["#F97709", "#FFFFFF"] },
+        { "name": "Nagoya Grampus", "tsdbTeamId": null, "badge": null, "colors": ["#E2231A", "#1A1A1A"] },
+        { "name": "Kyoto Sanga F.C.", "tsdbTeamId": null, "badge": null, "colors": ["#7B0046", "#7B0046"] },
+        { "name": "Gamba Osaka", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#1A1A1A"] },
+        { "name": "Cerezo Osaka", "tsdbTeamId": null, "badge": null, "colors": ["#EC1C79", "#1A1A1A"] },
+        { "name": "Vissel Kobe", "tsdbTeamId": null, "badge": null, "colors": ["#9E1B32", "#9E1B32"] },
+        { "name": "Fagiano Okayama", "tsdbTeamId": null, "badge": null },
+        { "name": "Sanfrecce Hiroshima", "tsdbTeamId": null, "badge": null, "colors": ["#652D90", "#652D90"] },
+        { "name": "Avispa Fukuoka", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FDB913"] },
+        { "name": "V-Varen Nagasaki", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

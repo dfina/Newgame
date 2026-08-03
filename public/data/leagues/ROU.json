@@ -2,7 +2,37 @@
   "association": "ROU",
   "country": "Romania",
   "confederation": "UEFA",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (200/200) was exhausted before this association could be covered. No clubs or leagues were invented per task rules; leagues left empty pending a follow-up session with search capacity."
+  "season": "2026-27",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Liga I",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Liga_I",
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Liga_I",
+        "https://liquipedia.net/lab/Football/LFP/Liga_I/2026-27"
+      ],
+      "clubs": [
+        {"name": "Universitatea Craiova", "tsdbTeamId": null, "badge": null, "colors": ["#003DA5", "#FFFFFF"]},
+        {"name": "Rapid Bucureşti", "tsdbTeamId": null, "badge": null, "colors": ["#800000", "#FFFFFF"]},
+        {"name": "Universitatea Cluj", "tsdbTeamId": null, "badge": null},
+        {"name": "CFR Cluj", "tsdbTeamId": null, "badge": null, "colors": ["#800000", "#FFFFFF"]},
+        {"name": "Dinamo Bucureşti", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#C8102E"]},
+        {"name": "FC Argeş Piteşti", "tsdbTeamId": null, "badge": null},
+        {"name": "FCSB", "tsdbTeamId": null, "badge": null, "colors": ["#C8102E", "#0033A0"]},
+        {"name": "UTA Arad", "tsdbTeamId": null, "badge": null},
+        {"name": "FC Botoşani", "tsdbTeamId": null, "badge": null},
+        {"name": "Oţelul Galaţi", "tsdbTeamId": null, "badge": null},
+        {"name": "Farul Constanţa", "tsdbTeamId": null, "badge": null, "colors": ["#003DA5", "#FFFFFF"]},
+        {"name": "Petrolul Ploieşti", "tsdbTeamId": null, "badge": null},
+        {"name": "Csikszereda Miercurea Ciuc", "tsdbTeamId": null, "badge": null},
+        {"name": "Corvinul Hunedoara", "tsdbTeamId": null, "badge": null},
+        {"name": "Sepsi OSK", "tsdbTeamId": null, "badge": null},
+        {"name": "ACS Voluntari", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "13 clubs confirmed as retained from the 2025-26 final standings (relegated: Metaloglobus București, Unirea Slobozia, Hermannstadt) plus 3 clubs confirmed as promoted for 2026-27 (Corvinul Hunedoara, Sepsi OSK, ACS Voluntari), giving the full 16-club total; marked unverified since no single source listed all 16 for 2026-27 directly."
 }

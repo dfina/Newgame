@@ -3,6 +3,34 @@
   "country": "Uruguay",
   "confederation": "CONMEBOL",
   "season": "2026",
-  "leagues": [],
-  "note": "Not researched: the shared WebSearch tool budget for this session was exhausted (200/200) before any query could be run for Uruguay. Per RULES no club, league, or structure may be invented from background knowledge without a WebSearch result obtained in this session, so no league entries were added. Requires a follow-up session with WebSearch quota available to research Primera División (tier 1) and Segunda División (tier 2)."
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Primera División (Liga AUF Uruguaya)",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://es.wikipedia.org/wiki/Torneo_Apertura_2026_(Uruguay)",
+        "https://es.wikipedia.org/wiki/Campeonato_Uruguayo_de_Primera_Divisi%C3%B3n_2026",
+        "https://en.wikipedia.org/wiki/2026_Liga_AUF_Uruguaya",
+        "https://www.espn.com.uy/futbol/uruguay/nota/_/id/16244762/fixture-torneo-apertura-penarol-nacional-campeonato-uruguayo-2026-fecha-hora-resultados-partidos-nombre",
+        "https://www.montevideo.com.uy/Deportes/Campeonato-Uruguayo-2026-las-altas-y-bajas-de-los-16-equipos-de-Primera-hasta-el-momento-uc950233",
+        "https://en.wikipedia.org/wiki/Liverpool_F.C._(Montevideo)"
+      ],
+      "clubs": [
+        { "name": "Peñarol", "tsdbTeamId": null, "badge": null, "colors": ["#FFDD00", "#000000"] },
+        { "name": "Nacional", "tsdbTeamId": null, "badge": null, "colors": ["#003DA5", "#FFFFFF"] },
+        { "name": "Racing Club de Montevideo", "tsdbTeamId": null, "badge": null },
+        { "name": "Defensor Sporting", "tsdbTeamId": null, "badge": null, "colors": ["#7A1FA2", "#000000"] },
+        { "name": "Danubio", "tsdbTeamId": null, "badge": null },
+        { "name": "Progreso", "tsdbTeamId": null, "badge": null },
+        { "name": "Cerro", "tsdbTeamId": null, "badge": null, "colors": ["#00693E", "#FFFFFF"] },
+        { "name": "Boston River", "tsdbTeamId": null, "badge": null },
+        { "name": "Rentistas", "tsdbTeamId": null, "badge": null },
+        { "name": "Wanderers", "tsdbTeamId": null, "badge": null },
+        { "name": "City Torque", "tsdbTeamId": null, "badge": null },
+        { "name": "Liverpool", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] }
+      ]
+    }
+  ]
 }

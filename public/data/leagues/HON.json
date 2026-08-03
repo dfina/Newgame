@@ -2,7 +2,32 @@
   "association": "HON",
   "country": "Honduras",
   "confederation": "CONCACAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Research not completed: this session's WebSearch budget was exhausted (200/200) before this association could be researched. This does NOT mean no organised national league exists here -- it means verification could not be attempted in this session. Re-run research for this association with a fresh/raised search budget before treating this file as authoritative."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Liga Nacional de Honduras",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2024%E2%80%9325_Honduran_Liga_Nacional",
+        "https://tnh.gob.hn/deportes/liga-nacional-de-honduras-presenta-calendario-del-torneo-apertura-2025-2026/",
+        "https://www.transfermarkt.us/liga-nacional-apertura/startseite/wettbewerb/HO1A",
+        "https://es.wikipedia.org/wiki/Torneo_Apertura_2025_(Honduras)"
+      ],
+      "clubs": [
+        { "name": "CD Olimpia", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#000000"] },
+        { "name": "CD Motagua", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"] },
+        { "name": "Marathón", "tsdbTeamId": null, "badge": null },
+        { "name": "Real España", "tsdbTeamId": null, "badge": null },
+        { "name": "Victoria", "tsdbTeamId": null, "badge": null },
+        { "name": "UPNFM (Vida)", "tsdbTeamId": null, "badge": null },
+        { "name": "Génesis FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Olancho FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Juticalpa FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Choloma FC", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "2025-26 Apertura tournament, 10 clubs including newly promoted Choloma FC."
+    }
+  ]
 }

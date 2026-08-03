@@ -3,6 +3,36 @@
   "country": "Ecuador",
   "confederation": "CONMEBOL",
   "season": "2026",
-  "leagues": [],
-  "note": "Not researched: the shared WebSearch tool budget for this session was exhausted (200/200) before any query could be run for Ecuador. Per RULES no club, league, or structure may be invented from background knowledge without a WebSearch result obtained in this session, so no league entries were added. Requires a follow-up session with WebSearch quota available to research LigaPro Serie A (tier 1) and Serie B (tier 2)."
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "LigaPro Serie A",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://es.wikipedia.org/wiki/Serie_A_de_Ecuador_2026",
+        "https://en.wikipedia.org/wiki/2026_LigaPro_Serie_A",
+        "https://www.primicias.ec/deportes/ligapro/altas-bajas-fichajes-equipos-clubes-ecuador-112329/",
+        "https://www.transfermarkt.us/ligapro-serie-a/startseite/wettbewerb/EC1N"
+      ],
+      "clubs": [
+        { "name": "Independiente del Valle", "tsdbTeamId": null, "badge": null },
+        { "name": "Aucas", "tsdbTeamId": null, "badge": null, "colors": ["#FFDD00", "#000000"] },
+        { "name": "Universidad Católica", "tsdbTeamId": null, "badge": null },
+        { "name": "Macará", "tsdbTeamId": null, "badge": null, "colors": ["#FFDD00", "#000000"] },
+        { "name": "Deportivo Cuenca", "tsdbTeamId": null, "badge": null },
+        { "name": "Delfín", "tsdbTeamId": null, "badge": null },
+        { "name": "Barcelona SC", "tsdbTeamId": null, "badge": null, "colors": ["#FFDD00", "#D50000"] },
+        { "name": "LDU Quito", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#000000"] },
+        { "name": "Técnico Universitario", "tsdbTeamId": null, "badge": null },
+        { "name": "Mushuc Runa", "tsdbTeamId": null, "badge": null },
+        { "name": "Orense SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Libertad", "tsdbTeamId": null, "badge": null },
+        { "name": "Guayaquil City", "tsdbTeamId": null, "badge": null },
+        { "name": "Emelec", "tsdbTeamId": null, "badge": null, "colors": ["#003DA5", "#FFFFFF"] },
+        { "name": "Manta", "tsdbTeamId": null, "badge": null },
+        { "name": "Leones Fútbol Club de Imbabura", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

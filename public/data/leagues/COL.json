@@ -3,6 +3,45 @@
   "country": "Colombia",
   "confederation": "CONMEBOL",
   "season": "2026",
-  "leagues": [],
-  "note": "Not researched: the shared WebSearch tool budget for this session was exhausted (200/200) before any query could be run for Colombia. Per RULES no club, league, or structure may be invented from background knowledge without a WebSearch result obtained in this session, so no league entries were added. Requires a follow-up session with WebSearch quota available to research Categoría Primera A (tier 1) and Categoría Primera B (tier 2)."
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Categoría Primera A (Liga BetPlay Dimayor)",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://footystats.org/colombia/categoria-primera-a",
+        "https://www.espn.com/soccer/standings/_/league/col.1",
+        "https://www.espn.com/soccer/teams/_/league/col.1",
+        "https://en.wikipedia.org/wiki/List_of_football_clubs_in_Colombia",
+        "https://es.wikipedia.org/wiki/Torneo_Apertura_2026_(Colombia)",
+        "https://es.wikipedia.org/wiki/Final_del_Torneo_Apertura_2026_(Colombia)",
+        "https://en.wikipedia.org/wiki/2026_Liga_DIMAYOR",
+        "https://www.elespectador.com/deportes/futbol-colombiano/liga-betplay-2026-ii-estas-son-las-altas-y-bajas-de-los-20-equipos-para-el-segundo-semestre/"
+      ],
+      "clubs": [
+        { "name": "Águilas Doradas", "tsdbTeamId": null, "badge": null },
+        { "name": "Alianza FC", "tsdbTeamId": null, "badge": null },
+        { "name": "América de Cali", "tsdbTeamId": null, "badge": null, "colors": ["#D50000", "#FFFFFF"] },
+        { "name": "Atlético Bucaramanga", "tsdbTeamId": null, "badge": null, "colors": ["#FFDD00", "#000000"] },
+        { "name": "Atlético Nacional", "tsdbTeamId": null, "badge": null, "colors": ["#00693E", "#FFFFFF"] },
+        { "name": "Boyacá Chicó", "tsdbTeamId": null, "badge": null },
+        { "name": "Deportes Tolima", "tsdbTeamId": null, "badge": null, "colors": ["#D50000", "#FFFFFF"] },
+        { "name": "Deportivo Cali", "tsdbTeamId": null, "badge": null, "colors": ["#00693E", "#FFFFFF"] },
+        { "name": "Deportivo Pasto", "tsdbTeamId": null, "badge": null },
+        { "name": "Deportivo Pereira", "tsdbTeamId": null, "badge": null },
+        { "name": "Envigado", "tsdbTeamId": null, "badge": null },
+        { "name": "Fortaleza CEIF", "tsdbTeamId": null, "badge": null },
+        { "name": "Independiente Medellín", "tsdbTeamId": null, "badge": null, "colors": ["#D50000", "#000000"] },
+        { "name": "Junior de Barranquilla", "tsdbTeamId": null, "badge": null, "colors": ["#D50000", "#FFFFFF"] },
+        { "name": "La Equidad", "tsdbTeamId": null, "badge": null },
+        { "name": "Llaneros FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Millonarios", "tsdbTeamId": null, "badge": null, "colors": ["#003DA5", "#FFFFFF"] },
+        { "name": "Once Caldas", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#D50000"] },
+        { "name": "Santa Fe", "tsdbTeamId": null, "badge": null, "colors": ["#D50000", "#FFFFFF"] },
+        { "name": "Jaguares de Córdoba", "tsdbTeamId": null, "badge": null },
+        { "name": "Cúcuta Deportivo", "tsdbTeamId": null, "badge": null, "colors": ["#D50000", "#000000"] }
+      ]
+    }
+  ]
 }

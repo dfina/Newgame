@@ -2,7 +2,36 @@
   "association": "CMR",
   "country": "Cameroon",
   "confederation": "CAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "NOT RESEARCHED: the WebSearch tool budget for this session (200/200 calls, shared across concurrent research agents) was exhausted before this association could be covered. This country is known/believed to have an organised national top-flight league (and possibly a second tier); an empty 'leagues' array here reflects a research gap, NOT a confirmed absence of a league. Requires a follow-up research pass with WebSearch capacity to populate per the rules in SCHEMA.md (no club/league may be invented without a WebSearch source)."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Elite One",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Elite_One",
+        "https://www.camfoot.com/actualites/saison-2025-2026-la-liste-complete-des-clubs-en-lice,522424.html",
+        "https://fr.wikipedia.org/wiki/Championnat_du_Cameroun_de_football_2025-2026",
+        "https://komiaza.com/single/685/football-la-mtn-elite-one-passe-officiellement-%C3%A0-14-clubs-pour-la-saison-2026"
+      ],
+      "clubs": [
+        { "name": "Colombe Sportive du Dja et Lobo", "tsdbTeamId": null, "badge": null },
+        { "name": "Panthère du Ndé", "tsdbTeamId": null, "badge": null },
+        { "name": "PWD Bamenda", "tsdbTeamId": null, "badge": null },
+        { "name": "Aigle du Moungo", "tsdbTeamId": null, "badge": null },
+        { "name": "Gazelle FA", "tsdbTeamId": null, "badge": null },
+        { "name": "Fauve Azur", "tsdbTeamId": null, "badge": null },
+        { "name": "Coton Sport de Garoua", "tsdbTeamId": null, "badge": null },
+        { "name": "Dynamo de Douala", "tsdbTeamId": null, "badge": null },
+        { "name": "Stade Renard", "tsdbTeamId": null, "badge": null },
+        { "name": "AS Fortuna", "tsdbTeamId": null, "badge": null },
+        { "name": "Victoria United", "tsdbTeamId": null, "badge": null },
+        { "name": "Unisport de Bafang", "tsdbTeamId": null, "badge": null },
+        { "name": "Canon de Yaoundé", "tsdbTeamId": null, "badge": null, "colors": ["#006400", "#DC0000"] },
+        { "name": "Aigle Royal de la Menoua", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "66th season, 14-club MTN Elite One running 24 January to 10 June 2026. Full 14-club list confirmed via Camfoot's official provisional-lists article."
+    }
+  ]
 }

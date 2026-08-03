@@ -3,6 +3,32 @@
   "country": "Paraguay",
   "confederation": "CONMEBOL",
   "season": "2026",
-  "leagues": [],
-  "note": "Not researched: the shared WebSearch tool budget for this session was exhausted (200/200) before any query could be run for Paraguay. Per RULES no club, league, or structure may be invented from background knowledge without a WebSearch result obtained in this session, so no league entries were added. Requires a follow-up session with WebSearch quota available to research Primera División de Paraguay (tier 1) and División Intermedia (tier 2)."
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "División Profesional (Primera División de Paraguay)",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://es.wikipedia.org/wiki/Torneo_Apertura_2026_(Paraguay)",
+        "https://es.wikipedia.org/wiki/Primera_Divisi%C3%B3n_de_Paraguay",
+        "https://www.transfermarkt.us/primera-division-apertura/startseite/wettbewerb/PR1A",
+        "https://www.fichajes.com/paraguay/primera-division-paraguay/equipo"
+      ],
+      "clubs": [
+        { "name": "Olimpia", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#000000"] },
+        { "name": "Cerro Porteño", "tsdbTeamId": null, "badge": null, "colors": ["#D50000", "#003DA5"] },
+        { "name": "Club Nacional", "tsdbTeamId": null, "badge": null },
+        { "name": "Libertad", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] },
+        { "name": "Guaraní", "tsdbTeamId": null, "badge": null, "colors": ["#D50000", "#000000"] },
+        { "name": "Deportivo Recoleta", "tsdbTeamId": null, "badge": null },
+        { "name": "Sportivo Ameliano", "tsdbTeamId": null, "badge": null },
+        { "name": "Sportivo Trinidense", "tsdbTeamId": null, "badge": null },
+        { "name": "Sportivo Luqueño", "tsdbTeamId": null, "badge": null },
+        { "name": "Rubio Ñu", "tsdbTeamId": null, "badge": null },
+        { "name": "2 de Mayo", "tsdbTeamId": null, "badge": null },
+        { "name": "Sportivo San Lorenzo", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

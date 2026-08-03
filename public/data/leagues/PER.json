@@ -3,6 +3,37 @@
   "country": "Peru",
   "confederation": "CONMEBOL",
   "season": "2026",
-  "leagues": [],
-  "note": "Not researched: the shared WebSearch tool budget for this session was exhausted (200/200) before any query could be run for Peru. Per RULES no club, league, or structure may be invented from background knowledge without a WebSearch result obtained in this session, so no league entries were added. Requires a follow-up session with WebSearch quota available to research Liga 1 (tier 1) and Liga 2 (tier 2)."
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Liga 1",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://elcomercio.pe/deporte-total/fixture-liga-1-2026-peru-ver-calendario-programacion-torneo-apertura-clausura-alianza-lima-universitario-cristal-especdis-noticia/",
+        "https://hiraoka.com.pe/blog/post/tabla-de-posiciones-liga-1-peru-2026",
+        "https://www.transfermarkt.us/liga-1-apertura/startseite/wettbewerb/TDeA"
+      ],
+      "clubs": [
+        { "name": "Universitario de Deportes", "tsdbTeamId": null, "badge": null, "colors": ["#8B0000", "#FFFFFF"] },
+        { "name": "Cusco FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Alianza Lima", "tsdbTeamId": null, "badge": null, "colors": ["#003DA5", "#FFFFFF"] },
+        { "name": "Sporting Cristal", "tsdbTeamId": null, "badge": null, "colors": ["#00A3E0", "#FFFFFF"] },
+        { "name": "Alianza Atlético", "tsdbTeamId": null, "badge": null },
+        { "name": "FBC Melgar", "tsdbTeamId": null, "badge": null, "colors": ["#8B0000", "#000000"] },
+        { "name": "Deportivo Garcilaso", "tsdbTeamId": null, "badge": null },
+        { "name": "Cienciano", "tsdbTeamId": null, "badge": null, "colors": ["#D50000", "#FFFFFF"] },
+        { "name": "Los Chankas", "tsdbTeamId": null, "badge": null },
+        { "name": "ADT", "tsdbTeamId": null, "badge": null },
+        { "name": "Sport Huancayo", "tsdbTeamId": null, "badge": null },
+        { "name": "Atlético Grau", "tsdbTeamId": null, "badge": null },
+        { "name": "Comerciantes Unidos", "tsdbTeamId": null, "badge": null },
+        { "name": "Sport Boys", "tsdbTeamId": null, "badge": null, "colors": ["#FFA500", "#000000"] },
+        { "name": "Juan Pablo II College", "tsdbTeamId": null, "badge": null },
+        { "name": "UTC", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Cajamarca", "tsdbTeamId": null, "badge": null },
+        { "name": "Deportivo Moquegua", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

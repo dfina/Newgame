@@ -2,7 +2,35 @@
   "association": "JAM",
   "country": "Jamaica",
   "confederation": "CONCACAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Research not completed: this session's WebSearch budget was exhausted (200/200) before this association could be researched. This does NOT mean no organised national league exists here -- it means verification could not be attempted in this session. Re-run research for this association with a fresh/raised search budget before treating this file as authoritative."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Jamaica Premier League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Jamaica_Premier_League",
+        "https://www.fctables.com/jamaica/premier-league/",
+        "https://footystats.org/jamaica/jamaica-national-premier-league"
+      ],
+      "clubs": [
+        { "name": "Mount Pleasant FA", "tsdbTeamId": null, "badge": null },
+        { "name": "Montego Bay United", "tsdbTeamId": null, "badge": null },
+        { "name": "Portmore United", "tsdbTeamId": null, "badge": null },
+        { "name": "Waterhouse FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Cavalier FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Racing United", "tsdbTeamId": null, "badge": null },
+        { "name": "Arnett Gardens", "tsdbTeamId": null, "badge": null },
+        { "name": "Chapelton Maroons", "tsdbTeamId": null, "badge": null },
+        { "name": "Dunbeholden FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Treasure Beach FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Tivoli Gardens", "tsdbTeamId": null, "badge": null },
+        { "name": "Molynes United", "tsdbTeamId": null, "badge": null },
+        { "name": "Harbour View FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Spanish Town", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "52nd season, 14 clubs; season began 15 September 2025, suspended 23 October due to Hurricane Melissa, resumed 7 December 2025, concluded May 2026. Full final-table list of 14 clubs found via fctables.com."
+    }
+  ]
 }

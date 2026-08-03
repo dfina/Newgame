@@ -2,7 +2,36 @@
   "association": "UKR",
   "country": "Ukraine",
   "confederation": "UEFA",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (200/200) was exhausted before this association could be covered. No clubs or leagues were invented per task rules; leagues left empty pending a follow-up session with search capacity."
+  "season": "2026-27",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Ukrainian Premier League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Ukrainian_Premier_League",
+        "https://mezha.net/eng/bukvy/d88ff7ac_ukrainian_premier_league/"
+      ],
+      "clubs": [
+        {"name": "Shakhtar Donetsk", "tsdbTeamId": null, "badge": null, "colors": ["#FF6600", "#000000"]},
+        {"name": "Dynamo Kyiv", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"]},
+        {"name": "Zorya Luhansk", "tsdbTeamId": null, "badge": null},
+        {"name": "Karpaty Lviv", "tsdbTeamId": null, "badge": null},
+        {"name": "Chornomorets Odesa", "tsdbTeamId": null, "badge": null},
+        {"name": "Kryvbas Kryvyi Rih", "tsdbTeamId": null, "badge": null},
+        {"name": "Veres Rivne", "tsdbTeamId": null, "badge": null},
+        {"name": "Polissya Zhytomyr", "tsdbTeamId": null, "badge": null},
+        {"name": "Obolon Kyiv", "tsdbTeamId": null, "badge": null},
+        {"name": "LNZ Cherkasy", "tsdbTeamId": null, "badge": null},
+        {"name": "Kolos Kovalivka", "tsdbTeamId": null, "badge": null},
+        {"name": "Metalist 1925 Kharkiv", "tsdbTeamId": null, "badge": null},
+        {"name": "Livyi Bereh Kyiv", "tsdbTeamId": null, "badge": null},
+        {"name": "Epicentr Podillya", "tsdbTeamId": null, "badge": null},
+        {"name": "Bukovyna Chernivtsi", "tsdbTeamId": null, "badge": null},
+        {"name": "Kudrivka", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ],
+  "note": "League has 20 clubs for 2026-27 (first 20-team season). Only 16 could be confirmed by name in this session's search results; 4 remain unconfirmed."
 }

@@ -2,7 +2,40 @@
   "association": "COD",
   "country": "Congo DR",
   "confederation": "CAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "NOT RESEARCHED: the WebSearch tool budget for this session (200/200 calls, shared across concurrent research agents) was exhausted before this association could be covered. This country is known/believed to have an organised national top-flight league (and possibly a second tier); an empty 'leagues' array here reflects a research gap, NOT a confirmed absence of a league. Requires a follow-up research pass with WebSearch capacity to populate per the rules in SCHEMA.md (no club/league may be invented without a WebSearch source)."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Linafoot",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "groups": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Linafoot",
+        "https://en.wikipedia.org/wiki/Linafoot"
+      ],
+      "clubs": [
+        { "name": "TP Mazembe", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] },
+        { "name": "Saint-Eloi Lupopo", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Don Bosco", "tsdbTeamId": null, "badge": null },
+        { "name": "Simba SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Blessing FC", "tsdbTeamId": null, "badge": null },
+        { "name": "AS Vita Club", "tsdbTeamId": null, "badge": null, "colors": ["#006400", "#000000"] },
+        { "name": "Aigles du Congo", "tsdbTeamId": null, "badge": null },
+        { "name": "Maniema Union", "tsdbTeamId": null, "badge": null },
+        { "name": "Dauphins Noirs", "tsdbTeamId": null, "badge": null },
+        { "name": "US Céleste", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Rangers", "tsdbTeamId": null, "badge": null },
+        { "name": "DC Motema Pembe", "tsdbTeamId": null, "badge": null },
+        { "name": "Etoile de Kivu", "tsdbTeamId": null, "badge": null },
+        { "name": "New Jack", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Etancheite", "tsdbTeamId": null, "badge": null },
+        { "name": "Anges Verts", "tsdbTeamId": null, "badge": null },
+        { "name": "Olympique de Kinshasa (Renaissance)", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Renaissance du Congo", "tsdbTeamId": null, "badge": null },
+        { "name": "Bukavu Dawa", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "65th season of the DR Congo top flight, played in two pools (Group A/Group B) ahead of a championship playoff round; 19 clubs named across both pools per Wikipedia standings as of 4 April 2026. Aigles du Congo were defending champions."
+    }
+  ]
 }
