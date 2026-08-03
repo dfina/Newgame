@@ -3,6 +3,28 @@
   "country": "Haiti",
   "confederation": "CONCACAF",
   "season": "2025-26",
-  "leagues": [],
-  "note": "Researched this session: the Ligue Haitienne is Haiti's top division, founded 1937, currently with 18 clubs. Only the 2025-26 Serie de Cloture champions, Violette AC, could be confirmed as playing in the current season; other well-known clubs (Racing Club Haitien, Don Bosco, Baltimore SC, Victory SC, Cavaly AS) appeared only in historical-championship context, not confirmed as 2025-26 season participants, so were not included per the no-invented-clubs rule. Insufficient (1 confirmed) to populate a usable club list; leagues left empty per the 6-club minimum rule. Sources: https://en.wikipedia.org/wiki/Ligue_Ha%C3%AFtienne"
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Championnat National (Ligue Haïtienne)",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "groups": true,
+      "sources": [
+        "https://globalsportsarchive.com/en/soccer/competition/championnat-national-d1-2025-2026/77704",
+        "https://haitiantimes.com/2026/02/15/violette-haitian-football-league-title-2026/",
+        "https://goals9.com/la-d1-haitienne-lance-sa-serie-de-cloture-2025-2026/"
+      ],
+      "clubs": [
+        { "name": "Violette AC", "tsdbTeamId": null, "badge": null },
+        { "name": "Racing Club Haïtien", "tsdbTeamId": null, "badge": null },
+        { "name": "Don Bosco FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Cavaly AS", "tsdbTeamId": null, "badge": null },
+        { "name": "Juventus des Cayes", "tsdbTeamId": null, "badge": null },
+        { "name": "America des Cayes", "tsdbTeamId": null, "badge": null },
+        { "name": "Baltimore SC", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ],
+  "note": "The 2025-26 Championnat National is split into Groupe Ouest and Groupe Sud (18 clubs total league-wide); 7 clubs across both groups were confirmed by name in sources for the current season."
 }

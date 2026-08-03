@@ -2,7 +2,38 @@
   "association": "GNB",
   "country": "Guinea-Bissau",
   "confederation": "CAF",
-  "season": "2024-25",
-  "leagues": [],
-  "note": "PARTIALLY RESEARCHED: Campeonato Nacional da Guiné-Bissau (Liga Orange) is confirmed as a 16-club top flight. Only 4 clubs could be reliably tied to the 2024-25 season standings (Sport Bissau e Benfica champions, UD Internacional 2nd, SC Portos de Bissau 4th, FC Tigres de Fronteira 12th); several other named clubs (Benfica Bissau, FC Canchungo, FC Cuntum, FC Sonaco, Flamengo Pefine, Os Balantas Mansôa, SC Bafatá, Sporting CG Bissau, ADR Mansabá, CDR Farim, Estrela Negra Bissau, Lagartos Bambadinca, Nuno Tristão Bula) appeared in a source that could not be confirmed as the same season, so were excluded per the no-season-mixing rule. Short of the 6-club minimum for a usable entry. Sources consulted: https://en.wikipedia.org/wiki/Campeonato_Nacional_da_Guin%C3%A9-Bissau , https://globalsportsarchive.com/en/soccer/competition/liga-orange-bissau-2024-2025/74496 , https://www.national-football-teams.com/old/leagues/79/2025_1/Campeonato_Nacional_Da_Guine_Bissau.html . Requires a follow-up pass with a fresh season-specific source."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Campeonato Nacional da Guiné-Bissau (Liga Orange)",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://www.ogol.com.br/pais/guine-bissau",
+        "https://www.ogol.com.br/competicao/liga-guine-bissau",
+        "https://www.zerozero.pt/competicao/liga-guine-bissau",
+        "https://www.rsssf.org/tablesg/gbis2026.html"
+      ],
+      "clubs": [
+        { "name": "Sporting Clube da Guiné-Bissau", "tsdbTeamId": null, "badge": null },
+        { "name": "Sport Bissau e Benfica", "tsdbTeamId": null, "badge": null },
+        { "name": "UD Internacional (Bissau)", "tsdbTeamId": null, "badge": null },
+        { "name": "SC Portos de Bissau", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Cumura", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Cuntum", "tsdbTeamId": null, "badge": null },
+        { "name": "Cupelum FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Flamengo FC (Pefine)", "tsdbTeamId": null, "badge": null },
+        { "name": "Hafía FC (Bafatá)", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Canchungo", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Pelundo", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Tigre de Fronteira", "tsdbTeamId": null, "badge": null },
+        { "name": "Os Balantas (Mansôa)", "tsdbTeamId": null, "badge": null },
+        { "name": "Os Arados FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Massaf SC", "tsdbTeamId": null, "badge": null },
+        { "name": "CDR Gabú", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "16 clubs named for the 2025-26 season (matching the league's confirmed 16-club size), combining a participant list and a round-5 standings table found in the same search result, both explicitly dated to the current 2025-26 campaign (first round played late Jan/early Feb). Supersedes the prior 2024-25 partial entry, which could not reach the 6-club minimum."
+    }
+  ]
 }

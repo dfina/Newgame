@@ -2,7 +2,28 @@
   "association": "NEP",
   "country": "Nepal",
   "confederation": "AFC",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (shared across this entire session) was exhausted before Nepal could be looked into. This is NOT a claim that no league exists (Nepal's Martyr's Memorial A-Division League likely exists) — composition simply could not be verified here. Needs a follow-up session with search budget available."
+  "season": "2025",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Nepal Super League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://kathmandupost.com/football/2025/03/29/nepal-super-league-3-kicks-off-today-between-seven-teams",
+        "https://en.wikipedia.org/wiki/2025_Nepal_Super_League",
+        "https://www.ncell.com.np/en/about/media-room/press-release/ncell-is-the-title-sponsor-of-third-edition-of-nepal-super-league-nsl-2025"
+      ],
+      "clubs": [
+        { "name": "Butwal Lumbini FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Dhangadhi FC", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Chitwan", "tsdbTeamId": null, "badge": null },
+        { "name": "Jhapa FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Kathmandu Rayzrs FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Lalitpur City FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Pokhara Thunders FC", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ],
+  "note": "Nepal Super League (NSL) is Nepal's professional franchise club league, organised by Nepal Sports and Events Management with ANFA technical support; used here as tier 1 since its 2025 (3rd edition) composition was fully confirmed with 7 clubs. Nepal's other traditional top-flight competition, the Martyr's Memorial A-Division League, was not separately researched this session due to search budget limits."
 }

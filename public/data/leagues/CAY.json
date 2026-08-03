@@ -2,7 +2,28 @@
   "association": "CAY",
   "country": "Cayman Islands",
   "confederation": "CONCACAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Research not completed: this session's WebSearch budget was exhausted (200/200) before this association could be researched. This does NOT mean no organised national league exists here -- it means verification could not be attempted in this session. Re-run research for this association with a fresh/raised search budget before treating this file as authoritative."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Cayman Islands Premier League (CIFA)",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://footystats.org/cayman-islands/cifa-premier-league",
+        "https://en.wikipedia.org/wiki/Cayman_Islands_Premier_League"
+      ],
+      "clubs": [
+        { "name": "Elite SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Bodden Town FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Scholars International SC", "tsdbTeamId": null, "badge": null },
+        { "name": "345 FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Sunset FC", "tsdbTeamId": null, "badge": null },
+        { "name": "East End United FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Future SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Latinos FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Cayman Brac FC", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

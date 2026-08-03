@@ -2,7 +2,35 @@
   "association": "GUM",
   "country": "Guam",
   "confederation": "AFC",
-  "season": "unverified",
-  "leagues": [],
-  "note": "Not researched this session: the shared WebSearch budget (200 calls) for this session was exhausted before this association could be investigated. No league or club data has been invented; this file intentionally lists no leagues pending a future session with search access to verify the Guam Soccer League and its clubs."
+  "season": "2025",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Guam Soccer League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://www.guamsportsnetwork.com/2025/wings-fc-opens-defense-of-g-league-crown/",
+        "https://en.wikipedia.org/wiki/Guam_Soccer_League",
+        "https://en.wikipedia.org/wiki/Bank_of_Guam_Strykers_FC",
+        "https://en.wikipedia.org/wiki/Wings_FC",
+        "https://www.national-football-teams.com/leagues/76/2025_2/Guam.html"
+      ],
+      "clubs": [
+        { "name": "Crushers FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Dededo SC", "tsdbTeamId": null, "badge": null },
+        { "name": "ASC Trust Islanders FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Quality Distributors FC", "tsdbTeamId": null, "badge": null },
+        { "name": "NAPA Rovers FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Sidekick SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Southern Cobras SC", "tsdbTeamId": null, "badge": null },
+        { "name": "GTA Southern Heat", "tsdbTeamId": null, "badge": null },
+        { "name": "Bank of Guam Strykers FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Tigers FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Tumon Typhoons FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Wings FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Guam Shipyard Wolverines SC", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

@@ -2,7 +2,29 @@
   "association": "TLS",
   "country": "Timor-Leste",
   "confederation": "AFC",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (shared across this entire session) was exhausted before Timor-Leste could be looked into. Liga Futebol Timor-Leste's running status is uncertain and genuinely needs checking, but that could not be done here. This is NOT a verified claim either way. Needs a follow-up session with search budget available."
+  "season": "2026",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Liga Futebol Timor-Leste (Primeira Divisão)",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_Liga_Futebol_Timor-Leste",
+        "https://globalsportsarchive.com/en/soccer/competition/liga-futebol-de-timor-leste-2026/80210"
+      ],
+      "clubs": [
+        { "name": "Benfica Laulara", "tsdbTeamId": null, "badge": null },
+        { "name": "Karketu Dili", "tsdbTeamId": null, "badge": null },
+        { "name": "Emmanuel", "tsdbTeamId": null, "badge": null },
+        { "name": "Santa Cruz", "tsdbTeamId": null, "badge": null },
+        { "name": "Porto Taibesse", "tsdbTeamId": null, "badge": null },
+        { "name": "Aitana", "tsdbTeamId": null, "badge": null },
+        { "name": "DIT", "tsdbTeamId": null, "badge": null },
+        { "name": "Coração", "tsdbTeamId": null, "badge": null },
+        { "name": "AS Marca", "tsdbTeamId": null, "badge": null },
+        { "name": "Assalam", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

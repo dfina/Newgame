@@ -3,6 +3,32 @@
   "country": "Cuba",
   "confederation": "CONCACAF",
   "season": "2025",
-  "leagues": [],
-  "note": "Researched this session: the Campeonato Nacional de Futbol de Cuba (108th season, 2025) is the top division, contested by 16 clubs (one per province plus Isla de la Juventud) split into 4 groups of 4 for Apertura/Clausura. Only the champions, FC La Habana (won both Apertura and Clausura), could be confirmed by name in available search snippets. Insufficient (1 of 16) to populate a usable club list; leagues left empty per the 6-club minimum rule. Sources: https://en.wikipedia.org/wiki/2025_Campeonato_Nacional_de_F%C3%BAtbol_de_Cuba"
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Campeonato Nacional de Fútbol (Liga Nacional de Cuba)",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025_Liga_Nacional_de_Cuba",
+        "https://www.flashscore.co/futbol/cuba/liga-nacional/"
+      ],
+      "clubs": [
+        { "name": "FC La Habana", "tsdbTeamId": null, "badge": null },
+        { "name": "Santiago de Cuba", "tsdbTeamId": null, "badge": null },
+        { "name": "Las Tunas", "tsdbTeamId": null, "badge": null },
+        { "name": "Cienfuegos", "tsdbTeamId": null, "badge": null },
+        { "name": "Villa Clara", "tsdbTeamId": null, "badge": null },
+        { "name": "Ciego de Ávila", "tsdbTeamId": null, "badge": null },
+        { "name": "Camagüey", "tsdbTeamId": null, "badge": null },
+        { "name": "Matanzas", "tsdbTeamId": null, "badge": null },
+        { "name": "Pinar del Río", "tsdbTeamId": null, "badge": null },
+        { "name": "Mayabeque", "tsdbTeamId": null, "badge": null },
+        { "name": "Sancti Spíritus", "tsdbTeamId": null, "badge": null },
+        { "name": "Granma", "tsdbTeamId": null, "badge": null },
+        { "name": "Guantánamo", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ],
+  "note": "The 2025 (108th season) Campeonato Nacional had 16 clubs total, one per province plus Isla de la Juventud. 13 were confirmed by name in sources; Holguín, Artemisa and Isla de la Juventud entries could not be confirmed by name and were not included."
 }

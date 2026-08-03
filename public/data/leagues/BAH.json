@@ -2,7 +2,29 @@
   "association": "BAH",
   "country": "Bahamas",
   "confederation": "CONCACAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Research not completed this session: the shared WebSearch budget (26 calls) was exhausted before the Bahamas could be researched. This does NOT mean no organised national league exists here -- it means verification could not be attempted in this session. Re-run research for this association with a fresh search budget before treating this file as authoritative."
+  "season": "2024-25",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "BFA Senior League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/BFA_Senior_League",
+        "https://globalsportsarchive.com/en/soccer/competition/bfa-senior-league-2024-2025/73770"
+      ],
+      "clubs": [
+        { "name": "Western Warriors SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Westside SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Dynamos FC", "tsdbTeamId": null, "badge": null },
+        { "name": "University of The Bahamas", "tsdbTeamId": null, "badge": null },
+        { "name": "United FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Seventeen FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Western Warriors SC B", "tsdbTeamId": null, "badge": null },
+        { "name": "Future Stars FC", "tsdbTeamId": null, "badge": null },
+        { "name": "IM Bears SC", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ],
+  "note": "Used the 2024-25 season (most recently completed) because that is the season for which a full club list could be confirmed together in one source. University of The Bahamas is reported as 2025-26 champion, but a full 2025-26 roster could not be confirmed, so seasons were not mixed."
 }

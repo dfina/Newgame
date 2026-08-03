@@ -2,7 +2,29 @@
   "association": "BRB",
   "country": "Barbados",
   "confederation": "CONCACAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Research not completed this session: the shared WebSearch budget (26 calls) was exhausted before Barbados could be researched. This does NOT mean no organised national league exists here -- it means verification could not be attempted in this session. Re-run research for this association with a fresh search budget before treating this file as authoritative."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Barbados Premier League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://www.besoccer.com/competition/table/premier_league_barbados/2026",
+        "https://en.wikipedia.org/wiki/Barbados_Premier_League"
+      ],
+      "clubs": [
+        { "name": "Weymouth Wales FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Wotton", "tsdbTeamId": null, "badge": null },
+        { "name": "Bagatelle SSC", "tsdbTeamId": null, "badge": null },
+        { "name": "Pride of Gall Hill", "tsdbTeamId": null, "badge": null },
+        { "name": "Brittons Hill United", "tsdbTeamId": null, "badge": null },
+        { "name": "Ellerton FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Paradise SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Kickstart", "tsdbTeamId": null, "badge": null },
+        { "name": "UWI Blackbirds", "tsdbTeamId": null, "badge": null },
+        { "name": "St Andrew Lions", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

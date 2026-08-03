@@ -2,7 +2,27 @@
   "association": "SKN",
   "country": "Saint Kitts and Nevis",
   "confederation": "CONCACAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Research not completed: this session's WebSearch budget was exhausted (200/200) before this association could be researched. This does NOT mean no organised national league exists here -- it means verification could not be attempted in this session. Re-run research for this association with a fresh/raised search budget before treating this file as authoritative."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "SKNFA Premier League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://globalsportsarchive.com/en/soccer/competition/sknfa-nbgc-premier-league-2025-2026/77807",
+        "https://en.wikipedia.org/wiki/SKNFA_Premier_League"
+      ],
+      "clubs": [
+        { "name": "Old Road Jets United", "tsdbTeamId": null, "badge": null },
+        { "name": "Newtown United FC", "tsdbTeamId": null, "badge": null },
+        { "name": "St. Paul's United FC", "tsdbTeamId": null, "badge": null },
+        { "name": "St. Peters", "tsdbTeamId": null, "badge": null },
+        { "name": "Cayon Rockets", "tsdbTeamId": null, "badge": null },
+        { "name": "Village Superstars", "tsdbTeamId": null, "badge": null },
+        { "name": "Conaree FC", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ],
+  "note": "10 clubs compete in the 2025-26 SKNFA Premier League; 7 were confirmed by name in standings data."
 }

@@ -3,6 +3,35 @@
   "country": "Guinea",
   "confederation": "CAF",
   "season": "2025-26",
-  "leagues": [],
-  "note": "PARTIALLY RESEARCHED: Guinée Championnat National (Ligue 1 Guicopres) is confirmed as a 14-club top flight for 2025-26 (Horoya AC champions for the 21st time; AFA Guinée and Karfamoriah FC promoted). Only 3 clubs could be individually named in available search results, short of the 6-club minimum needed for a usable entry, so no 'leagues' entry is populated. Sources consulted: https://fr.wikipedia.org/wiki/Championnat_de_Guin%C3%A9e_de_football_2025-2026 , https://en.wikipedia.org/wiki/Guin%C3%A9e_Championnat_National , https://www.guinee7.com/2026/05/01/ligue-1-guicopres-le-bilan-chiffre-dune-saison-2025-2026-maitrisee-par-le-horoya-ac/ . Requires a follow-up pass to name the remaining clubs."
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Ligue 1 Guicopres (Championnat National)",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://globalsportsarchive.com/en/soccer/competition/championnat-national-ligue-1-guicopres-2025-2026/77602",
+        "https://www.guinee7.com/2026/05/01/ligue-1-guicopres-le-bilan-chiffre-dune-saison-2025-2026-maitrisee-par-le-horoya-ac/",
+        "https://www.facebook.com/footdafriqueofficiel/posts/foot-guin%C3%A9e-ligue-1-guicopres-2025-2026-voici-les-14-clubs-de-ligue-1-guin%C3%A9enne-/1279522113973514/",
+        "https://fr.wikipedia.org/wiki/Championnat_de_Guin%C3%A9e_de_football_2025-2026"
+      ],
+      "clubs": [
+        { "name": "Horoya AC", "tsdbTeamId": null, "badge": null },
+        { "name": "Hafia FC", "tsdbTeamId": null, "badge": null },
+        { "name": "CI Kamsar", "tsdbTeamId": null, "badge": null },
+        { "name": "Kaloum Star", "tsdbTeamId": null, "badge": null },
+        { "name": "Renaissance", "tsdbTeamId": null, "badge": null },
+        { "name": "Milo FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Loubha Télimélé", "tsdbTeamId": null, "badge": null },
+        { "name": "Karfamoriah FC", "tsdbTeamId": null, "badge": null },
+        { "name": "RCC Kamsar", "tsdbTeamId": null, "badge": null },
+        { "name": "ASFAG", "tsdbTeamId": null, "badge": null },
+        { "name": "Wakriya FC", "tsdbTeamId": null, "badge": null },
+        { "name": "ASM Sangarédi", "tsdbTeamId": null, "badge": null },
+        { "name": "Ashanti GB (Ashanti Golden Boys)", "tsdbTeamId": null, "badge": null },
+        { "name": "Guinée Foot Elite", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "14 clubs named for the 2025-26 season (matches the confirmed 14-club league size), sourced from a Facebook post titled 'Ligue 1 Guicopres 2025-2026: voici les 14 clubs' cross-checked against Global Sports Archive's 2025/2026 competition page and Guinee7's season recap confirming Horoya AC as champions. One earlier report said AFA Guinée was promoted for 2025-26, but AFA Guinée did not appear in this 14-club list, so it was not included, per the no-invented-clubs rule."
+    }
+  ]
 }

@@ -2,7 +2,12 @@
   "association": "PAK",
   "country": "Pakistan",
   "confederation": "AFC",
-  "season": "unresearched",
+  "season": "2025-26",
   "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (shared across this entire session) was exhausted before Pakistan could be looked into. The Pakistan Premier League has historically been suspended/irregular due to PFF governance disputes, so its current running status genuinely needs checking, but that could not be done here. This is NOT a verified claim either way. Needs a follow-up session with search budget available."
+  "note": "Researched this session: the Pakistan Premier League remains dormant/suspended. As of October 2025 the PFF had not revived the domestic top flight, which has been effectively inactive for over six years amid long-running PFF governance disputes; the federation has prioritized national team fixtures over rebuilding league structure. Separately, FIFA suspended the PFF on 6 February 2025 over a constitution dispute and lifted the suspension on 2 March 2025, but this did not lead to a PPL restart. No 2025-26 (or recent) season with a verifiable club list could be found. Per the rules, this is recorded as suspended with leagues: [] rather than padded with historical/defunct club names.",
+  "sources": [
+    "https://footballpakistan.com/2025/02/major-blow-for-pakistan-football-as-fifa-suspends-pff-nukta/",
+    "https://inside.fifa.com/media-releases/fifa-lifts-suspension-of-the-pakistan-football-federation",
+    "https://grokipedia.com/page/Pakistan_Premier_League"
+  ]
 }

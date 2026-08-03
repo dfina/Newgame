@@ -2,7 +2,31 @@
   "association": "LAO",
   "country": "Laos",
   "confederation": "AFC",
-  "season": "unverified",
-  "leagues": [],
-  "note": "Not researched this session: the shared WebSearch budget (200 calls) for this session was exhausted before this association could be investigated. No league or club data has been invented; this file intentionally lists no leagues pending a future session with search access to verify the Lao Premier League and clubs."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Lao League 1",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Lao_League_1",
+        "https://globalsportsarchive.com/en/soccer/competition/pepsi-lao-league-1-2025-2026/77138",
+        "https://www.aseanfootball.org/v3/ezra-and-young-elephants-lead-lao-league-1-2025-26/",
+        "https://www.flashscore.com/football/laos/lao-league/standings/"
+      ],
+      "clubs": [
+        { "name": "Ezra FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Young Elephants FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Champasak Avenir FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Army FC", "tsdbTeamId": null, "badge": null },
+        { "name": "BIS Master FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Luang Prabang FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Mazda GB FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Namtha United FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Salavan United FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Savannakhet FC", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

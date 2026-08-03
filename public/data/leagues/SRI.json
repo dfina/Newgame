@@ -2,7 +2,31 @@
   "association": "SRI",
   "country": "Sri Lanka",
   "confederation": "AFC",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (shared across this entire session) was exhausted before Sri Lanka could be looked into. This is NOT a claim that no league exists — composition simply could not be verified here. Needs a follow-up session with search budget available."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Sri Lanka Champions League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://www.national-football-teams.com/leagues/175/2025_1/Sri_Lanka.html",
+        "https://www.thepapare.com/highlights-serendib-sc-v-sltb-sc-sri-lanka-champions-league-2025-26/",
+        "https://globalsportsarchive.com/en/soccer/competition/champions-league-2025-2026/77809"
+      ],
+      "clubs": [
+        { "name": "Colombo FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Defenders FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Solid SC", "tsdbTeamId": null, "badge": null },
+        { "name": "St. Mary's SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Super Sun SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Moragasmulla SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Matara City Club", "tsdbTeamId": null, "badge": null },
+        { "name": "Ratnam SC Colombo", "tsdbTeamId": null, "badge": null },
+        { "name": "Renown SC Colombo", "tsdbTeamId": null, "badge": null },
+        { "name": "Serendib SC", "tsdbTeamId": null, "badge": null },
+        { "name": "SLTB SC", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

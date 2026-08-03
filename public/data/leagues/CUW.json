@@ -2,7 +2,28 @@
   "association": "CUW",
   "country": "Curaçao",
   "confederation": "CONCACAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Research not completed this session: the shared WebSearch budget (26 calls) was exhausted before Curacao (Curacao Sekshon Paga) could be researched. This does NOT mean no organised national league exists here -- it means verification could not be attempted in this session. Re-run research for this association with a fresh search budget before treating this file as authoritative."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Promé Divishon (Curaçao Sekshon Pagá)",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://www.rsssf.org/tablesc/curacao2026.html"
+      ],
+      "clubs": [
+        { "name": "CVV Inter Willemstad", "tsdbTeamId": null, "badge": null },
+        { "name": "CRKSV Jong Colombia", "tsdbTeamId": null, "badge": null },
+        { "name": "SV Victory Boys", "tsdbTeamId": null, "badge": null },
+        { "name": "RKSV Scherpenheuvel", "tsdbTeamId": null, "badge": null },
+        { "name": "CRKSV Jong Holland", "tsdbTeamId": null, "badge": null },
+        { "name": "RKSV Centro Dominguito", "tsdbTeamId": null, "badge": null },
+        { "name": "Sport Club Atlético Saliña", "tsdbTeamId": null, "badge": null },
+        { "name": "SV SUBT", "tsdbTeamId": null, "badge": null },
+        { "name": "SV Undeba", "tsdbTeamId": null, "badge": null },
+        { "name": "SV Centro Social Deportivo Barber", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

@@ -2,7 +2,7 @@
   "association": "LCA",
   "country": "Saint Lucia",
   "confederation": "CONCACAF",
-  "season": "unresearched",
+  "season": "2025",
   "leagues": [],
-  "note": "Research not completed: this session's WebSearch budget was exhausted (200/200) before this association could be researched. This does NOT mean no organised national league exists here -- it means verification could not be attempted in this session. Re-run research for this association with a fresh/raised search budget before treating this file as authoritative."
+  "note": "Researched this session: Saint Lucia has a two-tier semi-professional league (SPFL, organised by SLFA), each tier with 10 clubs. Only the 2025 tier champions could be confirmed by name: La Clery (Premier League/tier 1) and Anse La Raye (Super League/tier 2). Insufficient (1 club per tier) to populate a usable club list; left empty per the 6-club minimum rule. Sources: https://en.wikipedia.org/wiki/Saint_Lucia_SemiPro_Football_League"
 }

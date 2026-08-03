@@ -2,7 +2,27 @@
   "association": "BER",
   "country": "Bermuda",
   "confederation": "CONCACAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Research not completed this session: the shared WebSearch budget (26 calls) was exhausted before Bermuda (Bermudian Premier Division) could be researched. This does NOT mean no organised national league exists here -- it means verification could not be attempted in this session. Re-run research for this association with a fresh search budget before treating this file as authoritative."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Bermudian Premier Division",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://footystats.org/bermuda/bermudian-premier-division",
+        "https://en.wikipedia.org/wiki/Bermudian_Premier_Division"
+      ],
+      "clubs": [
+        { "name": "North Village Community Club", "tsdbTeamId": null, "badge": null },
+        { "name": "Boulevard Community Club", "tsdbTeamId": null, "badge": null },
+        { "name": "St. George's Cricket Club", "tsdbTeamId": null, "badge": null },
+        { "name": "X-Roads Warriors FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Pembroke Hamilton Club Zebras", "tsdbTeamId": null, "badge": null },
+        { "name": "Young Men's Social Club Inc.", "tsdbTeamId": null, "badge": null },
+        { "name": "Devonshire Colts FC", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ],
+  "note": "10 teams compete in the 2025-26 Bermudian Premier Division; 7 were confirmed by name in sources."
 }

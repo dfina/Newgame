@@ -2,7 +2,30 @@
   "association": "VGB",
   "country": "British Virgin Islands",
   "confederation": "CONCACAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Research not completed: this session's WebSearch budget was exhausted (200/200) before this association could be researched. This does NOT mean no organised national league exists here -- it means verification could not be attempted in this session. Re-run research for this association with a fresh/raised search budget before treating this file as authoritative."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "BVIFA National League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://footystats.org/british-virgin-islands/bvifa-national-league",
+        "https://www.virginislandsdailynews.com/sports/virgin-gorda-united-four-other-teams-win-as-bvifa-national-league-kicks-off-25-/article_669e6c6d-dca6-4dbe-90e2-26c8d7c2b1af.html"
+      ],
+      "clubs": [
+        { "name": "Islanders FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Old Madrid FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Panthers FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Rebels FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Lion Heart FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Sugar Boys FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Positive FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Virgin Gorda United", "tsdbTeamId": null, "badge": null },
+        { "name": "Wolues FC", "tsdbTeamId": null, "badge": null },
+        { "name": "One Love FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Avengers FC", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

@@ -3,6 +3,27 @@
   "country": "Nicaragua",
   "confederation": "CONCACAF",
   "season": "2025-26",
-  "leagues": [],
-  "note": "Researched this session: the Liga Primera de Nicaragua 2025-26 has 10 teams (9 from 2024-25 Primera Division plus Segunda Division champions promoted). Diriangen (Apertura champions), Real Esteli (Clausura champions), Managua FC and Real Madriz (promoted) were confirmed by name; Ocotal was confirmed relegated (excluded). Insufficient (4 confirmed) to populate a usable club list; leagues left empty per the 6-club minimum rule. Sources: https://en.wikipedia.org/wiki/2025%E2%80%9326_Liga_Primera"
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Liga Primera de Nicaragua",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Liga_Primera"
+      ],
+      "clubs": [
+        { "name": "Real Estelí FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Diriangén FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Managua FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Club Sport Sébaco", "tsdbTeamId": null, "badge": null },
+        { "name": "Matagalpa FC", "tsdbTeamId": null, "badge": null },
+        { "name": "ART Municipal Jalapa", "tsdbTeamId": null, "badge": null },
+        { "name": "Deportivo Walter Ferretti", "tsdbTeamId": null, "badge": null },
+        { "name": "Rancho Santana FC", "tsdbTeamId": null, "badge": null },
+        { "name": "UNAN Managua", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ],
+  "note": "10 teams contest the 2025-26 season; 9 were confirmed by name. The 10th (Real Madriz, promoted from Segunda División) was referenced but not confirmed in the same listing as the others, so omitted."
 }

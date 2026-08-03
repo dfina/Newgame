@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-03T15:03:10.497Z",
+ "generated": "2026-08-03T15:08:42.541Z",
  "countries": [
   {
    "code": "AFG",
@@ -9,6 +9,20 @@
     {
      "tier": 1,
      "name": "Afghanistan Champions League",
+     "clubs": 11,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "AIA",
+   "country": "Anguilla",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "AFA Senior Male League (Anguilla Football League)",
      "clubs": 11,
      "verified": true,
      "tsdbLeagueId": null
@@ -107,6 +121,20 @@
    ]
   },
   {
+   "code": "ARU",
+   "country": "Aruba",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Division di Honor",
+     "clubs": 10,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "ASA",
    "country": "American Samoa",
    "confederation": "OFC",
@@ -115,6 +143,20 @@
      "tier": 1,
      "name": "FFAS Senior League",
      "clubs": 12,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "ATG",
+   "country": "Antigua and Barbuda",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "ABFA Premier Division",
+     "clubs": 9,
      "verified": true,
      "tsdbLeagueId": null
     }
@@ -158,6 +200,20 @@
      "name": "Azerbaijan Premier League",
      "clubs": 11,
      "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "BAH",
+   "country": "Bahamas",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "BFA Senior League",
+     "clubs": 9,
+     "verified": true,
      "tsdbLeagueId": null
     }
    ]
@@ -222,6 +278,20 @@
      "clubs": 8,
      "verified": true,
      "tsdbLeagueId": 5231
+    }
+   ]
+  },
+  {
+   "code": "BER",
+   "country": "Bermuda",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Bermudian Premier Division",
+     "clubs": 7,
+     "verified": true,
+     "tsdbLeagueId": null
     }
    ]
   },
@@ -366,6 +436,20 @@
    ]
   },
   {
+   "code": "BRB",
+   "country": "Barbados",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Barbados Premier League",
+     "clubs": 10,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "BRU",
    "country": "Brunei Darussalam",
    "confederation": "AFC",
@@ -416,6 +500,20 @@
      "tier": 1,
      "name": "Canadian Premier League",
      "clubs": 8,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "CAY",
+   "country": "Cayman Islands",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Cayman Islands Premier League (CIFA)",
+     "clubs": 9,
      "verified": true,
      "tsdbLeagueId": null
     }
@@ -611,6 +709,34 @@
    ]
   },
   {
+   "code": "CUB",
+   "country": "Cuba",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Campeonato Nacional de Fútbol (Liga Nacional de Cuba)",
+     "clubs": 13,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "CUW",
+   "country": "Curaçao",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Promé Divishon (Curaçao Sekshon Pagá)",
+     "clubs": 10,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "CYP",
    "country": "Cyprus",
    "confederation": "UEFA",
@@ -661,6 +787,20 @@
      "tier": 1,
      "name": "Djibouti Premier League",
      "clubs": 6,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "DOM",
+   "country": "Dominican Republic",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Liga Dominicana de Fútbol (LDF)",
+     "clubs": 9,
      "verified": true,
      "tsdbLeagueId": null
     }
@@ -989,6 +1129,20 @@
    ]
   },
   {
+   "code": "GNB",
+   "country": "Guinea-Bissau",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Campeonato Nacional da Guiné-Bissau (Liga Orange)",
+     "clubs": 16,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "GRE",
    "country": "Greece",
    "confederation": "UEFA",
@@ -1010,6 +1164,20 @@
    ]
   },
   {
+   "code": "GRN",
+   "country": "Grenada",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "GFA Premier League",
+     "clubs": 10,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "GUA",
    "country": "Guatemala",
    "confederation": "CONCACAF",
@@ -1024,6 +1192,34 @@
    ]
   },
   {
+   "code": "GUI",
+   "country": "Guinea",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Ligue 1 Guicopres (Championnat National)",
+     "clubs": 14,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "GUM",
+   "country": "Guam",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Guam Soccer League",
+     "clubs": 13,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "GUY",
    "country": "Guyana",
    "confederation": "CONCACAF",
@@ -1032,6 +1228,20 @@
      "tier": 1,
      "name": "GFF Elite League",
      "clubs": 10,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "HAI",
+   "country": "Haiti",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Championnat National (Ligue Haïtienne)",
+     "clubs": 7,
      "verified": true,
      "tsdbLeagueId": null
     }
@@ -1360,6 +1570,20 @@
     {
      "tier": 1,
      "name": "Kuwaiti Premier League",
+     "clubs": 10,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "LAO",
+   "country": "Laos",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Lao League 1",
      "clubs": 10,
      "verified": true,
      "tsdbLeagueId": null
@@ -1717,6 +1941,20 @@
    ]
   },
   {
+   "code": "MYA",
+   "country": "Myanmar",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Myanmar National League",
+     "clubs": 12,
+     "verified": true,
+     "tsdbLeagueId": 5630
+    }
+   ]
+  },
+  {
    "code": "NAM",
    "country": "Namibia",
    "confederation": "CAF",
@@ -1726,6 +1964,20 @@
      "name": "Namibia Premiership",
      "clubs": 16,
      "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "NCA",
+   "country": "Nicaragua",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Liga Primera de Nicaragua",
+     "clubs": 9,
+     "verified": true,
      "tsdbLeagueId": null
     }
    ]
@@ -1761,6 +2013,20 @@
      "name": "Eerste Divisie",
      "clubs": 10,
      "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "NEP",
+   "country": "Nepal",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Nepal Super League",
+     "clubs": 7,
+     "verified": true,
      "tsdbLeagueId": null
     }
    ]
@@ -1962,6 +2228,34 @@
    ]
   },
   {
+   "code": "PRK",
+   "country": "Korea DPR",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "DPR Korea Premier Football League",
+     "clubs": 8,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "PUR",
+   "country": "Puerto Rico",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Liga Puerto Rico Pro",
+     "clubs": 9,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "QAT",
    "country": "Qatar",
    "confederation": "AFC",
@@ -2109,6 +2403,20 @@
    ]
   },
   {
+   "code": "SKN",
+   "country": "Saint Kitts and Nevis",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "SKNFA Premier League",
+     "clubs": 7,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "SLE",
    "country": "Sierra Leone",
    "confederation": "CAF",
@@ -2188,6 +2496,20 @@
      "name": "Serbian SuperLiga",
      "clubs": 12,
      "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "SRI",
+   "country": "Sri Lanka",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Sri Lanka Champions League",
+     "clubs": 11,
+     "verified": true,
      "tsdbLeagueId": null
     }
    ]
@@ -2354,6 +2676,20 @@
    ]
   },
   {
+   "code": "TCA",
+   "country": "Turks and Caicos Islands",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Provo Premier League",
+     "clubs": 7,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "THA",
    "country": "Thailand",
    "confederation": "AFC",
@@ -2392,6 +2728,20 @@
      "clubs": 8,
      "verified": false,
      "tsdbLeagueId": 5257
+    }
+   ]
+  },
+  {
+   "code": "TLS",
+   "country": "Timor-Leste",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Liga Futebol Timor-Leste (Primeira Divisão)",
+     "clubs": 10,
+     "verified": true,
+     "tsdbLeagueId": null
     }
    ]
   },
@@ -2578,6 +2928,20 @@
    ]
   },
   {
+   "code": "VGB",
+   "country": "British Virgin Islands",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "BVIFA National League",
+     "clubs": 11,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "VIE",
    "country": "Vietnam",
    "confederation": "AFC",
@@ -2601,6 +2965,20 @@
      "name": "Cymru Premier",
      "clubs": 12,
      "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "YEM",
+   "country": "Yemen",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Yemeni League",
+     "clubs": 8,
+     "verified": false,
      "tsdbLeagueId": null
     }
    ]

@@ -2,7 +2,29 @@
   "association": "GRN",
   "country": "Grenada",
   "confederation": "CONCACAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Research not completed: this session's WebSearch budget was exhausted (200/200) before this association could be researched. This does NOT mean no organised national league exists here -- it means verification could not be attempted in this session. Re-run research for this association with a fresh/raised search budget before treating this file as authoritative."
+  "season": "2025",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "GFA Premier League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://footystats.org/grenada/gfa-premier-league",
+        "https://globalsportsarchive.com/en/soccer/competition/grenada-premier-league-2025/75910"
+      ],
+      "clubs": [
+        { "name": "St. John's SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Paradise FC International", "tsdbTeamId": null, "badge": null },
+        { "name": "Fontenoy United FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Hard Rock FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Hurricanes SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Queens Park Rangers FC", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Camerhogne", "tsdbTeamId": null, "badge": null },
+        { "name": "SAB Spartans SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Shamrock SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Mt. Rich SC", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

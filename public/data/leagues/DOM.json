@@ -3,6 +3,27 @@
   "country": "Dominican Republic",
   "confederation": "CONCACAF",
   "season": "2025-26",
-  "leagues": [],
-  "note": "Researched this session: the Liga Dominicana de Futbol (LDF) 2025-26 is the 11th edition, running August 2025-May 2026, with a two-round regular season (min. 18 matches/club) and a 6-team Liguilla playoff. Only 3 clubs could be confirmed by name from search snippets: Cibao FC, Moca FC, and Delfines del Este. Insufficient (3, need 6+) to populate a usable club list; leagues left empty per the 6-club minimum rule. Sources: https://es.wikipedia.org/wiki/Liga_Dominicana_de_F%C3%BAtbol_2025-26 , https://www.ligadominicanadefutbol.com/calendario/"
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Liga Dominicana de Fútbol (LDF)",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://es.wikipedia.org/wiki/Liga_Dominicana_de_F%C3%BAtbol_2025-26",
+        "https://elnacional.com.do/arranca-la-liga-dominicana-de-futbol-2025-26/"
+      ],
+      "clubs": [
+        { "name": "Cibao FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Moca FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Delfines del Este", "tsdbTeamId": null, "badge": null },
+        { "name": "Atlético Vega Real", "tsdbTeamId": null, "badge": null },
+        { "name": "Atlántico FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Jarabacoa FC", "tsdbTeamId": null, "badge": null },
+        { "name": "OyM FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Atlético San Cristóbal", "tsdbTeamId": null, "badge": null },
+        { "name": "Club Atlético Pantoja", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

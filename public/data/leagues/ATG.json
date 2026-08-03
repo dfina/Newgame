@@ -2,7 +2,29 @@
   "association": "ATG",
   "country": "Antigua and Barbuda",
   "confederation": "CONCACAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Research not completed this session: the shared WebSearch budget (26 calls) was exhausted before Antigua and Barbuda (Premier Division) could be researched. This does NOT mean no organised national league exists here -- it means verification could not be attempted in this session. Re-run research for this association with a fresh search budget before treating this file as authoritative."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "ABFA Premier Division",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://www.rsssf.org/tablesa/antig2026.html",
+        "https://globalsportsarchive.com/en/soccer/competition/abfa-premier-league-2025-2026/77628"
+      ],
+      "clubs": [
+        { "name": "Grenades", "tsdbTeamId": null, "badge": null },
+        { "name": "All Saints United", "tsdbTeamId": null, "badge": null },
+        { "name": "Aston Villa", "tsdbTeamId": null, "badge": null },
+        { "name": "Bullets", "tsdbTeamId": null, "badge": null },
+        { "name": "Old Road", "tsdbTeamId": null, "badge": null },
+        { "name": "Potters Tigers", "tsdbTeamId": null, "badge": null },
+        { "name": "Garden Stars", "tsdbTeamId": null, "badge": null },
+        { "name": "Green City", "tsdbTeamId": null, "badge": null },
+        { "name": "Attacking Saints", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ],
+  "note": "12 teams contest the 2025-26 Premier Division; 9 were confirmed by name from the RSSSF final table."
 }

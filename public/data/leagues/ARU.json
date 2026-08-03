@@ -2,7 +2,29 @@
   "association": "ARU",
   "country": "Aruba",
   "confederation": "CONCACAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Research not completed this session: the shared WebSearch budget (26 calls) was exhausted before Aruba (Division di Honor) could be researched. This does NOT mean no organised national league exists here -- it means verification could not be attempted in this session. Re-run research for this association with a fresh search budget before treating this file as authoritative."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Division di Honor",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://footystats.org/aruba/division-di-honor",
+        "https://globalsportsarchive.com/en/soccer/competition/division-di-honor-2025-2026/77588"
+      ],
+      "clubs": [
+        { "name": "SV Britannia", "tsdbTeamId": null, "badge": null },
+        { "name": "SV Dakota", "tsdbTeamId": null, "badge": null },
+        { "name": "SV Sporting", "tsdbTeamId": null, "badge": null },
+        { "name": "SV La Fama", "tsdbTeamId": null, "badge": null },
+        { "name": "Bubali SC", "tsdbTeamId": null, "badge": null },
+        { "name": "SV Racing Club Aruba", "tsdbTeamId": null, "badge": null },
+        { "name": "SV Estrella", "tsdbTeamId": null, "badge": null },
+        { "name": "Deportivo Nacional", "tsdbTeamId": null, "badge": null },
+        { "name": "River Plate", "tsdbTeamId": null, "badge": null },
+        { "name": "Real Koyari", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

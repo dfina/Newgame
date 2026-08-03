@@ -2,7 +2,29 @@
   "association": "PRK",
   "country": "Korea DPR",
   "confederation": "AFC",
-  "season": "unverified",
-  "leagues": [],
-  "note": "Not researched this session: the shared WebSearch budget (200 calls) for this session was exhausted before this association could be investigated. No league or club data has been invented. Separately, DPR Korea's domestic league structure is historically opaque and rarely fully reported in international media, so verification would likely have been difficult even with search access."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "DPR Korea Premier Football League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_DPR_Korea_Premier_Football_League",
+        "https://en.wikipedia.org/wiki/DPR_Korea_Premier_Football_League",
+        "https://en.wikipedia.org/wiki/April_25_Sports_Club"
+      ],
+      "clubs": [
+        { "name": "Hwaebul", "tsdbTeamId": null, "badge": null },
+        { "name": "April 25", "tsdbTeamId": null, "badge": null },
+        { "name": "Pyongyang", "tsdbTeamId": null, "badge": null },
+        { "name": "Sobaeksu", "tsdbTeamId": null, "badge": null },
+        { "name": "Sonbong", "tsdbTeamId": null, "badge": null },
+        { "name": "Ryomyong", "tsdbTeamId": null, "badge": null },
+        { "name": "Amrokkang", "tsdbTeamId": null, "badge": null },
+        { "name": "Kyonggongopsong", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ],
+  "note": "The 2025-26 DPR Korea Premier Football League (66th season, began 1 December 2025) has 12 participating teams, but search results only named 8 of them specifically (the other ~4 slots could not be confirmed by name in this session), so this league entry is marked verified: false per the partial-verification rule even though it clears the 6-club minimum."
 }

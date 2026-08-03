@@ -2,7 +2,29 @@
   "association": "PUR",
   "country": "Puerto Rico",
   "confederation": "CONCACAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Research not completed this session: the shared WebSearch budget (26 calls) was exhausted before Puerto Rico (Liga Puerto Rico) could be researched. This does NOT mean no organised national league exists here -- it means verification could not be attempted in this session. Re-run research for this association with a fresh search budget before treating this file as authoritative."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Liga Puerto Rico Pro",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://footystats.org/puerto-rico/liga-puerto-rico",
+        "https://en.wikipedia.org/wiki/Liga_Puerto_Rico"
+      ],
+      "clubs": [
+        { "name": "Metropolitan FA", "tsdbTeamId": null, "badge": null },
+        { "name": "Academia Quintana", "tsdbTeamId": null, "badge": null },
+        { "name": "Puerto Rico Surf", "tsdbTeamId": null, "badge": null },
+        { "name": "San Juan FC", "tsdbTeamId": null, "badge": null },
+        { "name": "DS Edusoccer", "tsdbTeamId": null, "badge": null },
+        { "name": "Ponce FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Escuela de Futbol Taurinos Cayey", "tsdbTeamId": null, "badge": null },
+        { "name": "Caguas Sporting", "tsdbTeamId": null, "badge": null },
+        { "name": "Mayagüez FC", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ],
+  "note": "11 clubs compete in the 2025-26 Liga Puerto Rico Pro; 9 were confirmed by name in sources."
 }

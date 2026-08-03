@@ -2,7 +2,29 @@
   "association": "YEM",
   "country": "Yemen",
   "confederation": "AFC",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (shared across this entire session) was exhausted before Yemen could be looked into. The task flagged Yemen as needing careful checking given the country's ongoing civil war and long-suspended Yemeni League, but that status could not be confirmed here. This is NOT a verified claim either way. Needs a follow-up session with search budget available."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Yemeni League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Yemeni_League",
+        "https://www.pakistantoday.com.pk/2026/07/02/yemens-football-league-returns-as-fighting-eases",
+        "https://en.wikipedia.org/wiki/List_of_football_clubs_in_Yemen"
+      ],
+      "clubs": [
+        { "name": "Al Sadd", "tsdbTeamId": null, "badge": null },
+        { "name": "Shabab Al Bayda", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Oruba", "tsdbTeamId": null, "badge": null },
+        { "name": "Ittihad Hadramout", "tsdbTeamId": null, "badge": null },
+        { "name": "Al Ittihad Ibb", "tsdbTeamId": null, "badge": null },
+        { "name": "Fahman", "tsdbTeamId": null, "badge": null },
+        { "name": "Hilal Hodeidah", "tsdbTeamId": null, "badge": null },
+        { "name": "Salam Al-Garfa", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ],
+  "note": "The Yemeni League resumed for 2025-26 (began 30 April 2026) for the first time as a full home-and-away round robin since 2014, after being cancelled 2014-2021 due to the civil war; it operates under a fragile truce. It features 14 clubs total, of which 8 were specifically named in sources found this session (Al-Saqr was noted as relegated to the second division and is excluded). Marked verified: false since the full 14-club roster could not be confirmed."
 }

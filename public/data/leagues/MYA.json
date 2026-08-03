@@ -2,7 +2,32 @@
   "association": "MYA",
   "country": "Myanmar",
   "confederation": "AFC",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (shared across this entire session) was exhausted after only Macau, Malaysia, Maldives, and Mongolia had been covered, before Myanmar could be looked into. This is NOT a verified claim that no league exists or is running — the task flagged Myanmar as needing careful checking given the country's ongoing civil conflict and disrupted Myanmar National League, but that status could not be confirmed here. Needs a follow-up session with search budget available."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Myanmar National League",
+      "tsdbLeagueId": 5630,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Myanmar_National_League",
+        "https://tribuna.com/en/league/national-league-mya/stats/2025-2026/clubs/",
+        "https://www.thesportsdb.com/season/5630-myanmar-national-league/2025-2026&view=3"
+      ],
+      "clubs": [
+        { "name": "Ayeyawady United", "tsdbTeamId": null, "badge": null },
+        { "name": "Dagon Port", "tsdbTeamId": null, "badge": null },
+        { "name": "Dagon Star United", "tsdbTeamId": null, "badge": null },
+        { "name": "Hantharwady United", "tsdbTeamId": null, "badge": null },
+        { "name": "ISPE", "tsdbTeamId": null, "badge": null },
+        { "name": "Mahar United", "tsdbTeamId": null, "badge": null },
+        { "name": "Rakhine United", "tsdbTeamId": null, "badge": null },
+        { "name": "Shan United", "tsdbTeamId": null, "badge": null },
+        { "name": "Thitsar Arman", "tsdbTeamId": null, "badge": null },
+        { "name": "Yadanarbon", "tsdbTeamId": null, "badge": null },
+        { "name": "Yangon United", "tsdbTeamId": null, "badge": null },
+        { "name": "Yarmanya United", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

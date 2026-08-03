@@ -2,7 +2,30 @@
   "association": "AIA",
   "country": "Anguilla",
   "confederation": "CONCACAF",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Research not completed: this session's WebSearch budget was exhausted (200/200) before this association could be researched. This does NOT mean no organised national league exists here -- it means verification could not be attempted in this session. Re-run research for this association with a fresh/raised search budget before treating this file as authoritative."
+  "season": "2025",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "AFA Senior Male League (Anguilla Football League)",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://www.national-football-teams.com/leagues/7/2025_2/Anguilla.html",
+        "https://globalsportsarchive.com/competition/soccer/anguilla-football-league-2025/regular-season/113221/"
+      ],
+      "clubs": [
+        { "name": "Roaring Lions", "tsdbTeamId": null, "badge": null },
+        { "name": "Attackers FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Doc's United", "tsdbTeamId": null, "badge": null },
+        { "name": "Uprising FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Eagle Claw FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Spartans International", "tsdbTeamId": null, "badge": null },
+        { "name": "Diamond FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Lymers FC", "tsdbTeamId": null, "badge": null },
+        { "name": "West End Predators", "tsdbTeamId": null, "badge": null },
+        { "name": "East Enders FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Kicks United", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }
