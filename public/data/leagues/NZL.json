@@ -9,15 +9,39 @@
       "name": "New Zealand National League",
       "tsdbLeagueId": null,
       "verified": false,
+      "groups": true,
       "sources": [
         "https://en.wikipedia.org/wiki/2026_New_Zealand_National_League",
-        "https://en.wikipedia.org/wiki/New_Zealand_National_League"
+        "https://en.wikipedia.org/wiki/New_Zealand_National_League",
+        "https://www.nzfootball.co.nz/newsarticle/162811?newsfeedId=1275538",
+        "https://en.wikipedia.org/wiki/2026_NRFL_Leagues"
       ],
       "clubs": [
+        {"name": "Auckland City FC", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"]},
         {"name": "Auckland FC Reserves", "tsdbTeamId": null, "badge": null},
-        {"name": "Wellington Phoenix Reserves", "tsdbTeamId": null, "badge": null}
+        {"name": "Auckland United", "tsdbTeamId": null, "badge": null},
+        {"name": "Bay Olympic", "tsdbTeamId": null, "badge": null},
+        {"name": "Birkenhead United", "tsdbTeamId": null, "badge": null},
+        {"name": "Eastern Suburbs", "tsdbTeamId": null, "badge": null},
+        {"name": "East Coast Bays", "tsdbTeamId": null, "badge": null},
+        {"name": "Fencibles United", "tsdbTeamId": null, "badge": null},
+        {"name": "Manukau United", "tsdbTeamId": null, "badge": null},
+        {"name": "Melville United", "tsdbTeamId": null, "badge": null},
+        {"name": "Tauranga City", "tsdbTeamId": null, "badge": null},
+        {"name": "Western Springs", "tsdbTeamId": null, "badge": null},
+        {"name": "Wellington Phoenix Reserves", "tsdbTeamId": null, "badge": null},
+        {"name": "Cashmere Technical", "tsdbTeamId": null, "badge": null},
+        {"name": "Christchurch United", "tsdbTeamId": null, "badge": null},
+        {"name": "Coastal Spirit", "tsdbTeamId": null, "badge": null},
+        {"name": "Dunedin City Royals", "tsdbTeamId": null, "badge": null},
+        {"name": "Ferrymead Bays", "tsdbTeamId": null, "badge": null},
+        {"name": "Nelson Suburbs", "tsdbTeamId": null, "badge": null},
+        {"name": "Nomads United", "tsdbTeamId": null, "badge": null},
+        {"name": "Northern AFC", "tsdbTeamId": null, "badge": null},
+        {"name": "Selwyn United", "tsdbTeamId": null, "badge": null},
+        {"name": "Wanaka FC", "tsdbTeamId": null, "badge": null}
       ]
     }
   ],
-  "note": "The New Zealand National League is the top domestic club competition run by New Zealand Football. The 2026 edition comprises 32 clubs across regional Northern, Central and Southern Leagues, from which 4, 3 and 2 clubs respectively qualify for a national championship phase alongside Auckland FC Reserves and Wellington Phoenix Reserves (automatic qualifiers). Additional searches this session on the feeder Northern League (NRFL) returned conflicting/inconsistent promotion-relegation details (contradictory claims about which clubs were promoted/relegated for 2026) and only a handful of partial standings names (e.g. Birkenhead United, Eastern Suburbs), not a reliable confirmed club list, so none were added. Full regional club lists still could not be confirmed by name this session; only the two automatic qualifiers are listed, and verified remains false pending a complete roster. Note: Auckland FC and Wellington Phoenix's first teams play in Australia's A-League Men (AFC), not in this competition."
+  "note": "The New Zealand National League is the top domestic club competition run by New Zealand Football. The 2026 edition comprises 32 clubs across regional Northern, Central and Southern Leagues, from which 4, 3 and 2 clubs respectively qualify for a national championship phase alongside Auckland FC Reserves and Wellington Phoenix Reserves (automatic qualifiers). Listed here are the 12 confirmed 2026 Northern League clubs, the 10 confirmed 2026 Southern League clubs, and the two automatic qualifiers; the Central League roster could not be confirmed this session, so verified remains false and groups is set. Auckland FC and Wellington Phoenix's first teams play in Australia's A-League Men (AFC), not in this competition."
 }

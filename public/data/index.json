@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-03T14:59:17.389Z",
+ "generated": "2026-08-03T15:03:10.497Z",
  "countries": [
   {
    "code": "AFG",
@@ -1817,6 +1817,20 @@
      "name": "Eliteserien",
      "clubs": 16,
      "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "NZL",
+   "country": "New Zealand",
+   "confederation": "OFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "New Zealand National League",
+     "clubs": 23,
+     "verified": false,
      "tsdbLeagueId": null
     }
    ]
