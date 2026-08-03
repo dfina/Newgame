@@ -1,55 +1,248 @@
 {
-  "association": "NED",
-  "country": "Netherlands",
-  "confederation": "UEFA",
-  "season": "2026-27",
-  "leagues": [
+ "association": "NED",
+ "country": "Netherlands",
+ "confederation": "UEFA",
+ "season": "2026-27",
+ "leagues": [
+  {
+   "tier": 1,
+   "name": "Eredivisie",
+   "tsdbLeagueId": null,
+   "verified": true,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2026%E2%80%9327_Eredivisie",
+    "https://www.worldfootball.net/competition/co37/netherlands-eredivisie/teams/"
+   ],
+   "clubs": [
     {
-      "tier": 1,
-      "name": "Eredivisie",
-      "tsdbLeagueId": null,
-      "verified": true,
-      "sources": ["https://en.wikipedia.org/wiki/2026%E2%80%9327_Eredivisie", "https://www.worldfootball.net/competition/co37/netherlands-eredivisie/teams/"],
-      "clubs": [
-        {"name": "ADO Den Haag", "tsdbTeamId": null, "badge": null},
-        {"name": "Ajax", "tsdbTeamId": null, "badge": null, "colors": ["#D2122E", "#FFFFFF"]},
-        {"name": "AZ", "tsdbTeamId": null, "badge": null, "colors": ["#D2122E", "#FFFFFF"]},
-        {"name": "Excelsior Rotterdam", "tsdbTeamId": null, "badge": null},
-        {"name": "FC Groningen", "tsdbTeamId": null, "badge": null},
-        {"name": "FC Twente", "tsdbTeamId": null, "badge": null, "colors": ["#DA020E", "#FFFFFF"]},
-        {"name": "FC Utrecht", "tsdbTeamId": null, "badge": null, "colors": ["#DA020E", "#FFFFFF"]},
-        {"name": "Feyenoord", "tsdbTeamId": null, "badge": null, "colors": ["#DA020E", "#FFFFFF"]},
-        {"name": "Fortuna Sittard", "tsdbTeamId": null, "badge": null},
-        {"name": "Go Ahead Eagles", "tsdbTeamId": null, "badge": null},
-        {"name": "N.E.C. Nijmegen", "tsdbTeamId": null, "badge": null},
-        {"name": "PEC Zwolle", "tsdbTeamId": null, "badge": null},
-        {"name": "PSV", "tsdbTeamId": null, "badge": null, "colors": ["#ED1C24", "#FFFFFF"]},
-        {"name": "SC Cambuur", "tsdbTeamId": null, "badge": null},
-        {"name": "SC Heerenveen", "tsdbTeamId": null, "badge": null},
-        {"name": "Sparta Rotterdam", "tsdbTeamId": null, "badge": null},
-        {"name": "Telstar", "tsdbTeamId": null, "badge": null},
-        {"name": "Willem II", "tsdbTeamId": null, "badge": null}
-      ]
+     "name": "ADO Den Haag",
+     "tsdbTeamId": null,
+     "badge": null
     },
     {
-      "tier": 2,
-      "name": "Eerste Divisie",
-      "tsdbLeagueId": null,
-      "verified": false,
-      "sources": ["https://www.worldfootball.net/competition/co50/netherlands-eerste-divisie/teams/", "https://www.worldfootball.net/competition/co50/netherlands-eerste-divisie/"],
-      "clubs": [
-        {"name": "FC Dordrecht", "tsdbTeamId": null, "badge": null},
-        {"name": "Jong Ajax", "tsdbTeamId": null, "badge": null},
-        {"name": "FC Emmen", "tsdbTeamId": null, "badge": null},
-        {"name": "Roda JC Kerkrade", "tsdbTeamId": null, "badge": null},
-        {"name": "TOP Oss", "tsdbTeamId": null, "badge": null},
-        {"name": "NAC Breda", "tsdbTeamId": null, "badge": null},
-        {"name": "Vitesse", "tsdbTeamId": null, "badge": null},
-        {"name": "RKC Waalwijk", "tsdbTeamId": null, "badge": null},
-        {"name": "VVV-Venlo", "tsdbTeamId": null, "badge": null},
-        {"name": "Heracles Almelo", "tsdbTeamId": null, "badge": null}
-      ],
-      "note": "Only 10 of 20 clubs for 2026-27 Eerste Divisie could be confirmed by name in search results; full roster not enumerated."
+     "name": "Ajax",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#D2122E",
+      "#FFFFFF"
+     ]
+    },
+    {
+     "name": "AZ",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#D2122E",
+      "#FFFFFF"
+     ]
+    },
+    {
+     "name": "Excelsior Rotterdam",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "FC Groningen",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "FC Twente",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#DA020E",
+      "#FFFFFF"
+     ]
+    },
+    {
+     "name": "FC Utrecht",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#DA020E",
+      "#FFFFFF"
+     ]
+    },
+    {
+     "name": "Feyenoord",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#DA020E",
+      "#FFFFFF"
+     ]
+    },
+    {
+     "name": "Fortuna Sittard",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Go Ahead Eagles",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "N.E.C. Nijmegen",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "PEC Zwolle",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "PSV",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#ED1C24",
+      "#FFFFFF"
+     ]
+    },
+    {
+     "name": "SC Cambuur",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "SC Heerenveen",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Sparta Rotterdam",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Telstar",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Willem II",
+     "tsdbTeamId": null,
+     "badge": null
     }
-  ]
+   ]
+  },
+  {
+   "tier": 2,
+   "name": "Eerste Divisie",
+   "tsdbLeagueId": null,
+   "verified": true,
+   "sources": [
+    "https://www.worldfootball.net/competition/co50/netherlands-eerste-divisie/teams/",
+    "https://www.worldfootball.net/competition/co50/netherlands-eerste-divisie/",
+    "https://nl.wikipedia.org/wiki/Eerste_divisie_2026/27"
+   ],
+   "clubs": [
+    {
+     "name": "Heracles Almelo",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "NAC Breda",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "FC Volendam",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "FC Dordrecht",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "MVV Maastricht",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Roda JC Kerkrade",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "De Graafschap",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "FC Eindhoven",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "FC Emmen",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "TOP Oss",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "RKC Waalwijk",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Jong Ajax",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Jong PSV",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Jong FC Utrecht",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Jong AZ",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Helmond Sport",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Almere City FC",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "FC Den Bosch",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "VVV-Venlo",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Vitesse",
+     "tsdbTeamId": null,
+     "badge": null
+    }
+   ],
+   "season": "2026-27"
+  }
+ ]
 }

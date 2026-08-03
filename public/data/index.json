@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-03T15:20:42.187Z",
+ "generated": "2026-08-03T15:29:37.878Z",
  "countries": [
   {
    "code": "AFG",
@@ -261,8 +261,8 @@
     {
      "tier": 2,
      "name": "Challenger Pro League",
-     "clubs": 7,
-     "verified": false,
+     "clubs": 15,
+     "verified": true,
      "tsdbLeagueId": null
     }
    ]
@@ -429,8 +429,8 @@
     {
      "tier": 2,
      "name": "Campeonato Brasileiro Série B",
-     "clubs": 8,
-     "verified": false,
+     "clubs": 20,
+     "verified": true,
      "tsdbLeagueId": null
     }
    ]
@@ -576,7 +576,7 @@
     {
      "tier": 2,
      "name": "China League One",
-     "clubs": 6,
+     "clubs": 12,
      "verified": false,
      "tsdbLeagueId": null
     }
@@ -773,6 +773,13 @@
      "tier": 1,
      "name": "Czech First League (Chance Liga)",
      "clubs": 15,
+     "verified": false,
+     "tsdbLeagueId": null
+    },
+    {
+     "tier": 2,
+     "name": "Czech National Football League",
+     "clubs": 9,
      "verified": false,
      "tsdbLeagueId": null
     }
@@ -1493,7 +1500,7 @@
     {
      "tier": 2,
      "name": "J2 League",
-     "clubs": 6,
+     "clubs": 16,
      "verified": false,
      "tsdbLeagueId": 4824
     }
@@ -2039,8 +2046,8 @@
     {
      "tier": 2,
      "name": "Eerste Divisie",
-     "clubs": 10,
-     "verified": false,
+     "clubs": 20,
+     "verified": true,
      "tsdbLeagueId": null
     }
    ]
@@ -2228,7 +2235,7 @@
     {
      "tier": 2,
      "name": "I liga",
-     "clubs": 7,
+     "clubs": 11,
      "verified": false,
      "tsdbLeagueId": null
     }
@@ -2249,7 +2256,7 @@
     {
      "tier": 2,
      "name": "Liga Portugal 2",
-     "clubs": 10,
+     "clubs": 17,
      "verified": false,
      "tsdbLeagueId": null
     }

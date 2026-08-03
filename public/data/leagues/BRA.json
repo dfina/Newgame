@@ -1,62 +1,333 @@
 {
-  "association": "BRA",
-  "country": "Brazil",
-  "confederation": "CONMEBOL",
-  "season": "2026",
-  "leagues": [
+ "association": "BRA",
+ "country": "Brazil",
+ "confederation": "CONMEBOL",
+ "season": "2026",
+ "leagues": [
+  {
+   "tier": 1,
+   "name": "Campeonato Brasileiro Série A",
+   "tsdbLeagueId": null,
+   "verified": true,
+   "sources": [
+    "https://atletico.com.br/atletico-conhece-a-tabela-basica-do-brasileirao-2026/",
+    "https://en.wikipedia.org/wiki/2026_Campeonato_Brasileiro_S%C3%A9rie_A",
+    "https://www.olympics.com/pt/noticias/brasileirao-serie-a-2026-times-confirmados",
+    "https://en.wikipedia.org/wiki/2026_Sport_Club_Internacional_season",
+    "https://en.wikipedia.org/wiki/2026_Club_Athletico_Paranaense_season"
+   ],
+   "clubs": [
     {
-      "tier": 1,
-      "name": "Campeonato Brasileiro Série A",
-      "tsdbLeagueId": null,
-      "verified": true,
-      "sources": [
-        "https://atletico.com.br/atletico-conhece-a-tabela-basica-do-brasileirao-2026/",
-        "https://en.wikipedia.org/wiki/2026_Campeonato_Brasileiro_S%C3%A9rie_A",
-        "https://www.olympics.com/pt/noticias/brasileirao-serie-a-2026-times-confirmados",
-        "https://en.wikipedia.org/wiki/2026_Sport_Club_Internacional_season",
-        "https://en.wikipedia.org/wiki/2026_Club_Athletico_Paranaense_season"
-      ],
-      "clubs": [
-        { "name": "Palmeiras", "tsdbTeamId": null, "badge": null, "colors": ["#006437", "#FFFFFF"] },
-        { "name": "Flamengo", "tsdbTeamId": null, "badge": null, "colors": ["#D50000", "#000000"] },
-        { "name": "Cruzeiro", "tsdbTeamId": null, "badge": null, "colors": ["#003DA5", "#FFFFFF"] },
-        { "name": "Mirassol", "tsdbTeamId": null, "badge": null, "colors": ["#FFDD00", "#00A651"] },
-        { "name": "Bahia", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#D50000"] },
-        { "name": "Botafogo", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] },
-        { "name": "Fluminense", "tsdbTeamId": null, "badge": null, "colors": ["#7A1FA2", "#006437"] },
-        { "name": "São Paulo", "tsdbTeamId": null, "badge": null, "colors": ["#D50000", "#000000"] },
-        { "name": "Red Bull Bragantino", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#D50000"] },
-        { "name": "Corinthians", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] },
-        { "name": "Grêmio", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#000000"] },
-        { "name": "Vasco da Gama", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] },
-        { "name": "Coritiba", "tsdbTeamId": null, "badge": null, "colors": ["#00693E", "#FFFFFF"] },
-        { "name": "Athletico Paranaense", "tsdbTeamId": null, "badge": null, "colors": ["#D50000", "#000000"] },
-        { "name": "Chapecoense", "tsdbTeamId": null, "badge": null, "colors": ["#00693E", "#FFFFFF"] },
-        { "name": "Clube do Remo", "tsdbTeamId": null, "badge": null, "colors": ["#003DA5", "#FFFFFF"] },
-        { "name": "Internacional", "tsdbTeamId": null, "badge": null, "colors": ["#D50000", "#FFFFFF"] },
-        { "name": "Vitória", "tsdbTeamId": null, "badge": null, "colors": ["#D50000", "#000000"] },
-        { "name": "Santos", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#000000"] },
-        { "name": "Atlético Mineiro", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] }
-      ]
+     "name": "Palmeiras",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#006437",
+      "#FFFFFF"
+     ]
     },
     {
-      "tier": 2,
-      "name": "Campeonato Brasileiro Série B",
-      "tsdbLeagueId": null,
-      "verified": false,
-      "sources": [
-        "https://en.wikipedia.org/wiki/2026_Campeonato_Brasileiro_S%C3%A9rie_B"
-      ],
-      "clubs": [
-        { "name": "Londrina", "tsdbTeamId": null, "badge": null },
-        { "name": "Náutico", "tsdbTeamId": null, "badge": null },
-        { "name": "Ponte Preta", "tsdbTeamId": null, "badge": null },
-        { "name": "São Bernardo", "tsdbTeamId": null, "badge": null },
-        { "name": "Juventude", "tsdbTeamId": null, "badge": null, "colors": ["#00693E", "#FFFFFF"] },
-        { "name": "Sport", "tsdbTeamId": null, "badge": null, "colors": ["#E30613", "#000000"] },
-        { "name": "Fortaleza", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#E30613"] },
-        { "name": "Ceará", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] }
-      ]
+     "name": "Flamengo",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#D50000",
+      "#000000"
+     ]
+    },
+    {
+     "name": "Cruzeiro",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#003DA5",
+      "#FFFFFF"
+     ]
+    },
+    {
+     "name": "Mirassol",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#FFDD00",
+      "#00A651"
+     ]
+    },
+    {
+     "name": "Bahia",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#0033A0",
+      "#D50000"
+     ]
+    },
+    {
+     "name": "Botafogo",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#000000",
+      "#FFFFFF"
+     ]
+    },
+    {
+     "name": "Fluminense",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#7A1FA2",
+      "#006437"
+     ]
+    },
+    {
+     "name": "São Paulo",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#D50000",
+      "#000000"
+     ]
+    },
+    {
+     "name": "Red Bull Bragantino",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#FFFFFF",
+      "#D50000"
+     ]
+    },
+    {
+     "name": "Corinthians",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#000000",
+      "#FFFFFF"
+     ]
+    },
+    {
+     "name": "Grêmio",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#0033A0",
+      "#000000"
+     ]
+    },
+    {
+     "name": "Vasco da Gama",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#000000",
+      "#FFFFFF"
+     ]
+    },
+    {
+     "name": "Coritiba",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#00693E",
+      "#FFFFFF"
+     ]
+    },
+    {
+     "name": "Athletico Paranaense",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#D50000",
+      "#000000"
+     ]
+    },
+    {
+     "name": "Chapecoense",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#00693E",
+      "#FFFFFF"
+     ]
+    },
+    {
+     "name": "Clube do Remo",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#003DA5",
+      "#FFFFFF"
+     ]
+    },
+    {
+     "name": "Internacional",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#D50000",
+      "#FFFFFF"
+     ]
+    },
+    {
+     "name": "Vitória",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#D50000",
+      "#000000"
+     ]
+    },
+    {
+     "name": "Santos",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#FFFFFF",
+      "#000000"
+     ]
+    },
+    {
+     "name": "Atlético Mineiro",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#000000",
+      "#FFFFFF"
+     ]
     }
-  ]
+   ]
+  },
+  {
+   "tier": 2,
+   "name": "Campeonato Brasileiro Série B",
+   "tsdbLeagueId": null,
+   "verified": true,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2026_Campeonato_Brasileiro_S%C3%A9rie_B",
+    "https://pt.wikipedia.org/wiki/Campeonato_Brasileiro_de_Futebol_de_2026_-_S%C3%A9rie_B",
+    "https://www.cnnbrasil.com.br/esportes/brasileirao/campeonato-brasileiro-veja-os-clubes-que-participarao-da-serie-b-em-2026/"
+   ],
+   "clubs": [
+    {
+     "name": "América-MG",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Athletic",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Atlético-GO",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Avaí",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Botafogo-SP",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Ceará",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#000000",
+      "#FFFFFF"
+     ]
+    },
+    {
+     "name": "CRB",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Criciúma",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Cuiabá",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Fortaleza",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#0033A0",
+      "#E30613"
+     ]
+    },
+    {
+     "name": "Goiás",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Juventude",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#00693E",
+      "#FFFFFF"
+     ]
+    },
+    {
+     "name": "Londrina",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Náutico",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Novorizontino",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Operário-PR",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Ponte Preta",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "São Bernardo",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Sport",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#E30613",
+      "#000000"
+     ]
+    },
+    {
+     "name": "Vila Nova",
+     "tsdbTeamId": null,
+     "badge": null
+    }
+   ],
+   "season": "2026"
+  }
+ ]
 }

@@ -1,60 +1,277 @@
 {
-  "association": "JPN",
-  "country": "Japan",
-  "confederation": "AFC",
-  "season": "2026-27",
-  "leagues": [
+ "association": "JPN",
+ "country": "Japan",
+ "confederation": "AFC",
+ "season": "2026-27",
+ "leagues": [
+  {
+   "tier": 1,
+   "name": "J1 League",
+   "tsdbLeagueId": null,
+   "verified": true,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2026%E2%80%9327_J1_League",
+    "https://www.worldfootball.net/competition/co48/japan-j1-league/results-and-standings/",
+    "https://tabimaniajapan.com/culture/the-new-era-of-j-league-everything-you-need-to-know-about-the-historic-2026-27-transition"
+   ],
+   "clubs": [
     {
-      "tier": 1,
-      "name": "J1 League",
-      "tsdbLeagueId": null,
-      "verified": true,
-      "sources": [
-        "https://en.wikipedia.org/wiki/2026%E2%80%9327_J1_League",
-        "https://www.worldfootball.net/competition/co48/japan-j1-league/results-and-standings/",
-        "https://tabimaniajapan.com/culture/the-new-era-of-j-league-everything-you-need-to-know-about-the-historic-2026-27-transition"
-      ],
-      "clubs": [
-        { "name": "Kashima Antlers", "tsdbTeamId": null, "badge": null, "colors": ["#A6093D", "#1A1A1A"] },
-        { "name": "Mito HollyHock", "tsdbTeamId": null, "badge": null },
-        { "name": "Urawa Red Diamonds", "tsdbTeamId": null, "badge": null, "colors": ["#E60012", "#FFFFFF"] },
-        { "name": "JEF United Chiba", "tsdbTeamId": null, "badge": null },
-        { "name": "Kashiwa Reysol", "tsdbTeamId": null, "badge": null, "colors": ["#FDB913", "#000000"] },
-        { "name": "FC Tokyo", "tsdbTeamId": null, "badge": null, "colors": ["#0D3B8C", "#E2231A"] },
-        { "name": "Tokyo Verdy", "tsdbTeamId": null, "badge": null, "colors": ["#5AAF41", "#5AAF41"] },
-        { "name": "FC Machida Zelvia", "tsdbTeamId": null, "badge": null },
-        { "name": "Kawasaki Frontale", "tsdbTeamId": null, "badge": null, "colors": ["#00A0DE", "#1A1A1A"] },
-        { "name": "Yokohama F. Marinos", "tsdbTeamId": null, "badge": null, "colors": ["#00539F", "#FFFFFF"] },
-        { "name": "Shimizu S-Pulse", "tsdbTeamId": null, "badge": null, "colors": ["#F97709", "#FFFFFF"] },
-        { "name": "Nagoya Grampus", "tsdbTeamId": null, "badge": null, "colors": ["#E2231A", "#1A1A1A"] },
-        { "name": "Kyoto Sanga F.C.", "tsdbTeamId": null, "badge": null, "colors": ["#7B0046", "#7B0046"] },
-        { "name": "Gamba Osaka", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#1A1A1A"] },
-        { "name": "Cerezo Osaka", "tsdbTeamId": null, "badge": null, "colors": ["#EC1C79", "#1A1A1A"] },
-        { "name": "Vissel Kobe", "tsdbTeamId": null, "badge": null, "colors": ["#9E1B32", "#9E1B32"] },
-        { "name": "Fagiano Okayama", "tsdbTeamId": null, "badge": null },
-        { "name": "Sanfrecce Hiroshima", "tsdbTeamId": null, "badge": null, "colors": ["#652D90", "#652D90"] },
-        { "name": "Avispa Fukuoka", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FDB913"] },
-        { "name": "V-Varen Nagasaki", "tsdbTeamId": null, "badge": null }
-      ]
+     "name": "Kashima Antlers",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#A6093D",
+      "#1A1A1A"
+     ]
     },
     {
-      "tier": 2,
-      "name": "J2 League",
-      "tsdbLeagueId": 4824,
-      "verified": false,
-      "sources": [
-        "https://en.wikipedia.org/wiki/2026%E2%80%9327_J2_League",
-        "https://en.wikipedia.org/wiki/2025_J3_League",
-        "https://www.thesportsdb.com/league/4824-japanese-j2-league"
-      ],
-      "clubs": [
-        { "name": "Albirex Niigata", "tsdbTeamId": null, "badge": null },
-        { "name": "Shonan Bellmare", "tsdbTeamId": null, "badge": null },
-        { "name": "Yokohama FC", "tsdbTeamId": null, "badge": null },
-        { "name": "Tochigi City FC", "tsdbTeamId": null, "badge": null },
-        { "name": "Vanraure Hachinohe", "tsdbTeamId": null, "badge": null },
-        { "name": "Tegevajaro Miyazaki", "tsdbTeamId": null, "badge": null }
-      ]
+     "name": "Mito HollyHock",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Urawa Red Diamonds",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#E60012",
+      "#FFFFFF"
+     ]
+    },
+    {
+     "name": "JEF United Chiba",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Kashiwa Reysol",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#FDB913",
+      "#000000"
+     ]
+    },
+    {
+     "name": "FC Tokyo",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#0D3B8C",
+      "#E2231A"
+     ]
+    },
+    {
+     "name": "Tokyo Verdy",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#5AAF41",
+      "#5AAF41"
+     ]
+    },
+    {
+     "name": "FC Machida Zelvia",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Kawasaki Frontale",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#00A0DE",
+      "#1A1A1A"
+     ]
+    },
+    {
+     "name": "Yokohama F. Marinos",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#00539F",
+      "#FFFFFF"
+     ]
+    },
+    {
+     "name": "Shimizu S-Pulse",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#F97709",
+      "#FFFFFF"
+     ]
+    },
+    {
+     "name": "Nagoya Grampus",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#E2231A",
+      "#1A1A1A"
+     ]
+    },
+    {
+     "name": "Kyoto Sanga F.C.",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#7B0046",
+      "#7B0046"
+     ]
+    },
+    {
+     "name": "Gamba Osaka",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#0033A0",
+      "#1A1A1A"
+     ]
+    },
+    {
+     "name": "Cerezo Osaka",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#EC1C79",
+      "#1A1A1A"
+     ]
+    },
+    {
+     "name": "Vissel Kobe",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#9E1B32",
+      "#9E1B32"
+     ]
+    },
+    {
+     "name": "Fagiano Okayama",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Sanfrecce Hiroshima",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#652D90",
+      "#652D90"
+     ]
+    },
+    {
+     "name": "Avispa Fukuoka",
+     "tsdbTeamId": null,
+     "badge": null,
+     "colors": [
+      "#000000",
+      "#FDB913"
+     ]
+    },
+    {
+     "name": "V-Varen Nagasaki",
+     "tsdbTeamId": null,
+     "badge": null
     }
-  ]
+   ]
+  },
+  {
+   "tier": 2,
+   "name": "J2 League",
+   "tsdbLeagueId": 4824,
+   "verified": false,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2026%E2%80%9327_J2_League",
+    "https://en.wikipedia.org/wiki/2025_J3_League",
+    "https://www.thesportsdb.com/league/4824-japanese-j2-league",
+    "https://en.wikipedia.org/wiki/Template:J2_League_map_2026%E2%80%9327"
+   ],
+   "clubs": [
+    {
+     "name": "Vegalta Sendai",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Ventforet Kofu",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Yokohama FC",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Fujieda MYFC",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Hokkaido Consadole Sapporo",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "FC Imabari",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Iwaki FC",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Júbilo Iwata",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Kataller Toyama",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Montedio Yamagata",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Tochigi City",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Vanraure Hachinohe",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Tegevajaro Miyazaki",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Albirex Niigata",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Shonan Bellmare",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Tochigi City FC",
+     "tsdbTeamId": null,
+     "badge": null
+    }
+   ],
+   "season": "2026-27",
+   "note": "J2 has 20 clubs in 2026-27 (14 retained, 3 relegated from J1, 3 promoted from J3). 13 confirmed by name this session, including promoted Tochigi City, Vanraure Hachinohe and Tegevajaro Miyazaki; the three clubs relegated from J1 were not named in any result consulted."
+  }
+ ]
 }

@@ -121,37 +121,77 @@
    ],
    "clubs": [
     {
-     "name": "CD Tondela",
+     "name": "Académica",
      "tsdbTeamId": null,
      "badge": null
     },
     {
-     "name": "AVS Futebol SAD",
+     "name": "AFS",
      "tsdbTeamId": null,
      "badge": null
     },
     {
-     "name": "Amarante FC",
+     "name": "Amarante",
      "tsdbTeamId": null,
      "badge": null
     },
     {
-     "name": "Académica de Coimbra",
+     "name": "Benfica B",
      "tsdbTeamId": null,
      "badge": null
     },
     {
-     "name": "CD Feirense",
+     "name": "Chaves",
      "tsdbTeamId": null,
      "badge": null
     },
     {
-     "name": "FC Penafiel",
+     "name": "Feirense",
      "tsdbTeamId": null,
      "badge": null
     },
     {
-     "name": "Vizela",
+     "name": "Felgueiras",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Leixões",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Lusitânia Lourosa",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Penafiel",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Portimonense",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Porto B",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Sporting CP B",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Tondela",
+     "tsdbTeamId": null,
+     "badge": null
+    },
+    {
+     "name": "Torreense",
      "tsdbTeamId": null,
      "badge": null
     },
@@ -161,16 +201,13 @@
      "badge": null
     },
     {
-     "name": "SL Benfica B",
-     "tsdbTeamId": null,
-     "badge": null
-    },
-    {
-     "name": "FC Porto B",
+     "name": "Vizela",
      "tsdbTeamId": null,
      "badge": null
     }
-   ]
+   ],
+   "season": "2026-27",
+   "note": "Liga Portugal 2 has 18 clubs in 2026-27; 17 were named in the source and one place was still to be determined. Reserve sides (Benfica B, Porto B, Sporting CP B) are ineligible for promotion."
   }
  ],
  "note": "Primeira Liga 2026-27 has 18 clubs; only 10 were confirmed by name this session (Porto as defending champions; Benfica, Braga, Casa Pia, Estoril Praia, Estrela da Amadora, Arouca, Alverca continuing from 2025-26; Académico de Viseu and Marítimo promoted from Liga Portugal 2). AVS and Tondela were named as relegated OUT of the Primeira Liga into Liga Portugal 2 for 2026-27, so they are listed under the tier-2 entry instead. Liga Portugal 2 has 18 clubs; 10 were confirmed by name this session (Tondela, AVS, Amarante, Académica de Coimbra, Feirense, Penafiel, Vizela, União de Leiria, and reserve sides Benfica B and Porto B, from fixture and promotion/relegation reporting); the remaining ~8 clubs (including Torreense, which appeared in a fixture list but could not be confirmed as a first-team Liga Portugal 2 participant with certainty) were not confirmed within the search budget. Both leagues marked unverified due to incomplete rosters."
