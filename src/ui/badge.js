@@ -15,27 +15,62 @@ function persist() {
 }
 
 const inflight = new Map();
+// Failures are remembered for this session only, never persisted: a blip in
+// the network must not permanently blank a crest on every later visit.
+const missed = new Set();
+
+const strip = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+// Drop punctuation and the club/league boilerplate that differs between
+// sources ("FC", "SAD", sponsor names) so names compare on their real words.
+const NOISE = /\b(fc|cf|afc|ac|as|sc|sv|cd|ud|us|sd|rc|ss|ssc|aa|bk|if|nk|hnk|fk|sk|club|calcio|futebol|football|soccer|de|do|da|the|of|sad|u23|b)\b/g;
+function norm(s) {
+  return strip(s).replace(/[.'’\-–—/()]/g, ' ').replace(NOISE, ' ').replace(/\s+/g, ' ').trim();
+}
+function tokens(s) { return new Set(norm(s).split(' ').filter((w) => w.length > 2)); }
+// Fraction of the shorter name's distinctive words that both names share.
+function overlap(a, b) {
+  const A = tokens(a), B = tokens(b);
+  if (!A.size || !B.size) return 0;
+  let hit = 0;
+  for (const w of A) if (B.has(w)) hit++;
+  return hit / Math.min(A.size, B.size);
+}
+
+// Try each candidate image URL in turn, keeping the last-resort fallback if
+// all of them fail. TheSportsDB does not host every size for every asset.
+function loadInto(el, urls, fallback) {
+  let i = 0;
+  const next = () => {
+    if (i >= urls.length) {
+      if (fallback) { el.onerror = null; el.src = fallback; } else { el.remove(); }
+      return;
+    }
+    el.onerror = next;
+    el.src = urls[i++];
+  };
+  next();
+}
 
 // A name search can return several clubs sharing a word ("Leuven", "United").
 // Prefer football clubs from the right country, then the closest name match,
 // so a short local name never resolves to a foreign club's crest.
 function pickTeam(teams, club) {
-  const soccer = (teams || []).filter((t) => t.strSport === 'Soccer');
+  const soccer = (teams || []).filter((t) => t.strSport === 'Soccer' && t.strBadge);
   if (!soccer.length) return null;
-  const want = club.name.toLowerCase();
-  const country = club.country?.toLowerCase();
+  const want = norm(club.name);
+  const country = club.country ? strip(club.country) : null;
   const scored = soccer.map((t) => {
-    const name = (t.strTeam || '').toLowerCase();
-    const alt = (t.strTeamAlternate || '').toLowerCase();
+    const name = norm(t.strTeam || '');
+    const alts = (t.strTeamAlternate || '').split(',').map((a) => norm(a));
     let s = 0;
-    if (country && (t.strCountry || '').toLowerCase() === country) s += 10;
-    if (name === want || alt.split(',').some((a) => a.trim() === want)) s += 6;
-    else if (name.includes(want) || want.includes(name)) s += 3;
-    else if (alt.includes(want)) s += 2;
+    if (country && strip(t.strCountry || '') === country) s += 10;
+    if (name === want || alts.includes(want)) s += 8;
+    else s += Math.max(overlap(club.name, t.strTeam || ''), ...alts.map((a) => (a ? overlap(want, a) : 0))) * 6;
     return { t, s };
   });
   scored.sort((a, b) => b.s - a.s);
-  return scored[0].s > 0 ? scored[0].t : soccer[0];
+  // Require some real name agreement, not just a shared country.
+  return scored[0].s >= 3 ? scored[0].t : null;
 }
 
 // Resolve a badge URL for a club; returns null when unavailable.
@@ -43,23 +78,29 @@ export async function resolveBadge(club) {
   const c = loadCache();
   const key = club.tsdbTeamId ? `id:${club.tsdbTeamId}` : `n:${club.name}`;
   if (key in c) return c[key];
+  if (missed.has(key)) return null;
   if (inflight.has(key)) return inflight.get(key);
 
   const p = (async () => {
     let badge = null;
     try {
-      const url = club.tsdbTeamId
-        ? `${TSDB}/lookupteam.php?id=${club.tsdbTeamId}`
-        : `${TSDB}/searchteams.php?t=${encodeURIComponent(club.name)}`;
-      const res = await fetch(url, { signal: AbortSignal.timeout(6000) });
-      if (res.ok) {
-        const json = await res.json();
-        const team = pickTeam(json.teams, club);
-        if (team?.strBadge) badge = team.strBadge + '/small';
+      if (club.tsdbTeamId) {
+        const res = await fetch(`${TSDB}/lookupteam.php?id=${club.tsdbTeamId}`, { signal: AbortSignal.timeout(6000) });
+        if (res.ok) badge = (await res.json()).teams?.[0]?.strBadge || null;
       }
-    } catch { /* offline or blocked — fall through to null */ }
-    c[key] = badge;
-    persist();
+      if (!badge) {
+        // Search the full name, then a cleaned-up form ("Nottingham Forest FC"
+        // → "nottingham forest"), which matches more of TheSportsDB's entries.
+        for (const q of [club.name, norm(club.name)]) {
+          if (!q) continue;
+          const res = await fetch(`${TSDB}/searchteams.php?t=${encodeURIComponent(q)}`, { signal: AbortSignal.timeout(6000) });
+          if (!res.ok) continue;
+          const team = pickTeam((await res.json()).teams, club);
+          if (team?.strBadge) { badge = team.strBadge; break; }
+        }
+      }
+    } catch { /* offline or blocked — treated as a miss, retried next session */ }
+    if (badge) { c[key] = badge; persist(); } else { missed.add(key); }
     inflight.delete(key);
     return badge;
   })();
@@ -101,7 +142,7 @@ async function leagueIdMap() {
       if (res.ok) {
         const json = await res.json();
         for (const l of json.leagues || []) {
-          if (l.strSport === 'Soccer') map[l.strLeague.toLowerCase()] = Number(l.idLeague);
+          if (l.strSport === 'Soccer' && l.strLeague) map[norm(l.strLeague)] = Number(l.idLeague);
         }
       }
     } catch { /* offline — empty map, retried next session */ }
@@ -111,24 +152,60 @@ async function leagueIdMap() {
   return leagueMapPromise;
 }
 
-async function leagueIdByName(name) {
-  const map = await leagueIdMap();
-  const n = name.toLowerCase();
-  if (map[n]) return map[n];
-  for (const [k, v] of Object.entries(map)) {
-    if (k.includes(n) || n.includes(k)) return v;
+// Leagues are named inconsistently between sources ("Belgian Pro League" vs
+// "Belgian First Division A"), so when the country is known, search only that
+// country's leagues and take the best word-overlap match. The global name map
+// is the fallback for competitions with no single country (continental cups).
+async function leagueIdByName(name, country) {
+  if (country) {
+    const c = loadCache();
+    const ckey = `lgcountry:${country}`;
+    let list = c[ckey];
+    if (!list) {
+      try {
+        const res = await fetch(`${TSDB}/search_all_leagues.php?c=${encodeURIComponent(country)}&s=Soccer`,
+          { signal: AbortSignal.timeout(8000) });
+        if (res.ok) {
+          const json = await res.json();
+          list = (json.countries || json.leagues || [])
+            .map((l) => ({ id: Number(l.idLeague), name: l.strLeague || '', alt: l.strLeagueAlternate || '' }))
+            .filter((l) => l.id && l.name);
+          if (list.length) { c[ckey] = list; persist(); }
+        }
+      } catch { /* fall through to the global map */ }
+    }
+    if (list?.length) {
+      let best = null, bestScore = 0;
+      for (const l of list) {
+        const s = Math.max(overlap(name, l.name), l.alt ? overlap(name, l.alt) : 0);
+        if (s > bestScore) { bestScore = s; best = l; }
+      }
+      // A country's top flight is usually its first listed league; accept it
+      // when nothing matches by name but only one league exists.
+      if (best && bestScore >= 0.5) return best.id;
+      if (list.length === 1) return list[0].id;
+    }
   }
-  return null;
+  const map = await leagueIdMap();
+  const n = norm(name);
+  if (map[n]) return map[n];
+  let best = null, bestScore = 0;
+  for (const [k, v] of Object.entries(map)) {
+    const s = overlap(n, k);
+    if (s > bestScore) { bestScore = s; best = v; }
+  }
+  return bestScore >= 0.6 ? best : null;
 }
 
 // League crest (badge) by TheSportsDB id or league name, cached.
-export async function resolveLeagueBadge(leagueName, tsdbLeagueId) {
+export async function resolveLeagueBadge(leagueName, tsdbLeagueId, country) {
   const c = loadCache();
   const key = `lbadge:${tsdbLeagueId || leagueName}`;
   if (key in c) return c[key];
+  if (missed.has(key)) return null;
   let badge = null;
   try {
-    const id = tsdbLeagueId || await leagueIdByName(leagueName);
+    const id = tsdbLeagueId || await leagueIdByName(leagueName, country);
     if (id) {
       const res = await fetch(`${TSDB}/lookupleague.php?id=${id}`, { signal: AbortSignal.timeout(6000) });
       if (res.ok) {
@@ -136,22 +213,20 @@ export async function resolveLeagueBadge(leagueName, tsdbLeagueId) {
         badge = json.leagues?.[0]?.strBadge || json.leagues?.[0]?.strLogo || null;
       }
     }
-  } catch { /* offline — fall through */ }
-  c[key] = badge;
-  persist();
+  } catch { /* offline — treated as a miss, retried next session */ }
+  if (badge) { c[key] = badge; persist(); } else { missed.add(key); }
   return badge;
 }
 
 // Small league crest <img>; hidden until (and unless) the crest resolves.
-export function leagueBadgeImg(leagueName, tsdbLeagueId, cls = 'lg-badge') {
+export function leagueBadgeImg(leagueName, tsdbLeagueId, cls = 'lg-badge', country) {
   const id = 'l' + Math.random().toString(36).slice(2, 9);
   queueMicrotask(async () => {
-    const url = await resolveLeagueBadge(leagueName, tsdbLeagueId);
+    const url = await resolveLeagueBadge(leagueName, tsdbLeagueId, country);
     const el = document.getElementById(id);
     if (el && url) {
-      el.onerror = () => el.remove();
-      el.src = url + '/tiny';
       el.style.display = '';
+      loadInto(el, [url + '/tiny', url + '/small', url], null);
     }
   });
   return `<img id="${id}" class="${cls}" style="display:none" alt="" loading="lazy">`;
@@ -210,10 +285,7 @@ export function badgeImg(club, cls = 'badge-img') {
   queueMicrotask(async () => {
     const url = await resolveBadge(club);
     const el = document.getElementById(id);
-    if (el && url) {
-      el.onerror = () => { el.onerror = null; el.src = fallback; };
-      el.src = url;
-    }
+    if (el && url) loadInto(el, [url + '/small', url], fallback);
   });
   return `<img id="${id}" class="${cls}" src="${fallback}" alt="" loading="lazy">`;
 }

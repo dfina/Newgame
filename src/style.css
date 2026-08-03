@@ -122,7 +122,8 @@ label { font-size: .82rem; color: var(--muted); display: block; margin-top: 12px
 .club-head .cname {
   font-weight: 800; line-height: 1.12;
   display: flex; align-items: center; gap: 7px;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;   /* prefer breaking between words, not inside them */
+  word-break: normal;
 }
 .club-head .cname span { min-width: 0; }
 .club-head .cname.len-s { font-size: 1.25rem; }
@@ -184,6 +185,7 @@ label { font-size: .82rem; color: var(--muted); display: block; margin-top: 12px
 .odd b { font-weight: 800; }
 .odd.win { color: #74d68a; border-color: #2b6b3c; background: #14301d; }
 .odd.lose { color: #f2938d; border-color: #6e3330; background: #301614; }
+.odd.none { color: var(--muted); border-color: var(--line); background: transparent; }
 
 .ovr-result { font-size: 1.05rem; font-weight: 800; padding: 10px 12px; border-radius: 10px; margin: 10px 0; }
 .ovr-result.up { color: #74d68a; background: #14301d; border: 1px solid #2b6b3c; }

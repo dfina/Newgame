@@ -36,7 +36,7 @@ function nameSizeClass(name) {
 
 // The odds a decision card is gambling with, shown before you commit.
 function stakeOdds(stake) {
-  if (!stake) return '';
+  if (!stake) return '<span class="odds"><span class="odd none">No OVR change</span></span>';
   const up = Math.round(stake.p * 100);
   return `<span class="odds">
     <span class="odd win">+${stake.up} OVR <b>${up}%</b></span>
@@ -220,7 +220,7 @@ function offerCard(o, i) {
     <span class="kicker">Sign for</span>
     <span class="club">${esc(o.clubName)}</span>
     <img id="${imgId}" class="crest" src="${crest}" alt="">
-    <span class="league">${leagueBadgeImg(o.leagueName, o.tsdbLeagueId)}${esc(o.leagueName)}</span>
+    <span class="league">${leagueBadgeImg(o.leagueName, o.tsdbLeagueId, 'lg-badge', o.countryName)}${esc(o.leagueName)}</span>
     <span class="terms">${o.loan ? 'Season loan' : `${fmtWage(o.wage)}/wk · ${o.years}y`}</span>
   </button>`;
 }
@@ -243,7 +243,7 @@ export function offersScreen(career) {
       <span class="kicker">Stay at</span>
       <span class="club">${esc(c.name)}</span>
       <img id="${imgId}" class="crest" src="${crest}" alt="">
-      <span class="league">${leagueBadgeImg(c.leagueName, c.tsdbLeagueId)}${esc(c.leagueName)}</span>
+      <span class="league">${leagueBadgeImg(c.leagueName, c.tsdbLeagueId, 'lg-badge', c.countryName)}${esc(c.leagueName)}</span>
       <span class="terms">${career.player.contractYears === 0 ? 'Negotiate renewal' : `${career.player.contractYears}y remaining`}</span>
     </button></div>`;
   }

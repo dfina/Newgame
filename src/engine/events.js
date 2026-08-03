@@ -27,7 +27,6 @@ E.push({
     },
     {
       label: 'Coast through sessions',
-      stake: { p: 0.45, up: 1, down: -2 },
       sub: 'Save your legs',
       resolve: () => chance(0.5)
         ? { text: 'Fresh legs help you late in matches, though the coaches noticed the shortcuts.', tone: 'neutral', fx: { fitness: 6, form: 2, reputation: -1 } }
@@ -58,7 +57,6 @@ E.push({
     },
     {
       label: 'Decline the interview',
-      stake: { p: 0.7, up: 1, down: -1 },
       sub: 'Stay out of the spotlight',
       resolve: () => ({ text: 'You keep your head down and let your football talk.', tone: 'neutral', fx: { form: 2 } })
     }
@@ -104,7 +102,6 @@ E.push({
     },
     {
       label: 'Decline politely',
-      stake: { p: 0.6, up: 1, down: -1 },
       sub: 'Focus on your own game',
       resolve: () => ({ text: 'You stay in the ranks. Some senior players quietly question your ambition.', tone: 'neutral', fx: { morale: -2, form: 2 } })
     }
@@ -131,7 +128,6 @@ E.push({
     },
     {
       label: 'Stay independent',
-      stake: { p: 0.6, up: 1, down: -1 },
       sub: 'Nobody takes a cut',
       resolve: () => ({ text: 'You back yourself to handle your own affairs.', tone: 'neutral', fx: {} })
     }
@@ -163,7 +159,6 @@ E.push({
     },
     {
       label: 'Let it run down',
-      stake: { p: 0.55, up: 2, down: -2 },
       sub: 'Freedom next summer',
       resolve: () => ({ text: 'No new deal. Clubs around the continent take note of a coming free agent.', tone: 'neutral', fx: { reputation: 2, listed: true } })
     }
@@ -236,7 +231,6 @@ E.push({
     },
     {
       label: 'Make a brief appearance',
-      stake: { p: 0.6, up: 1, down: -1 },
       sub: 'Tick the box',
       resolve: () => ({ text: 'You show your face and slip away early.', tone: 'neutral', fx: { reputation: 1 } })
     }
@@ -259,7 +253,6 @@ E.push({
     },
     {
       label: 'Turn it down',
-      stake: { p: 0.75, up: 1, down: -1 },
       sub: 'Football first',
       resolve: () => ({ text: 'You keep your diary clear and your mind on the pitch.', tone: 'neutral', fx: { form: 2 } })
     }
@@ -305,7 +298,6 @@ E.push({
     },
     {
       label: 'Keep your head down',
-      stake: { p: 0.65, up: 1, down: -1 },
       sub: 'Not your job',
       resolve: () => ({ text: 'Someone else steps up. No risk, no reward.', tone: 'neutral', fx: {} })
     }
@@ -326,7 +318,6 @@ E.push({
     },
     {
       label: 'Let your club form decide',
-      stake: { p: 0.75, up: 2, down: -1 },
       sub: 'Quiet confidence',
       resolve: () => ({ text: 'You focus on your club and let the call come when it comes.', tone: 'neutral', fx: { form: 2 } })
     }
@@ -403,7 +394,6 @@ E.push({
     },
     {
       label: 'Finish at your level',
-      stake: { p: 0.7, up: 2, down: -1 },
       sub: 'Pride in the standard you set',
       resolve: () => ({ text: 'You intend to bow out where you belong — at the top of your game.', tone: 'neutral', fx: { form: 2 } })
     }
