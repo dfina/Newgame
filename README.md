@@ -6,7 +6,17 @@ career season by season — transfers, promotion and relegation, cups,
 continental competition, international tournaments, injuries, media storms and
 career twists — until retirement, a legacy score, and a trophy cabinet.
 
-## Run it
+## Play it
+
+Published to GitHub Pages on every push to the default branch:
+**https://dfina.github.io/Newgame/**
+
+On a phone, open that URL and add it to the home screen (Safari: Share → Add to
+Home Screen; Chrome: menu → Add to Home screen) for a full-screen, app-like
+launch. Careers save to that browser's localStorage, so each device keeps its
+own save.
+
+## Run it locally
 
 ```sh
 npm install
