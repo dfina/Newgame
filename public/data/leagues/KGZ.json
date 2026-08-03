@@ -2,7 +2,35 @@
   "association": "KGZ",
   "country": "Kyrgyz Republic",
   "confederation": "AFC",
-  "season": "unverified",
-  "leagues": [],
-  "note": "Not researched this session: the shared WebSearch budget (200 calls) for this session was exhausted before this association could be investigated. No league or club data has been invented; this file intentionally lists no leagues pending a future session with search access to verify the Kyrgyzstan Premier League and clubs."
+  "season": "2026",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Kyrgyz Premier League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_Kyrgyz_Premier_League",
+        "https://tribuna.com/en/league/premier-league-kgz/"
+      ],
+      "clubs": [
+        { "name": "Abdysh-Ata", "tsdbTeamId": null, "badge": null },
+        { "name": "Alay Osh", "tsdbTeamId": null, "badge": null },
+        { "name": "Muras United", "tsdbTeamId": null, "badge": null },
+        { "name": "Alga Bishkek", "tsdbTeamId": null, "badge": null },
+        { "name": "Ilbirs Bishkek", "tsdbTeamId": null, "badge": null },
+        { "name": "Uzgen", "tsdbTeamId": null, "badge": null },
+        { "name": "Bishkek City", "tsdbTeamId": null, "badge": null },
+        { "name": "Bars Issyk-Kul", "tsdbTeamId": null, "badge": null },
+        { "name": "Asiagoal Bishkek", "tsdbTeamId": null, "badge": null },
+        { "name": "Talant", "tsdbTeamId": null, "badge": null },
+        { "name": "Asia Talas", "tsdbTeamId": null, "badge": null },
+        { "name": "OshSU-Aldier", "tsdbTeamId": null, "badge": null },
+        { "name": "Neftchi Kochkor-Ata", "tsdbTeamId": null, "badge": null },
+        { "name": "Toktogul", "tsdbTeamId": null, "badge": null },
+        { "name": "Kyrgyzaltyn", "tsdbTeamId": null, "badge": null },
+        { "name": "Dordoi Bishkek", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

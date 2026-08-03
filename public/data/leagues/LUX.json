@@ -2,7 +2,33 @@
   "association": "LUX",
   "country": "Luxembourg",
   "confederation": "UEFA",
-  "season": "",
-  "leagues": [],
-  "note": "Not researched: the shared session web-search budget (200 calls) was exhausted before this association could be investigated. No club data verified this session, so no league entries are included to avoid inventing content. Known top flight is the Luxembourg National Division; composition unverified."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Luxembourg National Division",
+      "tsdbLeagueId": 4694,
+      "verified": false,
+      "sources": [
+        "https://www.thesportsdb.com/league/4694-Luxembourg-National-Division",
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Luxembourg_National_Division"
+      ],
+      "clubs": [
+        { "name": "Atert Bissen", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Differdange 03", "tsdbTeamId": null, "badge": null },
+        { "name": "F91 Dudelange", "tsdbTeamId": null, "badge": null },
+        { "name": "Hostert", "tsdbTeamId": null, "badge": null },
+        { "name": "Jeunesse Canach", "tsdbTeamId": null, "badge": null },
+        { "name": "Jeunesse Esch", "tsdbTeamId": null, "badge": null },
+        { "name": "Käerjeng '97", "tsdbTeamId": null, "badge": null },
+        { "name": "Mamer 32", "tsdbTeamId": null, "badge": null },
+        { "name": "US Mondorf-les-Bains", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Progrès Niederkorn", "tsdbTeamId": null, "badge": null },
+        { "name": "Racing FC Union Luxembourg", "tsdbTeamId": null, "badge": null },
+        { "name": "Union Titus Pétange", "tsdbTeamId": null, "badge": null },
+        { "name": "Rodange 91", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ],
+  "note": "13 of the 16 clubs in the 2025-26 Luxembourg National Division were confirmed by name within the WebSearch budget; league marked verified:false as the full 16-club list could not be completed."
 }

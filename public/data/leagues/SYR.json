@@ -2,7 +2,33 @@
   "association": "SYR",
   "country": "Syria",
   "confederation": "AFC",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (shared across this entire session) was exhausted before Syria could be looked into. This is NOT a claim that no league exists or runs — composition and running status genuinely need checking given the country's situation, but that could not be done here. Needs a follow-up session with search budget available."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Syrian Premier League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://footystats.org/syria/syrian-premier-league",
+        "https://tribuna.com/en/league/premier-league-syrian/",
+        "https://en.wikipedia.org/wiki/Syrian_Premier_League"
+      ],
+      "clubs": [
+        { "name": "Al-Ittihad SC Aleppo", "tsdbTeamId": null, "badge": null },
+        { "name": "Homs Al-Fidaa", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Karama SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Wahda", "tsdbTeamId": null, "badge": null },
+        { "name": "Tishreen", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Futuwwa", "tsdbTeamId": null, "badge": null },
+        { "name": "Damascus Al-Ahli", "tsdbTeamId": null, "badge": null },
+        { "name": "Hottin", "tsdbTeamId": null, "badge": null },
+        { "name": "Umayya", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Majd", "tsdbTeamId": null, "badge": null },
+        { "name": "Khan Sheikhoun", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Horriya", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ],
+  "note": "No indication of league-wide suspension was found for the 2025-26 season specifically (unlike 2024-25, which was suspended in December due to the Syrian opposition offensive). These 12 clubs, including 4 newly added this season (Umayya, Al-Majd, Khan Sheikhoun, Al-Horriya), were named in search results as competing in 2025-26."
 }

@@ -2,7 +2,29 @@
   "association": "MKD",
   "country": "North Macedonia",
   "confederation": "UEFA",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (200/200) was exhausted before this association could be covered. No clubs or leagues were invented per task rules; leagues left empty pending a follow-up session with search capacity."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Macedonian First Football League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Macedonian_First_Football_League"
+      ],
+      "clubs": [
+        { "name": "Vardar", "tsdbTeamId": null, "badge": null, "colors": ["#D2122E", "#000000"] },
+        { "name": "Shkëndija", "tsdbTeamId": null, "badge": null },
+        { "name": "Sileks", "tsdbTeamId": null, "badge": null },
+        { "name": "Rabotnički", "tsdbTeamId": null, "badge": null },
+        { "name": "Struga", "tsdbTeamId": null, "badge": null },
+        { "name": "Voska Sport", "tsdbTeamId": null, "badge": null },
+        { "name": "Shkupi", "tsdbTeamId": null, "badge": null },
+        { "name": "Brera", "tsdbTeamId": null, "badge": null },
+        { "name": "Pelister", "tsdbTeamId": null, "badge": null },
+        { "name": "Makedonija G.P.", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ],
+  "note": "10 of 12 clubs in the 2025-26 Macedonian First Football League were confirmed by name within the WebSearch budget; league marked verified:false as the full 12-club list could not be completed."
 }

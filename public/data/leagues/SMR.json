@@ -2,7 +2,34 @@
   "association": "SMR",
   "country": "San Marino",
   "confederation": "UEFA",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (200/200) was exhausted before this association could be covered. No clubs or leagues were invented per task rules; leagues left empty pending a follow-up session with search capacity."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Campionato Sammarinese di Calcio",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Campionato_Sammarinese_di_Calcio"
+      ],
+      "clubs": [
+        { "name": "Tre Fiori", "tsdbTeamId": null, "badge": null },
+        { "name": "Cailungo", "tsdbTeamId": null, "badge": null },
+        { "name": "Cosmos", "tsdbTeamId": null, "badge": null },
+        { "name": "Domagnano", "tsdbTeamId": null, "badge": null },
+        { "name": "Faetano", "tsdbTeamId": null, "badge": null },
+        { "name": "Fiorentino", "tsdbTeamId": null, "badge": null },
+        { "name": "Folgore", "tsdbTeamId": null, "badge": null },
+        { "name": "Juvenes/Dogana", "tsdbTeamId": null, "badge": null },
+        { "name": "La Fiorita", "tsdbTeamId": null, "badge": null },
+        { "name": "Libertas", "tsdbTeamId": null, "badge": null },
+        { "name": "Murata", "tsdbTeamId": null, "badge": null },
+        { "name": "Pennarossa", "tsdbTeamId": null, "badge": null },
+        { "name": "San Giovanni", "tsdbTeamId": null, "badge": null },
+        { "name": "SM Academy", "tsdbTeamId": null, "badge": null },
+        { "name": "Tre Penne", "tsdbTeamId": null, "badge": null },
+        { "name": "Virtus", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

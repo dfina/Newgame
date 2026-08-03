@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-03T14:55:47.223Z",
+ "generated": "2026-08-03T14:56:29.789Z",
  "countries": [
   {
    "code": "AFG",
@@ -1045,6 +1045,20 @@
    ]
   },
   {
+   "code": "KAZ",
+   "country": "Kazakhstan",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Kazakhstan Premier League",
+     "clubs": 8,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "KEN",
    "country": "Kenya",
    "confederation": "CAF",
@@ -1054,6 +1068,20 @@
      "name": "Kenyan Premier League",
      "clubs": 11,
      "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "KGZ",
+   "country": "Kyrgyz Republic",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Kyrgyz Premier League",
+     "clubs": 16,
+     "verified": true,
      "tsdbLeagueId": null
     }
    ]
@@ -1122,6 +1150,20 @@
    ]
   },
   {
+   "code": "LBN",
+   "country": "Lebanon",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Lebanese Premier League",
+     "clubs": 12,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "LBR",
    "country": "Liberia",
    "confederation": "CAF",
@@ -1174,6 +1216,20 @@
      "clubs": 10,
      "verified": true,
      "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "LUX",
+   "country": "Luxembourg",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Luxembourg National Division",
+     "clubs": 13,
+     "verified": false,
+     "tsdbLeagueId": 4694
     }
    ]
   },
@@ -1299,6 +1355,20 @@
      "name": "Liga de Expansión MX",
      "clubs": 16,
      "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "MKD",
+   "country": "North Macedonia",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Macedonian First Football League",
+     "clubs": 10,
+     "verified": false,
      "tsdbLeagueId": null
     }
    ]
@@ -1529,6 +1599,20 @@
      "tier": 1,
      "name": "Eliteserien",
      "clubs": 16,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "OMA",
+   "country": "Oman",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Oman Professional League",
+     "clubs": 14,
      "verified": true,
      "tsdbLeagueId": null
     }
@@ -1794,6 +1878,20 @@
    ]
   },
   {
+   "code": "SMR",
+   "country": "San Marino",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Campionato Sammarinese di Calcio",
+     "clubs": 16,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "SOM",
    "country": "Somalia",
    "confederation": "CAF",
@@ -1913,6 +2011,20 @@
    ]
   },
   {
+   "code": "SYR",
+   "country": "Syria",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Syrian Premier League",
+     "clubs": 12,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "TAH",
    "country": "Tahiti",
    "confederation": "OFC",
@@ -1955,6 +2067,34 @@
    ]
   },
   {
+   "code": "TJK",
+   "country": "Tajikistan",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Tajikistan Higher League",
+     "clubs": 12,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "TKM",
+   "country": "Turkmenistan",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Ýokary Liga",
+     "clubs": 8,
+     "verified": false,
+     "tsdbLeagueId": 5257
+    }
+   ]
+  },
+  {
    "code": "TOG",
    "country": "Togo",
    "confederation": "CAF",
@@ -1964,6 +2104,20 @@
      "name": "Togolese Championnat National",
      "clubs": 10,
      "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "TPE",
+   "country": "Chinese Taipei",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Taiwan Football Premier League",
+     "clubs": 8,
+     "verified": true,
      "tsdbLeagueId": null
     }
    ]

@@ -2,7 +2,27 @@
   "association": "TPE",
   "country": "Chinese Taipei",
   "confederation": "AFC",
-  "season": "unverified",
-  "leagues": [],
-  "note": "Not researched this session: the shared WebSearch budget (200 calls) for this session was exhausted before this association could be investigated. No league or club data has been invented; this file intentionally lists no leagues pending a future session with search access to verify the Taiwan Football Premier League (or successor competition) and its clubs."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Taiwan Football Premier League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Taiwan_Football_Premier_League",
+        "https://www.soccerpunter.com/team/all/26258/261080/AC-Taipei-in-Taiwan-Taiwan-Football-Premier-League-2025-2026"
+      ],
+      "clubs": [
+        { "name": "Tainan City TSG", "tsdbTeamId": null, "badge": null },
+        { "name": "Ming Chuan University", "tsdbTeamId": null, "badge": null },
+        { "name": "Taichung Rock FC", "tsdbTeamId": null, "badge": null },
+        { "name": "New Taipei Hang Yuan", "tsdbTeamId": null, "badge": null },
+        { "name": "Sunny Bank AC Taipei", "tsdbTeamId": null, "badge": null },
+        { "name": "Leopard Cat FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Taipower", "tsdbTeamId": null, "badge": null },
+        { "name": "AC Taipei", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

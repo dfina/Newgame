@@ -2,7 +2,31 @@
   "association": "LBN",
   "country": "Lebanon",
   "confederation": "AFC",
-  "season": "unverified",
-  "leagues": [],
-  "note": "Not researched this session: the shared WebSearch budget (200 calls) for this session was exhausted before this association could be investigated. No league or club data has been invented; this file intentionally lists no leagues pending a future session with search access to verify the Lebanese Premier League and clubs."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Lebanese Premier League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Lebanese_Premier_League"
+      ],
+      "clubs": [
+        { "name": "Al Ansar Club", "tsdbTeamId": null, "badge": null },
+        { "name": "Nejmeh Beirut", "tsdbTeamId": null, "badge": null },
+        { "name": "Al Ahed Beirut", "tsdbTeamId": null, "badge": null },
+        { "name": "Jwaya SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Safa SC Beirut", "tsdbTeamId": null, "badge": null },
+        { "name": "Al Hikma Beirut", "tsdbTeamId": null, "badge": null },
+        { "name": "Shabab Al Sahel", "tsdbTeamId": null, "badge": null },
+        { "name": "Al Mabarrah", "tsdbTeamId": null, "badge": null },
+        { "name": "Al Abbasieh FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Tadamon Sour", "tsdbTeamId": null, "badge": null },
+        { "name": "Racing Beirut", "tsdbTeamId": null, "badge": null },
+        { "name": "Al Bourj Beirut", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ],
+  "note": "The 2025-26 season began 19 September 2025 with these 12 clubs, but per search results the Lebanese Football Association suspended all football activities on 18 March 2026 following the outbreak of the 2026 Lebanon war on 2 March 2026. Composition as fielded is recorded here; current in-season status (resumed/abandoned) was not further confirmable within the search budget."
 }

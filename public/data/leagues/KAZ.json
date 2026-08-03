@@ -2,7 +2,29 @@
   "association": "KAZ",
   "country": "Kazakhstan",
   "confederation": "UEFA",
-  "season": "",
-  "leagues": [],
-  "note": "Not researched: the shared session web-search budget (200 calls) was exhausted before this association could be investigated. No club data verified this session, so no league entries are included to avoid inventing content. Known top flight is the Kazakhstan Premier League (calendar-year season); composition unverified."
+  "season": "2026",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Kazakhstan Premier League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_Kazakhstan_Premier_League",
+        "https://en.wikipedia.org/wiki/2026_FC_Astana_season",
+        "https://en.wikipedia.org/wiki/2026_FC_Kairat_season"
+      ],
+      "clubs": [
+        { "name": "FC Kairat", "tsdbTeamId": null, "badge": null, "colors": ["#FFD700", "#000000"] },
+        { "name": "FC Ordabasy", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Astana", "tsdbTeamId": null, "badge": null, "colors": ["#FFD700", "#0033A0"] },
+        { "name": "FC Aktobe", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Yelimay Semey", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Okzhetpes", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Zhetysu", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Tobol", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ],
+  "note": "The 2026 Kazakhstan Premier League expanded to 16 clubs, but only 8 could be confirmed by name within the WebSearch budget; league marked verified:false as the full list could not be completed."
 }

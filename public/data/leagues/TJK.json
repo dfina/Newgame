@@ -2,7 +2,31 @@
   "association": "TJK",
   "country": "Tajikistan",
   "confederation": "AFC",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (shared across this entire session) was exhausted before Tajikistan could be looked into. This is NOT a claim that no league exists (the Tajikistan Higher League likely exists) — composition simply could not be verified here. Needs a follow-up session with search budget available."
+  "season": "2026",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Tajikistan Higher League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_Tajikistan_Higher_League",
+        "https://en.wikipedia.org/wiki/Tajikistan_Higher_League"
+      ],
+      "clubs": [
+        { "name": "FC Istiklol Dushanbe", "tsdbTeamId": null, "badge": null },
+        { "name": "CSKA Pamir Dushanbe", "tsdbTeamId": null, "badge": null },
+        { "name": "Khosilot Parkhar", "tsdbTeamId": null, "badge": null },
+        { "name": "Regar-TadAZ Tursunzoda", "tsdbTeamId": null, "badge": null },
+        { "name": "Ravshan Kulob", "tsdbTeamId": null, "badge": null },
+        { "name": "FK Eskhata", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Khatlon", "tsdbTeamId": null, "badge": null },
+        { "name": "Khujand", "tsdbTeamId": null, "badge": null },
+        { "name": "Barkchi Hisor", "tsdbTeamId": null, "badge": null },
+        { "name": "FK Parvoz Bobojon Ghafurov", "tsdbTeamId": null, "badge": null },
+        { "name": "Sardor Tursunzoda", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Istaravshan", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

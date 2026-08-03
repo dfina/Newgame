@@ -2,7 +2,29 @@
   "association": "TKM",
   "country": "Turkmenistan",
   "confederation": "AFC",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (shared across this entire session) was exhausted before Turkmenistan could be looked into. This is NOT a claim that no league exists (the Ýokary Liga likely exists) — composition simply could not be verified here. Needs a follow-up session with search budget available."
+  "season": "2026",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Ýokary Liga",
+      "tsdbLeagueId": 5257,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_%C3%9Dokary_Liga",
+        "https://www.thesportsdb.com/league/5257-turkmenistan-yokary-liga",
+        "https://globalsportsarchive.com/en/soccer/competition/yokary-liga-2026/79307"
+      ],
+      "clubs": [
+        { "name": "Arkadag", "tsdbTeamId": null, "badge": null },
+        { "name": "Altyn Asyr", "tsdbTeamId": null, "badge": null },
+        { "name": "Nebitci", "tsdbTeamId": null, "badge": null },
+        { "name": "Ahal", "tsdbTeamId": null, "badge": null },
+        { "name": "Asgabat", "tsdbTeamId": null, "badge": null },
+        { "name": "Kopetdag", "tsdbTeamId": null, "badge": null },
+        { "name": "Merw", "tsdbTeamId": null, "badge": null },
+        { "name": "Sagadam", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ],
+  "note": "Search results state the 2026 Yokary Liga has 9 clubs, but only 8 could be named within the search budget. Marked verified:false as the list is one club short of complete."
 }
