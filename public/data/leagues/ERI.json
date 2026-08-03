@@ -3,6 +3,32 @@
   "country": "Eritrea",
   "confederation": "CAF",
   "season": "2025",
-  "leagues": [],
-  "note": "PARTIALLY RESEARCHED: the Eritrean Premier League is confirmed as a 12-club top flight, with Denden confirmed as 2025 champions. No other clubs could be individually named in available search results, far short of the 6-club minimum needed for a usable entry. Source consulted: https://en.wikipedia.org/wiki/Eritrean_Premier_League . Requires a follow-up pass to name the remaining clubs."
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Eritrean Premier League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Eritrean_Premier_League",
+        "https://en.wikipedia.org/wiki/Denden_FC",
+        "https://en.wikipedia.org/wiki/Red_Sea_FC",
+        "https://en.wikipedia.org/wiki/Tesfa_FC"
+      ],
+      "clubs": [
+        { "name": "Denden FC", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] },
+        { "name": "Red Sea FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Adulis Club", "tsdbTeamId": null, "badge": null },
+        { "name": "Akria", "tsdbTeamId": null, "badge": null },
+        { "name": "Al Tahrir", "tsdbTeamId": null, "badge": null },
+        { "name": "Asmara Brewery", "tsdbTeamId": null, "badge": null },
+        { "name": "City Center FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Edaga Hamus", "tsdbTeamId": null, "badge": null },
+        { "name": "Geza Banda", "tsdbTeamId": null, "badge": null },
+        { "name": "Maitemenai", "tsdbTeamId": null, "badge": null },
+        { "name": "Tesfa FC", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "11 of the 12 clubs in the current Eritrean Premier League named via Wikipedia's infobox club list, cross-checked against individual club pages (Denden FC confirmed 2025 champions, Red Sea FC most-titled club). One slot of the stated 12-club league could not be individually confirmed."
+    }
+  ]
 }

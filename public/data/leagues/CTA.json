@@ -2,7 +2,29 @@
   "association": "CTA",
   "country": "Central African Republic",
   "confederation": "CAF",
-  "season": "2023-24",
-  "leagues": [],
-  "note": "PARTIALLY RESEARCHED: the Central African Republic League (Championnat Seniors D1) is confirmed as a 12-club top flight. Only AS Tempête Mocaf could be confirmed as champions for a single named season (2023-24); other clubs surfaced (DFC8, Olympique Ral, Red Star) were champions of different, unconfirmed years, so were excluded per the no-season-mixing rule. Far short of the 6-club minimum needed for a usable entry. Sources consulted: https://globalsportsarchive.com/en/soccer/competition/championnat-seniors-d1-2024-2025/74271 , https://en.wikipedia.org/wiki/Central_African_Republic_League , https://www.rsssf.org/tablesc/cafrchamp.html . Requires a follow-up pass to name a single season's full club roster."
+  "season": "2024-25",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Championnat Seniors D1",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://globalsportsarchive.com/en/soccer/competition/championnat-seniors-d1-2024-2025/74271"
+      ],
+      "clubs": [
+        { "name": "AS Tempête MOCAF", "tsdbTeamId": null, "badge": null },
+        { "name": "SOS Pius Njawe FC", "tsdbTeamId": null, "badge": null },
+        { "name": "FC FDS", "tsdbTeamId": null, "badge": null },
+        { "name": "AS Gbangré Sport", "tsdbTeamId": null, "badge": null },
+        { "name": "Club Red Star de Bangui", "tsdbTeamId": null, "badge": null },
+        { "name": "EFC du 5ème Arrondissement", "tsdbTeamId": null, "badge": null },
+        { "name": "TP USCA", "tsdbTeamId": null, "badge": null },
+        { "name": "Les Anges de Fatima", "tsdbTeamId": null, "badge": null },
+        { "name": "Olympique Réal de Bangui", "tsdbTeamId": null, "badge": null },
+        { "name": "DFC du 8ème Arrondissement", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "10 clubs named from Global Sports Archive's 2024/2025 Championnat Seniors D1 competition page, all tied to the same season (matches recorded June 18-22, 2025). AS Tempête MOCAF confirmed champions. Supersedes the prior entry which had only 1 club confirmed for a single season."
+    }
+  ]
 }

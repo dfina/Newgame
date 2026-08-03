@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-03T15:08:42.541Z",
+ "generated": "2026-08-03T15:09:00.288Z",
  "countries": [
   {
    "code": "AFG",
@@ -709,6 +709,20 @@
    ]
   },
   {
+   "code": "CTA",
+   "country": "Central African Republic",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Championnat Seniors D1",
+     "clubs": 10,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "CUB",
    "country": "Cuba",
    "confederation": "CONCACAF",
@@ -878,6 +892,20 @@
      "tier": 1,
      "name": "Liga Nacional de Fútbol (Equatoguinean Primera División)",
      "clubs": 18,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "ERI",
+   "country": "Eritrea",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Eritrean Premier League",
+     "clubs": 11,
      "verified": true,
      "tsdbLeagueId": null
     }
