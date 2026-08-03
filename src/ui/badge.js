@@ -89,6 +89,52 @@ async function leagueIdMap() {
   return leagueMapPromise;
 }
 
+async function leagueIdByName(name) {
+  const map = await leagueIdMap();
+  const n = name.toLowerCase();
+  if (map[n]) return map[n];
+  for (const [k, v] of Object.entries(map)) {
+    if (k.includes(n) || n.includes(k)) return v;
+  }
+  return null;
+}
+
+// League crest (badge) by TheSportsDB id or league name, cached.
+export async function resolveLeagueBadge(leagueName, tsdbLeagueId) {
+  const c = loadCache();
+  const key = `lbadge:${tsdbLeagueId || leagueName}`;
+  if (key in c) return c[key];
+  let badge = null;
+  try {
+    const id = tsdbLeagueId || await leagueIdByName(leagueName);
+    if (id) {
+      const res = await fetch(`${TSDB}/lookupleague.php?id=${id}`, { signal: AbortSignal.timeout(6000) });
+      if (res.ok) {
+        const json = await res.json();
+        badge = json.leagues?.[0]?.strBadge || json.leagues?.[0]?.strLogo || null;
+      }
+    }
+  } catch { /* offline — fall through */ }
+  c[key] = badge;
+  persist();
+  return badge;
+}
+
+// Small league crest <img>; hidden until (and unless) the crest resolves.
+export function leagueBadgeImg(leagueName, tsdbLeagueId, cls = 'lg-badge') {
+  const id = 'l' + Math.random().toString(36).slice(2, 9);
+  queueMicrotask(async () => {
+    const url = await resolveLeagueBadge(leagueName, tsdbLeagueId);
+    const el = document.getElementById(id);
+    if (el && url) {
+      el.onerror = () => el.remove();
+      el.src = url + '/tiny';
+      el.style.display = '';
+    }
+  });
+  return `<img id="${id}" class="${cls}" style="display:none" alt="" loading="lazy">`;
+}
+
 export async function resolveTrophyImageByName(competitionName) {
   const c = loadCache();
   const key = `trophyname:${competitionName}`;

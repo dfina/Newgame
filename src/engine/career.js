@@ -6,6 +6,7 @@ import { drawSeasonEvents, getEventById } from './events.js';
 import { simulateSeason } from './season.js';
 
 const SAVE_KEY = 'fcsim.career';
+const SAVE_VERSION = 2;
 const HALL_KEY = 'fcsim.hall';
 const START_YEAR = 2026;
 
@@ -16,6 +17,10 @@ export async function loadIndex() {
   const res = await fetch('data/index.json');
   index = (await res.json()).countries;
   return index;
+}
+
+function nationConfederation(career) {
+  return career.nation?.confederation || null;
 }
 
 function leagueRef(countryEntry, league) {
@@ -45,7 +50,7 @@ export async function startCareer({ name, nationality, position }) {
   const player = createPlayer({ name, nationality, position });
 
   const career = {
-    v: 1,
+    v: SAVE_VERSION,
     seed: getSeed(),
     year: START_YEAR,
     phase: 'offers',
@@ -83,22 +88,33 @@ async function generateOffers(career, isStart = false) {
     ? clamp(p.ability * 0.75 + rand() * 12, 8, 55)
     : clamp(p.ability * (0.9 + rand() * 0.25) + p.reputation * 0.15, 10, 105);
 
+  // Home-country leagues get a wider acceptable band, so a player from a
+  // small football nation still gets offers from home rather than none.
   const candidates = [];
   for (const c of idx) {
+    const home = c.code === p.nationality;
     for (const l of c.leagues) {
       if (l.clubs < 6) continue;
       const lvl = leagueLevel(countryCoeff(c.code, c.confederation), l.tier);
-      const fit = 1 - Math.abs(lvl - target) / 30;
+      const fit = 1 - Math.abs(lvl - target) / (home ? 55 : 30);
       if (fit > 0) candidates.push({ c, l, lvl, fit });
     }
   }
   if (!candidates.length) return [];
 
+  // Home-country pull is U-shaped across a career: strongest breaking through
+  // and again when winding down, weakest at the peak when the whole world calls.
+  const late = p.age >= 33 || retirementPressure(p) > 0;
+  const early = isStart || p.seasonsPlayed <= 2;
+  const homeWeight = early ? 7 : late ? 4.5 : 1.6;
+
   // A player chasing one last adventure draws romantic offers: far-off or
   // much weaker leagues get heavily upweighted for one window.
   const adventurous = career.adventure && !isStart;
   const homeBias = (cand) => {
-    let w = cand.c.code === p.nationality ? 2.2 : 1;
+    let w = 1;
+    if (cand.c.code === p.nationality) w *= homeWeight;
+    else if (cand.c.confederation === nationConfederation(career)) w *= early || late ? 1.8 : 1.15;
     if (adventurous) {
       if (cand.c.confederation !== career.club?.confederation) w *= 3;
       if (cand.lvl < target * 0.75) w *= 2.5;
@@ -106,10 +122,23 @@ async function generateOffers(career, isStart = false) {
     return w;
   };
   const count = isStart ? 3 : irand(2, 4);
+
+  // Breaking through and winding down, a player is courted from home. Reserve
+  // slots for home-country clubs outright rather than trusting the weighting —
+  // and where the home association has no playable league in the data, fall
+  // back to its confederation so the pull still reads as "close to home".
+  const homePool = candidates.filter((x) => x.c.code === p.nationality);
+  const confedPool = candidates.filter((x) => x.c.confederation === nationConfederation(career));
+  const nearHome = homePool.length ? homePool : confedPool;
+  let reserved = 0;
+  if (nearHome.length) reserved = early ? Math.min(2, count) : late ? 1 : 0;
+
   const offers = [];
   const seen = new Set();
-  for (let i = 0; i < count * 3 && offers.length < count; i++) {
-    const cand = weightedPick(candidates, (x) => Math.max(0.01, x.fit) * homeBias(x));
+  for (let i = 0; i < count * 4 && offers.length < count; i++) {
+    const useHome = offers.length < reserved && nearHome.length;
+    const pool = useHome ? nearHome : candidates;
+    const cand = weightedPick(pool, (x) => Math.max(0.01, x.fit) * (useHome ? 1 : homeBias(x)));
     const clubs = await clubsOf(cand.c.code, cand.l.tier);
     if (!clubs.length) continue;
     const club = pick(clubs);
@@ -178,8 +207,7 @@ async function refreshLeagueContext(career, idxEntry) {
 
 function beginSeason(career) {
   career.flags = {};
-  const nEvents = irand(3, 4);
-  career.pendingEvents = drawSeasonEvents(career, nEvents).map((e) => e.id);
+  career.pendingEvents = drawSeasonEvents(career, 1).map((e) => e.id);
   // Rare career-threatening injury interjection (~0.6%/season on average).
   if (chance(0.003 + career.player.injuryProne * 0.005 + (career.player.age > 30 ? 0.003 : 0))) {
     career.pendingEvents.splice(irand(0, career.pendingEvents.length), 0, '__grave-injury');
@@ -287,9 +315,14 @@ function finishSeason(career) {
   for (const n of report.news || []) career.news.unshift(n);
   career.history.push({
     year: career.year,
+    age: p.age,
+    ovr: Math.round(p.ability),
     club: career.club.name,
+    clubTsdbTeamId: career.club.tsdbTeamId ?? null,
+    clubColors: career.club.colors || null,
     country: career.club.country,
     league: career.club.leagueName,
+    leagueTsdbId: career.club.tsdbLeagueId ?? null,
     tier: career.club.tier,
     position: report.position,
     apps: report.stats.apps,
@@ -312,6 +345,17 @@ function finishSeason(career) {
   }
   p.form = clamp(50 + (p.form - 50) * 0.4 + (report.stats.rating - 6.6) * 8, 15, 95);
   p.morale = clamp(p.morale + (report.position && report.position <= 4 ? 4 : -2), 10, 95);
+
+  // Reputation is earned mainly by performing at a level — dominating a weak
+  // division counts for less than holding your own in a strong one. Decision
+  // events nudge it either way, but this is the engine of a career's standing.
+  const lvl = leagueLevel(countryCoeff(career.club.country, career.club.confederation), career.club.tier);
+  const target = clamp(
+    lvl * 0.85 + (report.stats.rating - 6.6) * 18 + (report.champion ? 8 : 0) +
+    (report.trophies || []).length * 3,
+    0, 100
+  );
+  p.reputation = clamp(p.reputation + (target - p.reputation) * 0.4, 0, 100);
 
   // Movement between tiers.
   if (report.promoted) career.club.tier -= 1;
@@ -402,7 +446,11 @@ export function saveCareer(career) {
 export function loadCareer() {
   try {
     const raw = localStorage.getItem(SAVE_KEY);
-    return raw ? JSON.parse(raw) : null;
+    if (!raw) return null;
+    const c = JSON.parse(raw);
+    // Saves from an older format lack the fields the timeline needs.
+    if (c.v !== SAVE_VERSION) { localStorage.removeItem(SAVE_KEY); return null; }
+    return c;
   } catch { return null; }
 }
 

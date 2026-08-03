@@ -186,7 +186,8 @@ function simulateInternationals(career, report, stats) {
   const p = career.player;
   const nation = career.nation; // {code, name, confederation}
   const natStr = countryCoeff(nation.code, nation.confederation);
-  const threshold = clamp(70 - natStr * 0.55, 10, 68) - (career.flags.intlBoost || 0);
+  // The stronger the nation, the higher the bar to break into the squad.
+  const threshold = clamp(16 + natStr * 0.6, 12, 88) - (career.flags.intlBoost || 0);
   const called = p.reputation >= threshold && stats.apps >= 8 && p.age >= 18;
   report.international = null;
   if (!called) {
