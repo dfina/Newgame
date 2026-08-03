@@ -67,7 +67,7 @@ export function trophyTile(trophy) {
     queueMicrotask(async () => {
       const img = trophy.tsdbLeagueId
         ? await resolveTrophyImage(trophy.tsdbLeagueId)
-        : await resolveTrophyImageByName(trophy.name);
+        : await resolveTrophyImageByName(trophy.name, trophy.countryName, trophy.country, trophy.tier);
       const holder = document.getElementById(id);
       if (holder && img) {
         const imgEl = document.createElement('img');

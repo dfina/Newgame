@@ -1,10 +1,20 @@
 # Career: Football
 
 A mobile-first, decision-based football career simulator. Create a player with
-any of the 211 FIFA nationalities, sign for a real club, and steer a whole
-career season by season — transfers, promotion and relegation, cups,
-continental competition, international tournaments, injuries, media storms and
-career twists — until retirement, a legacy score, and a trophy cabinet.
+any of the 211 FIFA nationalities, pick the position you play from a pitch —
+striker, wing-back, holding midfielder, keeper — sign for a real club, and
+steer a whole career season by season: transfers, promotion and relegation,
+cups, continental competition, international tournaments, injuries, media
+storms and career twists, until retirement, a legacy score and a trophy
+cabinet.
+
+Your overall rating is earned on the pitch. Appearances, goals, assists (or
+clean sheets and saves in goal) and match ratings drive it, measured against
+what your role and your division make a normal season; decision cards colour
+the story and move form, morale, minutes and reputation, but only ever nudge
+the rating itself. Every card shows the odds it is gambling with and the OVR
+each side carries — and the same roll decides both, so the outcome you read
+always matches the number you get.
 
 ## Play it
 
@@ -48,13 +58,19 @@ to the browser's localStorage.
 Club crests and league trophy images load at runtime from TheSportsDB's free
 API, are cached in localStorage, and fall back to a generated initials badge
 in club colours (or an original stylised SVG trophy) when unavailable.
+Competitions resolve by curated TheSportsDB id (`src/ui/tsdb-ids.js`) rather
+than by name, because word matching cannot tell "Serie A" from "Serie D Girone
+A"; clubs resolve inside their own division's squad list first, so a reserve
+side or a same-named foreign club can never supply the crest.
 
 ## Checks
 
 ```sh
-npm run check:data   # schema, sources, duplicates, coverage summary
-npm run sim          # Monte-Carlo: 300 headless full careers, balance stats
-npm run smoke        # Playwright: real-browser full career to retirement
+npm run check:data     # schema, sources, duplicates, coverage summary
+npm run check:balance  # appearances stay realistic; OVR stays performance-led
+npm run check:crests   # crest matching against canned TheSportsDB responses
+npm run sim            # Monte-Carlo: 300 headless full careers, balance stats
+npm run smoke          # Playwright: real-browser full career to retirement
 ```
 
 `npm run smoke` expects a dev server on :5173 and a Chromium binary

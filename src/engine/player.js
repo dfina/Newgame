@@ -1,21 +1,15 @@
 import { irand, rand, clamp, chance } from './rng.js';
-
-export const POSITIONS = [
-  { key: 'GK', name: 'Goalkeeper' },
-  { key: 'DEF', name: 'Defender' },
-  { key: 'MID', name: 'Midfielder' },
-  { key: 'FWD', name: 'Forward' }
-];
-
-const SHIRT = { GK: [1, 12, 13], DEF: [2, 3, 4, 5, 6], MID: [8, 10, 14, 20], FWD: [7, 9, 11, 19] };
+import { getRole, roleGroup, shirtFor } from './positions.js';
 
 export function createPlayer({ name, nationality, position }) {
   const potential = irand(62, 96);
+  const role = getRole(position).key;
+  const shirt = shirtFor(role);
   return {
     name,
     nationality,          // FIFA code
-    position,             // GK/DEF/MID/FWD
-    shirt: SHIRT[position][irand(0, SHIRT[position].length - 1)],
+    position: role,       // specific role, e.g. CAM / LWB / ST
+    shirt: shirt[irand(0, shirt.length - 1)],
     age: 17,
     ability: irand(38, 52),
     potential,
@@ -37,16 +31,51 @@ export function createPlayer({ name, nationality, position }) {
   };
 }
 
-// Yearly growth toward potential while young, decline from early 30s.
-export function developPlayer(p, seasonQuality /* 0..1 */) {
+// Yearly growth toward potential while young, decline from early 30s — driven
+// by how the season actually went on the pitch (see seasonPerformance), so a
+// year of 40 appearances and goals moves a career far more than any one
+// decision ever can.
+//
+// `perf` is 0..1.3: 0.5 is a season that merely kept a place in the side, 1.0
+// an outstanding one, above that a season that defines an era.
+export function developPlayer(p, perf) {
+  const q = clamp(perf, 0, 1.3);
   let delta = 0;
-  if (p.age <= 23) delta = (p.potential - p.ability) * (0.16 + 0.12 * seasonQuality);
-  else if (p.age <= 27) delta = (p.potential - p.ability) * (0.08 + 0.08 * seasonQuality);
-  else if (p.age <= 30) delta = (seasonQuality - 0.45) * 2.2;
-  else if (p.age <= 33) delta = -1.6 - rand() * 1.8 + seasonQuality * 1.2;
-  else delta = -3 - rand() * 2.6 + seasonQuality * 1.0;
+  if (p.age <= 21) delta = (p.potential - p.ability) * (0.05 + 0.26 * q);
+  else if (p.age <= 23) delta = (p.potential - p.ability) * (0.03 + 0.22 * q);
+  else if (p.age <= 27) delta = (p.potential - p.ability) * (0.01 + 0.15 * q) + (q - 0.55) * 1.2;
+  else if (p.age <= 30) delta = (q - 0.5) * 3.4;
+  else if (p.age <= 33) delta = -2.6 + q * 3.6 - rand() * 0.8;
+  else delta = -4.2 + q * 3.4 - rand() * 1.2;
   p.ability = clamp(p.ability + delta, 20, 99);
   p.peakAbility = Math.max(p.peakAbility, Math.round(p.ability));
+  return delta;
+}
+
+// How good a season was, 0..1.3, from what a football career is actually
+// judged on: minutes on the pitch, output in the final third (or goals kept
+// out, for a goalkeeper) and the rating the performances earned.
+//
+// Each component is measured against what the role and the standard of the
+// league make a normal season, so 25 goals as a striker and 8 as a centre-back
+// count for the same thing.
+export function seasonPerformance(stats, role) {
+  const played = clamp(stats.apps / Math.max(12, stats.possible * 0.72), 0, 1.25);
+  const rated = clamp((stats.rating - 6.15) / 1.15, 0, 1.3);
+
+  let output;
+  if (role.group === 'GK') {
+    const sheets = stats.apps ? (stats.cleanSheets / stats.apps) : 0;
+    const saves = stats.apps ? (stats.saves / stats.apps) / 3.2 : 0;
+    output = clamp(sheets / 0.30 * 0.38 + saves * 0.30, 0, 1.3);
+  } else {
+    const expected = (role.goals + role.assists) * Math.max(1, stats.apps);
+    output = expected > 0 ? clamp((stats.goals + stats.assists) / expected * 0.62, 0, 1.3) : 0.5;
+  }
+
+  // Minutes are the foundation: a brilliant rating over six appearances is not
+  // a season. Output and rating then decide how far above ordinary it went.
+  return clamp(played * 0.34 + rated * 0.38 + output * 0.28, 0, 1.3);
 }
 
 export function agePlayer(p) {
@@ -64,7 +93,17 @@ export function retirementPressure(p) {
 }
 
 export function effectivePosition(p) {
-  return p.retrained || p.position;
+  return getRole(p.retrained || p.position).key;
+}
+
+// The full role record for the position the player currently occupies.
+export function effectiveRole(p) {
+  return getRole(p.retrained || p.position);
+}
+
+// The broad line of the team the player belongs to (GK / DEF / MID / FWD).
+export function positionGroup(p) {
+  return roleGroup(p.retrained || p.position);
 }
 
 // Market value in euros: rises steeply with ability, peaks around 26, and

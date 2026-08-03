@@ -15,7 +15,7 @@ console.log('home loaded');
 
 await page.click('button[data-action="new-career"]');
 await page.fill('#pname', 'Smoke Tester');
-await page.click('button[data-action="pick-pos"][data-pos="FWD"]');
+await page.click('button[data-action="pick-pos"][data-pos="ST"]');
 await page.fill('#natsearch', 'Argentina');
 await page.waitForTimeout(150);
 await page.click('button[data-action="pick-nat"][data-code="ARG"]');
@@ -59,14 +59,14 @@ await page.waitForTimeout(300);
 const tiles = await page.$$eval('.trophy-cab', (t) => t.length).catch(() => 0);
 const empty = await page.$('.card.center');
 console.log(`cabinet: ${tiles} trophy tiles${empty && !tiles ? ' (empty cabinet message shown)' : ''}`);
-await page.screenshot({ path: process.env.SCRATCH + '/cabinet.png' });
+await page.screenshot({ path: `${process.env.SCRATCH || '.'}/cabinet.png` });
 await page.click('button[data-action="back-retired"]');
 await page.waitForTimeout(200);
 await page.click('button[data-action="history"]');
 await page.waitForTimeout(200);
 const histRows = await page.$$eval('.timeline tbody tr:not(.empty)', (r) => r.length);
 console.log(`history rows: ${histRows}`);
-await page.screenshot({ path: process.env.SCRATCH + '/history.png' });
+await page.screenshot({ path: `${process.env.SCRATCH || '.'}/history.png` });
 
 if (errors.length) {
   console.log('CONSOLE ERRORS (excluding network fails):');

@@ -1,7 +1,17 @@
-// Club crest resolution: TheSportsDB (free tier, key "3") at runtime,
-// cached in localStorage, with a generated initials badge as fallback.
+// Club crest and competition crest resolution: TheSportsDB (free tier, key
+// "3") at runtime, cached in localStorage, with a generated initials badge as
+// the fallback.
+//
+// The reliable route is by id, not by name: a bare search for "Serie A" or
+// "Hamburger SV" happily returns Serie D Girone A and a reserve side. So a
+// competition is looked up by its curated id where the game ships one, and a
+// club is looked for inside its own league's squad list before the open
+// search is ever tried.
+import { leagueId as curatedLeagueId, competitionId } from './tsdb-ids.js';
+
 const TSDB = 'https://www.thesportsdb.com/api/v1/json/3';
-const CACHE_KEY = 'fcsim.badges';
+// Versioned: a bumped key retires crests cached by an earlier, wronger matcher.
+const CACHE_KEY = 'fcsim.badges.v3';
 
 let cache = null;
 function loadCache() {
@@ -19,10 +29,29 @@ const inflight = new Map();
 // the network must not permanently blank a crest on every later visit.
 const missed = new Set();
 
-const strip = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+async function getJson(url, ms = 7000) {
+  try {
+    const res = await fetch(url, { signal: AbortSignal.timeout(ms) });
+    if (!res.ok) return null;
+    return await res.json();
+  } catch { return null; }
+}
+
+// TheSportsDB has renamed these fields across API versions and still serves a
+// mix; take whichever one this record happens to carry.
+function imageOf(rec, kind = 'team') {
+  if (!rec) return null;
+  const keys = kind === 'team'
+    ? ['strBadge', 'strTeamBadge', 'strLogo', 'strTeamLogo']
+    : ['strBadge', 'strLeagueBadge', 'strLogo'];
+  for (const k of keys) if (rec[k]) return rec[k];
+  return null;
+}
+
+const strip = (s) => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 // Drop punctuation and the club/league boilerplate that differs between
 // sources ("FC", "SAD", sponsor names) so names compare on their real words.
-const NOISE = /\b(fc|cf|afc|ac|as|sc|sv|cd|ud|us|sd|rc|ss|ssc|aa|bk|if|nk|hnk|fk|sk|club|calcio|futebol|football|soccer|de|do|da|the|of|sad|u23|b)\b/g;
+const NOISE = /\b(fc|cf|afc|ac|as|sc|sv|cd|ud|us|sd|rc|ss|ssc|aa|bk|if|nk|hnk|fk|sk|club|calcio|futebol|football|soccer|de|do|da|the|of|sad)\b/g;
 function norm(s) {
   return strip(s).replace(/[.'’\-–—/()]/g, ' ').replace(NOISE, ' ').replace(/\s+/g, ' ').trim();
 }
@@ -35,6 +64,317 @@ function overlap(a, b) {
   for (const w of A) if (B.has(w)) hit++;
   return hit / Math.min(A.size, B.size);
 }
+
+// Reserve, youth and B teams share almost every word with the senior side.
+const RESERVE = /\b(ii|iii|b|u\s?1[6-9]|u\s?2[0-3]|reserves?|youth|futures|academy|nxt|jong)\b/;
+function isReserve(name) {
+  return RESERVE.test(strip(name).replace(/[.'’\-–—/()]/g, ' '));
+}
+
+// Names the game uses that TheSportsDB files under something else. These are
+// alternative names for the same club, tried as extra search terms only.
+const CLUB_ALIASES = {
+  'Hamburger SV': ['Hamburg', 'Hamburger SV'],
+  'RAAL La Louvière': ['RAAL La Louviere', 'La Louviere'],
+  'Nottingham Forest': ['Nottingham Forest', 'Nottm Forest'],
+  'Internazionale': ['Inter Milan', 'Internazionale'],
+  'Bayern Munich': ['Bayern Munich', 'FC Bayern München'],
+  'Borussia Mönchengladbach': ['Borussia Monchengladbach', 'Gladbach'],
+  'Sporting CP': ['Sporting Lisbon', 'Sporting CP'],
+  'Paris Saint-Germain': ['Paris Saint Germain', 'PSG'],
+  'Manchester United': ['Manchester United', 'Man United'],
+  'Manchester City': ['Manchester City', 'Man City'],
+  'Wolverhampton Wanderers': ['Wolves', 'Wolverhampton'],
+  'Brighton & Hove Albion': ['Brighton', 'Brighton Hove Albion'],
+  'Union Saint-Gilloise': ['Union Saint-Gilloise', 'Royale Union Saint Gilloise'],
+  'OH Leuven': ['Oud-Heverlee Leuven', 'OH Leuven'],
+  'Standard Liège': ['Standard Liege', 'Standard Liège']
+};
+
+function searchTerms(club) {
+  const terms = CLUB_ALIASES[club.name] ? [...CLUB_ALIASES[club.name]] : [];
+  terms.unshift(club.name);
+  // The stripped-down form ("Nottingham Forest FC" → "nottingham forest")
+  // matches more of TheSportsDB's entries, so it is always worth a query of
+  // its own — compare raw text, since every term normalises to itself.
+  const cleaned = norm(club.name);
+  if (cleaned && !terms.some((t) => t.toLowerCase() === cleaned)) terms.push(cleaned);
+  return [...new Set(terms.filter(Boolean))];
+}
+
+// ---------------- club crests ----------------
+
+// A name search can return several clubs sharing a word ("Leuven", "United").
+// Prefer football clubs from the right country, then the closest name match,
+// so a short local name never resolves to a foreign club's crest.
+function pickTeam(teams, club) {
+  let soccer = (teams || []).filter((t) => t.strSport === 'Soccer' && imageOf(t));
+  if (!soccer.length) return null;
+  const want = norm(club.name);
+  const wantReserve = isReserve(club.name);
+  // When the right country is represented at all, nothing outside it can win:
+  // that is what put a French side's crest on a Belgian club.
+  const country = club.country ? strip(club.country) : null;
+  if (country) {
+    const home = soccer.filter((t) => strip(t.strCountry || '') === country);
+    if (home.length) soccer = home;
+  }
+  const scored = soccer.map((t) => {
+    const name = norm(t.strTeam || '');
+    const alts = (t.strTeamAlternate || '').split(',').map((a) => norm(a)).filter(Boolean);
+    let s = (name === want || alts.includes(want))
+      ? 1.4
+      : Math.max(overlap(club.name, t.strTeam || ''), ...alts.map((a) => overlap(want, a)), 0);
+    // Never hand a senior side its reserve team's crest, or the other way round.
+    if (isReserve(t.strTeam || '') !== wantReserve) s -= 1.2;
+    return { t, s };
+  });
+  scored.sort((a, b) => b.s - a.s);
+  // Require real name agreement, not merely a shared country.
+  return scored[0].s >= 0.6 ? scored[0].t : null;
+}
+
+// Every club in a TheSportsDB league, cached by league id. Matching a club
+// against its own division's squad list is far safer than a global search.
+async function leagueRoster(id) {
+  const c = loadCache();
+  const key = `roster:${id}`;
+  if (key in c) return c[key];
+  if (inflight.has(key)) return inflight.get(key);
+  const p = (async () => {
+    const json = await getJson(`${TSDB}/lookup_all_teams.php?id=${id}`, 9000);
+    const list = (json?.teams || [])
+      .map((t) => ({ name: t.strTeam || '', alt: t.strTeamAlternate || '', badge: imageOf(t) }))
+      .filter((t) => t.name && t.badge);
+    if (list.length) { c[key] = list; persist(); }
+    inflight.delete(key);
+    return list;
+  })();
+  inflight.set(key, p);
+  return p;
+}
+
+function pickFromRoster(list, clubName) {
+  const want = norm(clubName);
+  const wantReserve = isReserve(clubName);
+  let best = null, bestScore = 0;
+  for (const t of list) {
+    if (isReserve(t.name) !== wantReserve) continue;
+    const alts = t.alt.split(',').map((a) => norm(a)).filter(Boolean);
+    let s = (norm(t.name) === want || alts.includes(want))
+      ? 1.6
+      : Math.max(overlap(clubName, t.name), ...alts.map((a) => overlap(want, a)), 0);
+    if (s > bestScore) { bestScore = s; best = t; }
+  }
+  return bestScore >= 0.6 ? best.badge : null;
+}
+
+// Resolve a badge URL for a club; returns null when unavailable.
+export async function resolveBadge(club) {
+  const c = loadCache();
+  const key = club.tsdbTeamId ? `id:${club.tsdbTeamId}` : `n:${club.name}`;
+  if (key in c) return c[key];
+  if (missed.has(key)) return null;
+  if (inflight.has(key)) return inflight.get(key);
+
+  const p = (async () => {
+    let badge = null;
+    if (club.tsdbTeamId) {
+      const json = await getJson(`${TSDB}/lookupteam.php?id=${club.tsdbTeamId}`);
+      badge = imageOf(json?.teams?.[0]);
+    }
+    // The club's own division: a pool of twenty candidates from one country
+    // beats a global name search every time.
+    if (!badge && club.countryCode && club.tier) {
+      const lid = curatedLeagueId(club.countryCode, club.tier);
+      if (lid) {
+        const roster = await leagueRoster(lid);
+        if (roster?.length) badge = pickFromRoster(roster, club.name);
+      }
+    }
+    if (!badge) {
+      for (const q of searchTerms(club)) {
+        const json = await getJson(`${TSDB}/searchteams.php?t=${encodeURIComponent(q)}`);
+        const team = pickTeam(json?.teams, club);
+        const img = imageOf(team);
+        if (img) { badge = img; break; }
+      }
+    }
+    if (badge) { c[key] = badge; persist(); } else { missed.add(key); }
+    inflight.delete(key);
+    return badge;
+  })();
+  inflight.set(key, p);
+  return p;
+}
+
+// ---------------- competition crests and trophies ----------------
+
+// Name → TheSportsDB league id, via the full league list (fetched once,
+// cached as a name→id map). Covers domestic leagues, cups and continental
+// competitions, so trophies can show real hosted artwork where it exists.
+let leagueMapPromise = null;
+async function leagueIdMap() {
+  const c = loadCache();
+  if (c['leaguemap']) return c['leaguemap'];
+  if (leagueMapPromise) return leagueMapPromise;
+  leagueMapPromise = (async () => {
+    const map = {};
+    const json = await getJson(`${TSDB}/all_leagues.php`, 10000);
+    for (const l of json?.leagues || []) {
+      if (l.strSport === 'Soccer' && l.strLeague) map[norm(l.strLeague)] = Number(l.idLeague);
+    }
+    if (Object.keys(map).length) { c['leaguemap'] = map; persist(); }
+    return map;
+  })();
+  return leagueMapPromise;
+}
+
+// The division marker at the end of a league's name — "Serie A", "Ligue 2",
+// "Liga 3". Word overlap alone treats all of them as the same league, which is
+// exactly how a second division ends up wearing the top flight's crest.
+const TIER_WORD = { a: 1, i: 1, one: 1, b: 2, ii: 2, two: 2, c: 3, iii: 3, three: 3, d: 4, iv: 4, four: 4 };
+function tierMark(name) {
+  const words = strip(name).replace(/[.'’\-–—/()]/g, ' ').split(/\s+/).filter(Boolean);
+  for (let i = words.length - 1; i >= 0; i--) {
+    const w = words[i];
+    if (/^\d$/.test(w)) return Number(w);
+    if (w in TIER_WORD) return TIER_WORD[w];
+  }
+  return null;
+}
+
+function leagueScore(wantName, wantTier, candName, candAlt) {
+  let s = Math.max(overlap(wantName, candName), ...(candAlt || '').split(',')
+    .map((a) => (a.trim() ? overlap(wantName, a) : 0)), 0);
+  const want = tierMark(wantName) ?? wantTier ?? null;
+  const got = tierMark(candName);
+  if (want != null && got != null) s += want === got ? 0.4 : -0.8;
+  return s;
+}
+
+// Leagues are named inconsistently between sources ("Belgian Pro League" vs
+// "Belgian First Division A"), so when the country is known, search only that
+// country's leagues and take the best match. The global name map is the
+// fallback for competitions with no single country (continental cups).
+async function leagueIdByName(name, countryName, tier) {
+  if (countryName) {
+    const list = await countryLeagues(countryName);
+    if (list?.length) {
+      let best = null, bestScore = 0;
+      for (const l of list) {
+        const s = leagueScore(name, tier, l.name, l.alt);
+        if (s > bestScore) { bestScore = s; best = l; }
+      }
+      if (best && bestScore >= 0.5) return best.id;
+      if (list.length === 1 && (tier ?? 1) === 1) return list[0].id;
+    }
+  }
+  const map = await leagueIdMap();
+  const n = norm(name);
+  if (map[n]) return map[n];
+  let best = null, bestScore = 0;
+  for (const [k, v] of Object.entries(map)) {
+    const s = leagueScore(name, tier, k, '');
+    if (s > bestScore) { bestScore = s; best = v; }
+  }
+  return bestScore >= 0.7 ? best : null;
+}
+
+// One country's leagues, with the crest already attached — this endpoint
+// returns artwork, so a matched league needs no second request.
+async function countryLeagues(countryName) {
+  const c = loadCache();
+  const ckey = `lgcountry:${countryName}`;
+  if (c[ckey]) return c[ckey];
+  const json = await getJson(`${TSDB}/search_all_leagues.php?c=${encodeURIComponent(countryName)}&s=Soccer`, 9000);
+  const list = (json?.countries || json?.leagues || [])
+    .map((l) => ({ id: Number(l.idLeague), name: l.strLeague || '', alt: l.strLeagueAlternate || '', badge: imageOf(l, 'league') }))
+    .filter((l) => l.id && l.name);
+  if (list.length) { c[ckey] = list; persist(); }
+  return list;
+}
+
+async function badgeOfLeagueId(id) {
+  const c = loadCache();
+  const key = `lid:${id}`;
+  if (key in c) return c[key];
+  const json = await getJson(`${TSDB}/lookupleague.php?id=${id}`);
+  const badge = imageOf(json?.leagues?.[0], 'league');
+  if (badge) { c[key] = badge; persist(); }
+  return badge;
+}
+
+// League crest by curated id, explicit id, or name, cached.
+// `league`: { name, tsdbLeagueId, countryName, countryCode, tier }
+export async function resolveLeagueBadge(league) {
+  const c = loadCache();
+  const curated = curatedLeagueId(league.countryCode, league.tier);
+  const known = league.tsdbLeagueId || curated || competitionId(league.name) || null;
+  const key = `lbadge:${known || league.countryCode + ':' + league.tier + ':' + league.name}`;
+  if (key in c) return c[key];
+  if (missed.has(key)) return null;
+
+  let badge = null;
+  if (known) badge = await badgeOfLeagueId(known);
+  if (!badge && league.countryName) {
+    // The country listing carries crests inline; use its match directly.
+    const list = await countryLeagues(league.countryName);
+    let best = null, bestScore = 0;
+    for (const l of list || []) {
+      const s = leagueScore(league.name, league.tier, l.name, l.alt);
+      if (s > bestScore) { bestScore = s; best = l; }
+    }
+    if (best && bestScore >= 0.5) badge = best.badge || await badgeOfLeagueId(best.id);
+  }
+  if (!badge) {
+    const id = await leagueIdByName(league.name, league.countryName, league.tier);
+    if (id) badge = await badgeOfLeagueId(id);
+  }
+  if (badge) { c[key] = badge; persist(); } else { missed.add(key); }
+  return badge;
+}
+
+// Small league crest <img>; hidden until (and unless) the crest resolves.
+export function leagueBadgeImg(league, cls = 'lg-badge') {
+  const id = 'l' + Math.random().toString(36).slice(2, 9);
+  queueMicrotask(async () => {
+    const url = await resolveLeagueBadge(league);
+    const el = document.getElementById(id);
+    if (el && url) {
+      el.style.display = '';
+      loadInto(el, [url + '/tiny', url + '/small', url], null);
+    }
+  });
+  return `<img id="${id}" class="${cls}" style="display:none" alt="" loading="lazy">`;
+}
+
+// TheSportsDB hosted trophy image for a competition id, when it has one.
+export async function resolveTrophyImage(tsdbLeagueId) {
+  if (!tsdbLeagueId) return null;
+  const c = loadCache();
+  const key = `trophy:${tsdbLeagueId}`;
+  if (key in c) return c[key];
+  const json = await getJson(`${TSDB}/lookupleague.php?id=${tsdbLeagueId}`);
+  const img = json?.leagues?.[0]?.strTrophy || null;
+  if (img) { c[key] = img; persist(); }
+  return img;
+}
+
+// Trophy artwork for a competition the game names but has no id for on the
+// trophy record itself (a domestic cup, a continental final).
+export async function resolveTrophyImageByName(competitionName, countryName, countryCode, tier) {
+  const c = loadCache();
+  const key = `trophyname:${competitionName}`;
+  if (key in c) return c[key];
+  let id = competitionId(competitionName) || curatedLeagueId(countryCode, tier);
+  if (!id) id = await leagueIdByName(competitionName, countryName, tier);
+  const img = id ? await resolveTrophyImage(id) : null;
+  if (img) { c[key] = img; persist(); }
+  return img;
+}
+
+// ---------------- rendering helpers ----------------
 
 // Try each candidate image URL in turn, keeping the last-resort fallback if
 // all of them fail. TheSportsDB does not host every size for every asset.
@@ -51,215 +391,15 @@ function loadInto(el, urls, fallback) {
   next();
 }
 
-// A name search can return several clubs sharing a word ("Leuven", "United").
-// Prefer football clubs from the right country, then the closest name match,
-// so a short local name never resolves to a foreign club's crest.
-function pickTeam(teams, club) {
-  const soccer = (teams || []).filter((t) => t.strSport === 'Soccer' && t.strBadge);
-  if (!soccer.length) return null;
-  const want = norm(club.name);
-  const country = club.country ? strip(club.country) : null;
-  const scored = soccer.map((t) => {
-    const name = norm(t.strTeam || '');
-    const alts = (t.strTeamAlternate || '').split(',').map((a) => norm(a));
-    let s = 0;
-    if (country && strip(t.strCountry || '') === country) s += 10;
-    if (name === want || alts.includes(want)) s += 8;
-    else s += Math.max(overlap(club.name, t.strTeam || ''), ...alts.map((a) => (a ? overlap(want, a) : 0))) * 6;
-    return { t, s };
-  });
-  scored.sort((a, b) => b.s - a.s);
-  // Require some real name agreement, not just a shared country.
-  return scored[0].s >= 3 ? scored[0].t : null;
-}
-
-// Resolve a badge URL for a club; returns null when unavailable.
-export async function resolveBadge(club) {
-  const c = loadCache();
-  const key = club.tsdbTeamId ? `id:${club.tsdbTeamId}` : `n:${club.name}`;
-  if (key in c) return c[key];
-  if (missed.has(key)) return null;
-  if (inflight.has(key)) return inflight.get(key);
-
-  const p = (async () => {
-    let badge = null;
-    try {
-      if (club.tsdbTeamId) {
-        const res = await fetch(`${TSDB}/lookupteam.php?id=${club.tsdbTeamId}`, { signal: AbortSignal.timeout(6000) });
-        if (res.ok) badge = (await res.json()).teams?.[0]?.strBadge || null;
-      }
-      if (!badge) {
-        // Search the full name, then a cleaned-up form ("Nottingham Forest FC"
-        // → "nottingham forest"), which matches more of TheSportsDB's entries.
-        for (const q of [club.name, norm(club.name)]) {
-          if (!q) continue;
-          const res = await fetch(`${TSDB}/searchteams.php?t=${encodeURIComponent(q)}`, { signal: AbortSignal.timeout(6000) });
-          if (!res.ok) continue;
-          const team = pickTeam((await res.json()).teams, club);
-          if (team?.strBadge) { badge = team.strBadge; break; }
-        }
-      }
-    } catch { /* offline or blocked — treated as a miss, retried next session */ }
-    if (badge) { c[key] = badge; persist(); } else { missed.add(key); }
-    inflight.delete(key);
-    return badge;
-  })();
-  inflight.set(key, p);
-  return p;
-}
-
-// TheSportsDB hosted trophy image for a league, when the league id is known.
-export async function resolveTrophyImage(tsdbLeagueId) {
-  if (!tsdbLeagueId) return null;
-  const c = loadCache();
-  const key = `trophy:${tsdbLeagueId}`;
-  if (key in c) return c[key];
-  let img = null;
-  try {
-    const res = await fetch(`${TSDB}/lookupleague.php?id=${tsdbLeagueId}`, { signal: AbortSignal.timeout(6000) });
-    if (res.ok) {
-      const json = await res.json();
-      img = json.leagues?.[0]?.strTrophy || null;
-    }
-  } catch { /* fall through */ }
-  c[key] = img;
-  persist();
-  return img;
-}
-
-// Name → TheSportsDB league id, via the full league list (fetched once,
-// cached as a name→id map). Covers domestic leagues, cups and continental
-// competitions, so trophies can show real hosted artwork where it exists.
-let leagueMapPromise = null;
-async function leagueIdMap() {
-  const c = loadCache();
-  if (c['leaguemap']) return c['leaguemap'];
-  if (leagueMapPromise) return leagueMapPromise;
-  leagueMapPromise = (async () => {
-    const map = {};
-    try {
-      const res = await fetch(`${TSDB}/all_leagues.php`, { signal: AbortSignal.timeout(10000) });
-      if (res.ok) {
-        const json = await res.json();
-        for (const l of json.leagues || []) {
-          if (l.strSport === 'Soccer' && l.strLeague) map[norm(l.strLeague)] = Number(l.idLeague);
-        }
-      }
-    } catch { /* offline — empty map, retried next session */ }
-    if (Object.keys(map).length) { c['leaguemap'] = map; persist(); }
-    return map;
-  })();
-  return leagueMapPromise;
-}
-
-// Leagues are named inconsistently between sources ("Belgian Pro League" vs
-// "Belgian First Division A"), so when the country is known, search only that
-// country's leagues and take the best word-overlap match. The global name map
-// is the fallback for competitions with no single country (continental cups).
-async function leagueIdByName(name, country) {
-  if (country) {
-    const c = loadCache();
-    const ckey = `lgcountry:${country}`;
-    let list = c[ckey];
-    if (!list) {
-      try {
-        const res = await fetch(`${TSDB}/search_all_leagues.php?c=${encodeURIComponent(country)}&s=Soccer`,
-          { signal: AbortSignal.timeout(8000) });
-        if (res.ok) {
-          const json = await res.json();
-          list = (json.countries || json.leagues || [])
-            .map((l) => ({ id: Number(l.idLeague), name: l.strLeague || '', alt: l.strLeagueAlternate || '' }))
-            .filter((l) => l.id && l.name);
-          if (list.length) { c[ckey] = list; persist(); }
-        }
-      } catch { /* fall through to the global map */ }
-    }
-    if (list?.length) {
-      let best = null, bestScore = 0;
-      for (const l of list) {
-        const s = Math.max(overlap(name, l.name), l.alt ? overlap(name, l.alt) : 0);
-        if (s > bestScore) { bestScore = s; best = l; }
-      }
-      // A country's top flight is usually its first listed league; accept it
-      // when nothing matches by name but only one league exists.
-      if (best && bestScore >= 0.5) return best.id;
-      if (list.length === 1) return list[0].id;
-    }
-  }
-  const map = await leagueIdMap();
-  const n = norm(name);
-  if (map[n]) return map[n];
-  let best = null, bestScore = 0;
-  for (const [k, v] of Object.entries(map)) {
-    const s = overlap(n, k);
-    if (s > bestScore) { bestScore = s; best = v; }
-  }
-  return bestScore >= 0.6 ? best : null;
-}
-
-// League crest (badge) by TheSportsDB id or league name, cached.
-export async function resolveLeagueBadge(leagueName, tsdbLeagueId, country) {
-  const c = loadCache();
-  const key = `lbadge:${tsdbLeagueId || leagueName}`;
-  if (key in c) return c[key];
-  if (missed.has(key)) return null;
-  let badge = null;
-  try {
-    const id = tsdbLeagueId || await leagueIdByName(leagueName, country);
-    if (id) {
-      const res = await fetch(`${TSDB}/lookupleague.php?id=${id}`, { signal: AbortSignal.timeout(6000) });
-      if (res.ok) {
-        const json = await res.json();
-        badge = json.leagues?.[0]?.strBadge || json.leagues?.[0]?.strLogo || null;
-      }
-    }
-  } catch { /* offline — treated as a miss, retried next session */ }
-  if (badge) { c[key] = badge; persist(); } else { missed.add(key); }
-  return badge;
-}
-
-// Small league crest <img>; hidden until (and unless) the crest resolves.
-export function leagueBadgeImg(leagueName, tsdbLeagueId, cls = 'lg-badge', country) {
-  const id = 'l' + Math.random().toString(36).slice(2, 9);
-  queueMicrotask(async () => {
-    const url = await resolveLeagueBadge(leagueName, tsdbLeagueId, country);
-    const el = document.getElementById(id);
-    if (el && url) {
-      el.style.display = '';
-      loadInto(el, [url + '/tiny', url + '/small', url], null);
-    }
-  });
-  return `<img id="${id}" class="${cls}" style="display:none" alt="" loading="lazy">`;
-}
-
-export async function resolveTrophyImageByName(competitionName) {
-  const c = loadCache();
-  const key = `trophyname:${competitionName}`;
-  if (key in c) return c[key];
-  const map = await leagueIdMap();
-  const name = competitionName.toLowerCase();
-  // Exact match, then a contains-match either way round.
-  let id = map[name] ?? null;
-  if (!id) {
-    for (const [k, v] of Object.entries(map)) {
-      if (k.includes(name) || name.includes(k)) { id = v; break; }
-    }
-  }
-  const img = id ? await resolveTrophyImage(id) : null;
-  c[key] = img;
-  persist();
-  return img;
-}
-
 // Generated initials badge (SVG data URI) in club colours.
 export function initialsBadge(name, colors) {
-  const initials = name
+  const initials = String(name)
     .replace(/\(.*?\)/g, '')
     .split(/[\s-]+/)
     .filter((w) => w && !/^(fc|cf|afc|ac|as|cd|sc|sd|ud|us|club|de|do|da|the|of)$/i.test(w))
     .slice(0, 3)
     .map((w) => w[0].toUpperCase())
-    .join('') || name.slice(0, 2).toUpperCase();
+    .join('') || String(name).slice(0, 2).toUpperCase();
   const c1 = colors?.[0] || pickColor(name, 0);
   const c2 = colors?.[1] || '#ffffff';
   const svg =
@@ -273,7 +413,7 @@ export function initialsBadge(name, colors) {
 const PALETTE = ['#c0392b', '#2980b9', '#27ae60', '#8e44ad', '#d35400', '#16a085', '#2c3e50', '#7f0000', '#004d98', '#1a5c1a'];
 function pickColor(name, i) {
   let h = 0;
-  for (const ch of name) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
+  for (const ch of String(name)) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
   return PALETTE[(h + i) % PALETTE.length];
 }
 

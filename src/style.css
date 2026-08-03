@@ -136,8 +136,48 @@ label { font-size: .82rem; color: var(--muted); display: block; margin-top: 12px
 .meta-right .k { font-size: .58rem; color: var(--muted); letter-spacing: .1em; font-weight: 700; }
 .meta-right .v { font-size: 1.15rem; font-weight: 800; }
 
+/* ---------- position picker ---------- */
+.pitch {
+  position: relative; width: 100%; max-width: 340px; margin: 10px auto 0;
+  aspect-ratio: 100 / 150;
+}
+.pitch svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.pitch .turf { fill: #12301d; }
+.pitch .lines { stroke: #ffffff30; stroke-width: 0.6; vector-effect: non-scaling-stroke; }
+.pitch .lines .dot { fill: #ffffff40; stroke: none; }
+.pitch .spot {
+  position: absolute; transform: translate(-50%, -50%);
+  width: 44px; min-height: 34px; height: 34px; padding: 0; margin: 0;
+  border-radius: 8px; border: 1px solid #ffffff33;
+  background: #0d1117d9; color: var(--text);
+  font-size: .68rem; font-weight: 800; letter-spacing: .02em;
+  text-align: center; display: flex; align-items: center; justify-content: center;
+}
+.pitch .spot:hover { border-color: var(--accent); }
+.pitch .spot.on {
+  background: linear-gradient(180deg, #2c8247, #1d5c33);
+  border-color: #4ecb71; color: #fff; box-shadow: 0 0 0 3px #3fb95033;
+}
+.pitch-caption { text-align: center; margin: 10px 0 2px; font-size: .95rem; }
+
 /* ---------- stat strip ---------- */
 .statstrip { display: grid; grid-template-columns: repeat(3, 1fr); margin: 16px 0 6px; }
+.statstrip.four { grid-template-columns: repeat(4, 1fr); }
+.statstrip .v .of { font-size: .78rem; font-weight: 600; color: var(--muted); }
+
+/* Season OVR movement — what the football itself earned. */
+.season-ovr {
+  display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap;
+  border: 1px solid var(--line2); background: var(--panel);
+  border-radius: 10px; padding: 9px 12px; margin: 10px 0;
+}
+.season-ovr .k { font-size: .6rem; letter-spacing: .12em; color: var(--muted); font-weight: 700; }
+.season-ovr .v { font-size: 1.05rem; font-weight: 700; }
+.season-ovr .delta { font-size: .78rem; color: var(--muted); margin-left: auto; }
+.season-ovr.up { border-color: #2b6b3c; }
+.season-ovr.up .delta, .season-ovr.up .v b { color: #74d68a; }
+.season-ovr.down { border-color: #6e3330; }
+.season-ovr.down .delta, .season-ovr.down .v b { color: #f2938d; }
 .statstrip .cell { text-align: center; padding: 2px 4px; border-right: 1px solid var(--line); }
 .statstrip .cell:last-child { border-right: none; }
 .statstrip .k { font-size: .6rem; color: var(--muted); letter-spacing: .12em; font-weight: 700; }

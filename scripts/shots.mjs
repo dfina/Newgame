@@ -15,7 +15,9 @@ async function run(label, viewport) {
   await page.goto(BASE, { waitUntil: 'networkidle' });
   await page.click('button[data-action="new-career"]');
   await page.fill('#pname', 'Kevin De Bruyne');
-  await page.click('button[data-action="pick-pos"][data-pos="MID"]');
+  await page.click('button[data-action="pick-pos"][data-pos="CAM"]');
+  await page.waitForTimeout(120);
+  await page.screenshot({ path: `${OUT}/${label}-position.png`, fullPage: true });
   await page.fill('#natsearch', 'Belgium');
   await page.waitForTimeout(150);
   await page.click('button[data-action="pick-nat"][data-code="BEL"]');
@@ -27,6 +29,15 @@ async function run(label, viewport) {
   await page.click('button[data-action="accept-offer"]');
   await page.waitForTimeout(300);
   await page.screenshot({ path: `${OUT}/${label}-decision.png`, fullPage: true });
+
+  // Resolve the first decision and play the season through to its report.
+  for (const a of ['choose', 'after-outcome']) {
+    const b = await page.$(`button[data-action="${a}"]`);
+    if (b) { await b.click().catch(() => {}); await page.waitForTimeout(200); }
+  }
+  await page.waitForSelector('button[data-action="advance"]', { timeout: 8000 }).catch(() => {});
+  await page.waitForTimeout(300);
+  await page.screenshot({ path: `${OUT}/${label}-report.png`, fullPage: true });
 
   // Play a dozen seasons, then capture a mid-career transfer window.
   for (let i = 0; i < 90; i++) {

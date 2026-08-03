@@ -27,7 +27,7 @@ const { startCareer, acceptOffer, stayAtClub, chooseEventOption, runSeason, adva
 
 const N = Number(process.argv[2] || 300);
 const NATS = ['ENG', 'ARG', 'ESP', 'ITA', 'GER', 'BRA', 'MAR', 'TAN', 'USA', 'MEX', 'NZL', 'MLT', 'CHN', 'SEN', 'FIJ', 'TGA'];
-const POS = ['GK', 'DEF', 'MID', 'FWD'];
+const POS = ['GK', 'CB', 'LB', 'CDM', 'CM', 'CAM', 'LW', 'RW', 'ST', 'RB', 'LWB', 'RM'];
 const agg = {
   seasons: [], retireAge: [], trophies: [], caps: [], clubs: [], goals: [],
   graveEndings: 0, promotions: 0, relegations: 0, transfers: 0, worldCups: 0,
@@ -37,7 +37,7 @@ const agg = {
 for (let i = 0; i < N; i++) {
   try {
     const nat = NATS[i % NATS.length];
-    const c = await startCareer({ name: 'Sim ' + i, nationality: nat, position: POS[i % 4] });
+    const c = await startCareer({ name: 'Sim ' + i, nationality: nat, position: POS[i % POS.length] });
     if (!c.offers.length) { agg.errors.push(`${nat}: no starting offers`); continue; }
     await acceptOffer(c, c.offers[0]);
     let guard = 0;

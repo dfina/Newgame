@@ -4,7 +4,8 @@ import { badgeImg, initialsBadge, leagueBadgeImg } from './badge.js';
 import { trophySvg, trophyTile } from './trophies.js';
 import { computeLegacy, assembleCabinet } from '../engine/legacy.js';
 import { fmtWage, currentEvent } from '../engine/career.js';
-import { POSITIONS, effectivePosition, marketValue, formatValue } from '../engine/player.js';
+import { effectivePosition, positionGroup, marketValue, formatValue } from '../engine/player.js';
+import { ROLES, getRole } from '../engine/positions.js';
 import { ordinal } from '../engine/season.js';
 import { getAssociation } from '../engine/data.js';
 
@@ -24,6 +25,29 @@ function flagOf(code) {
   return getAssociation(code)?.flag || '';
 }
 
+// Everything the crest lookup needs: the club's own division is what makes a
+// name like "Hamburger SV" or "La Louvière" resolvable without ambiguity.
+function clubRef(club) {
+  return {
+    name: club.name,
+    tsdbTeamId: club.tsdbTeamId ?? null,
+    colors: club.colors || null,
+    country: club.countryName || getAssociation(club.country)?.name || null,
+    countryCode: club.country || null,
+    tier: club.tier ?? null
+  };
+}
+
+function leagueRef(o) {
+  return {
+    name: o.leagueName,
+    tsdbLeagueId: o.tsdbLeagueId ?? null,
+    countryName: o.countryName || getAssociation(o.country)?.name || null,
+    countryCode: o.country || null,
+    tier: o.tier ?? null
+  };
+}
+
 // Step the club-name type size down as the name gets longer, so even
 // "Borussia Mönchengladbach" fits without being cut off.
 function nameSizeClass(name) {
@@ -34,13 +58,20 @@ function nameSizeClass(name) {
   return 'len-xl';
 }
 
-// The odds a decision card is gambling with, shown before you commit.
-function stakeOdds(stake) {
-  if (!stake) return '<span class="odds"><span class="odd none">No OVR change</span></span>';
-  const up = Math.round(stake.p * 100);
+const signed = (n) => (n > 0 ? `+${n}` : `${n}`);
+
+// What a decision is actually gambling with, shown before you commit: the very
+// probability the outcome is rolled against, and the OVR each side carries.
+function stakeOdds(risk) {
+  if (!risk || risk.p >= 1) {
+    return `<span class="odds"><span class="odd none">Certain${risk?.up ? ` · ${signed(risk.up)} OVR` : ' · no OVR change'}</span></span>`;
+  }
+  const pct = Math.round(risk.p * 100);
+  const win = risk.up ? `${signed(risk.up)} OVR` : 'no OVR change';
+  const lose = risk.down ? `${signed(risk.down)} OVR` : 'no OVR change';
   return `<span class="odds">
-    <span class="odd win">+${stake.up} OVR <b>${up}%</b></span>
-    <span class="odd lose">${stake.down} OVR <b>${100 - up}%</b></span>
+    <span class="odd win">Goes well <b>${pct}%</b> · ${win}</span>
+    <span class="odd lose">Backfires <b>${100 - pct}%</b> · ${lose}</span>
   </span>`;
 }
 
@@ -50,7 +81,7 @@ function profileCard(career) {
   const p = career.player;
   const ovr = Math.round(p.ability);
   const club = career.club;
-  const clubObj = club ? { name: club.name, tsdbTeamId: club.tsdbTeamId, colors: club.colors, country: club.countryName } : null;
+  const clubObj = club ? clubRef(club) : null;
   const watermark = clubObj ? initialsBadge(clubObj.name, clubObj.colors) : '';
   // Tint the header with the club's primary colour, as a kit does.
   const tint = /^#[0-9a-f]{6}$/i.test(club?.colors?.[0] || '')
@@ -79,16 +110,19 @@ function profileCard(career) {
 function totals(career) {
   return career.history.reduce((a, h) => {
     a.apps += h.apps; a.goals += h.goals; a.assists += h.assists;
+    a.cleanSheets += h.cleanSheets || 0; a.saves += h.saves || 0;
     return a;
-  }, { apps: 0, goals: 0, assists: 0 });
+  }, { apps: 0, goals: 0, assists: 0, cleanSheets: 0, saves: 0 });
 }
 
+// A goalkeeper's career reads in clean sheets and saves, not goals and assists.
 function statStrip(career) {
   const t = totals(career);
+  const gk = positionGroup(career.player) === 'GK';
   return `<div class="statstrip">
     <div class="cell"><div class="k">APPS</div><div class="v"><span class="ic">📋</span>${t.apps}</div></div>
-    <div class="cell"><div class="k">GOALS</div><div class="v"><span class="ic">⚽</span>${t.goals}</div></div>
-    <div class="cell"><div class="k">AST</div><div class="v"><span class="ic">👟</span>${t.assists}</div></div>
+    <div class="cell"><div class="k">${gk ? 'CLEAN SH.' : 'GOALS'}</div><div class="v"><span class="ic">${gk ? '🧤' : '⚽'}</span>${gk ? t.cleanSheets : t.goals}</div></div>
+    <div class="cell"><div class="k">${gk ? 'SAVES' : 'AST'}</div><div class="v"><span class="ic">${gk ? '🙌' : '👟'}</span>${gk ? t.saves : t.assists}</div></div>
   </div>`;
 }
 
@@ -114,6 +148,9 @@ function timeline(career) {
   for (const h of career.history) byAge.set(h.age ?? 0, h);
   const rows = [];
   const currentAge = career.player.age;
+  const gk = positionGroup(career.player) === 'GK';
+  const colA = (h) => (gk ? (h.cleanSheets || 0) : h.goals);
+  const colB = (h) => (gk ? (h.saves || 0) : h.assists);
 
   for (let age = START_AGE; age <= END_AGE; age++) {
     const h = byAge.get(age);
@@ -123,17 +160,17 @@ function timeline(career) {
         : '';
       rows.push(`<tr>
         <td class="age">${age}</td>
-        <td><span class="club-cell">${badgeImg({ name: h.club, tsdbTeamId: h.clubTsdbTeamId, colors: h.clubColors, country: getAssociation(h.country)?.name }, '')}<span class="nm">${esc(h.club)}</span>${trophyMarks}</span></td>
+        <td><span class="club-cell">${badgeImg(clubRef({ name: h.club, tsdbTeamId: h.clubTsdbTeamId, colors: h.clubColors, country: h.country, tier: h.tier }), '')}<span class="nm">${esc(h.club)}</span>${trophyMarks}</span></td>
         <td class="n"><span class="ovr-pill ${ovrTier(h.ovr ?? 50)}">${h.ovr ?? '–'}</span></td>
         <td class="n">${h.apps}</td>
-        <td class="n">${h.goals}</td>
-        <td class="n">${h.assists}</td>
+        <td class="n">${colA(h)}</td>
+        <td class="n">${colB(h)}</td>
       </tr>`);
     } else if (age === currentAge && !career.retired) {
       const club = career.club;
       rows.push(`<tr class="current">
         <td class="age">${age}</td>
-        <td><span class="club-cell">${club ? badgeImg({ name: club.name, tsdbTeamId: club.tsdbTeamId, colors: club.colors, country: club.countryName }, '') : '<span style="width:17px">❓</span>'}<span class="nm">${club ? esc(club.name) : 'Choosing club…'}</span></span></td>
+        <td><span class="club-cell">${club ? badgeImg(clubRef(club), '') : '<span style="width:17px">❓</span>'}<span class="nm">${club ? esc(club.name) : 'Choosing club…'}</span></span></td>
         <td class="n"><span class="ovr-pill ${ovrTier(Math.round(career.player.ability))}">${Math.round(career.player.ability)}</span></td>
         <td class="n"></td><td class="n"></td><td class="n"></td>
       </tr>`);
@@ -160,7 +197,7 @@ function timeline(career) {
   return `<div class="timeline">
     <table>
       <colgroup><col class="c-age"><col><col class="c-ovr"><col class="c-num"><col class="c-num"><col class="c-num"></colgroup>
-      <thead><tr><th>AGE</th><th>CLUB</th><th class="n">OVR</th><th class="n">APP</th><th class="n">GLS</th><th class="n">AST</th></tr></thead>
+      <thead><tr><th>AGE</th><th>CLUB</th><th class="n">OVR</th><th class="n">APP</th><th class="n">${gk ? 'CS' : 'GLS'}</th><th class="n">${gk ? 'SAV' : 'AST'}</th></tr></thead>
       <tbody>${rows.join('')}${intlRow}</tbody>
     </table>
   </div>`;
@@ -186,6 +223,34 @@ export function homeScreen(hasSave, hall) {
   </div>`;
 }
 
+// A football pitch with every position marked; tap one to pick the role the
+// career is played in.
+function pitchPicker(selected) {
+  const spots = ROLES.map((r) => `<button class="spot ${selected === r.key ? 'on' : ''}"
+      style="left:${r.x}%;top:${r.y}%" data-action="pick-pos" data-pos="${r.key}"
+      aria-label="${esc(r.name)}">${r.key}</button>`).join('');
+  const chosen = selected ? getRole(selected) : null;
+  return `<div class="pitch">
+    <svg viewBox="0 0 100 150" preserveAspectRatio="none" aria-hidden="true">
+      <rect x="0" y="0" width="100" height="150" rx="3" class="turf"/>
+      <g class="lines" fill="none">
+        <rect x="3" y="3" width="94" height="144"/>
+        <line x1="3" y1="75" x2="97" y2="75"/>
+        <circle cx="50" cy="75" r="14"/>
+        <circle cx="50" cy="75" r="1.2" class="dot"/>
+        <rect x="26" y="3" width="48" height="20"/>
+        <rect x="38" y="3" width="24" height="8"/>
+        <rect x="26" y="127" width="48" height="20"/>
+        <rect x="38" y="139" width="24" height="8"/>
+      </g>
+    </svg>
+    ${spots}
+  </div>
+  <div class="pitch-caption">${chosen
+    ? `<b>${esc(chosen.name)}</b> <span class="muted small">${chosen.key}</span>`
+    : '<span class="muted small">Tap a position on the pitch</span>'}</div>`;
+}
+
 export function newCareerScreen(assocs, sel) {
   const filter = (sel.natFilter || '').toLowerCase();
   const list = assocs.filter((a) => a.name.toLowerCase().includes(filter) || a.code.toLowerCase().includes(filter));
@@ -193,10 +258,8 @@ export function newCareerScreen(assocs, sel) {
     <div class="topbar"><button class="back" data-action="go-home">←</button><h1>New career</h1></div>
     <label>Player name</label>
     <input type="text" id="pname" value="${esc(sel.name || '')}" placeholder="e.g. Danny Ings-Morata" autocomplete="off">
-    <label>Position</label>
-    <div style="display:flex;gap:6px;flex-wrap:wrap">
-      ${POSITIONS.map((p) => `<button class="compact ${sel.position === p.key ? 'primary' : ''}" data-action="pick-pos" data-pos="${p.key}">${p.name}</button>`).join('')}
-    </div>
+    <label>Position — where do you play?</label>
+    ${pitchPicker(sel.position)}
     <label>Nationality — all 211 FIFA associations</label>
     <input type="text" id="natsearch" value="${esc(sel.natFilter || '')}" placeholder="Search countries…" autocomplete="off">
     ${sel.nationality ? `<p style="margin:6px 0"><span class="flag">${assocs.find((a) => a.code === sel.nationality)?.flag || ''}</span> <b>${esc(assocs.find((a) => a.code === sel.nationality)?.name || '')}</b> selected</p>` : ''}
@@ -212,7 +275,7 @@ function offerCard(o, i) {
   const imgId = 'oc' + i + Math.random().toString(36).slice(2, 6);
   queueMicrotask(async () => {
     const { resolveBadge } = await import('./badge.js');
-    const url = await resolveBadge({ name: o.clubName, tsdbTeamId: o.tsdbTeamId, country: o.countryName });
+    const url = await resolveBadge(clubRef({ name: o.clubName, tsdbTeamId: o.tsdbTeamId, colors: o.colors, country: o.country, countryName: o.countryName, tier: o.tier }));
     const el = document.getElementById(imgId);
     if (el && url) { el.onerror = () => { el.src = crest; }; el.src = url; }
   });
@@ -220,7 +283,7 @@ function offerCard(o, i) {
     <span class="kicker">Sign for</span>
     <span class="club">${esc(o.clubName)}</span>
     <img id="${imgId}" class="crest" src="${crest}" alt="">
-    <span class="league">${leagueBadgeImg(o.leagueName, o.tsdbLeagueId, 'lg-badge', o.countryName)}${esc(o.leagueName)}</span>
+    <span class="league">${leagueBadgeImg(leagueRef(o))}${esc(o.leagueName)}</span>
     <span class="terms">${o.loan ? 'Season loan' : `${fmtWage(o.wage)}/wk · ${o.years}y`}</span>
   </button>`;
 }
@@ -235,7 +298,7 @@ export function offersScreen(career) {
     const imgId = 'sc' + Math.random().toString(36).slice(2, 6);
     queueMicrotask(async () => {
       const { resolveBadge } = await import('./badge.js');
-      const url = await resolveBadge({ name: c.name, tsdbTeamId: c.tsdbTeamId, country: c.countryName });
+      const url = await resolveBadge(clubRef(c));
       const el = document.getElementById(imgId);
       if (el && url) { el.onerror = () => { el.src = crest; }; el.src = url; }
     });
@@ -243,7 +306,7 @@ export function offersScreen(career) {
       <span class="kicker">Stay at</span>
       <span class="club">${esc(c.name)}</span>
       <img id="${imgId}" class="crest" src="${crest}" alt="">
-      <span class="league">${leagueBadgeImg(c.leagueName, c.tsdbLeagueId, 'lg-badge', c.countryName)}${esc(c.leagueName)}</span>
+      <span class="league">${leagueBadgeImg(leagueRef(c))}${esc(c.leagueName)}</span>
       <span class="terms">${career.player.contractYears === 0 ? 'Negotiate renewal' : `${career.player.contractYears}y remaining`}</span>
     </button></div>`;
   }
@@ -267,16 +330,17 @@ export function eventScreen(career) {
   if (!ev) return '';
   const action = `<h2>${esc(ev.title)}</h2>
     <div class="decision-body"><p>${esc(ev.text)}</p></div>
-    ${ev.choices.map((c) => `<button data-action="choose" data-i="${c.i}"><b>${esc(c.label)}</b>${c.sub ? `<span class="choice-sub">${esc(c.sub)}</span>` : ''}${stakeOdds(c.stake)}</button>`).join('')}`;
+    ${ev.choices.map((c) => `<button data-action="choose" data-i="${c.i}"><b>${esc(c.label)}</b>${c.sub ? `<span class="choice-sub">${esc(c.sub)}</span>` : ''}${stakeOdds(c.risk)}</button>`).join('')}`;
   return layout(career, action);
 }
 
 export function outcomeScreen(career) {
   const o = career.lastOutcome;
   const tone = o.tone === 'good' ? 'good' : o.tone === 'bad' ? 'bad' : o.tone === 'gold' ? 'gold' : '';
-  const d = o.ovrDelta;
-  const ovrLine = typeof d === 'number'
-    ? `<div class="ovr-result ${d >= 0 ? 'up' : 'down'}">${d >= 0 ? '▲' : '▼'} ${d >= 0 ? '+' : ''}${d} OVR<span class="muted small"> — now ${Math.round(career.player.ability)}</span></div>`
+  // Only shown when the decision actually moved the rating — "+0 OVR" is noise.
+  const d = o.ovrDelta || 0;
+  const ovrLine = d
+    ? `<div class="ovr-result ${d > 0 ? 'up' : 'down'}">${d > 0 ? '▲' : '▼'} ${signed(d)} OVR<span class="muted small"> — now ${Math.round(career.player.ability)}</span></div>`
     : '';
   const action = `<h2>${esc(o.title)}</h2>
     <div class="news ${tone}">${esc(o.text)}</div>
@@ -294,14 +358,27 @@ export function reportScreen(career) {
     return layout(career, action);
   }
   const s = r.stats;
-  const isGK = effectivePosition(p) === 'GK';
+  const isGK = positionGroup(p) === 'GK';
+  const parts = [
+    [s.appsBy?.league, 'league'], [s.appsBy?.cup, 'cup'], [s.appsBy?.continental, 'continental']
+  ].filter(([n]) => n > 0).map(([n, label]) => `${n} ${label}`).join(' · ');
+  // The season's OVR movement, which the football just earned.
+  const d = r.ovrDelta || 0;
+  const ovrLine = `<div class="season-ovr ${d > 0 ? 'up' : d < 0 ? 'down' : ''}">
+      <span class="k">OVR</span>
+      <span class="v">${r.ovrBefore} → <b>${r.ovrAfter}</b></span>
+      <span class="delta">${d === 0 ? 'no change' : `${signed(d)} from this season`}</span>
+    </div>`;
   const action = `<h2>${r.year}–${String((r.year + 1) % 100).padStart(2, '0')}</h2>
     <p class="lead"><b>${esc(career.club.name)}</b> finish <b>${ordinal(r.position)}</b> in the ${esc(career.club.leagueName)}</p>
-    <div class="statstrip" style="margin-top:0">
-      <div class="cell"><div class="k">APPS</div><div class="v">${s.apps}</div></div>
-      <div class="cell"><div class="k">${isGK ? 'CLEAN SHEETS' : 'GOALS'}</div><div class="v">${isGK ? s.cleanSheets : s.goals}</div></div>
+    <div class="statstrip four" style="margin-top:0">
+      <div class="cell"><div class="k">APPS</div><div class="v">${s.apps}<span class="of">/${s.possible ?? '–'}</span></div></div>
+      <div class="cell"><div class="k">${isGK ? 'CLEAN SH.' : 'GOALS'}</div><div class="v">${isGK ? s.cleanSheets : s.goals}</div></div>
+      <div class="cell"><div class="k">${isGK ? 'SAVES' : 'ASSISTS'}</div><div class="v">${isGK ? s.saves : s.assists}</div></div>
       <div class="cell"><div class="k">RATING</div><div class="v">${s.rating.toFixed(2)}</div></div>
     </div>
+    ${parts ? `<p class="muted small center" style="margin:2px 0 8px">${parts}</p>` : ''}
+    ${ovrLine}
     ${(r.news || []).map((n) => `<div class="news ${n.tone === 'good' ? 'good' : n.tone === 'bad' ? 'bad' : n.tone === 'gold' ? 'gold' : ''}">${esc(n.text)}</div>`).join('')}
     ${(r.awards || []).length ? `<div class="card"><b class="gold">🏅 ${r.awards.map(esc).join(' · ')}</b></div>` : ''}
     <details class="card"><summary class="muted small">Final table</summary>

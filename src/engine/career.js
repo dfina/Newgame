@@ -1,12 +1,12 @@
 // Career state machine: creation, offers, events, season loop, saves.
 import { seed, getSeed, rand, chance, irand, pick, clamp, weightedPick } from './rng.js';
 import { loadAssociations, getAssociation, loadCountry, countryCoeff, leagueLevel, playableLeagues } from './data.js';
-import { createPlayer, developPlayer, agePlayer, retirementPressure, effectivePosition } from './player.js';
+import { createPlayer, developPlayer, seasonPerformance, agePlayer, retirementPressure, effectiveRole } from './player.js';
 import { drawSeasonEvents, getEventById } from './events.js';
 import { simulateSeason } from './season.js';
 
 const SAVE_KEY = 'fcsim.career';
-const SAVE_VERSION = 2;
+const SAVE_VERSION = 3;
 const HALL_KEY = 'fcsim.hall';
 const START_YEAR = 2026;
 
@@ -227,8 +227,27 @@ export function currentEvent(career) {
     id: e.id,
     title: e.title,
     text: e.text(career),
-    choices: e.choices.map((ch, i) => ({ i, label: ch.label, sub: ch.sub, stake: ch.stake || null }))
+    // The odds shown are the very same number the outcome is rolled against,
+    // and each side is labelled with the OVR it carries, so a card can never
+    // advertise one thing and deliver another.
+    choices: e.choices.map((ch, i) => ({
+      i,
+      label: ch.label,
+      sub: ch.sub,
+      risk: { p: choiceOdds(ch, career), up: choiceOvr(ch, true), down: choiceOvr(ch, false) }
+    }))
   };
+}
+
+// Probability that a choice goes the player's way, 0..1 (1 = no gamble).
+function choiceOdds(choice, career) {
+  const p = typeof choice.odds === 'function' ? choice.odds(career) : choice.odds;
+  return typeof p === 'number' ? clamp(p, 0.05, 0.95) : 1;
+}
+
+function choiceOvr(choice, won) {
+  const swing = choice.ovr || [0, 0];
+  return won ? swing[0] || 0 : swing[1] || 0;
 }
 
 function graveInjuryEvent(career) {
@@ -237,8 +256,8 @@ function graveInjuryEvent(career) {
     title: 'A sickening moment',
     text: 'A crunching challenge leaves you in hospital. The surgeon is blunt: this is a career-threatening injury. How you respond will define everything.',
     choices: [
-      { i: 0, label: 'Fight through brutal rehabilitation', sub: 'Long odds, but a road back' },
-      { i: 1, label: 'Retire on medical advice', sub: 'Walk away with your health' }
+      { i: 0, label: 'Fight through brutal rehabilitation', sub: 'A road back, at a cost', risk: { p: 0.65, up: -4, down: 0 } },
+      { i: 1, label: 'Retire on medical advice', sub: 'Walk away with your health', risk: { p: 1, up: 0, down: 0 } }
     ]
   };
 }
@@ -259,18 +278,20 @@ export function chooseEventOption(career, choiceIdx) {
   } else {
     const e = getEventById(id);
     const choice = e.choices[choiceIdx];
-    outcome = choice.resolve(career);
-    // The choice's declared odds are the sole OVR consequence of a decision,
-    // so what the card advertises is exactly what is rolled.
-    if (choice.stake) {
-      const won = chance(choice.stake.p);
-      const delta = won ? choice.stake.up : choice.stake.down;
-      p_applyOvr(career, delta);
-      outcome.ovrDelta = delta;
-    }
+    // One roll decides everything: which branch is told, what it does to the
+    // player, and the OVR that goes with it. Text and numbers cannot diverge.
+    const p = choiceOdds(choice, career);
+    const won = p >= 1 || chance(p);
+    outcome = { ...(won ? choice.good(career) : choice.bad(career)) };
+    outcome.ovrDelta = choiceOvr(choice, won);
     career.usedEventIds.push(id);
   }
+  // Effects may carry their own ability change (a comeback that costs a yard
+  // of pace); the outcome screen reports the whole movement, not part of it.
+  const before = Math.round(career.player.ability);
   applyEffects(career, outcome.fx || {});
+  p_applyOvr(career, outcome.ovrDelta || 0);
+  outcome.ovrDelta = Math.round(career.player.ability) - before;
   career.news.unshift({ tone: outcome.tone, text: outcome.text });
   career.lastOutcome = { title: (id === '__grave-injury') ? 'A sickening moment' : getEventById(id).title, ...outcome };
   career.eventIdx += 1;
@@ -311,7 +332,7 @@ function applyEffects(career, fx) {
 // Runs the season sim; returns the report. Career remains in 'review' phase.
 export function runSeason(career) {
   if (career.player.careerEnded) {
-    career.report = { news: [], trophies: [], awards: [], stats: { apps: 0, goals: 0, assists: 0, cleanSheets: 0, rating: 0 }, position: null, table: [], year: career.year, cut: true };
+    career.report = { news: [], trophies: [], awards: [], stats: { apps: 0, goals: 0, assists: 0, cleanSheets: 0, saves: 0, possible: 0, rating: 0 }, position: null, table: [], year: career.year, cut: true };
     return finishSeason(career);
   }
   const report = simulateSeason(career);
@@ -326,10 +347,19 @@ function finishSeason(career) {
   // Record history + trophies.
   career.trophies.push(...(report.trophies || []));
   for (const n of report.news || []) career.news.unshift(n);
+  // A season's performance — minutes above all, then output and rating — is
+  // what moves a player's overall rating. Decisions nudge it; football decides it.
+  // A season is also worth more at a higher standard: tearing up a fourth
+  // division improves you, but not as fast as holding your own in a great league.
+  const standard = clamp(0.78 + leagueLevel(countryCoeff(career.club.country, career.club.confederation), career.club.tier) * 0.004, 0.78, 1.16);
+  const perf = report.cut ? 0 : seasonPerformance(report.stats, effectiveRole(p)) * standard;
+  report.performance = perf;
+  const ovrBefore = Math.round(p.ability);
+
   career.history.push({
     year: career.year,
     age: p.age,
-    ovr: Math.round(p.ability),
+    ovr: ovrBefore,
     club: career.club.name,
     clubTsdbTeamId: career.club.tsdbTeamId ?? null,
     clubColors: career.club.colors || null,
@@ -339,16 +369,22 @@ function finishSeason(career) {
     tier: career.club.tier,
     position: report.position,
     apps: report.stats.apps,
+    possible: report.stats.possible ?? 0,
     goals: report.stats.goals,
     assists: report.stats.assists,
     cleanSheets: report.stats.cleanSheets,
+    saves: report.stats.saves ?? 0,
     rating: report.stats.rating,
+    role: effectiveRole(p).key,
     trophies: (report.trophies || []).map((t) => t.name),
     awards: report.awards || []
   });
 
   // Development, ageing, contract.
-  developPlayer(p, clamp((report.stats.rating - 5.8) / 3, 0, 1));
+  developPlayer(p, perf);
+  report.ovrBefore = ovrBefore;
+  report.ovrAfter = Math.round(p.ability);
+  report.ovrDelta = report.ovrAfter - ovrBefore;
   agePlayer(p);
   p.contractYears = Math.max(0, p.contractYears - 1);
   career.yearsAtClub += 1;
