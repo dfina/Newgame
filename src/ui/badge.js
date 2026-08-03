@@ -16,6 +16,28 @@ function persist() {
 
 const inflight = new Map();
 
+// A name search can return several clubs sharing a word ("Leuven", "United").
+// Prefer football clubs from the right country, then the closest name match,
+// so a short local name never resolves to a foreign club's crest.
+function pickTeam(teams, club) {
+  const soccer = (teams || []).filter((t) => t.strSport === 'Soccer');
+  if (!soccer.length) return null;
+  const want = club.name.toLowerCase();
+  const country = club.country?.toLowerCase();
+  const scored = soccer.map((t) => {
+    const name = (t.strTeam || '').toLowerCase();
+    const alt = (t.strTeamAlternate || '').toLowerCase();
+    let s = 0;
+    if (country && (t.strCountry || '').toLowerCase() === country) s += 10;
+    if (name === want || alt.split(',').some((a) => a.trim() === want)) s += 6;
+    else if (name.includes(want) || want.includes(name)) s += 3;
+    else if (alt.includes(want)) s += 2;
+    return { t, s };
+  });
+  scored.sort((a, b) => b.s - a.s);
+  return scored[0].s > 0 ? scored[0].t : soccer[0];
+}
+
 // Resolve a badge URL for a club; returns null when unavailable.
 export async function resolveBadge(club) {
   const c = loadCache();
@@ -32,7 +54,7 @@ export async function resolveBadge(club) {
       const res = await fetch(url, { signal: AbortSignal.timeout(6000) });
       if (res.ok) {
         const json = await res.json();
-        const team = json.teams?.find((t) => t.strSport === 'Soccer') || json.teams?.[0];
+        const team = pickTeam(json.teams, club);
         if (team?.strBadge) badge = team.strBadge + '/small';
       }
     } catch { /* offline or blocked — fall through to null */ }

@@ -227,7 +227,7 @@ export function currentEvent(career) {
     id: e.id,
     title: e.title,
     text: e.text(career),
-    choices: e.choices.map((ch, i) => ({ i, label: ch.label, sub: ch.sub }))
+    choices: e.choices.map((ch, i) => ({ i, label: ch.label, sub: ch.sub, stake: ch.stake || null }))
   };
 }
 
@@ -258,7 +258,16 @@ export function chooseEventOption(career, choiceIdx) {
     }
   } else {
     const e = getEventById(id);
-    outcome = e.choices[choiceIdx].resolve(career);
+    const choice = e.choices[choiceIdx];
+    outcome = choice.resolve(career);
+    // The choice's declared odds are the sole OVR consequence of a decision,
+    // so what the card advertises is exactly what is rolled.
+    if (choice.stake) {
+      const won = chance(choice.stake.p);
+      const delta = won ? choice.stake.up : choice.stake.down;
+      p_applyOvr(career, delta);
+      outcome.ovrDelta = delta;
+    }
     career.usedEventIds.push(id);
   }
   applyEffects(career, outcome.fx || {});
@@ -272,6 +281,10 @@ export function chooseEventOption(career, choiceIdx) {
   }
   saveCareer(career);
   return outcome;
+}
+
+function p_applyOvr(career, delta) {
+  career.player.ability = clamp(career.player.ability + delta, 20, 99);
 }
 
 function applyEffects(career, fx) {

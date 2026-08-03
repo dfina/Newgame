@@ -15,7 +15,8 @@
     "https://en.wikipedia.org/wiki/2025%E2%80%9326_Challenger_Pro_League",
     "https://en.wikipedia.org/wiki/Lommel_SK",
     "https://en.wikipedia.org/wiki/FCV_Dender_EH",
-    "https://news.22bet.com/news/jupiler-pro-league-2026-27-season-guide-betting-preview/"
+    "https://news.22bet.com/news/jupiler-pro-league-2026-27-season-guide-betting-preview/",
+    "https://www.thesportsdb.com/team/133775-oud-heverlee-leuven"
    ],
    "clubs": [
     {
@@ -111,8 +112,12 @@
     },
     {
      "name": "OH Leuven",
-     "tsdbTeamId": null,
-     "badge": null
+     "tsdbTeamId": 133775,
+     "badge": null,
+     "colors": [
+      "#FFFFFF",
+      "#000000"
+     ]
     },
     {
      "name": "Zulte Waregem",

@@ -13,18 +13,21 @@ E.push({
   choices: [
     {
       label: 'Extra technical work',
+      stake: { p: 0.8, up: 2, down: -1 },
       sub: 'Steady improvement',
-      resolve: () => ({ text: 'The hours on the training pitch sharpen your game noticeably.', tone: 'good', fx: { ability: 1.5, form: 4 } })
+      resolve: () => ({ text: 'The hours on the training pitch sharpen your game noticeably.', tone: 'good', fx: { form: 4 } })
     },
     {
       label: 'Push physical limits',
+      stake: { p: 0.55, up: 5, down: -3 },
       sub: 'Bigger gains, injury risk',
       resolve: (c) => chance(0.28 + c.player.injuryProne * 0.3)
         ? { text: 'You overdo it in the gym and tweak a hamstring — three weeks out.', tone: 'bad', fx: { injuryWeeks: 3, form: -6 } }
-        : { text: 'You come out stronger and faster than ever.', tone: 'good', fx: { ability: 2.5, form: 6, fitness: 5 } }
+        : { text: 'You come out stronger and faster than ever.', tone: 'good', fx: { form: 6, fitness: 5 } }
     },
     {
       label: 'Coast through sessions',
+      stake: { p: 0.45, up: 1, down: -2 },
       sub: 'Save your legs',
       resolve: () => chance(0.5)
         ? { text: 'Fresh legs help you late in matches, though the coaches noticed the shortcuts.', tone: 'neutral', fx: { fitness: 6, form: 2, reputation: -1 } }
@@ -41,11 +44,13 @@ E.push({
   choices: [
     {
       label: 'Speak with humility',
+      stake: { p: 0.75, up: 1, down: -1 },
       sub: 'Safe',
       resolve: () => ({ text: 'The pundits praise your level-headedness. Fans warm to you.', tone: 'good', fx: { reputation: 2, morale: 3 } })
     },
     {
       label: 'Talk yourself up',
+      stake: { p: 0.5, up: 4, down: -3 },
       sub: 'High risk, high profile',
       resolve: (c) => chance(0.45 + c.player.form / 400)
         ? { text: 'Your confidence electrifies the fanbase. Your name is everywhere.', tone: 'gold', fx: { reputation: 6, morale: 4, form: 3 } }
@@ -53,6 +58,7 @@ E.push({
     },
     {
       label: 'Decline the interview',
+      stake: { p: 0.7, up: 1, down: -1 },
       sub: 'Stay out of the spotlight',
       resolve: () => ({ text: 'You keep your head down and let your football talk.', tone: 'neutral', fx: { form: 2 } })
     }
@@ -67,6 +73,7 @@ E.push({
   choices: [
     {
       label: 'Fire up the fans in the press',
+      stake: { p: 0.45, up: 5, down: -3 },
       sub: 'Become a derby hero — or villain',
       resolve: (c) => chance(0.35 + c.player.ability / 300)
         ? { text: `You score in a famous win over ${c.rival}. Legend status with this crowd.`, tone: 'gold', fx: { reputation: 7, morale: 10, form: 8, fanFavourite: true } }
@@ -74,6 +81,7 @@ E.push({
     },
     {
       label: 'Keep it professional',
+      stake: { p: 0.7, up: 2, down: -1 },
       sub: 'Just another match',
       resolve: () => chance(0.5)
         ? { text: 'A composed derby performance. The manager singles you out for praise.', tone: 'good', fx: { form: 5, morale: 4 } }
@@ -90,11 +98,13 @@ E.push({
   choices: [
     {
       label: 'Accept the armband',
+      stake: { p: 0.7, up: 3, down: -2 },
       sub: 'Leadership and pressure',
       resolve: () => ({ text: 'You are the new club captain. The responsibility sits well on your shoulders.', tone: 'gold', fx: { captain: true, reputation: 5, morale: 8 } })
     },
     {
       label: 'Decline politely',
+      stake: { p: 0.6, up: 1, down: -1 },
       sub: 'Focus on your own game',
       resolve: () => ({ text: 'You stay in the ranks. Some senior players quietly question your ambition.', tone: 'neutral', fx: { morale: -2, form: 2 } })
     }
@@ -109,16 +119,19 @@ E.push({
   choices: [
     {
       label: 'Sign with the veteran',
+      stake: { p: 0.75, up: 2, down: -1 },
       sub: 'Honest, steady counsel',
       resolve: () => ({ text: 'A safe pair of hands now guides your career.', tone: 'good', fx: { agent: 'honest', morale: 4 } })
     },
     {
       label: 'Sign with the shark',
+      stake: { p: 0.5, up: 4, down: -3 },
       sub: 'Bigger deals, bigger drama',
       resolve: () => ({ text: 'The shark takes you on. Your name starts appearing in transfer gossip columns.', tone: 'neutral', fx: { agent: 'shark', reputation: 3 } })
     },
     {
       label: 'Stay independent',
+      stake: { p: 0.6, up: 1, down: -1 },
       sub: 'Nobody takes a cut',
       resolve: () => ({ text: 'You back yourself to handle your own affairs.', tone: 'neutral', fx: {} })
     }
@@ -133,6 +146,7 @@ E.push({
   choices: [
     {
       label: 'Push hard for more money',
+      stake: { p: 0.5, up: 3, down: -3 },
       sub: 'Agent earns their fee',
       resolve: (c) => {
         const boost = c.player.agent === 'shark' ? 0.25 : c.player.agent === 'honest' ? 0.12 : 0;
@@ -143,11 +157,13 @@ E.push({
     },
     {
       label: 'Sign a fair extension',
+      stake: { p: 0.8, up: 2, down: -1 },
       sub: 'Security and goodwill',
       resolve: () => ({ text: 'A sensible extension keeps everyone happy.', tone: 'good', fx: { wageMult: 1.2, contractYears: 3, morale: 4 } })
     },
     {
       label: 'Let it run down',
+      stake: { p: 0.55, up: 2, down: -2 },
       sub: 'Freedom next summer',
       resolve: () => ({ text: 'No new deal. Clubs around the continent take note of a coming free agent.', tone: 'neutral', fx: { reputation: 2, listed: true } })
     }
@@ -162,6 +178,7 @@ E.push({
   choices: [
     {
       label: 'Go out with the lads',
+      stake: { p: 0.45, up: 3, down: -3 },
       sub: 'Squad bonding, tabloid risk',
       resolve: () => chance(0.4)
         ? { text: 'Photos of you at 3am make the front pages. The manager fines you.', tone: 'bad', fx: { reputation: -4, form: -5, morale: -3 } }
@@ -169,6 +186,7 @@ E.push({
     },
     {
       label: 'Stay home',
+      stake: { p: 0.85, up: 2, down: -1 },
       sub: 'Professional choice',
       resolve: () => ({ text: 'Early night, extra recovery. The staff appreciate your habits.', tone: 'good', fx: { form: 3, fitness: 3 } })
     }
@@ -186,14 +204,16 @@ E.push({
   choices: [
     {
       label: 'Embrace the new role',
+      stake: { p: 0.75, up: 3, down: -1 },
       sub: 'Extend your career',
       resolve: (c) => {
         const map = { FWD: 'MID', MID: 'DEF', DEF: 'MID' };
-        return { text: 'You retrain diligently and master the new position. Careers are lengthened this way.', tone: 'good', fx: { retrain: map[c.player.position], ability: 1, form: 4, morale: 3 } };
+        return { text: 'You retrain diligently and master the new position. Careers are lengthened this way.', tone: 'good', fx: { retrain: map[c.player.position], form: 4, morale: 3 } };
       }
     },
     {
       label: 'Refuse — you know your game',
+      stake: { p: 0.45, up: 4, down: -4 },
       sub: 'Back yourself',
       resolve: (c) => chance(c.player.ability > 70 ? 0.55 : 0.35)
         ? { text: 'You prove the doubters wrong in your natural position.', tone: 'good', fx: { form: 6, morale: 5 } }
@@ -210,11 +230,13 @@ E.push({
   choices: [
     {
       label: 'Give it your full weight',
+      stake: { p: 0.7, up: 2, down: -1 },
       sub: 'Time well spent',
       resolve: () => ({ text: 'The campaign raises a fortune. The city adores you for it.', tone: 'gold', fx: { reputation: 4, morale: 6 } })
     },
     {
       label: 'Make a brief appearance',
+      stake: { p: 0.6, up: 1, down: -1 },
       sub: 'Tick the box',
       resolve: () => ({ text: 'You show your face and slip away early.', tone: 'neutral', fx: { reputation: 1 } })
     }
@@ -229,6 +251,7 @@ E.push({
   choices: [
     {
       label: 'Sign the deal',
+      stake: { p: 0.55, up: 3, down: -3 },
       sub: 'Money and profile',
       resolve: () => chance(0.7)
         ? { text: 'Billboards, adverts, a signature boot. Your profile soars.', tone: 'gold', fx: { reputation: 5, wageBonus: 2000 } }
@@ -236,6 +259,7 @@ E.push({
     },
     {
       label: 'Turn it down',
+      stake: { p: 0.75, up: 1, down: -1 },
       sub: 'Football first',
       resolve: () => ({ text: 'You keep your diary clear and your mind on the pitch.', tone: 'neutral', fx: { form: 2 } })
     }
@@ -250,6 +274,7 @@ E.push({
   choices: [
     {
       label: 'Confront him',
+      stake: { p: 0.5, up: 3, down: -3 },
       sub: 'Stand your ground',
       resolve: () => chance(0.5)
         ? { text: 'The squad respects that you did not back down. The air is cleared.', tone: 'good', fx: { morale: 6, reputation: 1 } }
@@ -257,6 +282,7 @@ E.push({
     },
     {
       label: 'Let your football answer',
+      stake: { p: 0.75, up: 2, down: -1 },
       sub: 'Rise above it',
       resolve: () => ({ text: 'You respond with performances. The row fizzles out.', tone: 'good', fx: { form: 4 } })
     }
@@ -271,6 +297,7 @@ E.push({
   choices: [
     {
       label: 'Take the responsibility',
+      stake: { p: 0.55, up: 4, down: -3 },
       sub: 'Glory or misery',
       resolve: (c) => chance(0.55 + c.player.ability / 400)
         ? { text: 'Ice in your veins — you convert the big ones all season.', tone: 'gold', fx: { form: 7, reputation: 4, bonusGoals: 4 } }
@@ -278,6 +305,7 @@ E.push({
     },
     {
       label: 'Keep your head down',
+      stake: { p: 0.65, up: 1, down: -1 },
       sub: 'Not your job',
       resolve: () => ({ text: 'Someone else steps up. No risk, no reward.', tone: 'neutral', fx: {} })
     }
@@ -292,11 +320,13 @@ E.push({
   choices: [
     {
       label: 'Go public with your dream',
+      stake: { p: 0.6, up: 3, down: -2 },
       sub: 'Declare for the shirt',
       resolve: () => ({ text: 'Your passion plays well at home. The selectors have you firmly on the list.', tone: 'good', fx: { reputation: 3, intlBoost: 8 } })
     },
     {
       label: 'Let your club form decide',
+      stake: { p: 0.75, up: 2, down: -1 },
       sub: 'Quiet confidence',
       resolve: () => ({ text: 'You focus on your club and let the call come when it comes.', tone: 'neutral', fx: { form: 2 } })
     }
@@ -311,6 +341,7 @@ E.push({
   choices: [
     {
       label: 'Give as good as you get',
+      stake: { p: 0.5, up: 3, down: -3 },
       sub: 'Cards will come',
       resolve: () => chance(0.5)
         ? { text: 'Opponents learn to leave you alone. Respect earned the hard way.', tone: 'good', fx: { form: 4, reputation: 2 } }
@@ -318,10 +349,11 @@ E.push({
     },
     {
       label: 'Play through it cleverly',
+      stake: { p: 0.6, up: 3, down: -2 },
       sub: 'Move the ball quicker',
       resolve: (c) => chance(0.3 + c.player.injuryProne * 0.35)
         ? { text: 'A late lunge catches you anyway — ankle ligaments, six weeks out.', tone: 'bad', fx: { injuryWeeks: 6, form: -4 } }
-        : { text: 'You adapt your game and the kicks stop finding you.', tone: 'good', fx: { form: 4, ability: 0.5 } }
+        : { text: 'You adapt your game and the kicks stop finding you.', tone: 'good', fx: { form: 4 } }
     }
   ]
 });
@@ -334,6 +366,7 @@ E.push({
   choices: [
     {
       label: 'Demand answers in his office',
+      stake: { p: 0.45, up: 4, down: -4 },
       sub: 'Clear the air or burn it down',
       resolve: () => chance(0.45)
         ? { text: 'A frank conversation resets your standing. You are back in the side.', tone: 'good', fx: { morale: 8, form: 5 } }
@@ -341,11 +374,13 @@ E.push({
     },
     {
       label: 'Ask to be listed',
+      stake: { p: 0.6, up: 2, down: -2 },
       sub: 'Force a move',
       resolve: () => ({ text: 'The club quietly makes you available. Suitors will call in the summer.', tone: 'neutral', fx: { listed: true, morale: 2 } })
     },
     {
       label: 'Fight for your place silently',
+      stake: { p: 0.6, up: 3, down: -2 },
       sub: 'Let training talk',
       resolve: () => chance(0.55)
         ? { text: 'Your application wins the staff over again.', tone: 'good', fx: { form: 6, morale: 5 } }
@@ -362,11 +397,13 @@ E.push({
   choices: [
     {
       label: 'Chase the adventure',
+      stake: { p: 0.6, up: 2, down: -2 },
       sub: 'Open the door to romantic offers',
       resolve: () => ({ text: 'Word spreads that you are open to one last great story. Unexpected phone calls follow.', tone: 'good', fx: { adventure: true, listed: true, morale: 5 } })
     },
     {
       label: 'Finish at your level',
+      stake: { p: 0.7, up: 2, down: -1 },
       sub: 'Pride in the standard you set',
       resolve: () => ({ text: 'You intend to bow out where you belong — at the top of your game.', tone: 'neutral', fx: { form: 2 } })
     }

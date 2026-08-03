@@ -24,13 +24,33 @@ function flagOf(code) {
   return getAssociation(code)?.flag || '';
 }
 
+// Step the club-name type size down as the name gets longer, so even
+// "Borussia Mönchengladbach" fits without being cut off.
+function nameSizeClass(name) {
+  const n = name.length;
+  if (n <= 14) return 'len-s';
+  if (n <= 20) return 'len-m';
+  if (n <= 28) return 'len-l';
+  return 'len-xl';
+}
+
+// The odds a decision card is gambling with, shown before you commit.
+function stakeOdds(stake) {
+  if (!stake) return '';
+  const up = Math.round(stake.p * 100);
+  return `<span class="odds">
+    <span class="odd win">+${stake.up} OVR <b>${up}%</b></span>
+    <span class="odd lose">${stake.down} OVR <b>${100 - up}%</b></span>
+  </span>`;
+}
+
 // ---------------- profile card ----------------
 
 function profileCard(career) {
   const p = career.player;
   const ovr = Math.round(p.ability);
   const club = career.club;
-  const clubObj = club ? { name: club.name, tsdbTeamId: club.tsdbTeamId, colors: club.colors } : null;
+  const clubObj = club ? { name: club.name, tsdbTeamId: club.tsdbTeamId, colors: club.colors, country: club.countryName } : null;
   const watermark = clubObj ? initialsBadge(clubObj.name, clubObj.colors) : '';
   // Tint the header with the club's primary colour, as a kit does.
   const tint = /^#[0-9a-f]{6}$/i.test(club?.colors?.[0] || '')
@@ -46,7 +66,7 @@ function profileCard(career) {
           <span class="chip pos">#${p.shirt ?? 10} ${effectivePosition(p)}</span>
           ${p.captain ? '<span class="chip">CAPTAIN</span>' : ''}
         </div>
-        <div class="cname">${clubObj ? badgeImg(clubObj, '') : ''}<span>${esc(club ? club.name : 'Free agent')}</span></div>
+        <div class="cname ${nameSizeClass(club ? club.name : 'Free agent')}">${clubObj ? badgeImg(clubObj, '') : ''}<span>${esc(club ? club.name : 'Free agent')}</span></div>
       </div>
       <div class="meta-right">
         <div class="row2"><span class="k">AGE</span><span class="v">${p.age}</span></div>
@@ -103,7 +123,7 @@ function timeline(career) {
         : '';
       rows.push(`<tr>
         <td class="age">${age}</td>
-        <td><span class="club-cell">${badgeImg({ name: h.club, tsdbTeamId: h.clubTsdbTeamId, colors: h.clubColors }, '')}<span class="nm">${esc(h.club)}</span>${trophyMarks}</span></td>
+        <td><span class="club-cell">${badgeImg({ name: h.club, tsdbTeamId: h.clubTsdbTeamId, colors: h.clubColors, country: getAssociation(h.country)?.name }, '')}<span class="nm">${esc(h.club)}</span>${trophyMarks}</span></td>
         <td class="n"><span class="ovr-pill ${ovrTier(h.ovr ?? 50)}">${h.ovr ?? '–'}</span></td>
         <td class="n">${h.apps}</td>
         <td class="n">${h.goals}</td>
@@ -113,7 +133,7 @@ function timeline(career) {
       const club = career.club;
       rows.push(`<tr class="current">
         <td class="age">${age}</td>
-        <td><span class="club-cell">${club ? badgeImg({ name: club.name, tsdbTeamId: club.tsdbTeamId, colors: club.colors }, '') : '<span style="width:17px">❓</span>'}<span class="nm">${club ? esc(club.name) : 'Choosing club…'}</span></span></td>
+        <td><span class="club-cell">${club ? badgeImg({ name: club.name, tsdbTeamId: club.tsdbTeamId, colors: club.colors, country: club.countryName }, '') : '<span style="width:17px">❓</span>'}<span class="nm">${club ? esc(club.name) : 'Choosing club…'}</span></span></td>
         <td class="n"><span class="ovr-pill ${ovrTier(Math.round(career.player.ability))}">${Math.round(career.player.ability)}</span></td>
         <td class="n"></td><td class="n"></td><td class="n"></td>
       </tr>`);
@@ -139,7 +159,8 @@ function timeline(career) {
 
   return `<div class="timeline">
     <table>
-      <thead><tr><th>AGE</th><th>CLUB</th><th class="n">OVR</th><th class="n">APPS</th><th class="n">GOALS</th><th class="n">AST</th></tr></thead>
+      <colgroup><col class="c-age"><col><col class="c-ovr"><col class="c-num"><col class="c-num"><col class="c-num"></colgroup>
+      <thead><tr><th>AGE</th><th>CLUB</th><th class="n">OVR</th><th class="n">APP</th><th class="n">GLS</th><th class="n">AST</th></tr></thead>
       <tbody>${rows.join('')}${intlRow}</tbody>
     </table>
   </div>`;
@@ -191,7 +212,7 @@ function offerCard(o, i) {
   const imgId = 'oc' + i + Math.random().toString(36).slice(2, 6);
   queueMicrotask(async () => {
     const { resolveBadge } = await import('./badge.js');
-    const url = await resolveBadge({ name: o.clubName, tsdbTeamId: o.tsdbTeamId });
+    const url = await resolveBadge({ name: o.clubName, tsdbTeamId: o.tsdbTeamId, country: o.countryName });
     const el = document.getElementById(imgId);
     if (el && url) { el.onerror = () => { el.src = crest; }; el.src = url; }
   });
@@ -214,7 +235,7 @@ export function offersScreen(career) {
     const imgId = 'sc' + Math.random().toString(36).slice(2, 6);
     queueMicrotask(async () => {
       const { resolveBadge } = await import('./badge.js');
-      const url = await resolveBadge({ name: c.name, tsdbTeamId: c.tsdbTeamId });
+      const url = await resolveBadge({ name: c.name, tsdbTeamId: c.tsdbTeamId, country: c.countryName });
       const el = document.getElementById(imgId);
       if (el && url) { el.onerror = () => { el.src = crest; }; el.src = url; }
     });
@@ -246,15 +267,20 @@ export function eventScreen(career) {
   if (!ev) return '';
   const action = `<h2>${esc(ev.title)}</h2>
     <div class="decision-body"><p>${esc(ev.text)}</p></div>
-    ${ev.choices.map((c) => `<button data-action="choose" data-i="${c.i}"><b>${esc(c.label)}</b>${c.sub ? `<span class="choice-sub">${esc(c.sub)}</span>` : ''}</button>`).join('')}`;
+    ${ev.choices.map((c) => `<button data-action="choose" data-i="${c.i}"><b>${esc(c.label)}</b>${c.sub ? `<span class="choice-sub">${esc(c.sub)}</span>` : ''}${stakeOdds(c.stake)}</button>`).join('')}`;
   return layout(career, action);
 }
 
 export function outcomeScreen(career) {
   const o = career.lastOutcome;
   const tone = o.tone === 'good' ? 'good' : o.tone === 'bad' ? 'bad' : o.tone === 'gold' ? 'gold' : '';
+  const d = o.ovrDelta;
+  const ovrLine = typeof d === 'number'
+    ? `<div class="ovr-result ${d >= 0 ? 'up' : 'down'}">${d >= 0 ? '▲' : '▼'} ${d >= 0 ? '+' : ''}${d} OVR<span class="muted small"> — now ${Math.round(career.player.ability)}</span></div>`
+    : '';
   const action = `<h2>${esc(o.title)}</h2>
     <div class="news ${tone}">${esc(o.text)}</div>
+    ${ovrLine}
     <button class="primary" data-action="after-outcome">Play the season</button>`;
   return layout(career, action);
 }

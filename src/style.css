@@ -117,11 +117,18 @@ label { font-size: .82rem; color: var(--muted); display: block; margin-top: 12px
   font-size: .68rem; font-weight: 700; letter-spacing: .03em;
 }
 .chip.pos { background: #6b46c1; color: #fff; }
+/* Long club names wrap onto a second line and shrink rather than truncate,
+   so the full name is always readable. */
 .club-head .cname {
-  font-size: 1.25rem; font-weight: 800; line-height: 1.15;
+  font-weight: 800; line-height: 1.12;
   display: flex; align-items: center; gap: 7px;
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  overflow-wrap: anywhere;
 }
+.club-head .cname span { min-width: 0; }
+.club-head .cname.len-s { font-size: 1.25rem; }
+.club-head .cname.len-m { font-size: 1.05rem; }
+.club-head .cname.len-l { font-size: .92rem; }
+.club-head .cname.len-xl { font-size: .82rem; }
 .club-head .cname img { width: 26px; height: 26px; object-fit: contain; flex-shrink: 0; }
 .meta-right { position: relative; z-index: 1; text-align: right; flex-shrink: 0; }
 .meta-right .row2 { display: flex; align-items: baseline; justify-content: flex-end; gap: 6px; }
@@ -170,6 +177,17 @@ label { font-size: .82rem; color: var(--muted); display: block; margin-top: 12px
 
 /* ---------- decision ---------- */
 .decision-body { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 15px; margin-bottom: 12px; }
+
+/* Odds shown on a decision card before committing */
+.odds { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+.odd { font-size: .72rem; font-weight: 600; border-radius: 6px; padding: 3px 8px; border: 1px solid; }
+.odd b { font-weight: 800; }
+.odd.win { color: #74d68a; border-color: #2b6b3c; background: #14301d; }
+.odd.lose { color: #f2938d; border-color: #6e3330; background: #301614; }
+
+.ovr-result { font-size: 1.05rem; font-weight: 800; padding: 10px 12px; border-radius: 10px; margin: 10px 0; }
+.ovr-result.up { color: #74d68a; background: #14301d; border: 1px solid #2b6b3c; }
+.ovr-result.down { color: #f2938d; background: #301614; border: 1px solid #6e3330; }
 .decision-body p { font-size: .95rem; }
 
 .news { border-left: 3px solid var(--accent2); padding: 9px 12px; margin: 8px 0; background: var(--panel); border-radius: 0 10px 10px 0; font-size: .9rem; line-height: 1.4; }
@@ -179,13 +197,19 @@ label { font-size: .82rem; color: var(--muted); display: block; margin-top: 12px
 
 /* ---------- timeline ---------- */
 .timeline { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
-.timeline table { width: 100%; border-collapse: collapse; font-size: .82rem; }
+/* Fixed layout guarantees every column — including AST — fits in portrait
+   on a phone; the club name is the only thing allowed to truncate. */
+.timeline table { width: 100%; border-collapse: collapse; font-size: .82rem; table-layout: fixed; }
+.timeline col.c-age { width: 30px; }
+.timeline col.c-ovr { width: 46px; }
+.timeline col.c-num { width: 38px; }
 .timeline thead th {
   font-size: .6rem; letter-spacing: .12em; color: var(--muted); font-weight: 700;
   text-align: left; padding: 9px 8px; border-bottom: 1px solid var(--line);
 }
 .timeline th.n, .timeline td.n { text-align: right; }
-.timeline td { padding: 6px 8px; border-bottom: 1px solid #ffffff08; white-space: nowrap; }
+.timeline td { padding: 6px 4px; border-bottom: 1px solid #ffffff08; white-space: nowrap; overflow: hidden; }
+.timeline thead th { padding-left: 4px; padding-right: 4px; }
 .timeline tr:last-child td { border-bottom: none; }
 .timeline td.age { color: var(--muted); font-weight: 700; width: 34px; }
 .timeline tr.empty td { color: var(--dim); height: 31px; }
