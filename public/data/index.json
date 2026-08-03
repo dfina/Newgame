@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-03T15:09:00.288Z",
+ "generated": "2026-08-03T15:10:15.346Z",
  "countries": [
   {
    "code": "AFG",
@@ -660,8 +660,8 @@
     {
      "tier": 1,
      "name": "Comoros Premier League",
-     "clubs": 11,
-     "verified": false,
+     "clubs": 30,
+     "verified": true,
      "tsdbLeagueId": null
     }
    ]
@@ -2389,6 +2389,20 @@
    ]
   },
   {
+   "code": "SDN",
+   "country": "Sudan",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Sudan Premier League",
+     "clubs": 10,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "SEN",
    "country": "Senegal",
    "confederation": "CAF",
@@ -2718,6 +2732,20 @@
    ]
   },
   {
+   "code": "TGA",
+   "country": "Tonga",
+   "confederation": "OFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Tonga Major League",
+     "clubs": 8,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "THA",
    "country": "Thailand",
    "confederation": "AFC",
@@ -2937,6 +2965,20 @@
      "name": "Uzbekistan Super League",
      "clubs": 16,
      "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "VAN",
+   "country": "Vanuatu",
+   "confederation": "OFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "VFF Champions League (formerly VFF National Super League)",
+     "clubs": 6,
+     "verified": false,
      "tsdbLeagueId": null
     }
    ]

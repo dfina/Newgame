@@ -15,7 +15,9 @@
         "https://www.national-football-teams.com/club/11957/2025_1/Foullah_Edifice_Ndjamena.html",
         "https://www.national-football-teams.com/club/8720/2025_1/Ascot_Ndjamena.html",
         "https://www.national-football-teams.com/club/30650/2025_1/Psi_Ndjamena.html",
-        "https://www.sofascore.com/football/tournament/chad/premiere-division-de-n-djamena/22106"
+        "https://www.sofascore.com/football/tournament/chad/premiere-division-de-n-djamena/22106",
+        "https://en.wikipedia.org/wiki/Chad_Premier_League",
+        "https://www.besoccer.com/competition/info/chad-premier-league/2025"
       ],
       "clubs": [
         { "name": "Tourbillon FC (N'Djamena)", "tsdbTeamId": null, "badge": null },
@@ -28,7 +30,7 @@
         { "name": "CotonTchad FC (N'Djamena)", "tsdbTeamId": null, "badge": null },
         { "name": "Postel 2000 FC (N'Djamena)", "tsdbTeamId": null, "badge": null }
       ],
-      "note": "Chad's effective top flight is organised as the Première Division de la Ligue de N'Djamena (the capital-region league that functions as the de facto national tier 1, per tracked sources); a separate 'Chad Premier League'/LINAFOOT national structure exists historically but a distinct current-season roster for it was not found. 9 clubs individually named for 2025-26 sharing the same home stadium/zone. verified=false pending confirmation that this is the full recognised national tier 1 rather than a regional zone."
+      "note": "Chad's effective top flight is organised as the Première Division de la Ligue de N'Djamena (the capital-region league that functions as the de facto national tier 1, per tracked sources); a separate 'Chad Premier League'/LINAFOOT national structure exists historically but a distinct current-season roster for it was not found. 9 clubs individually named for 2025-26 sharing the same home stadium/zone. FOLLOW-UP CHECK: a further search confirmed Gazelle, Renaissance, AS CotonTchad and Postel 2000 (all already in this list) are genuine past Chad Premier League/LINAFOOT title-winning clubs (4, 7, 2, and 2 titles respectively per Wikipedia/Grokipedia), and that the competition -- cancelled in 2024 -- resumed for 2025/26 under new FTFA leadership with '12 regionally diverse teams', consistent with N'Djamena-based clubs comprising the national top flight. This supports the existing 9 clubs as real, but a full current-season 12-club roster still could not be located, so verified=false is retained."
     }
   ]
 }

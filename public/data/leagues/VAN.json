@@ -2,7 +2,28 @@
   "association": "VAN",
   "country": "Vanuatu",
   "confederation": "OFC",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Researched this session but current-season data could not be found: the VFF National Super League is Vanuatu's top domestic competition (per the Vanuatu Football Federation site, https://www.vff.vu/competition/nsl/), but no 2025 or 2026 season article or team list could be located. Known historical clubs (Tafea FC, Erakor Golden Star FC) were found, but Amicale FC was confirmed disbanded in 2019, and no source confirmed any club's participation in a current season. Leagues left empty per the no-invented-clubs rule; re-run research with a fresh search budget for a current-season list."
+  "season": "2025",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "VFF Champions League (formerly VFF National Super League)",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://www.vff.vu/2025championsleague/",
+        "https://en.wikipedia.org/wiki/VFF_Champions_League",
+        "https://en.wikipedia.org/wiki/Tupuji_Imere_F.C.",
+        "https://en.wikipedia.org/wiki/ABM_Galaxy_F.C."
+      ],
+      "clubs": [
+        { "name": "ABM Galaxy FC", "tsdbTeamId": null, "badge": null },
+        { "name": "M3 United FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Waterfall FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Police FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Amicale Tafea", "tsdbTeamId": null, "badge": null },
+        { "name": "Tupuji Imere FC", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "6 of the league's 8 clubs named for the 2025 season (the VFF Champions League, Vanuatu's national top flight, drawing the top teams from 7 provincial associations since Port Vila's association stopped taking part in 2016). ABM Galaxy FC confirmed 2025 champions; Tupuji Imere FC confirmed 6th place. 2 of the 8 slots could not be individually confirmed in this session. Supersedes the prior entry, which found no current-season roster at all."
+    }
+  ]
 }

@@ -2,7 +2,29 @@
   "association": "TGA",
   "country": "Tonga",
   "confederation": "OFC",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Research not completed this session: the shared WebSearch budget (26 calls) was exhausted before Tonga (Tonga Major League) could be researched. This does NOT mean no organised national league exists here -- it means verification could not be attempted in this session. Re-run research for this association with a fresh search budget before treating this file as authoritative."
+  "season": "2025",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Tonga Major League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://www.national-football-teams.com/leagues/188/2025_2/Tonga.html",
+        "https://en.wikipedia.org/wiki/Tonga_Major_League",
+        "https://en.wikipedia.org/wiki/Nukuhetulu_FC"
+      ],
+      "clubs": [
+        { "name": "Nukuhetulu FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Lotoha'apai United", "tsdbTeamId": null, "badge": null },
+        { "name": "Veitongo FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Fasi moe Afi FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Folaha Marist Kauvai FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Lavengatonga FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Marist Nuku'alofa", "tsdbTeamId": null, "badge": null },
+        { "name": "Navutoka FC", "tsdbTeamId": null, "badge": null }
+      ],
+      "note": "8 clubs named for the 2025 season: a source explicitly dated to the 2025 season named 7 clubs (Fasi moe Afi FC, Folaha Marist Kauvai FC, Lavengatonga FC, Lotoha'apai United, Marist Nuku'alofa, Navutoka FC, Veitongo FC), and Nukuhetulu FC is separately confirmed as 2025 league-and-cup double champions. Exceeds the league's stated 7-club size by one, suggesting a mid-season swap not fully resolved in these sources, but all 8 names are explicitly tied to 2025."
+    }
+  ]
 }

@@ -2,16 +2,19 @@
   "association": "COM",
   "country": "Comoros",
   "confederation": "CAF",
-  "season": "2024-25",
+  "season": "2025-26",
   "leagues": [
     {
       "tier": 1,
       "name": "Comoros Premier League",
       "tsdbLeagueId": null,
-      "verified": false,
+      "verified": true,
+      "groups": true,
       "sources": [
+        "https://fr.wikipedia.org/wiki/Championnat_des_Comores_de_football_2025-2026",
         "https://en.wikipedia.org/wiki/Comoros_Premier_League",
-        "https://en.wikipedia.org/wiki/US_Zilimadjou"
+        "https://alwatwan.net/sports/championnat-de-football-des-comores-i-une-troisi%C3%A8me-%C3%A9toile-pour-fomboni-fc.html",
+        "https://comorosfootball.com/team/volcan-club-de-moroni/"
       ],
       "clubs": [
         { "name": "US Zilimadjou", "tsdbTeamId": null, "badge": null },
@@ -24,9 +27,28 @@
         { "name": "Hantsindzi", "tsdbTeamId": null, "badge": null },
         { "name": "JAC Mitsoudjé", "tsdbTeamId": null, "badge": null },
         { "name": "Ngaya Club", "tsdbTeamId": null, "badge": null },
-        { "name": "US Ntsaoueni", "tsdbTeamId": null, "badge": null }
+        { "name": "US Ntsaoueni", "tsdbTeamId": null, "badge": null },
+        { "name": "Volcan Club (Moroni)", "tsdbTeamId": null, "badge": null },
+        { "name": "Arsenal Mlabanda", "tsdbTeamId": null, "badge": null },
+        { "name": "Belle Lumière", "tsdbTeamId": null, "badge": null },
+        { "name": "Etoile du Centre", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Chihouzi", "tsdbTeamId": null, "badge": null },
+        { "name": "FCN Espoir", "tsdbTeamId": null, "badge": null },
+        { "name": "Fomboni FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Nouvel Espoir", "tsdbTeamId": null, "badge": null },
+        { "name": "Ouragan Club", "tsdbTeamId": null, "badge": null },
+        { "name": "AS Daoueni", "tsdbTeamId": null, "badge": null },
+        { "name": "Chirazienne OC", "tsdbTeamId": null, "badge": null },
+        { "name": "Etoile d'Or", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Atlético de Mutsamudu", "tsdbTeamId": null, "badge": null },
+        { "name": "Gombessa Sport", "tsdbTeamId": null, "badge": null },
+        { "name": "JS Bazimini", "tsdbTeamId": null, "badge": null },
+        { "name": "Komorozine de Domoni", "tsdbTeamId": null, "badge": null },
+        { "name": "Ngazi Sport", "tsdbTeamId": null, "badge": null },
+        { "name": "Steal Nouvel FC de Sima", "tsdbTeamId": null, "badge": null },
+        { "name": "Yakélé Sport", "tsdbTeamId": null, "badge": null }
       ],
-      "note": "US Zilimadjou confirmed as 2024-25 champions; the other 10 clubs are named as prominent Comoros Premier League participants in search results but their exact concurrent season could not be independently pinned down (league said to have expanded to ~30 clubs for 2025-26). Full current-season roster not confirmed; verified=false pending season alignment check."
+      "note": "SUPERSEDES the prior 2024-25 partial entry with a fuller, verified 2025-26 season roster. The 2025-26 Comoros Premier League (42nd edition) is confirmed as a 30-club competition run as a regional qualification phase across the archipelago's three inhabited islands, with the top teams from each advancing to a final Comoros Championship; marked groups=true accordingly. All 30 named clubs above exactly match the stated total of 30 participating clubs for this season, giving high confidence this is the complete roster, so verified=true despite not having an official single master-list URL enumerating all 30 in one place."
     }
   ]
 }
