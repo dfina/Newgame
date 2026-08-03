@@ -2,7 +2,36 @@
   "association": "IRQ",
   "country": "Iraq",
   "confederation": "AFC",
-  "season": "unverified",
-  "leagues": [],
-  "note": "Not researched this session: the shared WebSearch budget (200 calls) for this session was exhausted before this association could be investigated. No league or club data has been invented; this file intentionally lists no leagues pending a future session with search access to verify the Iraqi Premier League and clubs."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Iraq Stars League",
+      "tsdbLeagueId": null,
+      "verified": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Iraq_Stars_League",
+        "https://www.transfermarkt.us/iraq-stars-league/startseite/wettbewerb/IRQ1"
+      ],
+      "clubs": [
+        { "name": "Al-Quwa Al-Jawiya", "tsdbTeamId": null, "badge": null, "colors": ["#00205B", "#FFFFFF"] },
+        { "name": "Al-Shorta", "tsdbTeamId": null, "badge": null, "colors": ["#00205B", "#FFFFFF"] },
+        { "name": "Erbil", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Zawraa", "tsdbTeamId": null, "badge": null, "colors": ["#FFFFFF", "#000000"] },
+        { "name": "Al-Karma", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Talaba", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Karkh", "tsdbTeamId": null, "badge": null },
+        { "name": "Newroz", "tsdbTeamId": null, "badge": null },
+        { "name": "Zakho", "tsdbTeamId": null, "badge": null },
+        { "name": "Duhok", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Minaa", "tsdbTeamId": null, "badge": null },
+        { "name": "Amanat Baghdad", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Qasim", "tsdbTeamId": null, "badge": null },
+        { "name": "Naft Maysan", "tsdbTeamId": null, "badge": null },
+        { "name": "Diyala", "tsdbTeamId": null, "badge": null },
+        { "name": "Al-Kahrabaa", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ],
+  "note": "Iraq Stars League 2025-26 has 20 clubs total per Wikipedia; only 16 could be individually confirmed by name in sources retrieved this session, so the league entry is marked unverified/partial. No club listed here was invented."
 }

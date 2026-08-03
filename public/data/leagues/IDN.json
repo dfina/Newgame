@@ -2,7 +2,39 @@
   "association": "IDN",
   "country": "Indonesia",
   "confederation": "AFC",
-  "season": "unverified",
-  "leagues": [],
-  "note": "Not researched this session: the shared WebSearch budget (200 calls) for this session was exhausted before this association could be investigated. No league or club data has been invented; this file intentionally lists no leagues pending a future session with search access to verify Indonesia's top-flight competition and clubs."
+  "season": "2026-27",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Liga 1",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://www.cuindependent.com/football-season-in-indonesia-2026-liga-1-highlights-and-fan-engagement-trends/",
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Liga_Nusantara"
+      ],
+      "clubs": [
+        { "name": "Arema FC", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"] },
+        { "name": "Bali United", "tsdbTeamId": null, "badge": null, "colors": ["#E2231A", "#000000"] },
+        { "name": "Bhayangkara Presisi Lampung", "tsdbTeamId": null, "badge": null },
+        { "name": "Borneo Samarinda", "tsdbTeamId": null, "badge": null, "colors": ["#F47920", "#000000"] },
+        { "name": "Dewa United", "tsdbTeamId": null, "badge": null },
+        { "name": "Madura United", "tsdbTeamId": null, "badge": null },
+        { "name": "Malut United", "tsdbTeamId": null, "badge": null },
+        { "name": "Persebaya Surabaya", "tsdbTeamId": null, "badge": null, "colors": ["#00693E", "#FFFFFF"] },
+        { "name": "Persib Bandung", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"] },
+        { "name": "Persija Jakarta", "tsdbTeamId": null, "badge": null, "colors": ["#E2231A", "#000000"] },
+        { "name": "Persijap Jepara", "tsdbTeamId": null, "badge": null },
+        { "name": "Persik Kediri", "tsdbTeamId": null, "badge": null },
+        { "name": "Persis Solo", "tsdbTeamId": null, "badge": null },
+        { "name": "Persita Tangerang", "tsdbTeamId": null, "badge": null },
+        { "name": "PSBS Biak", "tsdbTeamId": null, "badge": null },
+        { "name": "PSIM Yogyakarta", "tsdbTeamId": null, "badge": null },
+        { "name": "Garudayaksa", "tsdbTeamId": null, "badge": null },
+        { "name": "PSS Sleman", "tsdbTeamId": null, "badge": null },
+        { "name": "Adhyaksa Banten", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ],
+  "note": "Source describes the 2026-27 season as featuring 18 teams but individually names 19 clubs (16 plus 3 newly promoted: Garudayaksa, PSS Sleman, Adhyaksa Banten); all 19 named clubs are retained here rather than guessing which to drop. No club was invented."
 }

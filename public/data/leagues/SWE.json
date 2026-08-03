@@ -2,7 +2,35 @@
   "association": "SWE",
   "country": "Sweden",
   "confederation": "UEFA",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (200/200) was exhausted before this association could be covered. No clubs or leagues were invented per task rules; leagues left empty pending a follow-up session with search capacity."
+  "season": "2026",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Allsvenskan",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_Allsvenskan",
+        "https://www.foxsports.com/soccer/bk-hacken-team-standings"
+      ],
+      "clubs": [
+        {"name": "Mjällby AIF", "tsdbTeamId": null, "badge": null},
+        {"name": "Hammarby IF", "tsdbTeamId": null, "badge": null, "colors": ["#008000", "#FFFFFF"]},
+        {"name": "GAIS", "tsdbTeamId": null, "badge": null, "colors": ["#00843D", "#FFFFFF"]},
+        {"name": "IFK Göteborg", "tsdbTeamId": null, "badge": null, "colors": ["#0055A4", "#FFFFFF"]},
+        {"name": "Djurgårdens IF", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#C8102E"]},
+        {"name": "Malmö FF", "tsdbTeamId": null, "badge": null, "colors": ["#87CEEB", "#FFFFFF"]},
+        {"name": "AIK", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFD200"]},
+        {"name": "IF Elfsborg", "tsdbTeamId": null, "badge": null, "colors": ["#FFD200", "#000000"]},
+        {"name": "IK Sirius", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"]},
+        {"name": "BK Häcken", "tsdbTeamId": null, "badge": null, "colors": ["#FFD200", "#000000"]},
+        {"name": "Halmstads BK", "tsdbTeamId": null, "badge": null},
+        {"name": "IF Brommapojkarna", "tsdbTeamId": null, "badge": null},
+        {"name": "Degerfors IF", "tsdbTeamId": null, "badge": null},
+        {"name": "Västerås SK", "tsdbTeamId": null, "badge": null},
+        {"name": "Kalmar FF", "tsdbTeamId": null, "badge": null, "colors": ["#C8102E", "#FFFFFF"]},
+        {"name": "Örgryte IS", "tsdbTeamId": null, "badge": null}
+      ]
+    }
+  ]
 }

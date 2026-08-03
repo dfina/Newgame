@@ -2,7 +2,35 @@
   "association": "UAE",
   "country": "United Arab Emirates",
   "confederation": "AFC",
-  "season": "unresearched",
-  "leagues": [],
-  "note": "Not researched this session: the WebSearch tool budget (shared across this entire session) was exhausted before the UAE could be looked into. This is NOT a claim that no league exists (the UAE Pro League clearly exists) — composition simply could not be verified here. Needs a follow-up session with search budget available."
+  "season": "2026-27",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "UAE Pro League",
+      "tsdbLeagueId": 4678,
+      "verified": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_UAE_Pro_League",
+        "https://www.worldfootball.net/competition/co1183/ua-emirates-uae-pro-league/teams/",
+        "https://www.rsssf.org/tablesu/uae2026.html",
+        "https://www.thesportsdb.com/season/4678-uae-pro-league/2025-2026"
+      ],
+      "clubs": [
+        { "name": "Al Ain FC", "tsdbTeamId": null, "badge": null, "colors": ["#F47920", "#FFFFFF"] },
+        { "name": "Al Jazira", "tsdbTeamId": null, "badge": null, "colors": ["#FFD200", "#000000"] },
+        { "name": "Shabab Al Ahli", "tsdbTeamId": null, "badge": null, "colors": ["#E2231A", "#FFFFFF"] },
+        { "name": "Al Wahda", "tsdbTeamId": null, "badge": null, "colors": ["#FFD200", "#000000"] },
+        { "name": "Al Wasl", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] },
+        { "name": "Sharjah FC", "tsdbTeamId": null, "badge": null, "colors": ["#003C7C", "#FFFFFF"] },
+        { "name": "Al Nasr", "tsdbTeamId": null, "badge": null, "colors": ["#FFD200", "#000000"] },
+        { "name": "Baniyas", "tsdbTeamId": null, "badge": null },
+        { "name": "Ajman Club", "tsdbTeamId": null, "badge": null },
+        { "name": "Al Dhafra", "tsdbTeamId": null, "badge": null },
+        { "name": "Ittihad Kalba", "tsdbTeamId": null, "badge": null },
+        { "name": "Khor Fakkan", "tsdbTeamId": null, "badge": null },
+        { "name": "Hatta Club", "tsdbTeamId": null, "badge": null },
+        { "name": "Dubai United", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ]
 }

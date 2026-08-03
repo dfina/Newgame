@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-03T10:54:16.149Z",
+ "generated": "2026-08-03T14:43:10.252Z",
  "countries": [
   {
    "code": "AFG",
@@ -149,6 +149,20 @@
    ]
   },
   {
+   "code": "BEL",
+   "country": "Belgium",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Belgian Pro League",
+     "clubs": 17,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "BFA",
    "country": "Burkina Faso",
    "confederation": "CAF",
@@ -226,6 +240,20 @@
    ]
   },
   {
+   "code": "BOL",
+   "country": "Bolivia",
+   "confederation": "CONMEBOL",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "División Profesional",
+     "clubs": 8,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "BOT",
    "country": "Botswana",
    "confederation": "CAF",
@@ -235,6 +263,20 @@
      "name": "Botswana Premier League",
      "clubs": 15,
      "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "BRA",
+   "country": "Brazil",
+   "confederation": "CONMEBOL",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Campeonato Brasileiro Série A",
+     "clubs": 20,
+     "verified": true,
      "tsdbLeagueId": null
     }
    ]
@@ -282,6 +324,20 @@
    ]
   },
   {
+   "code": "CHI",
+   "country": "Chile",
+   "confederation": "CONMEBOL",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Liga de Primera (Primera División de Chile)",
+     "clubs": 16,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "CHN",
    "country": "China PR",
    "confederation": "AFC",
@@ -303,6 +359,34 @@
    ]
   },
   {
+   "code": "CMR",
+   "country": "Cameroon",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Elite One",
+     "clubs": 14,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "COD",
+   "country": "Congo DR",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Linafoot",
+     "clubs": 19,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "COK",
    "country": "Cook Islands",
    "confederation": "OFC",
@@ -311,6 +395,34 @@
      "tier": 1,
      "name": "Cook Islands Round Cup",
      "clubs": 6,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "COL",
+   "country": "Colombia",
+   "confederation": "CONMEBOL",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Categoría Primera A (Liga BetPlay Dimayor)",
+     "clubs": 21,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "CRC",
+   "country": "Costa Rica",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Liga FPD (Liga Promérica)",
+     "clubs": 10,
      "verified": true,
      "tsdbLeagueId": null
     }
@@ -367,6 +479,34 @@
      "tier": 1,
      "name": "Danish Superliga",
      "clubs": 7,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "ECU",
+   "country": "Ecuador",
+   "confederation": "CONMEBOL",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "LigaPro Serie A",
+     "clubs": 16,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "EGY",
+   "country": "Egypt",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Egyptian Premier League",
+     "clubs": 15,
      "verified": false,
      "tsdbLeagueId": null
     }
@@ -485,6 +625,41 @@
    ]
   },
   {
+   "code": "FRA",
+   "country": "France",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Ligue 1",
+     "clubs": 18,
+     "verified": true,
+     "tsdbLeagueId": null
+    },
+    {
+     "tier": 2,
+     "name": "Ligue 2",
+     "clubs": 18,
+     "verified": true,
+     "tsdbLeagueId": null
+    },
+    {
+     "tier": 3,
+     "name": "Ligue 3",
+     "clubs": 18,
+     "verified": true,
+     "tsdbLeagueId": null
+    },
+    {
+     "tier": 4,
+     "name": "National 1",
+     "clubs": 26,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "FRO",
    "country": "Faroe Islands",
    "confederation": "UEFA",
@@ -541,6 +716,62 @@
    ]
   },
   {
+   "code": "GHA",
+   "country": "Ghana",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Ghana Premier League",
+     "clubs": 18,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "GRE",
+   "country": "Greece",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Super League Greece",
+     "clubs": 12,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "GUA",
+   "country": "Guatemala",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Liga Nacional de Guatemala (Liga Bantrab)",
+     "clubs": 11,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "HON",
+   "country": "Honduras",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Liga Nacional de Honduras",
+     "clubs": 10,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "HUN",
    "country": "Hungary",
    "confederation": "UEFA",
@@ -549,6 +780,62 @@
      "tier": 1,
      "name": "Nemzeti Bajnokság I (NB I)",
      "clubs": 11,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "IDN",
+   "country": "Indonesia",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Liga 1",
+     "clubs": 19,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "IND",
+   "country": "India",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Indian Super League",
+     "clubs": 14,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "IRN",
+   "country": "IR Iran",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Persian Gulf Pro League",
+     "clubs": 16,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "IRQ",
+   "country": "Iraq",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Iraq Stars League",
+     "clubs": 16,
      "verified": false,
      "tsdbLeagueId": null
     }
@@ -604,6 +891,34 @@
    ]
   },
   {
+   "code": "JAM",
+   "country": "Jamaica",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Jamaica Premier League",
+     "clubs": 14,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "JPN",
+   "country": "Japan",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "J1 League",
+     "clubs": 20,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "KEN",
    "country": "Kenya",
    "confederation": "CAF",
@@ -613,6 +928,34 @@
      "name": "Kenyan Premier League",
      "clubs": 11,
      "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "KOR",
+   "country": "Korea Republic",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "K League 1",
+     "clubs": 12,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "KSA",
+   "country": "Saudi Arabia",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Saudi Pro League",
+     "clubs": 18,
+     "verified": true,
      "tsdbLeagueId": null
     }
    ]
@@ -919,6 +1262,62 @@
    ]
   },
   {
+   "code": "NOR",
+   "country": "Norway",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Eliteserien",
+     "clubs": 16,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "PAN",
+   "country": "Panama",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Liga Panameña de Fútbol (LPF)",
+     "clubs": 12,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "PAR",
+   "country": "Paraguay",
+   "confederation": "CONMEBOL",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "División Profesional (Primera División de Paraguay)",
+     "clubs": 12,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "PER",
+   "country": "Peru",
+   "confederation": "CONMEBOL",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Liga 1",
+     "clubs": 18,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "PNG",
    "country": "Papua New Guinea",
    "confederation": "OFC",
@@ -933,6 +1332,76 @@
    ]
   },
   {
+   "code": "POL",
+   "country": "Poland",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Ekstraklasa",
+     "clubs": 18,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "QAT",
+   "country": "Qatar",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Qatar Stars League",
+     "clubs": 10,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "ROU",
+   "country": "Romania",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Liga I",
+     "clubs": 16,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "RSA",
+   "country": "South Africa",
+   "confederation": "CAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "South African Premiership (Betway Premiership)",
+     "clubs": 15,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "RUS",
+   "country": "Russia",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Russian Premier League",
+     "clubs": 16,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "RWA",
    "country": "Rwanda",
    "confederation": "CAF",
@@ -941,6 +1410,20 @@
      "tier": 1,
      "name": "Rwanda Premier League",
      "clubs": 15,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "SCO",
+   "country": "Scotland",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Scottish Premiership",
+     "clubs": 12,
      "verified": true,
      "tsdbLeagueId": null
     }
@@ -1003,6 +1486,20 @@
    ]
   },
   {
+   "code": "SRB",
+   "country": "Serbia",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Serbian SuperLiga",
+     "clubs": 12,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "SSD",
    "country": "South Sudan",
    "confederation": "CAF",
@@ -1026,6 +1523,20 @@
      "name": "São Tomé and Príncipe Championship",
      "clubs": 6,
      "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "SWE",
+   "country": "Sweden",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Allsvenskan",
+     "clubs": 16,
+     "verified": true,
      "tsdbLeagueId": null
     }
    ]
@@ -1059,6 +1570,20 @@
    ]
   },
   {
+   "code": "THA",
+   "country": "Thailand",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Thai League 1",
+     "clubs": 8,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
    "code": "TOG",
    "country": "Togo",
    "confederation": "CAF",
@@ -1068,6 +1593,20 @@
      "name": "Togolese Championnat National",
      "clubs": 10,
      "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "TRI",
+   "country": "Trinidad and Tobago",
+   "confederation": "CONCACAF",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "TT Premier Football League",
+     "clubs": 12,
+     "verified": true,
      "tsdbLeagueId": null
     }
    ]
@@ -1087,6 +1626,34 @@
    ]
   },
   {
+   "code": "TUR",
+   "country": "Türkiye",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Süper Lig",
+     "clubs": 18,
+     "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "UAE",
+   "country": "United Arab Emirates",
+   "confederation": "AFC",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "UAE Pro League",
+     "clubs": 14,
+     "verified": true,
+     "tsdbLeagueId": 4678
+    }
+   ]
+  },
+  {
    "code": "UGA",
    "country": "Uganda",
    "confederation": "CAF",
@@ -1095,6 +1662,34 @@
      "tier": 1,
      "name": "Uganda Premier League (StarTimes Uganda Premier League)",
      "clubs": 13,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "UKR",
+   "country": "Ukraine",
+   "confederation": "UEFA",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Ukrainian Premier League",
+     "clubs": 16,
+     "verified": false,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "URU",
+   "country": "Uruguay",
+   "confederation": "CONMEBOL",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Primera División (Liga AUF Uruguaya)",
+     "clubs": 12,
      "verified": false,
      "tsdbLeagueId": null
     }
@@ -1117,6 +1712,20 @@
      "name": "USL Championship",
      "clubs": 25,
      "verified": true,
+     "tsdbLeagueId": null
+    }
+   ]
+  },
+  {
+   "code": "VEN",
+   "country": "Venezuela",
+   "confederation": "CONMEBOL",
+   "leagues": [
+    {
+     "tier": 1,
+     "name": "Liga FUTVE (Primera División de Venezuela)",
+     "clubs": 12,
+     "verified": false,
      "tsdbLeagueId": null
     }
    ]

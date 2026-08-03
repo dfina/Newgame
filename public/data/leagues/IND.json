@@ -2,7 +2,35 @@
   "association": "IND",
   "country": "India",
   "confederation": "AFC",
-  "season": "unverified",
-  "leagues": [],
-  "note": "Not researched this session: the shared WebSearch budget (200 calls) for this session was exhausted before this association could be investigated. No league or club data has been invented; this file intentionally lists no leagues pending a future session with search access to verify India's top-flight competition(s) and clubs."
+  "season": "2025-26",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Indian Super League",
+      "tsdbLeagueId": null,
+      "verified": true,
+      "sources": [
+        "https://www.transfermarkt.co.in/all-14-clubs-confirm-participation-fixtures-and-stadium-details-to-follow/view/news/473538",
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Indian_Super_League",
+        "https://www.outlookindia.com/sports/football/indian-super-league-crisis-clubs-joint-statement-uncertainty-2026-27-season"
+      ],
+      "clubs": [
+        { "name": "Bengaluru FC", "tsdbTeamId": null, "badge": null, "colors": ["#1B3F8B", "#FFD200"] },
+        { "name": "Chennaiyin FC", "tsdbTeamId": null, "badge": null, "colors": ["#1B3F8B", "#FFD200"] },
+        { "name": "East Bengal FC", "tsdbTeamId": null, "badge": null, "colors": ["#E2231A", "#FFD200"] },
+        { "name": "FC Goa", "tsdbTeamId": null, "badge": null, "colors": ["#F47920", "#FFFFFF"] },
+        { "name": "Hyderabad FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Jamshedpur FC", "tsdbTeamId": null, "badge": null, "colors": ["#E2231A", "#000000"] },
+        { "name": "Kerala Blasters FC", "tsdbTeamId": null, "badge": null, "colors": ["#FDB913", "#000000"] },
+        { "name": "Mohammedan SC", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#E2231A"] },
+        { "name": "Mohun Bagan Super Giant", "tsdbTeamId": null, "badge": null, "colors": ["#8A1538", "#00693E"] },
+        { "name": "Mumbai City FC", "tsdbTeamId": null, "badge": null, "colors": ["#003C7C", "#FFD200"] },
+        { "name": "NorthEast United FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Odisha FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Punjab FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Inter Kashi FC", "tsdbTeamId": null, "badge": null }
+      ]
+    }
+  ],
+  "note": "2025-26 ISL season (14 clubs, concluded May 2026 with East Bengal champions) is the last confirmed completed season. Multiple sources indicate ISL clubs have publicly stated uncertainty about the 2026-27 season due to unresolved AIFF commercial-partner/governance issues, so no 2026-27 composition is recorded here."
 }
