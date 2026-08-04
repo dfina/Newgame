@@ -1,7 +1,7 @@
 // Simulates one full season: league, domestic cup, continental competition,
 // internationals, stats, awards, promotion/relegation.
 import { rand, chance, irand, clamp, noise } from './rng.js';
-import { clubStrength, leagueLevel, countryCoeff } from './data.js';
+import { clubStrength, settleClubQuality, leagueLevel, countryCoeff } from './data.js';
 import {
   domesticCupName, CONTINENTAL, continentalSlots,
   continentalTournamentInYear, isWorldCupYear, WORLD_CUP, AWARDS
@@ -102,13 +102,17 @@ function playerSeasonStats(career, level, load, injuryWeeks) {
 }
 
 // Rank all clubs in the league; returns table array of {name, pts} sorted.
-function simulateTable(career, level, share) {
+// The player's own club uses its carried-over quality rather than the
+// division's baseline, so a side that has just come up plays like a side that
+// has just come up.
+function simulateTable(career, level, quality, share) {
   const clubs = career.leagueClubs;
   const n = clubs.length;
   const games = (n - 1) * 2;
   const rows = clubs.map((c) => {
     let s = clubStrength(c.name, level);
     if (c.name === career.club.name) {
+      s = quality;
       const contrib = clamp((career.player.ability - level) / 130, -0.1, 0.22) * clamp(share, 0.2, 1);
       s *= 1 + contrib + (career.player.captain ? 0.03 : 0);
     }
@@ -120,12 +124,20 @@ function simulateTable(career, level, share) {
   return rows;
 }
 
+// Cup football is not a coin toss weighted by a hair. Raising both sides to a
+// power before comparing them makes a real gap in quality tell over a run of
+// rounds, which is why the clubs that win continental trophies are the strong
+// ones rather than whoever happened to qualify.
+const KO_EDGE = 2.6;
+
 function knockoutRun(teamStr, fieldStr, roundsNames) {
   // Returns { reached, won } — reached is index into roundsNames (last = champion).
   let reached = -1;
   for (let i = 0; i < roundsNames.length; i++) {
     const oppStr = fieldStr * (0.75 + (i / roundsNames.length) * 0.45) * (1 + noise() * 0.15);
-    const pWin = clamp(teamStr / (teamStr + oppStr), 0.08, 0.92);
+    const a = Math.pow(Math.max(1, teamStr), KO_EDGE);
+    const b = Math.pow(Math.max(1, oppStr), KO_EDGE);
+    const pWin = clamp(a / (a + b), 0.04, 0.94);
     if (chance(pWin)) reached = i; else break;
   }
   return { reached, won: reached === roundsNames.length - 1 };
@@ -143,8 +155,14 @@ export function simulateSeason(career) {
   const injuryWeeks = career.flags.injuryWeeks || 0;
 
   // ----- The club's campaigns, which decide how many matches there are -----
-  const teamStr = clubStrength(career.club.name, level) *
-    (1 + clamp(squadEdge(p.ability, level), -0.15, 0.35) * 0.12);
+  // The club's quality is carried between seasons and only drifts toward what
+  // its standing is worth in its current division, so promotion is survived
+  // rather than sailed through, and a regular in Europe grows into a contender.
+  const quality = settleClubQuality(career.clubQuality, career.club.name, level);
+  career.clubQuality = quality;
+  report.clubQuality = quality;
+
+  const teamStr = quality * (1 + clamp(squadEdge(p.ability, level), -0.15, 0.35) * 0.12);
 
   const cupName = domesticCupName(career.club.country, career.club.countryName);
   const cupField = leagueLevel(coeff, 1) * 0.9;
@@ -153,7 +171,12 @@ export function simulateSeason(career) {
   let cont = null;
   if (career.continental) {
     const comp = career.continental;
-    const contField = 70 * (comp.prestige / 100);
+    // A continental field is made of the best sides on the continent, so the
+    // bar is set by them and not by the entrant's own league. Winning the
+    // Champions League means beating clubs of that stature, every round — and
+    // even the third-tier competition is full of clubs from divisions as good
+    // as your own, so it never becomes a stroll for a mid-table side.
+    const contField = Math.max(comp.prestige * 1.02, level * 0.92);
     cont = { comp, ...knockoutRun(teamStr * 1.05, contField, CONT_ROUNDS) };
   }
 
@@ -173,7 +196,7 @@ export function simulateSeason(career) {
   // ----- Player + league -----
   const stats = playerSeasonStats(career, level, load, injuryWeeks);
   career.lastStats = stats;
-  const table = simulateTable(career, level, stats.share);
+  const table = simulateTable(career, level, quality, stats.share);
   const position = table.findIndex((r) => r.name === career.club.name) + 1;
   const n = table.length;
   report.stats = stats;

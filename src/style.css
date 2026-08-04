@@ -216,21 +216,58 @@ label { font-size: .82rem; color: var(--muted); display: block; margin-top: 12px
 
 .lg-badge { width: 14px; height: 14px; object-fit: contain; flex-shrink: 0; vertical-align: -2px; }
 
-/* ---------- decision ---------- */
-.decision-body { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 15px; margin-bottom: 12px; }
+/* ---------- decision cards ---------- */
+/* Two options, side by side: title, an illustration, and the odds the choice
+   is actually rolled against. */
+.choice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
 
-/* Odds shown on a decision card before committing */
-.odds { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
-.odd { font-size: .72rem; font-weight: 600; border-radius: 6px; padding: 3px 8px; border: 1px solid; }
-.odd b { font-weight: 800; }
-.odd.win { color: #74d68a; border-color: #2b6b3c; background: #14301d; }
-.odd.lose { color: #f2938d; border-color: #6e3330; background: #301614; }
-.odd.none { color: var(--muted); border-color: var(--line); background: transparent; }
+.choice-card {
+  background: var(--panel); border: 1px solid var(--line);
+  border-radius: 16px; padding: 14px 12px 12px;
+  display: flex; flex-direction: column; gap: 10px;
+  margin: 0; min-height: 0; text-align: center;
+  transition: border-color .15s, background .15s, transform .06s;
+}
+.choice-card:hover { border-color: #414755; background: #13161b; }
+/* Two lines of room whether the label needs them or not, so the two
+   illustrations sit on the same line as each other. */
+.choice-card .ct {
+  font-size: 1rem; font-weight: 800; line-height: 1.2;
+  min-height: 2.4em; display: flex; align-items: center; justify-content: center;
+}
+.choice-card .art {
+  width: 100%; height: auto; aspect-ratio: 5 / 4;
+  border-radius: 10px; display: block; background: #0d1117;
+}
+
+.odds-chips { display: flex; flex-direction: column; gap: 6px; margin-top: auto; }
+.chip-odd {
+  display: flex; align-items: center; gap: 7px;
+  border-radius: 999px; padding: 7px 10px;
+  font-size: .78rem; font-weight: 700; line-height: 1;
+}
+.chip-odd i { font-style: normal; font-size: .8rem; opacity: .9; }
+.chip-odd b { font-weight: 700; }
+.chip-odd em {
+  font-style: normal; margin-left: auto; font-weight: 800; font-size: .74rem;
+  padding: 3px 7px; border-radius: 999px;
+}
+.chip-odd.win { color: #6ee7a0; background: #0e2a1b; }
+.chip-odd.win em { background: #14432a; color: #7cf0ac; }
+.chip-odd.lose { color: #f2938d; background: #2c1315; }
+.chip-odd.lose em { background: #46191c; color: #ffa8a2; }
+.chip-odd.none { color: var(--muted); background: #16191f; }
+
+@media (max-width: 380px) {
+  .choice-card { padding: 11px 9px 10px; }
+  .choice-card .ct { font-size: .88rem; }
+  .chip-odd { font-size: .7rem; padding: 6px 8px; gap: 5px; }
+  .chip-odd em { font-size: .66rem; padding: 2px 5px; }
+}
 
 .ovr-result { font-size: 1.05rem; font-weight: 800; padding: 10px 12px; border-radius: 10px; margin: 10px 0; }
 .ovr-result.up { color: #74d68a; background: #14301d; border: 1px solid #2b6b3c; }
 .ovr-result.down { color: #f2938d; background: #301614; border: 1px solid #6e3330; }
-.decision-body p { font-size: .95rem; }
 
 .news { border-left: 3px solid var(--accent2); padding: 9px 12px; margin: 8px 0; background: var(--panel); border-radius: 0 10px 10px 0; font-size: .9rem; line-height: 1.4; }
 .news.good { border-left-color: var(--accent); }

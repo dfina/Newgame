@@ -6,6 +6,12 @@
 //  2. A career's overall rating is driven by football, not by decision cards:
 //     across a career, far more OVR movement must come from season
 //     development than from the choices made on the cards.
+//  3. Decision cards are rare, and always a choice between exactly two options.
+//  4. Clubs behave like the clubs they are: a side cannot climb from the
+//     fourth tier to the first in successive seasons, and the teams that win
+//     continental trophies are the strong ones, not whoever qualified.
+//  5. The same season is worth more at a higher standard: identical output in
+//     a stronger league must move a young player's rating further.
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 
@@ -43,8 +49,32 @@ const NATS = ['ENG', 'ESP', 'ITA', 'GER', 'FRA', 'BRA', 'ARG', 'NED', 'POR', 'BE
 const POS = ['GK', 'CB', 'LB', 'RB', 'LWB', 'CDM', 'CM', 'CAM', 'LM', 'RM', 'LW', 'RW', 'CF', 'ST'];
 
 const seasons = [];          // one row per season played
+
+// Record a finished season for the report below.
+function record(c, r) {
+  developmentOvr += Math.abs(r.ovrDelta || 0);
+  if (r.cut) return;
+  seasons.push({
+    ovr: r.ovrBefore, age: c.history[c.history.length - 1].age,
+    edge: edgeOf(r.ovrBefore, c.club),
+    apps: r.stats.apps, possible: r.stats.possible,
+    league: r.matchLoad.league, cont: r.matchLoad.continental,
+    goals: r.stats.goals, assists: r.stats.assists, saves: r.stats.saves,
+    role: c.history[c.history.length - 1].role,
+    rating: r.stats.rating, tier: c.club.tier,
+    quality: r.clubQuality, position: r.position, champion: !!r.champion,
+    promoted: !!r.promoted, relegated: !!r.relegated, ovrDelta: r.ovrDelta || 0, perf: r.performance || 0,
+    level: leagueLevel(countryCoeff(c.club.country, c.club.confederation), c.club.tier),
+    contPlayed: !!r.continentalRun, contWon: !!(r.continentalRun && r.continentalRun.won),
+    contName: r.continentalRun ? r.continentalRun.name : null
+  });
+}
 let decisionOvr = 0;         // absolute OVR moved by decision cards
 let developmentOvr = 0;      // absolute OVR moved by season development
+let cardsPlayed = 0;         // decision cards seen across all careers
+let badChoiceCount = 0;      // cards that did not offer exactly two options
+const promoStreaks = [];     // longest run of successive promotions per career
+const afterPromotion = [];   // where a promoted side finishes, 0 (top) to 1 (bottom)
 const errors = [];
 
 for (let i = 0; i < N; i++) {
@@ -53,34 +83,37 @@ for (let i = 0; i < N; i++) {
     if (!c.offers.length) { errors.push('no starting offers'); continue; }
     await acceptOffer(c, c.offers[0]);
     let guard = 0;
+    let streak = 0, maxStreak = 0;
+    const before = seasons.length;
     while (!c.retired && guard++ < 400) {
       if (c.phase === 'offers') {
         if (c.offers.length && Math.random() < 0.5) await acceptOffer(c, c.offers[Math.floor(Math.random() * c.offers.length)]);
         else stayAtClub(c);
       } else if (c.phase === 'event') {
         const ev = currentEvent(c);
+        if (ev.choices.length !== 2) badChoiceCount++;
         const out = chooseEventOption(c, Math.floor(Math.random() * ev.choices.length));
         decisionOvr += Math.abs(out.ovrDelta || 0);
+        cardsPlayed++;
         c.lastOutcome = null;
-        if (c.phase === 'review') {
-          const r = runSeason(c);
-          developmentOvr += Math.abs(r.ovrDelta || 0);
-          if (!r.cut) {
-            seasons.push({
-              ovr: r.ovrBefore, age: c.history[c.history.length - 1].age,
-              edge: edgeOf(r.ovrBefore, c.club),
-              apps: r.stats.apps, possible: r.stats.possible,
-              league: r.matchLoad.league, cont: r.matchLoad.continental,
-              goals: r.stats.goals, assists: r.stats.assists, saves: r.stats.saves,
-              role: c.history[c.history.length - 1].role,
-              rating: r.stats.rating, tier: c.club.tier
-            });
-          }
-        }
+        if (c.phase === 'review') record(c, runSeason(c));
+      } else if (c.phase === 'review') {
+        record(c, runSeason(c));
       } else if (c.phase === 'postseason') {
         await advanceToNextSeason(c);
       } else { errors.push('stuck in ' + c.phase); break; }
     }
+    const mine = seasons.slice(before);
+    for (let k = 0; k < mine.length; k++) {
+      streak = mine[k].promoted ? streak + 1 : 0;
+      if (streak > maxStreak) maxStreak = streak;
+      // How a side fares the season after going up, as a share of its new
+      // division: 1.0 is bottom, 0 is champions.
+      if (k > 0 && mine[k - 1].promoted && mine[k].tier === mine[k - 1].tier - 1) {
+        afterPromotion.push(mine[k].position / Math.max(2, mine[k].league / 2 + 1));
+      }
+    }
+    promoStreaks.push(maxStreak);
   } catch (e) {
     errors.push(e.stack.split('\n').slice(0, 3).join(' | '));
   }
@@ -113,6 +146,41 @@ const keepers = seasons.filter((s) => s.role === 'GK' && s.apps >= 20);
 console.log(`\nstriker seasons (20+ apps): goals avg ${avg(strikers.map((s) => s.goals)).toFixed(1)} | p90 ${pct(strikers.map((s) => s.goals), 0.9)} | max ${Math.max(0, ...strikers.map((s) => s.goals))}`);
 console.log(`keeper seasons (20+ apps): saves avg ${avg(keepers.map((s) => s.saves)).toFixed(1)} | per game ${(avg(keepers.map((s) => s.saves / s.apps))).toFixed(2)}`);
 
+const contWinners = seasons.filter((s) => s.contWon);
+const contEntrants = seasons.filter((s) => s.contPlayed);
+const qAbs = (rows) => avg(rows.map((r) => r.quality));
+console.log(`\ncontinental: ${contEntrants.length} campaigns, ${contWinners.length} won` +
+  (contWinners.length ? ` | winners average quality ${qAbs(contWinners).toFixed(0)}, all entrants ${qAbs(contEntrants).toFixed(0)}` : ''));
+// Split each competition at its own median entrant, so the comparison is
+// between clubs that met the same field rather than across competitions.
+let strongEntries = 0, strongWins = 0, weakEntries = 0, weakWins = 0;
+for (const name of [...new Set(contEntrants.map((r) => r.contName))]) {
+  const rows = contEntrants.filter((r) => r.contName === name);
+  if (rows.length < 8) continue;
+  const half = [...rows].sort((a, b) => a.quality - b.quality)[Math.floor(rows.length / 2)].quality;
+  const up = rows.filter((r) => r.quality >= half), down = rows.filter((r) => r.quality < half);
+  strongEntries += up.length; strongWins += up.filter((r) => r.contWon).length;
+  weakEntries += down.length; weakWins += down.filter((r) => r.contWon).length;
+  console.log(`  ${name.padEnd(26)} ${String(rows.length).padStart(3)} entries | won ${String(rows.filter((r) => r.contWon).length).padStart(2)}` +
+    ` | stronger half ${(up.filter((r) => r.contWon).length / Math.max(1, up.length) * 100).toFixed(0)}%` +
+    ` vs weaker half ${(down.filter((r) => r.contWon).length / Math.max(1, down.length) * 100).toFixed(0)}%`);
+}
+const strongRate = strongWins / Math.max(1, strongEntries), weakRate = weakWins / Math.max(1, weakEntries);
+console.log(`  stronger halves win ${(strongRate * 100).toFixed(1)}% of their campaigns, weaker halves ${(weakRate * 100).toFixed(1)}%`);
+console.log(`promotions in successive seasons: longest run p90 ${pct(promoStreaks, 0.9)}, max ${Math.max(0, ...promoStreaks)}`);
+if (afterPromotion.length) {
+  console.log(`the season after promotion: average finish ${(avg(afterPromotion) * 100).toFixed(0)}% down its new division (${afterPromotion.length} samples)`);
+}
+console.log(`decision cards: ${cardsPlayed} over ${seasons.length} seasons (${(cardsPlayed / Math.max(1, seasons.length) * 100).toFixed(0)}% of seasons)`);
+
+// The same season, played at a higher standard, has to be worth more.
+const young = (lo, hi) => seasons.filter((s) => s.age <= 23 && s.apps >= 25 &&
+  s.goals + s.assists >= 4 && s.goals + s.assists <= 14 && s.level >= lo && s.level < hi);
+const weak = young(0, 45), strong = young(70, 999);
+console.log(`the same season (25+ apps, 4-14 goals+assists, under 24) is worth:` +
+  ` weak leagues ${avg(weak.map((s) => s.perf)).toFixed(2)} development | strong leagues ${avg(strong.map((s) => s.perf)).toFixed(2)}` +
+  ` (raw movement +${avg(weak.map((s) => s.ovrDelta)).toFixed(2)} vs +${avg(strong.map((s) => s.ovrDelta)).toFixed(2)} OVR, headroom differs)`);
+
 const totalOvr = decisionOvr + developmentOvr;
 const decisionShare = totalOvr ? decisionOvr / totalOvr : 0;
 console.log(`\nOVR movement: season development ${developmentOvr.toFixed(0)} | decision cards ${decisionOvr.toFixed(0)} → cards are ${(decisionShare * 100).toFixed(0)}% of all movement`);
@@ -135,6 +203,24 @@ const youthShare = avg(youth.map((s) => s.apps / s.possible));
 if (youth.length && youthShare > 0.5) fails.push(`teenagers play ${(youthShare * 100).toFixed(0)}% of fixtures (expected under 50%)`);
 
 if (decisionShare > 0.3) fails.push(`decision cards account for ${(decisionShare * 100).toFixed(0)}% of OVR movement (expected under 30%)`);
+if (badChoiceCount) fails.push(`${badChoiceCount} decision cards did not offer exactly two options`);
+
+const cardRate = cardsPlayed / Math.max(1, seasons.length);
+if (cardRate > 0.55) fails.push(`decision cards appear in ${(cardRate * 100).toFixed(0)}% of seasons (expected under 55%)`);
+
+if (Math.max(0, ...promoStreaks) > 2) fails.push(`a club won ${Math.max(...promoStreaks)} promotions in successive seasons`);
+if (pct(promoStreaks, 0.9) > 1) fails.push('back-to-back promotions are commonplace (p90 of the longest run is above 1)');
+
+if (strongEntries > 40 && weakEntries > 40 && strongRate < weakRate * 2) {
+  fails.push(`stronger entrants win only ${(strongRate * 100).toFixed(1)}% of continental campaigns against ${(weakRate * 100).toFixed(1)}% for weaker ones (expected at least double)`);
+}
+if (contEntrants.length > 50 && contWinners.length / contEntrants.length > 0.16) {
+  fails.push(`${(contWinners.length / contEntrants.length * 100).toFixed(0)}% of continental campaigns end in the trophy (expected under 16%)`);
+}
+
+if (weak.length > 20 && strong.length > 20 && avg(strong.map((s) => s.perf)) <= avg(weak.map((s) => s.perf)) * 1.05) {
+  fails.push(`the same season develops a player no more in a strong league (${avg(strong.map((s) => s.perf)).toFixed(2)}) than a weak one (${avg(weak.map((s) => s.perf)).toFixed(2)})`);
+}
 
 if (fails.length) {
   console.log('\nBALANCE FAIL:');

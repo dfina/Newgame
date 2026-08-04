@@ -58,6 +58,11 @@ for (let i = 0; i < N; i++) {
           if (r.promoted) agg.promotions++;
           if (r.relegated) agg.relegations++;
         }
+      } else if (c.phase === 'review') {
+        // Most seasons now carry no decision card at all and go straight here.
+        const r = runSeason(c);
+        if (r.promoted) agg.promotions++;
+        if (r.relegated) agg.relegations++;
       } else if (c.phase === 'postseason') {
         await advanceToNextSeason(c);
       } else {

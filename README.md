@@ -10,11 +10,20 @@ cabinet.
 
 Your overall rating is earned on the pitch. Appearances, goals, assists (or
 clean sheets and saves in goal) and match ratings drive it, measured against
-what your role and your division make a normal season; decision cards colour
-the story and move form, morale, minutes and reputation, but only ever nudge
-the rating itself. Every card shows the odds it is gambling with and the OVR
-each side carries — and the same roll decides both, so the outcome you read
-always matches the number you get.
+what your role and your division make a normal season — and weighted by where
+you played it, so the same numbers in a great league move you further than in
+a fourth division.
+
+Decision cards are rare: roughly one season in three turns on one. Each offers
+exactly two options, shows the odds it is gambling with and the OVR each side
+carries, and the same roll decides the outcome you read and the number you
+get. Some of them are transfers — force the move or sign the new deal, take
+the loan or fight for your place.
+
+Clubs carry their quality between seasons rather than inheriting their
+division's average, so a promoted side arrives as a promoted side, a fourth-tier
+club cannot reach the top flight in three years, and the teams that win
+continental trophies are the ones good enough to.
 
 ## Play it
 

@@ -65,6 +65,45 @@ function overlap(a, b) {
   return hit / Math.min(A.size, B.size);
 }
 
+// FIFA's country names and TheSportsDB's disagree often enough to break the
+// one filter that keeps a Congolese club from wearing a Scottish crest.
+const COUNTRY_ALIASES = {
+  'congo dr': ['dr congo', 'democratic republic of the congo', 'congo democratic republic', 'congo-kinshasa'],
+  'congo': ['republic of the congo', 'congo-brazzaville'],
+  'united states': ['usa', 'united states of america', 'us'],
+  'korea republic': ['south korea', 'korea south'],
+  'korea dpr': ['north korea', 'korea north'],
+  'ir iran': ['iran'],
+  'côte d\'ivoire': ['ivory coast', 'cote divoire'],
+  'cabo verde': ['cape verde'],
+  'chinese taipei': ['taiwan'],
+  'hong kong, china': ['hong kong'],
+  'macau': ['macao'],
+  'china pr': ['china'],
+  'türkiye': ['turkey'],
+  'czechia': ['czech republic'],
+  'netherlands': ['holland'],
+  'north macedonia': ['macedonia'],
+  'eswatini': ['swaziland'],
+  'timor-leste': ['east timor'],
+  'curaçao': ['curacao'],
+  'st kitts and nevis': ['saint kitts and nevis'],
+  'st lucia': ['saint lucia'],
+  'st vincent and the grenadines': ['saint vincent and the grenadines'],
+  'bosnia and herzegovina': ['bosnia', 'bosnia-herzegovina'],
+  'ireland': ['republic of ireland'],
+  'chinese hong kong': ['hong kong']
+};
+
+// Do these two country names refer to the same association?
+function sameCountry(a, b) {
+  if (!a || !b) return false;
+  const x = strip(a).trim(), y = strip(b).trim();
+  if (x === y) return true;
+  const known = (k, v) => (COUNTRY_ALIASES[k] || []).some((n) => strip(n) === v);
+  return known(x, y) || known(y, x);
+}
+
 // Reserve, youth and B teams share almost every word with the senior side.
 const RESERVE = /\b(ii|iii|b|u\s?1[6-9]|u\s?2[0-3]|reserves?|youth|futures|academy|nxt|jong)\b/;
 function isReserve(name) {
@@ -112,12 +151,13 @@ function pickTeam(teams, club) {
   if (!soccer.length) return null;
   const want = norm(club.name);
   const wantReserve = isReserve(club.name);
-  // When the right country is represented at all, nothing outside it can win:
-  // that is what put a French side's crest on a Belgian club.
-  const country = club.country ? strip(club.country) : null;
-  if (country) {
-    const home = soccer.filter((t) => strip(t.strCountry || '') === country);
-    if (home.length) soccer = home;
+  // A club may only wear a crest from its own country. Glasgow Rangers and
+  // Kinshasa's Rangers share a name and nothing else; without this, whichever
+  // the search happened to rank first won. When the country is known and no
+  // candidate comes from it, the honest answer is no crest at all.
+  if (club.country) {
+    soccer = soccer.filter((t) => sameCountry(club.country, t.strCountry));
+    if (!soccer.length) return null;
   }
   const scored = soccer.map((t) => {
     const name = norm(t.strTeam || '');

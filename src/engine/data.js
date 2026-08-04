@@ -60,10 +60,29 @@ export function leagueLevel(coeff, tier) {
   return coeff * Math.pow(0.72, tier - 1);
 }
 
+// Where a club sits within its division, 0..1, stable for the life of the
+// club: 0 is a relegation candidate, 1 is the side that wins the thing.
+export function clubStature(clubName) {
+  return strHash(clubName);
+}
+
 // Stable per-club strength within a league: level ± 18% by name hash.
 export function clubStrength(clubName, level) {
-  const jitter = 0.82 + strHash(clubName) * 0.36;
-  return level * jitter;
+  return level * (0.82 + clubStature(clubName) * 0.36);
+}
+
+// A club promoted into a stronger division does not become a stronger club
+// overnight — it arrives as one of the weakest sides there and has to build.
+// This drifts a club's absolute quality toward what its stature would be worth
+// in its current division, a fraction of the way each season, which is why a
+// Serie D side cannot reach Serie A in three years and why a club that keeps
+// qualifying for Europe becomes genuinely capable of winning it.
+const DRIFT = 0.16;
+
+export function settleClubQuality(current, clubName, level) {
+  const target = clubStrength(clubName, level);
+  if (current == null) return target;
+  return current + (target - current) * DRIFT;
 }
 
 // Build a flat playable list of leagues for a country file.

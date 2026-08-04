@@ -1,6 +1,7 @@
 // All screen renderers. Each returns an HTML string; actions are wired via
 // data-action attributes handled in main.js.
 import { badgeImg, initialsBadge, leagueBadgeImg } from './badge.js';
+import { cardArt } from './cardart.js';
 import { trophySvg, trophyTile } from './trophies.js';
 import { computeLegacy, assembleCabinet } from '../engine/legacy.js';
 import { fmtWage, currentEvent } from '../engine/career.js';
@@ -62,16 +63,18 @@ const signed = (n) => (n > 0 ? `+${n}` : `${n}`);
 
 // What a decision is actually gambling with, shown before you commit: the very
 // probability the outcome is rolled against, and the OVR each side carries.
-function stakeOdds(risk) {
+function ovrLabel(n) {
+  return n ? `${signed(n)} OVR` : 'No change';
+}
+
+function riskChips(risk) {
   if (!risk || risk.p >= 1) {
-    return `<span class="odds"><span class="odd none">Certain${risk?.up ? ` · ${signed(risk.up)} OVR` : ' · no OVR change'}</span></span>`;
+    return `<span class="odds-chips"><span class="chip-odd none"><i>\u2192</i><b>${risk?.up ? ovrLabel(risk.up) : 'No changes'}</b></span></span>`;
   }
   const pct = Math.round(risk.p * 100);
-  const win = risk.up ? `${signed(risk.up)} OVR` : 'no OVR change';
-  const lose = risk.down ? `${signed(risk.down)} OVR` : 'no OVR change';
-  return `<span class="odds">
-    <span class="odd win">Goes well <b>${pct}%</b> · ${win}</span>
-    <span class="odd lose">Backfires <b>${100 - pct}%</b> · ${lose}</span>
+  return `<span class="odds-chips">
+    <span class="chip-odd win"><i>\u2197</i><b>${ovrLabel(risk.up)}</b><em>${pct}%</em></span>
+    <span class="chip-odd lose"><i>\u2198</i><b>${ovrLabel(risk.down)}</b><em>${100 - pct}%</em></span>
   </span>`;
 }
 
@@ -328,9 +331,14 @@ export function offersScreen(career) {
 export function eventScreen(career) {
   const ev = currentEvent(career);
   if (!ev) return '';
+  const cards = ev.choices.map((c) => `<button class="choice-card" data-action="choose" data-i="${c.i}">
+      <span class="ct">${esc(c.label)}</span>
+      ${cardArt(c.art)}
+      ${riskChips(c.risk)}
+    </button>`).join('');
   const action = `<h2>${esc(ev.title)}</h2>
-    <div class="decision-body"><p>${esc(ev.text)}</p></div>
-    ${ev.choices.map((c) => `<button data-action="choose" data-i="${c.i}"><b>${esc(c.label)}</b>${c.sub ? `<span class="choice-sub">${esc(c.sub)}</span>` : ''}${stakeOdds(c.risk)}</button>`).join('')}`;
+    <p class="lead">${esc(ev.text)}</p>
+    <div class="choice-grid">${cards}</div>`;
   return layout(career, action);
 }
 

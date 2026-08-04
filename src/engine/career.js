@@ -6,7 +6,7 @@ import { drawSeasonEvents, getEventById } from './events.js';
 import { simulateSeason } from './season.js';
 
 const SAVE_KEY = 'fcsim.career';
-const SAVE_VERSION = 3;
+const SAVE_VERSION = 4;
 const HALL_KEY = 'fcsim.hall';
 const START_YEAR = 2026;
 
@@ -86,7 +86,8 @@ async function generateOffers(career, isStart = false) {
   const idx = await loadIndex();
   const target = isStart
     ? clamp(p.ability * 0.75 + rand() * 12, 8, 55)
-    : clamp(p.ability * (0.9 + rand() * 0.25) + p.reputation * 0.15, 10, 105);
+    : clamp(p.ability * (0.9 + rand() * 0.25) + p.reputation * 0.15, 10, 105) *
+      (career.bigMove ? 1.18 : 1);
 
   // Home-country leagues get a wider acceptable band, so a player from a
   // small football nation still gets offers from home rather than none.
@@ -178,6 +179,9 @@ export async function acceptOffer(career, offer) {
   career.player.wage = offer.wage;
   career.player.contractYears = offer.years;
   career.yearsAtClub = 0;
+  // A new club comes with its own standing in its own division; the quality
+  // the last one had carried is not the player's to bring with them.
+  career.clubQuality = null;
   career.player.captain = false;
   career.continental = null;
   await refreshLeagueContext(career, entry);
@@ -205,9 +209,25 @@ async function refreshLeagueContext(career, idxEntry) {
 
 // ---------- Season flow ----------
 
+// How likely this season is to turn on a decision at all. Most seasons are
+// just football: a career should be punctuated by a handful of these, not
+// interrupted by one every August. A young career and a contract year throw up
+// more of them, and two in consecutive seasons is deliberately unlikely.
+function cardChance(career) {
+  const p = career.player;
+  let c = 0.34;
+  if (p.age <= 21) c += 0.14;
+  if (p.contractYears === 1) c += 0.12;
+  if (p.morale < 45) c += 0.08;
+  if (career.lastCardYear === career.year - 1) c -= 0.2;
+  return clamp(c, 0.1, 0.6);
+}
+
 function beginSeason(career) {
   career.flags = {};
-  career.pendingEvents = drawSeasonEvents(career, 1).map((e) => e.id);
+  const drawn = chance(cardChance(career)) ? drawSeasonEvents(career, 1) : [];
+  if (drawn.length) career.lastCardYear = career.year;
+  career.pendingEvents = drawn.map((e) => e.id);
   // Rare career-threatening injury interjection (~0.6%/season on average).
   if (chance(0.003 + career.player.injuryProne * 0.005 + (career.player.age > 30 ? 0.003 : 0))) {
     career.pendingEvents.splice(irand(0, career.pendingEvents.length), 0, '__grave-injury');
@@ -233,7 +253,7 @@ export function currentEvent(career) {
     choices: e.choices.map((ch, i) => ({
       i,
       label: ch.label,
-      sub: ch.sub,
+      art: ch.art || 'pitch',
       risk: { p: choiceOdds(ch, career), up: choiceOvr(ch, true), down: choiceOvr(ch, false) }
     }))
   };
@@ -256,8 +276,8 @@ function graveInjuryEvent(career) {
     title: 'A sickening moment',
     text: 'A crunching challenge leaves you in hospital. The surgeon is blunt: this is a career-threatening injury. How you respond will define everything.',
     choices: [
-      { i: 0, label: 'Fight through brutal rehabilitation', sub: 'A road back, at a cost', risk: { p: 0.65, up: -4, down: 0 } },
-      { i: 1, label: 'Retire on medical advice', sub: 'Walk away with your health', risk: { p: 1, up: 0, down: 0 } }
+      { i: 0, label: 'Fight through rehabilitation', art: 'gym', risk: { p: 0.65, up: -4, down: 0 } },
+      { i: 1, label: 'Retire on medical advice', art: 'quiet', risk: { p: 1, up: 0, down: 0 } }
     ]
   };
 }
@@ -326,6 +346,8 @@ function applyEffects(career, fx) {
   if (fx.bonusGoals) career.flags.bonusGoals = fx.bonusGoals;
   if (fx.intlBoost) career.flags.intlBoost = fx.intlBoost;
   if (fx.adventure) career.adventure = true;
+  if (fx.forceOffers) career.forceOffers = true;
+  if (fx.bigMove) career.bigMove = true;
   if (fx.fanFavourite) career.flags.fanFavourite = true;
 }
 
@@ -349,10 +371,15 @@ function finishSeason(career) {
   for (const n of report.news || []) career.news.unshift(n);
   // A season's performance — minutes above all, then output and rating — is
   // what moves a player's overall rating. Decisions nudge it; football decides it.
-  // A season is also worth more at a higher standard: tearing up a fourth
-  // division improves you, but not as fast as holding your own in a great league.
-  const standard = clamp(0.78 + leagueLevel(countryCoeff(career.club.country, career.club.confederation), career.club.tier) * 0.004, 0.78, 1.16);
-  const perf = report.cut ? 0 : seasonPerformance(report.stats, effectiveRole(p)) * standard;
+  //
+  // Where that season was played counts for as much as what it contained. The
+  // same thirty games and eight goals are worth far more in a great league
+  // than in a fourth division, and more again at a club good enough to be
+  // challenging in it: better team-mates, harder opponents, bigger occasions.
+  const lvl = leagueLevel(countryCoeff(career.club.country, career.club.confederation), career.club.tier);
+  const standard = clamp(0.55 + Math.pow(clamp(lvl / 95, 0, 1.1), 1.5) * 1.15, 0.55, 1.6);
+  const clubFactor = clamp(0.9 + ((career.clubQuality ?? lvl) / Math.max(8, lvl) - 1) * 0.55, 0.88, 1.14);
+  const perf = report.cut ? 0 : seasonPerformance(report.stats, effectiveRole(p)) * standard * clubFactor;
   report.performance = perf;
   const ovrBefore = Math.round(p.ability);
 
@@ -398,7 +425,6 @@ function finishSeason(career) {
   // Reputation is earned mainly by performing at a level — dominating a weak
   // division counts for less than holding your own in a strong one. Decision
   // events nudge it either way, but this is the engine of a career's standing.
-  const lvl = leagueLevel(countryCoeff(career.club.country, career.club.confederation), career.club.tier);
   const target = clamp(
     lvl * 0.85 + (report.stats.rating - 6.6) * 18 + (report.champion ? 8 : 0) +
     (report.trophies || []).length * 3,
@@ -444,10 +470,13 @@ export async function advanceToNextSeason(career) {
   }
 
   // Transfer window: offers arrive when in demand, listed, or out of contract.
-  const wantOffers = career.flags.listed || p.contractYears === 0 ||
+  // A decision that pushed for a move guarantees the phone rings.
+  const wantOffers = career.forceOffers || career.flags.listed || p.contractYears === 0 ||
     (p.reputation > 30 && chance(0.45)) || chance(0.2);
   career.offers = wantOffers ? await generateOffers(career) : [];
   career.adventure = false;
+  career.forceOffers = false;
+  career.bigMove = false;
   if (p.contractYears === 0 && !career.offers.length) {
     // Out of contract with no suitors: the club offers a modest one-year deal.
     career.offers = [];

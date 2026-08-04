@@ -31,7 +31,10 @@ const TEAMS = [
   { strTeam: 'RAAL La Louviere', strCountry: 'Belgium', strSport: 'Soccer', strBadge: 'B/raal' },
   { strTeam: 'La Louviere Centre', strCountry: 'Belgium', strSport: 'Soccer', strBadge: 'B/llc' },
   { strTeam: 'Louviere Sportif', strCountry: 'France', strSport: 'Soccer', strBadge: 'B/french-louviere' },
-  { strTeam: 'Nottingham Rugby', strCountry: 'England', strSport: 'Rugby', strBadge: 'B/rugby' }
+  { strTeam: 'Nottingham Rugby', strCountry: 'England', strSport: 'Rugby', strBadge: 'B/rugby' },
+  { strTeam: 'Rangers', strCountry: 'Scotland', strSport: 'Soccer', strBadge: 'B/gers' },
+  { strTeam: 'Queens Park Rangers', strCountry: 'England', strSport: 'Soccer', strBadge: 'B/qpr' },
+  { strTeam: 'AS Vita Club', strCountry: 'DR Congo', strSport: 'Soccer', strBadge: 'B/vita' }
 ];
 
 const ROSTERS = {
@@ -117,6 +120,12 @@ await refuseClub('a Belgian club never takes a French lookalike’s crest',
   { name: 'Louvière SC', country: 'Belgium' }, 'B/french-louviere');
 await refuseClub('an unknown club gets no crest rather than a stranger’s',
   { name: 'Wanderers of Nowhere', country: 'Belgium' }, 'B/raal');
+await refuseClub('Kinshasa’s Rangers never wear Glasgow’s crest',
+  { name: 'FC Rangers', country: 'Congo DR' }, 'B/gers');
+await expectClub('Glasgow Rangers still resolve for Scotland',
+  { name: 'Rangers', country: 'Scotland' }, 'B/gers');
+await expectClub('a country named differently by each source still matches',
+  { name: 'AS Vita Club', country: 'Congo DR' }, 'B/vita');
 
 console.log('\nleague crests');
 await expectLeague('Serie A is not Serie D Girone A',
