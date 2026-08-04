@@ -74,12 +74,6 @@ const SCENES = {
     <path d="M36 82 q24 -22 48 0 z" fill="#8894a6"/>
     <path d="M22 22 l14 10 M98 22 l-14 10" stroke="#ffffff26" stroke-width="2"/>`,
 
-  // A packed end, flares and all.
-  derby: () => `<g fill="#ffffff1a"><circle cx="18" cy="60" r="7"/><circle cx="36" cy="56" r="7"/><circle cx="54" cy="60" r="7"/>
-      <circle cx="72" cy="56" r="7"/><circle cx="90" cy="60" r="7"/><circle cx="104" cy="56" r="7"/></g>
-    <g fill="#ffffff2e"><rect x="10" y="66" width="100" height="22" rx="4"/></g>
-    <path d="M46 26 q8 -14 16 0 q8 14 -8 20 q-16 -6 -8 -20 z" fill="#f2762b"/>`,
-
   // The armband.
   armband: () => `<path d="M30 40 h60 v22 h-60 z" fill="#e2b23c"/>
     <path d="M30 40 q30 10 60 0 v22 q-30 10 -60 0 z" fill="#f0c65a"/>
@@ -173,7 +167,7 @@ export function cardArt(key) {
   const scene = SCENES[key] || SCENES.pitch;
   const tint = {
     gym: P.cool, nutrition: P.cool, burger: P.warm, media: P.night, quiet: P.night,
-    derby: P.red, armband: P.warm, contract: P.cool, money: P.grass, handshake: P.cool,
+    armband: P.warm, contract: P.cool, money: P.grass, handshake: P.cool,
     nightlife: P.night, home: P.night, tactics: P.grass, boot: P.warm, row: P.red,
     penalty: P.grass, beach: P.sky, plane: P.sky, loan: P.warm, flag: P.cool,
     youth: P.cool, charity: P.red, cones: P.grass, training: P.grass, pitch: P.grass

@@ -11,7 +11,7 @@ import { leagueId as curatedLeagueId, competitionId } from './tsdb-ids.js';
 
 const TSDB = 'https://www.thesportsdb.com/api/v1/json/3';
 // Versioned: a bumped key retires crests cached by an earlier, wronger matcher.
-const CACHE_KEY = 'fcsim.badges.v3';
+const CACHE_KEY = 'fcsim.badges.v4';
 
 let cache = null;
 function loadCache() {
@@ -53,7 +53,10 @@ const strip = (s) => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerC
 // sources ("FC", "SAD", sponsor names) so names compare on their real words.
 const NOISE = /\b(fc|cf|afc|ac|as|sc|sv|cd|ud|us|sd|rc|ss|ssc|aa|bk|if|nk|hnk|fk|sk|club|calcio|futebol|football|soccer|de|do|da|the|of|sad)\b/g;
 function norm(s) {
-  return strip(s).replace(/[.'’\-–—/()]/g, ' ').replace(NOISE, ' ').replace(/\s+/g, ' ').trim();
+  // Apostrophes are dropped rather than split on: "FC Rànger's" has to reduce
+  // to "rangers", not to "ranger s", or nothing will ever match it.
+  return strip(s).replace(/['’]/g, '').replace(/[.\-–—/()]/g, ' ')
+    .replace(NOISE, ' ').replace(/\s+/g, ' ').trim();
 }
 function tokens(s) { return new Set(norm(s).split(' ').filter((w) => w.length > 2)); }
 // Fraction of the shorter name's distinctive words that both names share.
@@ -105,9 +108,13 @@ function sameCountry(a, b) {
 }
 
 // Reserve, youth and B teams share almost every word with the senior side.
-const RESERVE = /\b(ii|iii|b|u\s?1[6-9]|u\s?2[0-3]|reserves?|youth|futures|academy|nxt|jong)\b/;
+// The markers are matched only where they sit — as a suffix, or the Dutch
+// "Jong" prefix — so B 36 Tórshavn is not mistaken for somebody's B team.
+const RESERVE_SUFFIX = /\S+\s+(ii|iii|b|u\s?1[6-9]|u\s?2[0-3]|reserves?|youth|futures|academy|nxt)(\s|$)/;
+const RESERVE_PREFIX = /^jong\s/;
 function isReserve(name) {
-  return RESERVE.test(strip(name).replace(/[.'’\-–—/()]/g, ' '));
+  const n = strip(name).replace(/['’]/g, '').replace(/[.\-–—/()]/g, ' ').replace(/\s+/g, ' ').trim();
+  return RESERVE_PREFIX.test(n) || RESERVE_SUFFIX.test(n);
 }
 
 // Names the game uses that TheSportsDB files under something else. These are
@@ -127,7 +134,11 @@ const CLUB_ALIASES = {
   'Brighton & Hove Albion': ['Brighton', 'Brighton Hove Albion'],
   'Union Saint-Gilloise': ['Union Saint-Gilloise', 'Royale Union Saint Gilloise'],
   'OH Leuven': ['Oud-Heverlee Leuven', 'OH Leuven'],
-  'Standard Liège': ['Standard Liege', 'Standard Liège']
+  'Standard Liège': ['Standard Liege', 'Standard Liège'],
+  "FC Rànger's": ["FC Ranger's", 'Rangers', 'FC Rangers'],
+  "Atlètic Club d'Escaldes": ["Atletic Club d'Escaldes", 'Atletic Escaldes'],
+  "Inter Club d'Escaldes": ["Inter Club d'Escaldes", 'Inter Escaldes'],
+  "Penya Encarnada d'Andorra": ['Penya Encarnada']
 };
 
 function searchTerms(club) {

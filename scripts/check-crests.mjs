@@ -34,7 +34,8 @@ const TEAMS = [
   { strTeam: 'Nottingham Rugby', strCountry: 'England', strSport: 'Rugby', strBadge: 'B/rugby' },
   { strTeam: 'Rangers', strCountry: 'Scotland', strSport: 'Soccer', strBadge: 'B/gers' },
   { strTeam: 'Queens Park Rangers', strCountry: 'England', strSport: 'Soccer', strBadge: 'B/qpr' },
-  { strTeam: 'AS Vita Club', strCountry: 'DR Congo', strSport: 'Soccer', strBadge: 'B/vita' }
+  { strTeam: 'AS Vita Club', strCountry: 'DR Congo', strSport: 'Soccer', strBadge: 'B/vita' },
+  { strTeam: "FC Rànger's", strCountry: 'Andorra', strSport: 'Soccer', strBadge: 'B/andorra-rangers' }
 ];
 
 const ROSTERS = {
@@ -126,6 +127,8 @@ await expectClub('Glasgow Rangers still resolve for Scotland',
   { name: 'Rangers', country: 'Scotland' }, 'B/gers');
 await expectClub('a country named differently by each source still matches',
   { name: 'AS Vita Club', country: 'Congo DR' }, 'B/vita');
+await expectClub('an apostrophe in a club name does not break the search',
+  { name: "FC Rànger's", country: 'Andorra' }, 'B/andorra-rangers');
 
 console.log('\nleague crests');
 await expectLeague('Serie A is not Serie D Girone A',

@@ -12,7 +12,10 @@ Your overall rating is earned on the pitch. Appearances, goals, assists (or
 clean sheets and saves in goal) and match ratings drive it, measured against
 what your role and your division make a normal season — and weighted by where
 you played it, so the same numbers in a great league move you further than in
-a fourth division.
+a fourth division. A division also sets how far it can carry you: dominate a
+small league and you reach the top of it, and the only way past that ceiling
+is to go and play somewhere harder. Careers rise fastest to about 22, plateau
+around 30 and fall away from 33.
 
 Decision cards are rare: roughly one season in three turns on one. Each offers
 exactly two options, shows the odds it is gambling with and the OVR each side
@@ -23,7 +26,10 @@ the loan or fight for your place.
 Clubs carry their quality between seasons rather than inheriting their
 division's average, so a promoted side arrives as a promoted side, a fourth-tier
 club cannot reach the top flight in three years, and the teams that win
-continental trophies are the ones good enough to.
+continental trophies are the ones good enough to. The best-known clubs are
+rated for what they are (`STATURE` in `src/engine/data.js`), so Real Madrid
+win La Liga more often than Getafe do — and the clubs that come calling in a
+transfer window match the standard the player has actually reached.
 
 ## Play it
 

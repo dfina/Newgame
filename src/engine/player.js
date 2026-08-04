@@ -38,18 +38,52 @@ export function createPlayer({ name, nationality, position }) {
 //
 // `perf` is 0..1.3: 0.5 is a season that merely kept a place in the side, 1.0
 // an outstanding one, above that a season that defines an era.
-export function developPlayer(p, perf) {
-  const q = clamp(perf, 0, 1.3);
-  let delta = 0;
-  if (p.age <= 21) delta = (p.potential - p.ability) * (0.05 + 0.26 * q);
-  else if (p.age <= 23) delta = (p.potential - p.ability) * (0.03 + 0.22 * q);
-  else if (p.age <= 27) delta = (p.potential - p.ability) * (0.01 + 0.15 * q) + (q - 0.55) * 1.2;
-  else if (p.age <= 30) delta = (q - 0.5) * 3.4;
-  else if (p.age <= 33) delta = -2.6 + q * 3.6 - rand() * 0.8;
-  else delta = -4.2 + q * 3.4 - rand() * 1.2;
+export function developPlayer(p, perf, standardCap = 99) {
+  const q = clamp(perf, 0, 1.35);
+  const gap = p.potential - p.ability;
+  let delta, ceiling;
+  if (p.age <= 21) {
+    // The years a career is made in: a big season is worth a leap.
+    delta = gap * (0.10 + 0.30 * q) + (q - 0.6) * 1.2;
+    ceiling = 99;
+  } else if (p.age <= 25) {
+    delta = gap * (0.06 + 0.24 * q) + (q - 0.65) * 1.8;
+    ceiling = 99;
+  } else if (p.age <= 29) {
+    // At peak age the ceiling stops mattering and the season does the talking.
+    delta = gap * 0.06 * q + (q - 0.75) * 4;
+    ceiling = 4;
+  } else if (p.age <= 32) {
+    // From thirty, standing still is already an achievement.
+    delta = -2.0 + (q - 0.5) * 3.2 - rand() * 0.6;
+    ceiling = 0.8;
+  } else if (p.age <= 35) {
+    delta = -4.0 + (q - 0.5) * 2.6 - rand() * 0.9;
+    ceiling = 0.3;
+  } else {
+    delta = -5.5 + (q - 0.5) * 2.0 - rand() * 1.2;
+    ceiling = 0;
+  }
+  // You can only become as good as the football you are measured against.
+  // Dominating a small league takes you to the top of it and no further; the
+  // way past that ceiling is to go and play somewhere harder.
+  delta = Math.min(delta, ceiling, Math.max(0, standardCap - p.ability));
   p.ability = clamp(p.ability + delta, 20, 99);
   p.peakAbility = Math.max(p.peakAbility, Math.round(p.ability));
   return delta;
+}
+
+// Potential is an estimate of a player, not a fact about them. Seasons that
+// keep exceeding it revise it upward — which is how someone who began in a
+// small league can end up better than anyone thought — and years of struggling
+// while young revise it back down.
+export function revisePotential(p, perf) {
+  if (p.age <= 28 && perf > 1.05) {
+    p.potential = clamp(p.potential + (perf - 1.05) * 4, 20, 99);
+  } else if (p.age <= 24 && perf < 0.45) {
+    p.potential = clamp(p.potential - (0.45 - perf) * 2.5, 20, 99);
+  }
+  if (p.potential < p.ability) p.potential = p.ability;
 }
 
 // How good a season was, 0..1.3, from what a football career is actually

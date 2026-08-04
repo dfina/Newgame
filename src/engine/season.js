@@ -116,8 +116,11 @@ function simulateTable(career, level, quality, share) {
       const contrib = clamp((career.player.ability - level) / 130, -0.1, 0.22) * clamp(share, 0.2, 1);
       s *= 1 + contrib + (career.player.captain ? 0.03 : 0);
     }
-    s *= 1 + noise() * 0.16;
-    const ppg = clamp(0.7 + (s / level) * 0.75 + noise() * 0.18, 0.35, 2.55);
+    s *= 1 + noise() * 0.13;
+    // Points per game across a real division run from about 0.8 for a side
+    // that goes down to 2.3 for a champion; the strength spread is mapped onto
+    // that range so a table looks like a table.
+    const ppg = clamp(0.80 + (s / level - 0.7) * 2.3 + noise() * 0.16, 0.3, 2.55);
     return { name: c.name, pts: Math.round(ppg * games) };
   });
   rows.sort((a, b) => b.pts - a.pts);

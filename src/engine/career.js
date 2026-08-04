@@ -1,7 +1,7 @@
 // Career state machine: creation, offers, events, season loop, saves.
 import { seed, getSeed, rand, chance, irand, pick, clamp, weightedPick } from './rng.js';
-import { loadAssociations, getAssociation, loadCountry, countryCoeff, leagueLevel, playableLeagues } from './data.js';
-import { createPlayer, developPlayer, seasonPerformance, agePlayer, retirementPressure, effectiveRole } from './player.js';
+import { loadAssociations, getAssociation, loadCountry, countryCoeff, clubStature, isReserveSide, leagueLevel, playableLeagues } from './data.js';
+import { createPlayer, developPlayer, revisePotential, seasonPerformance, agePlayer, retirementPressure, effectiveRole } from './player.js';
 import { drawSeasonEvents, getEventById } from './events.js';
 import { simulateSeason } from './season.js';
 
@@ -59,7 +59,6 @@ export async function startCareer({ name, nationality, position }) {
     club: null,
     leagueClubs: [],
     yearsAtClub: 0,
-    rival: null,
     continental: null,
     hasHigherTier: false,
     hasLowerTier: false,
@@ -84,10 +83,15 @@ export async function startCareer({ name, nationality, position }) {
 async function generateOffers(career, isStart = false) {
   const p = career.player;
   const idx = await loadIndex();
+  // What level of football is currently open to this player. Last season's
+  // form counts: a player who has just struggled is not courted by the clubs
+  // who wanted him a year ago.
+  const recent = career.lastStats?.rating ?? 6.6;
+  const standing = clamp((recent - 6.4) / 1.3, -0.5, 0.5);
   const target = isStart
     ? clamp(p.ability * 0.75 + rand() * 12, 8, 55)
     : clamp(p.ability * (0.9 + rand() * 0.25) + p.reputation * 0.15, 10, 105) *
-      (career.bigMove ? 1.18 : 1);
+      (1 + standing * 0.12) * (career.bigMove ? 1.18 : 1);
 
   // Home-country leagues get a wider acceptable band, so a player from a
   // small football nation still gets offers from home rather than none.
@@ -97,7 +101,12 @@ async function generateOffers(career, isStart = false) {
     for (const l of c.leagues) {
       if (l.clubs < 6) continue;
       const lvl = leagueLevel(countryCoeff(c.code, c.confederation), l.tier);
-      const fit = 1 - Math.abs(lvl - target) / (home ? 55 : 30);
+      // Dropping down is always possible — a home-country club two divisions
+      // below will still take you. Climbing is not: a league well above the
+      // standard the player has reached does not come calling, however much
+      // they would like it to.
+      const band = lvl > target ? 18 : (home ? 55 : 30);
+      const fit = 1 - Math.abs(lvl - target) / band;
       if (fit > 0) candidates.push({ c, l, lvl, fit });
     }
   }
@@ -140,9 +149,21 @@ async function generateOffers(career, isStart = false) {
     const useHome = offers.length < reserved && nearHome.length;
     const pool = useHome ? nearHome : candidates;
     const cand = weightedPick(pool, (x) => Math.max(0.01, x.fit) * (useHome ? 1 : homeBias(x)));
-    const clubs = await clubsOf(cand.c.code, cand.l.tier);
+    const all = await clubsOf(cand.c.code, cand.l.tier);
+    // A career is not spent at Jong Genk: reserve sides play in the division
+    // but do not sign professionals from outside.
+    const senior = all.filter((cl) => !isReserveSide(cl.name));
+    const clubs = senior.length >= 4 ? senior : all;
     if (!clubs.length) continue;
-    const club = pick(clubs);
+    // Real Madrid do not call a 60-rated player who has just been relegated.
+    // Where the player sits relative to the division decides which of its
+    // clubs is interested: the champions at the top, the strugglers at the
+    // bottom, and a spread of noise around it.
+    // Where the player stands relative to this division, on the same scale the
+    // season uses: half a division above its ordinary starter is a club near
+    // the top, well below it is a club near the bottom.
+    const fits = clamp(0.5 + (p.ability + p.reputation * 0.12 - cand.lvl * 0.88) / 30 + standing * 0.2, 0, 1);
+    const club = weightedPick(clubs, (cl) => 1 / (0.14 + Math.abs(clubStature(cl.name) - fits)));
     const key = cand.c.code + club.name;
     if (seen.has(key) || club.name === career.club?.name) continue;
     seen.add(key);
@@ -185,9 +206,6 @@ export async function acceptOffer(career, offer) {
   career.player.captain = false;
   career.continental = null;
   await refreshLeagueContext(career, entry);
-  // A rival: another club in the same division (a derby narrative anchor).
-  const others = career.leagueClubs.filter((c) => c.name !== career.club.name);
-  career.rival = others.length && chance(0.7) ? pick(others).name : null;
   career.news.unshift({ tone: 'good', text: offer.loan
     ? `You join ${career.club.name} (${career.club.leagueName}, ${career.club.countryName}) on a season-long loan.`
     : `You sign for ${career.club.name} (${career.club.leagueName}, ${career.club.countryName}) on ${fmtWage(offer.wage)} a week.` });
@@ -348,7 +366,6 @@ function applyEffects(career, fx) {
   if (fx.adventure) career.adventure = true;
   if (fx.forceOffers) career.forceOffers = true;
   if (fx.bigMove) career.bigMove = true;
-  if (fx.fanFavourite) career.flags.fanFavourite = true;
 }
 
 // Runs the season sim; returns the report. Career remains in 'review' phase.
@@ -377,7 +394,7 @@ function finishSeason(career) {
   // than in a fourth division, and more again at a club good enough to be
   // challenging in it: better team-mates, harder opponents, bigger occasions.
   const lvl = leagueLevel(countryCoeff(career.club.country, career.club.confederation), career.club.tier);
-  const standard = clamp(0.55 + Math.pow(clamp(lvl / 95, 0, 1.1), 1.5) * 1.15, 0.55, 1.6);
+  const standard = clamp(0.7 + Math.pow(clamp(lvl / 95, 0, 1.1), 1.5) * 0.8, 0.7, 1.5);
   const clubFactor = clamp(0.9 + ((career.clubQuality ?? lvl) / Math.max(8, lvl) - 1) * 0.55, 0.88, 1.14);
   const perf = report.cut ? 0 : seasonPerformance(report.stats, effectiveRole(p)) * standard * clubFactor;
   report.performance = perf;
@@ -407,8 +424,10 @@ function finishSeason(career) {
     awards: report.awards || []
   });
 
-  // Development, ageing, contract.
-  developPlayer(p, perf);
+  // Development, ageing, contract. The standard of the division sets how far
+  // a player can be carried by it: the way past that is a move upward.
+  revisePotential(p, perf);
+  developPlayer(p, perf, clamp(lvl + 26, 40, 99));
   report.ovrBefore = ovrBefore;
   report.ovrAfter = Math.round(p.ability);
   report.ovrDelta = report.ovrAfter - ovrBefore;
@@ -463,8 +482,6 @@ export async function advanceToNextSeason(career) {
       career.club.leagueName = lg.name;
       career.club.tsdbLeagueId = lg.tsdbLeagueId ?? null;
       await refreshLeagueContext(career, entry);
-      const others = career.leagueClubs.filter((c) => c.name !== career.club.name);
-      career.rival = others.length && chance(0.5) ? pick(others).name : career.rival;
     }
     career.pendingTierRefresh = false;
   }

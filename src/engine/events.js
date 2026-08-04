@@ -113,28 +113,6 @@ E.push({
 });
 
 E.push({
-  id: 'derby-week',
-  weight: (c) => (c.rival ? 2.2 : 0),
-  title: 'Derby week',
-  text: (c) => `It is derby week against ${c.rival}. The city talks about nothing else.`,
-  choices: [
-    {
-      label: 'Fire up the fans',
-      art: 'derby',
-      odds: (c) => 0.4 + c.player.ability / 320,
-      ovr: [4, -3],
-      good: (c) => ({ text: `You score in a famous win over ${c.rival}. Legend status with this crowd, earned in ninety minutes.`, tone: 'gold', fx: { reputation: 9, morale: 10, form: 9, fanFavourite: true } }),
-      bad: (c) => ({ text: `${c.rival} win it, and your quotes are pinned to their dressing-room wall. The stick never stops.`, tone: 'bad', fx: { reputation: -5, morale: -9, form: -7 } })
-    },
-    {
-      label: 'Keep it professional',
-      art: 'pitch',
-      good: () => ({ text: 'You say nothing all week and play the game, not the occasion.', tone: 'neutral', fx: { form: 3 } })
-    }
-  ]
-});
-
-E.push({
   id: 'captaincy-offer',
   weight: (c) => (!c.player.captain && c.player.age >= 24 && c.yearsAtClub >= 2 && c.player.reputation > 30 ? 2.2 : 0),
   title: 'The armband',
