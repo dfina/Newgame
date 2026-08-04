@@ -15,7 +15,8 @@
         "https://en.wikipedia.org/wiki/2026_Liga_AUF_Uruguaya",
         "https://www.espn.com.uy/futbol/uruguay/nota/_/id/16244762/fixture-torneo-apertura-penarol-nacional-campeonato-uruguayo-2026-fecha-hora-resultados-partidos-nombre",
         "https://www.montevideo.com.uy/Deportes/Campeonato-Uruguayo-2026-las-altas-y-bajas-de-los-16-equipos-de-Primera-hasta-el-momento-uc950233",
-        "https://en.wikipedia.org/wiki/Liverpool_F.C._(Montevideo)"
+        "https://en.wikipedia.org/wiki/Liverpool_F.C._(Montevideo)",
+        "https://tribuna.com/en/league/primera-uruguay/table/2026/"
       ],
       "clubs": [
         { "name": "Peñarol", "tsdbTeamId": null, "badge": null, "colors": ["#FFDD00", "#000000"] },
@@ -29,7 +30,10 @@
         { "name": "Rentistas", "tsdbTeamId": null, "badge": null },
         { "name": "Wanderers", "tsdbTeamId": null, "badge": null },
         { "name": "City Torque", "tsdbTeamId": null, "badge": null },
-        { "name": "Liverpool", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] }
+        { "name": "Liverpool", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#FFFFFF"] },
+        { "name": "Albion", "tsdbTeamId": null, "badge": null },
+        { "name": "Central Español", "tsdbTeamId": null, "badge": null },
+        { "name": "Deportivo Maldonado", "tsdbTeamId": null, "badge": null }
       ]
     }
   ]

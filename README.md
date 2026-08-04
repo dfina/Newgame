@@ -43,12 +43,15 @@ to the browser's localStorage.
 - `public/data/leagues/<CODE>.json` — one file per association with its league
   pyramid (tiers 1–4 for England, Spain, Italy, Germany, France; tiers 1–2
   elsewhere where they exist). See `public/data/SCHEMA.md`.
-- Coverage: 170 of the 211 associations have at least one playable league
-  (a league needs 6+ confirmed clubs to be used by the game), across 204
-  leagues and roughly 2,860 clubs. The 41 without one are mostly very small
-  associations whose semi-professional leagues could not be sourced, plus a
-  few where competition is suspended; Liechtenstein has no domestic league at
-  all, by design.
+- Coverage: 203 of the 211 associations have at least one playable league
+  (a league needs 6+ confirmed clubs to be used by the game), across 239
+  leagues and roughly 3,330 clubs. The 8 without one each have a documented
+  reason — a suspended competition, no published current roster, or, in
+  Liechtenstein's case, no domestic league at all by design.
+- Some leagues are still short of their full complement: a league whose club
+  list could not be completed from published sources carries only the clubs
+  that were confirmed, and `verified: false`. Nothing is padded to reach a
+  league's official size.
 - Every league entry carries `sources` (URLs consulted during research) and a
   `verified` flag. Entries that could not be verified are flagged
   `verified: false`; associations that could not be researched at all have an

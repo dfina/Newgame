@@ -8,13 +8,14 @@
       "tier": 1,
       "name": "Major League Soccer",
       "tsdbLeagueId": null,
-      "verified": false,
+      "verified": true,
       "sources": [
         "https://en.wikipedia.org/wiki/2026_Major_League_Soccer_season",
         "https://en.wikipedia.org/wiki/Eastern_Conference_(MLS)",
-        "https://en.wikipedia.org/wiki/Western_Conference_(MLS)"
-      ],
-      "note": "MLS has 30 clubs (27 US + 3 Canadian) in 2026 but only 13 were named by title in this session's searches before the web-search budget was exhausted; the remaining ~17 clubs are NOT included (not invented). Canadian MLS clubs (Toronto FC, CF Montréal, Vancouver Whitecaps FC) are included here per task instruction, not duplicated in CAN.json.",
+        "https://en.wikipedia.org/wiki/Western_Conference_(MLS)",
+        "https://www.mlssoccer.com/news/mls-eastern-conference-your-team-s-season-so-far-what-s-next",
+        "https://www.mlssoccer.com/news/western-conference-your-team-s-season-so-far-what-s-next",
+        "https://www.squawka.com/us/mls-standings-2026/"],
       "clubs": [
         { "name": "D.C. United", "tsdbTeamId": null, "badge": null, "colors": ["#000000", "#EE1C25"] },
         { "name": "St. Louis City SC", "tsdbTeamId": null, "badge": null, "colors": ["#DA291C", "#002B5C"] },
@@ -28,7 +29,24 @@
         { "name": "FC Dallas", "tsdbTeamId": null, "badge": null, "colors": ["#C41230", "#00529B"] },
         { "name": "Portland Timbers", "tsdbTeamId": null, "badge": null, "colors": ["#00482B", "#EEB111"] },
         { "name": "Houston Dynamo FC", "tsdbTeamId": null, "badge": null, "colors": ["#F68712", "#101820"] },
-        { "name": "Vancouver Whitecaps FC", "tsdbTeamId": null, "badge": null, "colors": ["#00245D", "#9BCBEB"] }
+        { "name": "Vancouver Whitecaps FC", "tsdbTeamId": null, "badge": null, "colors": ["#00245D", "#9BCBEB"] },
+        { "name": "New York City FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Charlotte FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Toronto FC", "tsdbTeamId": null, "badge": null },
+        { "name": "New York Red Bulls", "tsdbTeamId": null, "badge": null },
+        { "name": "New England Revolution", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Cincinnati", "tsdbTeamId": null, "badge": null },
+        { "name": "Columbus Crew", "tsdbTeamId": null, "badge": null },
+        { "name": "Orlando City SC", "tsdbTeamId": null, "badge": null },
+        { "name": "Philadelphia Union", "tsdbTeamId": null, "badge": null },
+        { "name": "Atlanta United FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Austin FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Minnesota United FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Colorado Rapids", "tsdbTeamId": null, "badge": null },
+        { "name": "LA Galaxy", "tsdbTeamId": null, "badge": null },
+        { "name": "Real Salt Lake", "tsdbTeamId": null, "badge": null },
+        { "name": "Sporting Kansas City", "tsdbTeamId": null, "badge": null },
+        { "name": "Seattle Sounders FC", "tsdbTeamId": null, "badge": null }
       ]
     },
     {

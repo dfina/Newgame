@@ -8,13 +8,16 @@
    "tier": 1,
    "name": "Primeira Liga",
    "tsdbLeagueId": null,
-   "verified": false,
+   "verified": true,
    "sources": [
     "https://en.wikipedia.org/wiki/2026%E2%80%9327_Primeira_Liga",
     "https://groundhopperguides.com/2026-27-primeira-liga-schedule/",
     "https://news.22bet.com/news/portugal-primeira-liga-2026-27-season-guide-predictions/",
     "https://bolanarede.pt/especial-bola-na-rede/atualidade/eis-o-calendario-completo-da-primeira-liga-2026-27/",
-    "https://www.abola.pt/noticias/eis-os-calendarios-completos-da-liga-e-da-liga-2-para-202627-2026070218520723632"
+    "https://www.abola.pt/noticias/eis-os-calendarios-completos-da-liga-e-da-liga-2-para-202627-2026070218520723632",
+    "https://www.worldfootball.net/competition/co123/portugal-primeira-liga/results-and-standings/",
+    "https://www.espn.com/soccer/standings/_/league/por.1",
+    "https://football.fandom.com/wiki/2026%E2%80%9327_Primeira_Liga"
    ],
    "clubs": [
     {
@@ -106,9 +109,12 @@
      "name": "Moreirense FC",
      "tsdbTeamId": null,
      "badge": null
-    }
-   ],
-   "note": "Primeira Liga has 18 clubs in 2026-27. 14 confirmed by name this session: the ten previously sourced plus Sporting CP, Vitoria SC, FC Famalicao and Moreirense FC, all named in the published 2026-27 opening-round fixture list. The remaining clubs could not be confirmed by name from any source consulted, so verified stays false."
+    },
+    { "name": "CD Santa Clara", "tsdbTeamId": null, "badge": null },
+    { "name": "CD Nacional", "tsdbTeamId": null, "badge": null },
+    { "name": "Gil Vicente FC", "tsdbTeamId": null, "badge": null },
+    { "name": "Rio Ave FC", "tsdbTeamId": null, "badge": null }
+   ]
   },
   {
    "tier": 2,

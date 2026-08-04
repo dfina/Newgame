@@ -11,7 +11,8 @@
       "verified": false,
       "sources": [
         "https://punchng.com/full-list-20-teams-compete-as-2025-26-npfl-season-begins-friday/",
-        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Nigeria_Premier_Football_League"
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Nigeria_Premier_Football_League",
+        "https://tribuna.com/en/league/nigeria-premier-league/table/2025-2026/"
       ],
       "clubs": [
         { "name": "Remo Stars", "tsdbTeamId": null, "badge": null },
@@ -29,7 +30,8 @@
         { "name": "Bayelsa United", "tsdbTeamId": null, "badge": null },
         { "name": "Kwara United", "tsdbTeamId": null, "badge": null },
         { "name": "Bendel Insurance", "tsdbTeamId": null, "badge": null },
-        { "name": "Katsina United", "tsdbTeamId": null, "badge": null }
+        { "name": "Katsina United", "tsdbTeamId": null, "badge": null },
+        { "name": "Plateau United", "tsdbTeamId": null, "badge": null }
       ],
       "note": "20 clubs contest the 2025-26 NPFL season; 16 were individually named in available sources."
     }

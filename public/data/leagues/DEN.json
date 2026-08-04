@@ -8,10 +8,12 @@
       "tier": 1,
       "name": "Danish Superliga",
       "tsdbLeagueId": null,
-      "verified": false,
+      "verified": true,
       "sources": [
         "https://en.wikipedia.org/wiki/2026%E2%80%9327_Danish_Superliga",
-        "https://en.wikipedia.org/wiki/List_of_Danish_Superliga_clubs"
+        "https://en.wikipedia.org/wiki/List_of_Danish_Superliga_clubs",
+        "https://www.espn.com/soccer/standings/_/league/den.1",
+        "https://www.soccerway.com/denmark/superliga/"
       ],
       "clubs": [
         {"name": "FC Midtjylland", "tsdbTeamId": null, "badge": null},
@@ -20,7 +22,12 @@
         {"name": "FC Nordsjælland", "tsdbTeamId": null, "badge": null},
         {"name": "Silkeborg IF", "tsdbTeamId": null, "badge": null},
         {"name": "AGF", "tsdbTeamId": null, "badge": null},
-        {"name": "Lyngby BK", "tsdbTeamId": null, "badge": null}
+        {"name": "Lyngby BK", "tsdbTeamId": null, "badge": null},
+        { "name": "Odense Boldklub", "tsdbTeamId": null, "badge": null },
+        { "name": "SønderjyskE", "tsdbTeamId": null, "badge": null },
+        { "name": "Viborg FF", "tsdbTeamId": null, "badge": null },
+        { "name": "Randers FC", "tsdbTeamId": null, "badge": null },
+        { "name": "AC Horsens", "tsdbTeamId": null, "badge": null }
       ]
     }
   ],

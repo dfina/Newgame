@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-03T15:29:37.878Z",
+ "generated": "2026-08-04T02:04:41.996Z",
  "countries": [
   {
    "code": "AFG",
@@ -702,8 +702,8 @@
     {
      "tier": 1,
      "name": "Croatian Football League (HNL)",
-     "clubs": 7,
-     "verified": false,
+     "clubs": 10,
+     "verified": true,
      "tsdbLeagueId": null
     }
    ]
@@ -793,8 +793,8 @@
     {
      "tier": 1,
      "name": "Danish Superliga",
-     "clubs": 7,
-     "verified": false,
+     "clubs": 12,
+     "verified": true,
      "tsdbLeagueId": null
     }
    ]
@@ -1514,8 +1514,8 @@
     {
      "tier": 1,
      "name": "Kazakhstan Premier League",
-     "clubs": 8,
-     "verified": false,
+     "clubs": 16,
+     "verified": true,
      "tsdbLeagueId": null
     }
    ]
@@ -2074,7 +2074,7 @@
     {
      "tier": 1,
      "name": "Nigeria Premier Football League (NPFL)",
-     "clubs": 16,
+     "clubs": 17,
      "verified": false,
      "tsdbLeagueId": null
     }
@@ -2249,8 +2249,8 @@
     {
      "tier": 1,
      "name": "Primeira Liga",
-     "clubs": 14,
-     "verified": false,
+     "clubs": 18,
+     "verified": true,
      "tsdbLeagueId": null
     },
     {
@@ -2767,8 +2767,8 @@
     {
      "tier": 1,
      "name": "Thai League 1",
-     "clubs": 8,
-     "verified": false,
+     "clubs": 16,
+     "verified": true,
      "tsdbLeagueId": null
     }
    ]
@@ -2942,7 +2942,7 @@
     {
      "tier": 1,
      "name": "Primera División (Liga AUF Uruguaya)",
-     "clubs": 12,
+     "clubs": 15,
      "verified": false,
      "tsdbLeagueId": null
     }
@@ -2956,8 +2956,8 @@
     {
      "tier": 1,
      "name": "Major League Soccer",
-     "clubs": 13,
-     "verified": false,
+     "clubs": 30,
+     "verified": true,
      "tsdbLeagueId": null
     },
     {

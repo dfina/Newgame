@@ -8,12 +8,14 @@
       "tier": 1,
       "name": "Thai League 1",
       "tsdbLeagueId": null,
-      "verified": false,
+      "verified": true,
       "sources": [
         "https://liquipedia.net/lab/Football/FAT/Thai_League_1/2026-27",
         "https://www.bangkokpost.com/sports/3288162/thai-league-1-fixtures-unveiled-as-season-kicks-off-three-weeks-late",
         "https://en.wikipedia.org/wiki/2026%E2%80%9327_Bangkok_United_F.C._season",
-        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Buriram_United_F.C._season"
+        "https://en.wikipedia.org/wiki/2026%E2%80%9327_Buriram_United_F.C._season",
+        "https://m.aiscore.com/tournament-thai-league-1/w34kgmi2n1s1ko9/standings",
+        "https://www.transfermarkt.us/thai-league/startseite/wettbewerb/THA1"
       ],
       "clubs": [
         { "name": "Buriram United", "tsdbTeamId": null, "badge": null, "colors": ["#7B0046", "#FFD200"] },
@@ -23,7 +25,15 @@
         { "name": "Pattani", "tsdbTeamId": null, "badge": null },
         { "name": "BG Pathum United", "tsdbTeamId": null, "badge": null },
         { "name": "Rasisalai United", "tsdbTeamId": null, "badge": null },
-        { "name": "Si Sa Ket United", "tsdbTeamId": null, "badge": null }
+        { "name": "Si Sa Ket United", "tsdbTeamId": null, "badge": null },
+        { "name": "Ratchaburi FC", "tsdbTeamId": null, "badge": null },
+        { "name": "PT Prachuap FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Chiangrai United", "tsdbTeamId": null, "badge": null },
+        { "name": "Chonburi FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Rayong FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Ayutthaya United", "tsdbTeamId": null, "badge": null },
+        { "name": "Uthai Thani FC", "tsdbTeamId": null, "badge": null },
+        { "name": "Lamphun Warriors", "tsdbTeamId": null, "badge": null }
       ]
     }
   ],

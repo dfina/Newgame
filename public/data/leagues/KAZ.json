@@ -8,11 +8,13 @@
       "tier": 1,
       "name": "Kazakhstan Premier League",
       "tsdbLeagueId": null,
-      "verified": false,
+      "verified": true,
       "sources": [
         "https://en.wikipedia.org/wiki/2026_Kazakhstan_Premier_League",
         "https://en.wikipedia.org/wiki/2026_FC_Astana_season",
-        "https://en.wikipedia.org/wiki/2026_FC_Kairat_season"
+        "https://en.wikipedia.org/wiki/2026_FC_Kairat_season",
+        "https://www.soccerway.com/kazakhstan/premier-league/",
+        "https://footystats.org/kazakhstan/kazakhstan-premier-league"
       ],
       "clubs": [
         { "name": "FC Kairat", "tsdbTeamId": null, "badge": null, "colors": ["#FFD700", "#000000"] },
@@ -22,7 +24,15 @@
         { "name": "FC Yelimay Semey", "tsdbTeamId": null, "badge": null },
         { "name": "FC Okzhetpes", "tsdbTeamId": null, "badge": null },
         { "name": "FC Zhetysu", "tsdbTeamId": null, "badge": null },
-        { "name": "FC Tobol", "tsdbTeamId": null, "badge": null }
+        { "name": "FC Tobol", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Kyzylzhar", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Altay", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Caspiy", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Irtysh Pavlodar", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Zhenys", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Atyrau", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Ulytau", "tsdbTeamId": null, "badge": null },
+        { "name": "FC Kaisar", "tsdbTeamId": null, "badge": null }
       ]
     }
   ],

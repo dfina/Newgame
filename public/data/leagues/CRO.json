@@ -2,16 +2,18 @@
   "association": "CRO",
   "country": "Croatia",
   "confederation": "UEFA",
-  "season": "2025-26",
+  "season": "2026-27",
   "leagues": [
     {
       "tier": 1,
       "name": "Croatian Football League (HNL)",
       "tsdbLeagueId": null,
-      "verified": false,
+      "verified": true,
       "sources": [
         "https://en.wikipedia.org/wiki/2025%E2%80%9326_Croatian_Football_League",
-        "https://en.wikipedia.org/wiki/2025%E2%80%9326_HNK_Hajduk_Split_season"
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_HNK_Hajduk_Split_season",
+        "https://semafor.hns.family/en/competitions/114137140/supersport-hrvatska-nogometna-liga-20262027/",
+        "https://www.worldfootball.net/competition/co2/croatia-1-hnl/"
       ],
       "clubs": [
         {"name": "Dinamo Zagreb", "tsdbTeamId": null, "badge": null, "colors": ["#0033A0", "#FFFFFF"]},
@@ -20,7 +22,10 @@
         {"name": "Varaždin", "tsdbTeamId": null, "badge": null},
         {"name": "Osijek", "tsdbTeamId": null, "badge": null},
         {"name": "Gorica", "tsdbTeamId": null, "badge": null},
-        {"name": "Vukovar 1991", "tsdbTeamId": null, "badge": null}
+        {"name": "Vukovar 1991", "tsdbTeamId": null, "badge": null},
+        { "name": "Lokomotiva Zagreb", "tsdbTeamId": null, "badge": null },
+        { "name": "NK Istra 1961", "tsdbTeamId": null, "badge": null },
+        { "name": "Slaven Belupo", "tsdbTeamId": null, "badge": null }
       ]
     }
   ],
