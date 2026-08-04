@@ -37,7 +37,7 @@ const {
   startCareer, acceptOffer, stayAtClub, chooseEventOption, runSeason,
   advanceToNextSeason, currentEvent
 } = await import('../src/engine/career.js');
-const { countryCoeff, leagueLevel } = await import('../src/engine/data.js');
+const { countryCoeff, leagueLevel, clubStature } = await import('../src/engine/data.js');
 
 // How far above the division's ordinary starter a player stands, in the same
 // units the engine uses. Judging a 50-rated player as "fringe" is meaningless
@@ -76,6 +76,7 @@ let cardsPlayed = 0;         // decision cards seen across all careers
 let badChoiceCount = 0;      // cards that did not offer exactly two options
 const promoStreaks = [];     // longest run of successive promotions per career
 const afterPromotion = [];   // where a promoted side finishes, 0 (top) to 1 (bottom)
+const eliteOffers = [];      // who the biggest clubs in the biggest leagues call
 const errors = [];
 
 for (let i = 0; i < N; i++) {
@@ -88,6 +89,12 @@ for (let i = 0; i < N; i++) {
     const before = seasons.length;
     while (!c.retired && guard++ < 400) {
       if (c.phase === 'offers') {
+        for (const o of c.offers) {
+          const lvl = leagueLevel(countryCoeff(o.country, o.confederation), o.tier);
+          if (lvl >= 85 && clubStature(o.clubName) >= 0.85) {
+            eliteOffers.push({ ovr: c.player.ability, age: c.player.age, headroom: c.player.potential - c.player.ability });
+          }
+        }
         if (c.offers.length && Math.random() < 0.5) await acceptOffer(c, c.offers[Math.floor(Math.random() * c.offers.length)]);
         else stayAtClub(c);
       } else if (c.phase === 'event') {
@@ -182,6 +189,11 @@ console.log(`promotions in successive seasons: longest run p90 ${pct(promoStreak
 if (afterPromotion.length) {
   console.log(`the season after promotion: average finish ${(avg(afterPromotion) * 100).toFixed(0)}% down its new division (${afterPromotion.length} samples)`);
 }
+if (eliteOffers.length) {
+  const kids = eliteOffers.filter((o) => o.age <= 23);
+  console.log(`the biggest clubs called ${eliteOffers.length} times: target OVR avg ${avg(eliteOffers.map((o) => o.ovr)).toFixed(0)}` +
+    `, age avg ${avg(eliteOffers.map((o) => o.age)).toFixed(1)} | ${kids.length} of them under 24 (OVR avg ${avg(kids.map((o) => o.ovr)).toFixed(0)}, headroom avg ${avg(kids.map((o) => o.headroom)).toFixed(0)})`);
+}
 console.log(`decision cards: ${cardsPlayed} over ${seasons.length} seasons (${(cardsPlayed / Math.max(1, seasons.length) * 100).toFixed(0)}% of seasons)`);
 
 // The same season, played at a higher standard, has to be worth more.
@@ -219,6 +231,17 @@ if (youth.length && youthShare > 0.5) fails.push(`teenagers play ${(youthShare *
 const champPts = avg(big.map((s) => s.topPts));
 if (big.length > 50 && (champPts < 70 || champPts > 102)) {
   fails.push(`champions of a 20-club division average ${champPts.toFixed(0)} points (expected 70-102)`);
+}
+
+// The biggest clubs chase two kinds of player: the finished article, and the
+// prospect they think will become one. Neither is an ordinary professional.
+if (eliteOffers.length > 30) {
+  const eliteAvg = avg(eliteOffers.map((o) => o.ovr));
+  if (eliteAvg < 82) fails.push(`the biggest clubs are calling players averaging ${eliteAvg.toFixed(0)} OVR (expected 82+)`);
+  const kids = eliteOffers.filter((o) => o.age <= 23 && o.headroom >= 4);
+  if (kids.length < eliteOffers.length * 0.04) {
+    fails.push(`only ${kids.length} of ${eliteOffers.length} approaches from the biggest clubs went to a prospect (expected some)`);
+  }
 }
 
 if (decisionShare > 0.3) fails.push(`decision cards account for ${(decisionShare * 100).toFixed(0)}% of OVR movement (expected under 30%)`);

@@ -29,7 +29,9 @@ club cannot reach the top flight in three years, and the teams that win
 continental trophies are the ones good enough to. The best-known clubs are
 rated for what they are (`STATURE` in `src/engine/data.js`), so Real Madrid
 win La Liga more often than Getafe do — and the clubs that come calling in a
-transfer window match the standard the player has actually reached.
+transfer window match the player: the standard they have reached, the form
+they are in, and, if they are young with headroom and a rising line, the
+player a big club thinks they are about to become.
 
 ## Play it
 

@@ -88,10 +88,21 @@ async function generateOffers(career, isStart = false) {
   // who wanted him a year ago.
   const recent = career.lastStats?.rating ?? 6.6;
   const standing = clamp((recent - 6.4) / 1.3, -0.5, 0.5);
+
+  // Big clubs sign the player they think you are becoming, not only the one
+  // you are. A twenty-year-old with headroom and a rising line is chased by
+  // clubs an established professional of the same rating would never hear
+  // from — to keep, or to send back out on loan for a year. The pull fades as
+  // a career settles: past the mid-twenties, only what you are counts.
+  const lastOvr = career.history.length ? career.history[career.history.length - 1].ovr : p.ability;
+  const rising = clamp(p.ability - lastOvr, 0, 6) / 6;
+  const youth = p.age <= 21 ? 1 : p.age <= 23 ? 0.8 : p.age <= 25 ? 0.5 : p.age <= 27 ? 0.2 : 0;
+  const promise = clamp(((p.potential - p.ability) / 18 * 0.6 + rising * 0.4) * youth, 0, 1);
+
   const target = isStart
     ? clamp(p.ability * 0.75 + rand() * 12, 8, 55)
     : clamp(p.ability * (0.9 + rand() * 0.25) + p.reputation * 0.15, 10, 105) *
-      (1 + standing * 0.12) * (career.bigMove ? 1.18 : 1);
+      (1 + standing * 0.12 + promise * 0.1) * (career.bigMove ? 1.18 : 1);
 
   // Home-country leagues get a wider acceptable band, so a player from a
   // small football nation still gets offers from home rather than none.
@@ -162,8 +173,15 @@ async function generateOffers(career, isStart = false) {
     // Where the player stands relative to this division, on the same scale the
     // season uses: half a division above its ordinary starter is a club near
     // the top, well below it is a club near the bottom.
-    const fits = clamp(0.5 + (p.ability + p.reputation * 0.12 - cand.lvl * 0.88) / 30 + standing * 0.2, 0, 1);
-    const club = weightedPick(clubs, (cl) => 1 / (0.14 + Math.abs(clubStature(cl.name) - fits)));
+    const fits = clamp(0.5 + (p.ability + p.reputation * 0.12 - cand.lvl * 0.88) / 30 +
+      standing * 0.2 + promise * 0.25, 0, 1);
+    // Clubs well above where the player stands do not call at all, and among
+    // those that might, the closest match is heavily favoured. Without the
+    // gate, a squared weight still leaves a champion picking up a 30-year-old
+    // who is a division below them once in a hundred windows.
+    const reachable = clubs.filter((cl) => clubStature(cl.name) - fits <= 0.35);
+    const clubPool = reachable.length ? reachable : clubs;
+    const club = weightedPick(clubPool, (cl) => 1 / Math.pow(0.1 + Math.abs(clubStature(cl.name) - fits), 2));
     const key = cand.c.code + club.name;
     if (seen.has(key) || club.name === career.club?.name) continue;
     seen.add(key);
