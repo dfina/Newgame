@@ -96,7 +96,11 @@ async function generateOffers(career, isStart = false) {
   // a career settles: past the mid-twenties, only what you are counts.
   const lastOvr = career.history.length ? career.history[career.history.length - 1].ovr : p.ability;
   const rising = clamp(p.ability - lastOvr, 0, 6) / 6;
-  const youth = p.age <= 21 ? 1 : p.age <= 23 ? 0.8 : p.age <= 25 ? 0.5 : p.age <= 27 ? 0.2 : 0;
+  // Room to grow is worth most at twenty and least at thirty, but it does not
+  // vanish at twenty-six: a player in his prime is still expected to add
+  // something, just less of it.
+  const youth = p.age <= 21 ? 1 : p.age <= 23 ? 0.8 : p.age <= 25 ? 0.55
+    : p.age <= 27 ? 0.35 : p.age <= 29 ? 0.15 : 0;
   const promise = clamp(((p.potential - p.ability) / 18 * 0.6 + rising * 0.4) * youth, 0, 1);
 
   const target = isStart
