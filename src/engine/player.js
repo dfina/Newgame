@@ -2,7 +2,12 @@ import { irand, rand, clamp, chance } from './rng.js';
 import { getRole, roleGroup, shirtFor } from './positions.js';
 
 export function createPlayer({ name, nationality, position }) {
-  const potential = irand(62, 96);
+  // Most players top out as good professionals. A few have more in them, and
+  // a very few have the ceiling of a great — drawn rarely, so a career that
+  // ends in the nineties is the exception it should be.
+  let potential = irand(56, 78);
+  if (chance(0.18)) potential += irand(4, 10);
+  if (chance(0.04)) potential += irand(6, 12);
   const role = getRole(position).key;
   const shirt = shirtFor(role);
   return {
@@ -12,7 +17,8 @@ export function createPlayer({ name, nationality, position }) {
     shirt: shirt[irand(0, shirt.length - 1)],
     age: 17,
     ability: irand(38, 52),
-    potential,
+    potential: Math.min(potential, 96),
+    potentialGained: 0,   // how much scouts have revised it upward, capped
     form: 60,
     morale: 70,
     fitness: 100,
@@ -47,12 +53,12 @@ export function developPlayer(p, perf, standardCap = 99) {
     delta = gap * (0.10 + 0.30 * q) + (q - 0.6) * 1.2;
     ceiling = 99;
   } else if (p.age <= 25) {
-    delta = gap * (0.06 + 0.24 * q) + (q - 0.65) * 1.8;
+    delta = gap * (0.05 + 0.20 * q) + (q - 0.7) * 1.6;
     ceiling = 99;
   } else if (p.age <= 29) {
     // At peak age the ceiling stops mattering and the season does the talking.
-    delta = gap * 0.06 * q + (q - 0.75) * 4;
-    ceiling = 4;
+    delta = gap * 0.05 * q + (q - 0.82) * 3;
+    ceiling = 2.5;
   } else if (p.age <= 32) {
     // From thirty, standing still is already an achievement.
     delta = -2.0 + (q - 0.5) * 3.2 - rand() * 0.6;
@@ -67,19 +73,26 @@ export function developPlayer(p, perf, standardCap = 99) {
   // You can only become as good as the football you are measured against.
   // Dominating a small league takes you to the top of it and no further; the
   // way past that ceiling is to go and play somewhere harder.
-  delta = Math.min(delta, ceiling, Math.max(0, standardCap - p.ability));
+  const room = Math.max(0, standardCap - p.ability);
+  const earned = Math.min(delta, ceiling);
+  delta = Math.min(earned, room);
+  const capped = earned > delta + 0.25;
   p.ability = clamp(p.ability + delta, 20, 99);
   p.peakAbility = Math.max(p.peakAbility, Math.round(p.ability));
-  return delta;
+  return { delta, capped };
 }
 
-// Potential is an estimate of a player, not a fact about them. Seasons that
-// keep exceeding it revise it upward — which is how someone who began in a
-// small league can end up better than anyone thought — and years of struggling
-// while young revise it back down.
+// Potential is an estimate of a player, not a fact about them. Scouts revise
+// it upward only for seasons that genuinely exceed what was
+// expected, and only so far: a career can talk its way to roughly eight points
+// more than it was first credited with, not to a different player entirely.
+const MAX_REVISION = 8;
+
 export function revisePotential(p, perf) {
-  if (p.age <= 28 && perf > 1.05) {
-    p.potential = clamp(p.potential + (perf - 1.05) * 4, 20, 99);
+  if (p.age <= 27 && perf > 1.15 && (p.potentialGained || 0) < MAX_REVISION) {
+    const add = Math.min((perf - 1.15) * 3, MAX_REVISION - (p.potentialGained || 0));
+    p.potentialGained = (p.potentialGained || 0) + add;
+    p.potential = clamp(p.potential + add, 20, 99);
   } else if (p.age <= 24 && perf < 0.45) {
     p.potential = clamp(p.potential - (0.45 - perf) * 2.5, 20, 99);
   }

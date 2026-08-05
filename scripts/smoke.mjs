@@ -27,7 +27,7 @@ await page.click('button[data-action="accept-offer"]');
 let steps = 0, seasons = 0;
 while (steps++ < 900) {
   await page.waitForTimeout(60);
-  const done = await page.$('button[data-action="cabinet"]');
+  const done = await page.$('button[data-action="finish-retire"]');
   if (done) break;
   const actions = ['choose', 'after-outcome', 'advance', 'start-season', 'stay-put', 'accept-offer'];
   let clicked = false;
@@ -51,7 +51,7 @@ while (steps++ < 900) {
 }
 console.log(`seasons advanced: ${seasons}, steps: ${steps}`);
 
-const retiredVisible = await page.$('button[data-action="cabinet"]');
+const retiredVisible = await page.$('button[data-action="finish-retire"]');
 if (!retiredVisible) { console.log('FAIL: never reached retirement'); process.exit(1); }
 console.log('retirement reached');
 await page.click('button[data-action="cabinet"]');

@@ -218,7 +218,9 @@ export function simulateSeason(career) {
   report.relegated = career.hasLowerTier && position > n - relegatedSlots;
 
   if (report.champion) {
-    report.trophies.push({ type: 'league', name: career.club.leagueName, year: career.year, tsdbLeagueId: career.club.tsdbLeagueId ?? null, country: career.club.country, tier: career.club.tier });
+    report.trophies.push({ type: 'league', name: career.club.leagueName, year: career.year,
+      tsdbLeagueId: career.club.tsdbLeagueId ?? null, country: career.club.country,
+      countryName: career.club.countryName, tier: career.club.tier });
     report.news.push({ tone: 'gold', text: `${career.club.name} are champions of the ${career.club.leagueName}!` });
   } else if (report.promoted) {
     report.news.push({ tone: 'good', text: `Promotion! ${career.club.name} finish ${ordinal(position)} and go up.` });
@@ -238,7 +240,8 @@ export function simulateSeason(career) {
 
   // ----- Domestic cup -----
   if (cup.won) {
-    report.trophies.push({ type: 'cup', name: cupName, year: career.year, tsdbLeagueId: null });
+    report.trophies.push({ type: 'cup', name: cupName, year: career.year, tsdbLeagueId: null,
+      country: career.club.country, countryName: career.club.countryName });
     report.news.push({ tone: 'gold', text: `${career.club.name} lift the ${cupName}!` });
   } else if (cup.reached >= 2) {
     report.news.push({ tone: 'neutral', text: `A ${cupName} run ends at the ${CUP_ROUNDS[cup.reached + 1] ?? 'final hurdle'}.` });
@@ -250,6 +253,7 @@ export function simulateSeason(career) {
     const comp = cont.comp;
     if (cont.won) {
       report.trophies.push({ type: 'continental', name: comp.name, year: career.year, tsdbLeagueId: null, key: comp.key });
+      report.trophies[report.trophies.length - 1].countryName = null;
       report.news.push({ tone: 'gold', text: `${career.club.name} are ${comp.name} champions — the pinnacle of club football on the continent!` });
       p.reputation = clamp(p.reputation + 10, 0, 100);
     } else if (cont.reached >= 0) {
@@ -284,9 +288,9 @@ export function simulateSeason(career) {
   }
   const worldStage = coeff >= 75 && career.club.tier === 1;
   if (worldStage && p.ability >= 88 && stats.rating >= 7.7 && (report.champion || report.continentalRun?.won) && chance(0.45)) {
-    report.awards.push(AWARDS.worldBest);
-    report.trophies.push({ type: 'award', name: AWARDS.worldBest, year: career.year });
-    report.news.push({ tone: 'gold', text: `You are named ${AWARDS.worldBest} — the world’s best footballer.` });
+    report.awards.push(AWARDS.ballonDor);
+    report.trophies.push({ type: 'award', name: AWARDS.ballonDor, year: career.year });
+    report.news.push({ tone: 'gold', text: `You win the ${AWARDS.ballonDor} — the best footballer on earth this year.` });
     p.reputation = 100;
   }
 
@@ -344,7 +348,16 @@ function simulateInternationals(career, report, stats) {
         report.trophies.push({ type: 'international', name: WORLD_CUP.name, year: career.year });
         report.news.push({ tone: 'gold', text: `WORLD CHAMPIONS! ${nation.name} win the ${WORLD_CUP.name}!` });
         p.reputation = 100;
-      } else {
+      }
+      // The tournament's outstanding player, which a run to the closing
+      // weekend and a season at this level can earn.
+      if (run.reached >= 2 && p.ability >= 86 && stats.rating >= 7.4 && chance(run.won ? 0.4 : 0.15)) {
+        report.awards.push(AWARDS.goldenBall);
+        report.trophies.push({ type: 'award', name: AWARDS.goldenBall, year: career.year });
+        report.news.push({ tone: 'gold', text: `You are voted the ${AWARDS.goldenBall} — the outstanding player of the tournament.` });
+        p.reputation = 100;
+      }
+      if (!run.won) {
         report.news.push({ tone: 'neutral', text: `${nation.name}'s ${WORLD_CUP.name} ends at the ${TOURN_ROUNDS[Math.min(run.reached + 1, 4)]}.` });
         p.reputation = clamp(p.reputation + 3, 0, 100);
       }

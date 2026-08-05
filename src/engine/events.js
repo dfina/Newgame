@@ -441,7 +441,10 @@ E.push({
     {
       label: 'Chase the adventure',
       art: 'plane',
-      good: () => ({ text: 'Word spreads that you are open to one last great story. Unexpected phone calls follow.', tone: 'good', fx: { adventure: true, forceOffers: true, listed: true, morale: 7 } })
+      odds: 0.6,
+      ovr: [3, -2],
+      good: () => ({ text: 'Word spreads that you are open to one last great story, and the prospect of it puts years back in your legs.', tone: 'gold', fx: { adventure: true, forceOffers: true, listed: true, morale: 9, form: 6 } }),
+      bad: () => ({ text: 'Word spreads, and the calls that come are not the ones you hoped for. Your own club reads it as a man already gone.', tone: 'bad', fx: { adventure: true, forceOffers: true, listed: true, morale: -6, form: -5 } })
     },
     {
       label: 'Finish at your level',
@@ -482,7 +485,10 @@ E.push({
     {
       label: 'Take him under your wing',
       art: 'youth',
-      good: () => ({ text: 'You bring him into everything. The staff notice the kind of professional you have become.', tone: 'good', fx: { reputation: 5, morale: 6 } })
+      odds: 0.78,
+      ovr: [2, -1],
+      good: () => ({ text: 'You bring him into everything. Teaching the game sharpens your own reading of it, and the staff notice the professional you have become.', tone: 'good', fx: { reputation: 5, morale: 7, form: 4 } }),
+      bad: () => ({ text: 'He takes your place in the side by March, and you spend the spring watching a version of yourself.', tone: 'bad', fx: { reputation: 3, morale: -8, form: -5 } })
     },
     {
       label: 'Leave him to find his way',
@@ -501,7 +507,10 @@ E.push({
     {
       label: 'Give it your full weight',
       art: 'charity',
-      good: () => ({ text: 'The campaign raises a fortune, and the city adores you for it.', tone: 'gold', fx: { reputation: 6, morale: 7 } })
+      odds: 0.72,
+      ovr: [2, -1],
+      good: () => ({ text: 'The campaign raises a fortune, the city adores you for it, and you play the back half of the season lifted by it.', tone: 'gold', fx: { reputation: 6, morale: 9, form: 4 } }),
+      bad: () => ({ text: 'The campaign runs long and eats into your weeks. Worth doing, and it costs you on Saturdays.', tone: 'bad', fx: { reputation: 5, form: -6 } })
     },
     {
       label: 'Make a brief appearance',

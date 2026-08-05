@@ -123,6 +123,16 @@ app.addEventListener('click', async (e) => {
         btn.disabled = true;
         await advanceToNextSeason(c);
         break;
+      case 'abandon':
+        if (c.confirmAbandon) {
+          clearCareer();
+          state.career = null;
+          state.screen = 'home';
+        } else {
+          c.confirmAbandon = true;
+        }
+        break;
+      case 'abandon-cancel': c.confirmAbandon = false; break;
       case 'cabinet': state.screen = 'cabinet'; break;
       case 'history': state.screen = 'history'; break;
       case 'back-retired': state.screen = 'play'; break;

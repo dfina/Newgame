@@ -7,7 +7,6 @@ import { computeLegacy, assembleCabinet } from '../engine/legacy.js';
 import { fmtWage, currentEvent } from '../engine/career.js';
 import { effectivePosition, positionGroup, marketValue, formatValue } from '../engine/player.js';
 import { ROLES, getRole } from '../engine/positions.js';
-import { ordinal } from '../engine/season.js';
 import { getAssociation } from '../engine/data.js';
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -141,7 +140,23 @@ function trophyRow(career) {
 
 function leftPanel(career, actionHtml) {
   return `${profileCard(career)}${statStrip(career)}${trophyRow(career)}<hr class="divider">
-    <div class="action">${actionHtml}</div>`;
+    <div class="action">${actionHtml}</div>${abandonBar(career)}`;
+}
+
+// A way out of a career that is not going anywhere, with one step of friction
+// so it cannot happen by accident.
+function abandonBar(career) {
+  if (career.retired) return '';
+  if (career.confirmAbandon) {
+    return `<div class="abandon confirming">
+      <p class="muted small">Abandon this career? Everything is lost and you return to the menu.</p>
+      <div class="pair">
+        <button class="danger" data-action="abandon">Yes, abandon it</button>
+        <button data-action="abandon-cancel">Keep playing</button>
+      </div>
+    </div>`;
+  }
+  return `<div class="abandon"><button class="ghost" data-action="abandon">Abandon career</button></div>`;
 }
 
 // ---------------- career timeline ----------------
@@ -370,29 +385,46 @@ export function reportScreen(career) {
   const parts = [
     [s.appsBy?.league, 'league'], [s.appsBy?.cup, 'cup'], [s.appsBy?.continental, 'continental']
   ].filter(([n]) => n > 0).map(([n, label]) => `${n} ${label}`).join(' · ');
-  // The season's OVR movement, which the football just earned.
+
+  // Everything the season is worth keeping: what the player did, what they
+  // won, and whether the club went up or down.
+  const intl = r.international;
   const d = r.ovrDelta || 0;
-  const ovrLine = `<div class="season-ovr ${d > 0 ? 'up' : d < 0 ? 'down' : ''}">
-      <span class="k">OVR</span>
-      <span class="v">${r.ovrBefore} → <b>${r.ovrAfter}</b></span>
-      <span class="delta">${d === 0 ? 'no change' : `${signed(d)} from this season`}</span>
-    </div>`;
-  const action = `<h2>${r.year}–${String((r.year + 1) % 100).padStart(2, '0')}</h2>
-    <p class="lead"><b>${esc(career.club.name)}</b> finish <b>${ordinal(r.position)}</b> in the ${esc(career.club.leagueName)}</p>
+  const won = (r.trophies || []).map((t) => `<button class="result-tile trophy" data-action="cabinet">
+      ${trophySvg(t)}<span class="rt-name">${esc(t.name)}</span></button>`).join('');
+  const awards = (r.awards || [])
+    .filter((a) => !(r.trophies || []).some((t) => t.name.startsWith(a)))
+    .map((a) => `<button class="result-tile trophy" data-action="cabinet">
+      ${trophySvg({ type: 'award', name: a })}<span class="rt-name">${esc(a)}</span></button>`).join('');
+  const move = r.promoted
+    ? `<button class="result-tile up" data-action="history"><span class="rt-ic">\u25b2</span>
+        <span class="rt-name">Promoted<small>${esc(career.club.name)} go up</small></span></button>`
+    : r.relegated
+      ? `<button class="result-tile down" data-action="history"><span class="rt-ic">\u25bc</span>
+          <span class="rt-name">Relegated<small>${esc(career.club.name)} go down</small></span></button>`
+      : '';
+
+  const action = `<h2>${r.year}\u2013${String((r.year + 1) % 100).padStart(2, '0')}</h2>
     <div class="statstrip four" style="margin-top:0">
-      <div class="cell"><div class="k">APPS</div><div class="v">${s.apps}<span class="of">/${s.possible ?? '–'}</span></div></div>
+      <div class="cell"><div class="k">APPS</div><div class="v">${s.apps}<span class="of">/${s.possible ?? '\u2013'}</span></div></div>
       <div class="cell"><div class="k">${isGK ? 'CLEAN SH.' : 'GOALS'}</div><div class="v">${isGK ? s.cleanSheets : s.goals}</div></div>
       <div class="cell"><div class="k">${isGK ? 'SAVES' : 'ASSISTS'}</div><div class="v">${isGK ? s.saves : s.assists}</div></div>
       <div class="cell"><div class="k">RATING</div><div class="v">${s.rating.toFixed(2)}</div></div>
     </div>
     ${parts ? `<p class="muted small center" style="margin:2px 0 8px">${parts}</p>` : ''}
-    ${ovrLine}
+    ${intl ? `<div class="intl-strip"><span class="flag">${flagOf(career.nation.code)}</span>
+        <b>${esc(career.nation.name)}</b>
+        <span>${intl.caps} cap${intl.caps === 1 ? '' : 's'}${intl.goals ? ` \u00b7 ${intl.goals} goal${intl.goals === 1 ? '' : 's'}` : ''}</span>
+      </div>` : ''}
+    ${move || won || awards ? `<div class="result-grid">${move}${won}${awards}</div>` : ''}
+    <div class="season-ovr ${d > 0 ? 'up' : d < 0 ? 'down' : ''}">
+      <span class="k">OVR</span>
+      <span class="v">${r.ovrBefore} \u2192 <b>${r.ovrAfter}</b></span>
+      <span class="delta">${d === 0 ? 'no change' : `${signed(d)} from this season`}</span>
+    </div>
+    ${r.outgrewLevel ? `<div class="news">You have gone as far as ${esc(career.club.leagueName)} can take you.
+      Only a move to a higher standard will make you a better player now.</div>` : ''}
     ${(r.news || []).map((n) => `<div class="news ${n.tone === 'good' ? 'good' : n.tone === 'bad' ? 'bad' : n.tone === 'gold' ? 'gold' : ''}">${esc(n.text)}</div>`).join('')}
-    ${(r.awards || []).length ? `<div class="card"><b class="gold">🏅 ${r.awards.map(esc).join(' · ')}</b></div>` : ''}
-    <details class="card"><summary class="muted small">Final table</summary>
-      <table class="league" style="margin-top:8px">
-      ${r.table.map((row, i) => `<tr class="${row.name === career.club.name ? 'me' : ''}"><td>${i + 1}</td><td>${esc(row.name)}</td><td class="num">${row.pts}</td></tr>`).join('')}
-      </table></details>
     <button class="primary" data-action="advance">Continue to ${r.year + 1}</button>`;
   return layout(career, action);
 }

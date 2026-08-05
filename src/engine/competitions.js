@@ -84,7 +84,8 @@ export function continentalSlots(coeff) {
 export const AWARDS = {
   goldenBoot: 'Golden Boot',
   playerOfSeason: 'Player of the Season',
-  worldBest: 'World Footballer of the Year',
+  ballonDor: 'Ballon d\'Or',
+  goldenBall: 'World Cup Golden Ball',
   youngPlayer: 'Young Player of the Year',
   goldenGlove: 'Golden Glove'
 };

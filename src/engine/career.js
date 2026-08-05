@@ -108,6 +108,10 @@ async function generateOffers(career, isStart = false) {
     : clamp(p.ability * (0.9 + rand() * 0.25) + p.reputation * 0.15, 10, 105) *
       (1 + standing * 0.12 + promise * 0.1) * (career.bigMove ? 1.18 : 1);
 
+  // A veteran winding down, or a player who has asked for one last adventure,
+  // will consider a drop that a peak-years professional never would.
+  const loosen = isStart || career.adventure || p.age >= 33 || retirementPressure(p) > 0;
+
   // Home-country leagues get a wider acceptable band, so a player from a
   // small football nation still gets offers from home rather than none.
   const candidates = [];
@@ -116,11 +120,14 @@ async function generateOffers(career, isStart = false) {
     for (const l of c.leagues) {
       if (l.clubs < 6) continue;
       const lvl = leagueLevel(countryCoeff(c.code, c.confederation), l.tier);
-      // Dropping down is always possible — a home-country club two divisions
-      // below will still take you. Climbing is not: a league well above the
-      // standard the player has reached does not come calling, however much
-      // they would like it to.
-      const band = lvl > target ? 18 : (home ? 55 : 30);
+      // Climbing is hard: a league well above the standard the player has
+      // reached does not come calling. Dropping is easier, but not unlimited —
+      // a first-choice player at Atlético is not phoned by a Serie B club.
+      // The drop a player will actually be offered scales with where they are,
+      // and widens again for a veteran winding down or one chasing a last
+      // adventure, who really do go looking for it.
+      const dropRoom = isStart ? (home ? 55 : 30) : target * (loosen ? 0.55 : 0.3) + (home ? 8 : 0);
+      const band = lvl > target ? 18 : Math.max(12, dropRoom);
       const fit = 1 - Math.abs(lvl - target) / band;
       if (fit > 0) candidates.push({ c, l, lvl, fit });
     }
@@ -148,6 +155,21 @@ async function generateOffers(career, isStart = false) {
   };
   const count = isStart ? 3 : irand(2, 4);
 
+  // One of a youngster's first offers can come from a big club — its academy
+  // or reserve side, or the bottom of a first division. The football there is
+  // a level above him, which the season will show in his minutes; the reward
+  // is training and a shop window. Where he starts is his to weigh.
+  const academy = [];
+  if (isStart) {
+    for (const c of idx) {
+      for (const l of c.leagues) {
+        if (l.clubs < 6 || l.tier > 2) continue;
+        const lvl = leagueLevel(countryCoeff(c.code, c.confederation), l.tier);
+        if (lvl >= 52) academy.push({ c, l, lvl, fit: 1 });
+      }
+    }
+  }
+
   // Breaking through and winding down, a player is courted from home. Reserve
   // slots for home-country clubs outright rather than trusting the weighting —
   // and where the home association has no playable league in the data, fall
@@ -160,16 +182,46 @@ async function generateOffers(career, isStart = false) {
 
   const offers = [];
   const seen = new Set();
-  for (let i = 0; i < count * 4 && offers.length < count; i++) {
-    const useHome = offers.length < reserved && nearHome.length;
-    const pool = useHome ? nearHome : candidates;
-    const cand = weightedPick(pool, (x) => Math.max(0.01, x.fit) * (useHome ? 1 : homeBias(x)));
+  const academySlot = isStart && academy.length ? 1 : 0;
+  for (let i = 0; i < count * 5 && offers.length < count; i++) {
+    const useAcademy = academySlot && offers.length === count - 1;
+    const useHome = !useAcademy && offers.length < reserved && nearHome.length;
+    const pool = useAcademy ? academy : useHome ? nearHome : candidates;
+    // The academy slot leans hard on home and on the size of the club: a big
+    // side near home is the offer that means something to a seventeen-year-old.
+    const cand = useAcademy
+      ? weightedPick(pool, (x) => Math.pow(homeBias(x), 2) * Math.pow(x.lvl / 60, 1.5))
+      : weightedPick(pool, (x) => Math.max(0.01, x.fit) * homeBias(x));
     const all = await clubsOf(cand.c.code, cand.l.tier);
     // A career is not spent at Jong Genk: reserve sides play in the division
-    // but do not sign professionals from outside.
-    const senior = all.filter((cl) => !isReserveSide(cl.name));
+    // but do not sign professionals from outside. Breaking through is the
+    // exception — an academy or reserve side of a bigger club is exactly how
+    // a seventeen-year-old gets started.
+    const senior = isStart ? all : all.filter((cl) => !isReserveSide(cl.name));
     const clubs = senior.length >= 4 ? senior : all;
     if (!clubs.length) continue;
+    if (useAcademy) {
+      // The reserve side if the club has one in this division, otherwise the
+      // club least likely to have a first-team place already spoken for.
+      const reserves = clubs.filter((cl) => isReserveSide(cl.name));
+      const pickFrom = reserves.length ? reserves
+        : [...clubs].sort((a, b) => clubStature(a.name) - clubStature(b.name)).slice(0, 5);
+      const chosen = pick(pickFrom);
+      const key0 = cand.c.code + chosen.name;
+      if (!seen.has(key0)) {
+        seen.add(key0);
+        offers.push({
+          clubName: chosen.name,
+          tsdbTeamId: chosen.tsdbTeamId ?? null,
+          colors: chosen.colors || null,
+          ...leagueRef(cand.c, { tier: cand.l.tier, name: cand.l.name, tsdbLeagueId: cand.l.tsdbLeagueId }),
+          wage: Math.round((40 + Math.pow(cand.lvl, 1.5) * 1.2) * (0.8 + rand() * 0.4)) * 5,
+          years: irand(2, 3),
+          loan: false
+        });
+      }
+      continue;
+    }
     // Real Madrid do not call a 60-rated player who has just been relegated.
     // Where the player sits relative to the division decides which of its
     // clubs is interested: the champions at the top, the strugglers at the
@@ -290,12 +342,21 @@ export function currentEvent(career) {
     // The odds shown are the very same number the outcome is rolled against,
     // and each side is labelled with the OVR it carries, so a card can never
     // advertise one thing and deliver another.
-    choices: e.choices.map((ch, i) => ({
-      i,
-      label: ch.label,
-      art: ch.art || 'pitch',
-      risk: { p: choiceOdds(ch, career), up: choiceOvr(ch, true), down: choiceOvr(ch, false) }
-    }))
+    // A rating cannot pass 99 or fall below 20, so a card at the ceiling shows
+    // what it can actually deliver rather than a rise that will not arrive.
+    choices: e.choices.map((ch, i) => {
+      const now = Math.round(career.player.ability);
+      return {
+        i,
+        label: ch.label,
+        art: ch.art || 'pitch',
+        risk: {
+          p: choiceOdds(ch, career),
+          up: clamp(choiceOvr(ch, true), -(now - 20), 99 - now),
+          down: clamp(choiceOvr(ch, false), -(now - 20), 99 - now)
+        }
+      };
+    })
   };
 }
 
@@ -449,7 +510,10 @@ function finishSeason(career) {
   // Development, ageing, contract. The standard of the division sets how far
   // a player can be carried by it: the way past that is a move upward.
   revisePotential(p, perf);
-  developPlayer(p, perf, clamp(lvl + 26, 40, 99));
+  const grew = developPlayer(p, perf, clamp(lvl + 22, 40, 99));
+  // A season good enough to improve a player, at a level that cannot improve
+  // them any further, is the game telling them to move.
+  report.outgrewLevel = grew.capped;
   report.ovrBefore = ovrBefore;
   report.ovrAfter = Math.round(p.ability);
   report.ovrDelta = report.ovrAfter - ovrBefore;

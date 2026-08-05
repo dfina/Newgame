@@ -216,6 +216,39 @@ label { font-size: .82rem; color: var(--muted); display: block; margin-top: 12px
 
 .lg-badge { width: 14px; height: 14px; object-fit: contain; flex-shrink: 0; vertical-align: -2px; }
 
+/* ---------- season result ---------- */
+.intl-strip {
+  display: flex; align-items: center; gap: 8px; justify-content: center;
+  background: var(--panel); border: 1px solid var(--line);
+  border-radius: 10px; padding: 8px 12px; margin: 8px 0; font-size: .85rem;
+}
+.intl-strip span:last-child { color: var(--muted); }
+
+.result-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; margin: 12px 0; }
+.result-tile {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
+  padding: 12px 8px; margin: 0; min-height: 0; text-align: center;
+}
+.result-tile:hover { border-color: #414755; background: #13161b; }
+.result-tile svg { width: 46px; height: 52px; }
+.result-tile .rt-ic { font-size: 1.7rem; line-height: 1; }
+.result-tile .rt-name { font-size: .78rem; font-weight: 700; line-height: 1.25; }
+.result-tile .rt-name small { display: block; font-weight: 400; color: var(--muted); font-size: .72rem; margin-top: 2px; }
+.result-tile.trophy .rt-name { color: var(--gold); }
+.result-tile.up { border-color: #2b6b3c; }
+.result-tile.up .rt-ic, .result-tile.up .rt-name { color: #74d68a; }
+.result-tile.down { border-color: #6e3330; }
+.result-tile.down .rt-ic, .result-tile.down .rt-name { color: #f2938d; }
+
+/* ---------- abandon ---------- */
+.abandon { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--line); }
+.abandon .ghost { font-size: .82rem; color: var(--muted); min-height: 42px; text-align: center; }
+.abandon .ghost:hover { color: var(--text); }
+.abandon .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.abandon .pair button { margin: 0; min-height: 46px; font-size: .85rem; text-align: center; }
+button.danger { background: #3a1417; border-color: #6e3330; color: #ffa8a2; font-weight: 700; }
+
 /* ---------- decision cards ---------- */
 /* Two options, side by side: title, an illustration, and the odds the choice
    is actually rolled against. */

@@ -29,12 +29,57 @@ const inflight = new Map();
 // the network must not permanently blank a crest on every later visit.
 const missed = new Set();
 
+// TheSportsDB's free tier rate-limits hard, and a career screen wants a dozen
+// crests at once. Firing them all together got most of them refused, which is
+// why crests appeared for some clubs and not others with no pattern to it.
+// Requests go through a queue: two at a time, spaced out, and a refusal is
+// retried once before the answer is believed.
+const MAX_PARALLEL = 2;
+const SPACING_MS = 120;
+let active = 0;
+let nextSlot = 0;
+const waiting = [];
+
+function slot() {
+  return new Promise((resolve) => {
+    waiting.push(resolve);
+    pump();
+  });
+}
+function pump() {
+  while (active < MAX_PARALLEL && waiting.length) {
+    active++;
+    const go = waiting.shift();
+    const now = Date.now();
+    const at = Math.max(now, nextSlot);
+    nextSlot = at + SPACING_MS;
+    setTimeout(go, at - now);
+  }
+}
+function release() {
+  active--;
+  pump();
+}
+
+// Returns the parsed body, or `null` when the request itself failed — which is
+// not the same as "no such club", and must not be cached as one.
 async function getJson(url, ms = 7000) {
+  await slot();
   try {
-    const res = await fetch(url, { signal: AbortSignal.timeout(ms) });
-    if (!res.ok) return null;
-    return await res.json();
-  } catch { return null; }
+    for (let attempt = 0; attempt < 2; attempt++) {
+      try {
+        const res = await fetch(url, { signal: AbortSignal.timeout(ms) });
+        if (res.ok) return await res.json();
+        // 429 and friends: wait out the window and ask once more.
+        if (attempt === 0) await new Promise((r) => setTimeout(r, 900));
+      } catch {
+        if (attempt === 0) await new Promise((r) => setTimeout(r, 400));
+      }
+    }
+    return null;
+  } finally {
+    release();
+  }
 }
 
 // TheSportsDB has renamed these fields across API versions and still serves a
@@ -136,6 +181,17 @@ const CLUB_ALIASES = {
   'OH Leuven': ['Oud-Heverlee Leuven', 'OH Leuven'],
   'Standard Liège': ['Standard Liege', 'Standard Liège'],
   "FC Rànger's": ["FC Ranger's", 'Rangers', 'FC Rangers'],
+  'Inter': ['Inter Milan', 'Internazionale'],
+  'Milan': ['AC Milan', 'Milan'],
+  'AS Monaco': ['Monaco', 'AS Monaco'],
+  'PSV': ['PSV Eindhoven', 'PSV'],
+  'KAS Eupen': ['Eupen', 'KAS Eupen'],
+  'SC Heerenveen': ['Heerenveen', 'SC Heerenveen'],
+  'Al-Ahli': ['Al Ahli', 'Al-Ahli Saudi FC', 'Al Ahli Jeddah'],
+  'Al-Hilal': ['Al Hilal', 'Al-Hilal Saudi FC'],
+  'Al-Nassr': ['Al Nassr'],
+  'Al-Ittihad': ['Al Ittihad', 'Ittihad Jeddah'],
+  'Real Forio': ['Real Forio', 'Forio'],
   "Atlètic Club d'Escaldes": ["Atletic Club d'Escaldes", 'Atletic Escaldes'],
   "Inter Club d'Escaldes": ["Inter Club d'Escaldes", 'Inter Escaldes'],
   "Penya Encarnada d'Andorra": ['Penya Encarnada']
@@ -243,15 +299,19 @@ export async function resolveBadge(club) {
         if (roster?.length) badge = pickFromRoster(roster, club.name);
       }
     }
+    let answered = false;
     if (!badge) {
       for (const q of searchTerms(club)) {
         const json = await getJson(`${TSDB}/searchteams.php?t=${encodeURIComponent(q)}`);
+        if (json) answered = true;
         const team = pickTeam(json?.teams, club);
         const img = imageOf(team);
         if (img) { badge = img; break; }
       }
     }
-    if (badge) { c[key] = badge; persist(); } else { missed.add(key); }
+    // Only a search that actually came back and matched nothing is a miss;
+    // a refused request is worth trying again later in the session.
+    if (badge) { c[key] = badge; persist(); } else if (answered) { missed.add(key); }
     inflight.delete(key);
     return badge;
   })();

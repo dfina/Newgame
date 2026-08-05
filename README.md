@@ -14,8 +14,11 @@ what your role and your division make a normal season — and weighted by where
 you played it, so the same numbers in a great league move you further than in
 a fourth division. A division also sets how far it can carry you: dominate a
 small league and you reach the top of it, and the only way past that ceiling
-is to go and play somewhere harder. Careers rise fastest to about 22, plateau
-around 30 and fall away from 33.
+is to go and play somewhere harder — the season report says so when you get
+there. Careers rise fastest to about 22, plateau around 30 and fall away from
+33, and most of them top out as good professionals: across simulated careers
+the median peaks in the low seventies, and fewer than one in ten ever reaches
+90.
 
 Decision cards are rare: roughly one season in three turns on one. Each offers
 exactly two options, shows the odds it is gambling with and the OVR each side

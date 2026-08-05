@@ -17,13 +17,52 @@ function hueShift(name) {
   return h;
 }
 
+// Two individual honours are distinctive enough to deserve their own shape
+// rather than the generic award star.
+const NAMED_SHAPE = [
+  [/Ballon d'Or/i, 'ballon'],
+  [/Golden Ball/i, 'goldenball'],
+  [/Golden Boot/i, 'goldenboot'],
+  [/Golden Glove/i, 'goldenglove']
+];
+
 export function trophySvg(trophy) {
   const style = TYPE_STYLE[trophy.type] || TYPE_STYLE.cup;
   const h = hueShift(trophy.name);
   const ribbon = `hsl(${h % 360} 55% 45%)`;
   const m = style.metal;
+  const named = NAMED_SHAPE.find(([re]) => re.test(trophy.name || ''));
+  const shape = named ? named[1] : style.shape;
   let body = '';
-  switch (style.shape) {
+  switch (shape) {
+    case 'ballon':
+      // A football held up on a fluted plinth: the Ballon d'Or.
+      body = `<circle cx="50" cy="32" r="20" fill="#f3c847"/>
+        <g fill="#8a6a10"><path d="M50 18 l7 5 -3 8 h-8 l-3 -8 z"/>
+          <path d="M33 30 l6 5 -2 6 -7 -3 z"/><path d="M67 30 l-6 5 2 6 7 -3 z"/>
+          <path d="M41 46 l4 5 h10 l4 -5 -9 -3 z"/></g>
+        <path d="M44 52 h12 l3 14 h-18 z" fill="#e0b23c"/>
+        <rect x="34" y="66" width="32" height="6" rx="2" fill="#f3c847"/>
+        <path d="M37 72 h26 l4 12 h-34 z" fill="#c99a2e"/>`;
+      break;
+    case 'goldenball':
+      // A ball on a slim column with laurels: the tournament's best player.
+      body = `<circle cx="50" cy="28" r="15" fill="#f6d564"/>
+        <path d="M50 17 l6 4 -2 7 h-8 l-2 -7 z" fill="#8a6a10"/>
+        <path d="M31 34 q-6 14 6 24 M69 34 q6 14 -6 24" stroke="#d8b34a" stroke-width="4" fill="none"/>
+        <rect x="46" y="43" width="8" height="24" rx="2" fill="#e8c451"/>
+        <path d="M38 67 h24 l5 15 h-34 z" fill="#c99a2e"/>`;
+      break;
+    case 'goldenboot':
+      body = `<path d="M24 54 q18 -10 32 -5 l16 5 q12 4 12 13 h-60 z" fill="#f3c847"/>
+        <path d="M84 67 h-60 v7 h62 q4 0 4 -3 z" fill="#c99a2e"/>
+        <path d="M34 48 l10 4 M45 44 l10 5 M56 42 l10 6" stroke="#8a6a10" stroke-width="2.5"/>`;
+      break;
+    case 'goldenglove':
+      body = `<path d="M34 30 q0 -8 7 -8 t7 8 v10 q4 -8 10 -6 t6 9 q5 -4 9 1 t2 12
+          q-2 18 -18 22 q-16 -2 -21 -16 q-4 -12 -2 -32 z" fill="#f3c847"/>
+        <path d="M32 74 h36 l4 10 h-44 z" fill="#c99a2e"/>`;
+      break;
     case 'globe':
       body = `<circle cx="50" cy="38" r="20" fill="none" stroke="${m}" stroke-width="5"/>
         <ellipse cx="50" cy="38" rx="9" ry="20" fill="none" stroke="${m}" stroke-width="3"/>

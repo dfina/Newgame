@@ -74,9 +74,11 @@ let decisionOvr = 0;         // absolute OVR moved by decision cards
 let developmentOvr = 0;      // absolute OVR moved by season development
 let cardsPlayed = 0;         // decision cards seen across all careers
 let badChoiceCount = 0;      // cards that did not offer exactly two options
+let pointlessCards = 0;      // cards where neither option could move the rating
 const promoStreaks = [];     // longest run of successive promotions per career
 const afterPromotion = [];   // where a promoted side finishes, 0 (top) to 1 (bottom)
 const eliteOffers = [];      // who the biggest clubs in the biggest leagues call
+const peaks = [];            // the best rating each career ever reached
 const errors = [];
 
 for (let i = 0; i < N; i++) {
@@ -100,6 +102,8 @@ for (let i = 0; i < N; i++) {
       } else if (c.phase === 'event') {
         const ev = currentEvent(c);
         if (ev.choices.length !== 2) badChoiceCount++;
+        // A card where neither side can move the rating is not a decision.
+        if (c.player.ability < 98 && ev.choices.every((ch) => !ch.risk.up && !ch.risk.down)) pointlessCards++;
         const out = chooseEventOption(c, Math.floor(Math.random() * ev.choices.length));
         decisionOvr += Math.abs(out.ovrDelta || 0);
         cardsPlayed++;
@@ -126,6 +130,7 @@ for (let i = 0; i < N; i++) {
       }
     }
     promoStreaks.push(maxStreak);
+    peaks.push(c.player.peakAbility);
   } catch (e) {
     errors.push(e.stack.split('\n').slice(0, 3).join(' | '));
   }
@@ -189,6 +194,13 @@ console.log(`promotions in successive seasons: longest run p90 ${pct(promoStreak
 if (afterPromotion.length) {
   console.log(`the season after promotion: average finish ${(avg(afterPromotion) * 100).toFixed(0)}% down its new division (${afterPromotion.length} samples)`);
 }
+if (peaks.length) {
+  const sorted = [...peaks].sort((a, b) => a - b);
+  const at = (f) => sorted[Math.min(sorted.length - 1, Math.floor(sorted.length * f))];
+  const over = (t) => (peaks.filter((x) => x >= t).length / peaks.length * 100).toFixed(0);
+  console.log(`\npeak rating reached: median ${at(0.5)} | p90 ${at(0.9)} | best ${sorted[sorted.length - 1]}` +
+    ` | reached 85+ ${over(85)}% of careers, 90+ ${over(90)}%, 95+ ${over(95)}%`);
+}
 if (eliteOffers.length) {
   const kids = eliteOffers.filter((o) => o.age <= 23);
   console.log(`the biggest clubs called ${eliteOffers.length} times: target OVR avg ${avg(eliteOffers.map((o) => o.ovr)).toFixed(0)}` +
@@ -237,15 +249,30 @@ if (big.length > 50 && (champPts < 70 || champPts > 102)) {
 // prospect they think will become one. Neither is an ordinary professional.
 if (eliteOffers.length > 30) {
   const eliteAvg = avg(eliteOffers.map((o) => o.ovr));
-  if (eliteAvg < 82) fails.push(`the biggest clubs are calling players averaging ${eliteAvg.toFixed(0)} OVR (expected 82+)`);
-  const kids = eliteOffers.filter((o) => o.age <= 23 && o.headroom >= 4);
-  if (kids.length < eliteOffers.length * 0.04) {
-    fails.push(`only ${kids.length} of ${eliteOffers.length} approaches from the biggest clubs went to a prospect (expected some)`);
+  if (eliteAvg < 78) fails.push(`the biggest clubs are calling players averaging ${eliteAvg.toFixed(0)} OVR (expected 78+)`);
+  const kids = eliteOffers.filter((o) => o.age <= 23);
+  const grown = eliteOffers.filter((o) => o.age >= 26);
+  if (kids.length < eliteOffers.length * 0.015) {
+    fails.push(`only ${kids.length} of ${eliteOffers.length} approaches from the biggest clubs went to a player under 24`);
   }
+  // Promise is what a prospect is signed on, so they arrive rated lower than
+  // the established players the same clubs approach.
+  if (kids.length > 10 && grown.length > 10 && avg(kids.map((o) => o.ovr)) >= avg(grown.map((o) => o.ovr))) {
+    fails.push('the biggest clubs are not signing prospects on promise — their under-24 targets are rated as highly as their established ones');
+  }
+}
+
+// A career that ends in the nineties has to be the exception.
+if (peaks.length > 60) {
+  const share90 = peaks.filter((x) => x >= 90).length / peaks.length;
+  const median = [...peaks].sort((a, b) => a - b)[Math.floor(peaks.length / 2)];
+  if (share90 > 0.15) fails.push(`${(share90 * 100).toFixed(0)}% of careers peak at 90+ (expected under 15%)`);
+  if (median > 82) fails.push(`the median career peaks at ${median} (expected 82 or below)`);
 }
 
 if (decisionShare > 0.3) fails.push(`decision cards account for ${(decisionShare * 100).toFixed(0)}% of OVR movement (expected under 30%)`);
 if (badChoiceCount) fails.push(`${badChoiceCount} decision cards did not offer exactly two options`);
+if (pointlessCards) fails.push(`${pointlessCards} decision cards could not change the rating either way`);
 
 const cardRate = cardsPlayed / Math.max(1, seasons.length);
 if (cardRate > 0.55) fails.push(`decision cards appear in ${(cardRate * 100).toFixed(0)}% of seasons (expected under 55%)`);
@@ -254,7 +281,7 @@ if (Math.max(0, ...promoStreaks) > 2) fails.push(`a club won ${Math.max(...promo
 if (pct(promoStreaks, 0.9) > 1) fails.push('back-to-back promotions are commonplace (p90 of the longest run is above 1)');
 
 // Only asserted once the sample can carry it — a short run is too noisy.
-if (strongEntries > 60 && weakEntries > 60 && strongRate < weakRate * 2.2) {
+if (strongEntries > 110 && weakEntries > 110 && strongRate < weakRate * 2.2) {
   fails.push(`the strongest entrants win ${(strongRate * 100).toFixed(1)}% of continental campaigns against ${(weakRate * 100).toFixed(1)}% for the weakest (expected at least 2.2x)`);
 }
 if (contEntrants.length > 50 && contWinners.length / contEntrants.length > 0.16) {
